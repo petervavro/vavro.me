@@ -1,0 +1,24 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+
+	# TECHNOLOGY COLOPHON
+
+		HTML5, CSS3
+		Normalize.css, jQuery, Modernizr
+
+
+	# TEAM
+
+		Developer: Peter Vavro
+		Contact: peter [at] vavro.me
+		Personal web: www.vavro.me
+		Location: Cali, Colombia
+
+
+	# SITE
+
+		Last update:2013/06/17
+		Language: Spanish, English
+		Doctype: XHTML 1.0
+		IDE: Netbeans, Notepad++, FileZilla, Gimp, InkScape
