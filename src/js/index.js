@@ -98,6 +98,9 @@ var steps = [
             gHeight
           );
 
+          // Move Raphael's SVG to background
+          $('svg').css('position', 'absolute');
+
           // Make paper visible
           paperVisible = true;
 
@@ -110,7 +113,6 @@ var steps = [
 ];
 
 const renderCircle = function() {
-  console.log('renderCircle', paper);
   // Create circle object
   const circle = paper.circle(
     getRandomInt(100, gWidth - 100),
@@ -242,12 +244,6 @@ window.addEventListener('scroll', function() {
 $(function() {
   // Adjust "intro" section to height of browser viewport
   $('#intro').height($(window).height());
-
-  // Creates canvas
-  // paper = Raphael(document.getElementById('intro'), gWidth - 30, gHeight);
-
-  // Move Raphael's SVG to background
-  $('svg').css('position', 'absolute');
 
   // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
   // Add smooth scrolling to all links
