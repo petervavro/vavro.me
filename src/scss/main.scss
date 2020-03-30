@@ -334,8 +334,15 @@ h2 {
 
 .circle-md {
 
-    width: $spacer * 7;
-    height: $spacer * 7;
+    width: $spacer * 5;
+    height: $spacer * 5;
+
+    @include media-breakpoint-up(xl) {
+
+        width: $spacer * 7;
+        height: $spacer * 7;
+        
+    }
 
 }
 
