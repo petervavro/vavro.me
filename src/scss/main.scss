@@ -204,6 +204,13 @@ h2 {
     display: inline-block;
 }
 
+button {
+
+    &:focus {
+      outline: none;
+    }
+}
+
 .bg-A {
     background-color: $colorA;
 }
