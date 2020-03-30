@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Personal web pages of Peter Vavro">
+    <meta name="keywords" content="Peter Vavro,personal website,personal presentetion, presentetion of work, gallery">
+    <meta name="author" content="Peter Vavro">
+    <meta name="copyright" content="Peter Vavro">
+    <meta name="Charset" content="UTF-8">
+    <meta charset="utf-8">
+    <meta name="Rating" content="General">
+    <meta name="Distribution" content="Global">
+    <meta name="Revisit-after" content="7 Days">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Presentation of vavro.me">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="msvalidate.01" content="FEBB973C4B6B911E33AF5D4E3AE8E074" />
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#343a40">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#343a40">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Modal -->
+    <div 
+      class="modal fade" 
+      id="projectsModal" 
+      tabindex="-1" 
+      role="dialog" 
+      aria-hidden="true"
+    >
+      <div 
+        class="modal-dialog modal-lg modal-dialog-centered" 
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="modal-header-custom text-right py-3">
+              <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close">
+                <span class="sr-only">(Close)</span>
+              </button>
+            </div>
+              <div class="container">
+                <% projects.forEach(function(project){ %>
+                  <div class="row job <%= project.id %> d-none bg-C shadow text-dark py-5 p-3">
+                    <div class="col-8">
+                      <h3 class="bg-dark p-3 mb-3"><%= project.title %></h2><!-- p-1 px-3 block-inline -->
+                      <p class="desc text-justify"><%= project.description %></p>
+                      <hr/>
+                      <p class="job-desc text-justify"><%= project.jobDescription %></p>
+                      <small class="year"><%= project.year %></small>
+                      <hr/>
+                      <div class="used-technologies d-flex flex-wrap justify-content-center py-3 text-center animated">
+                        <% project.technologies.split(",").forEach(function(projectTechnology){
+                          technologies.forEach(function(technology){ 
+                            if (technology.id === projectTechnology) { _%>
+                              <div
+                                class="technology <%= technology.id %> d-flex flex-column justify-content-center text-center animated m-3" 
+                                title="<%= technology.title %>"
+                              >
+                                <span 
+                                  class="bg-logo circle-sm d-flex justify-content-center align-items-center shadow"
+                                  style="background-image: url(images/<%= technology.thumbnailImage %>);"
+                                ></span>
+                              </div>
+                        <% }
+                          })
+                        }) %>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <<% if (project.url !== "") { %>a<% } else{ %>span<% } %>
+                        target="_blank" 
+                        href="<%= project.url %>" 
+                        title="<%= project.description %>"
+                        class="bg-thumbnail circle-lg d-block mx-auto shadow"
+                        style="background-image: url(images/<%= project.backgroundImage %>);"
+                      ></<% if (project.url !== "") { %>a<% } else{ %>span<% } %>>
+                    </div>
+                  </div>
+                <% }) %>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header>
+      <nav class="navbar fixed-top navbar-expand">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand bg-dark px-3 animated fadeIn" href="#">Peter Vavro</a>
+
+        <div class="collapse navbar-collapse animated fadeIn" id="navbarTogglerDemo03">
+          <ul class="navbar-nav ml-auto p-1">
+            <!-- <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link bg-logo email" href="mailto:&#112;&#101;&#116;&#101;&#114;&#064;&#118;&#097;&#118;&#114;&#111;&#046;&#109;&#101;">
+                <span class="sr-only">Email</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-logo github" href="https://github.com/petervavro" target="_blank">
+                <span class="sr-only">GitHub</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-logo linkedin" href="https://www.linkedin.com/in/peter-vavro-44604163" target="_blank">
+               <span class="sr-only">Linkedin</span>
+            </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" role="main">
+      <a href="#about" class="scroll-down"></a>
+      <section id="intro" class="container-fluid">
+        <div class="row h-100">
+          <div class="col h-100">
+            <div class="h-100 d-flex justify-content-center align-items-center">
+              <div class="p-5">
+                <div class="story-part-1">
+                  <p  class="text-white">Welcome.</p>
+                  <button type="button" class="btn btn-outline-primary btn-start animated pulse delay-1s infinite">Let's get started</button>      
+                </div>
+                <div class="story-part-2 text-center d-none">
+                  <div class="typed-strings d-none">
+                    <p>
+                      Hi.^500 it's me,^500 <strong>Peter Vavro</strong>,^500 most probably your new <strong>web & mobile developer</strong>.<br/>
+                      How about to know more about me...<br/>
+                      To start, click/tap on some circles.<br/>
+                      Go.
+                    </p>
+                  </div> 
+                  <p class="story-text-wrapper text-white">
+                    <span class="story-text"></span>
+                  </p>
+                  <button type="button" class="btn btn-outline-primary btn-next invisible">Ready ?</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="jumbotron px-0 mb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <article class="sticky text-justify bg-B p-5 shadow">
+                <h1 class="display-4 bg-dark p-1 px-3">
+                  ...so
+                </h1>
+                <br/>
+                <div class="pt-3">
+                  <p>
+                    I am a Full Stack Engineer, programming since 1994, specialized in JavaScript.
+                  </p>
+                  <p>My experience includes 13+ years with JS and I am efficient in both, front and back end. In front-end web and mobile: React (<span class="react-years"><%= ((new Date()).getFullYear() - technologies.find(function(technology){ return (technology.id === 'react')}).year) %></span>+ years), React Native (<span class="react-native-years"><%= ((new Date()).getFullYear() - technologies.find(function(technology){ return (technology.id === 'react-native')}).year) %></span>+ years), AngularJS and many other interesting frameworks and libraries. In back-end, my experience includes <span class="nodejs-years"><%= ((new Date()).getFullYear() - technologies.find(function(technology){ return (technology.id === 'nodejs')}).year) %></span>+ years with Node.js working with various frameworks such as Express.js, Sails.js, and HapiJS.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="row">
+            <section id="technologies" class="technologies col-12 offset-md-2 col-md-10 pt-5">
+              <h2 class="p-3 px-md-0">Technologies...</h2> <!-- And here is a since when I am a friend with these .. -->
+              <% (y => y.filter((v, i) => y.indexOf(v) === i))(technologies.map(item => item.year)).forEach(function(year){ _%>
+                <div class="item year-<%= year %> d-flex flex-column flex-sm-row">
+                  <div class="tl-date">
+                    <%= year %>
+                  </div>
+                  <div class="tl-desc d-flex">
+                    <% technologies.forEach(function(technology){
+                      if (technology.year === year) { %>
+                        <a class="technology <%= technology.id %> d-flex flex-column justify-content-center text-center animated" target="_blank" href="<%= technology.url %>e">
+                          <span class="technology-label"><%= technology.title %></span>
+                          <span 
+                            class="bg-logo <%= technology.id %> circle-sm d-flex justify-content-center align-items-center shadow"
+                            style="background-image: url(images/<%= technology.thumbnailImage %>);"
+                          ></span>
+                        </a>
+                      <% }
+                    }) %>
+                  </div>
+                </div>
+              <% }) %>
+            </section>
+          </div>
+        </div>
+      </section> 
+      <section id="projects" class="container-fluid bg-C">
+        <div class="row">
+          <div class="offset-lg-4 col-lg-8 p-5">
+            <div class="projects bg-B p-5 shadow animated">
+                <h2 class="bg-dark p-1 px-3">Projects</h2><br/>
+                <div class="text-center">
+                  <% projects.forEach(function(project){ %>
+                    <button 
+                      type="button" 
+                      data-toggle="modal" 
+                      data-target="#projectsModal"
+                      data-selector="<%= project.id %>"
+                      class="item bg-thumbnail <%= project.id %> spin shadow circle-md hover-animation-type-1 m-3" 
+                      style="background-image: url(images/<%= project.backgroundImage %>);"
+                  ></button>
+                  <% }); %>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="container pb-5">
+      <div class="row">
+        <div class="col d-flex justify-content-center align-items-center py-5 my-5">
+          <a class="btn email-me bg-A d-flex justify-content-center align-items-center circle-lg hover-animation-type-1" href="mailto:&#112;&#101;&#116;&#101;&#114;&#064;&#118;&#097;&#118;&#114;&#111;&#046;&#109;&#101;">
+              Contact me
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="float-right">
+            <a href="#" class="btn btn-outline-primary">Back to top</a>
+          </p>
+          <p>
+            <small>&copy; 2013-2020 Peter Vavro.</small>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-13090749-7', 'vavro.me');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
