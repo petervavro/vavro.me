@@ -23,6 +23,7 @@ $theme-colors: (
 $font-family-base: 'Ubuntu', sans-serif;
 
 $font-size-base: 1.1rem;
+$enable-responsive-font-sizes: true;
 
 $body-bg: $gray-800;
 $text-color: color-yiq(theme-color("dark"));
@@ -313,8 +314,8 @@ h2 {
 
 .circle-sm {
 
-    width: $spacer * 3;
-    height: $spacer * 3;
+    width: $spacer * 3.4;
+    height: $spacer * 3.4;
 
     @include media-breakpoint-up(md) {
 
@@ -348,8 +349,8 @@ h2 {
 
 .circle-lg {
 
-    width: 200px;
-    height: 200px;
+    width: $spacer * 12;
+    height: $spacer * 12;
 
 }
 
@@ -556,11 +557,9 @@ h2 {
                 .circle-lg {
 
                     border: {
-
                         width: $border-width *3;
                         style: solid;
                         color: $colorA;
-
                     }
 
                 }
@@ -580,11 +579,19 @@ h2 {
 
                     &:first-child {
 
-                        border-right: {
+                        border: {
                             style: dotted;
                             color: $dark;
-                            width: $border-width;
+                            width: 0 0 $border-width 0;
                         };
+
+                        @include media-breakpoint-up(lg) {
+
+                            border-width: 0 $border-width 0 0;
+                            
+                        }
+
+
 
                     }
 
