@@ -574,10 +574,7 @@ button {
 
                 h4 {
                     font-size: $font-size-base * .9;
-                }
-
-                .job-desc {
-                    // color: $body-color;
+                    color: lighten($colorA, 20);
                 }
 
                 .platforms {
@@ -721,20 +718,6 @@ header {
         }
 
     }
-
-    /*
-    .item {
-
-        background: {
-            size: 100%;
-        }
-
-        &.parcel {
-            background-size: 120%;
-        }
-    }
-    */
-
 
 }
 
