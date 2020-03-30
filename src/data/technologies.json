@@ -49,7 +49,7 @@
     "id": "visual-basic"
   },
   {
-    "year": 2004,
+    "year": 2003,
     "title": "ASP.NET",
     "url": "https://en.wikipedia.org/wiki/ASP.NET",
     "thumbnailImage": "logo-ASP.NET-NL.png",
@@ -147,6 +147,13 @@
     "id": "bower"
   },
   {
+    "year": 2013,
+    "title": "AngularJS",
+    "url": "https://en.wikipedia.org/wiki/AngularJS",
+    "thumbnailImage": "logo-AngularJS.svg",
+    "id": "angularjs"
+  },
+  {
     "year": 2014,
     "title": "Node.js",
     "url": "https://en.wikipedia.org/wiki/Node.js",
@@ -166,13 +173,6 @@
     "url": "https://en.wikipedia.org/wiki/Express.js",
     "thumbnailImage": "logo-Express.svg",
     "id": "express"
-  },
-  {
-    "year": 2014,
-    "title": "AngularJS",
-    "url": "https://en.wikipedia.org/wiki/AngularJS",
-    "thumbnailImage": "logo-AngularJS.svg",
-    "id": "angularjs"
   },
   {
     "year": 2015,

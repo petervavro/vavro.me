@@ -63,9 +63,16 @@
               <% projects.forEach(function(project){ %>
                 <div class="row job <%= project.id %> d-none bg-C shadow text-dark py-5 p-3">
                   <div class="col-lg-8">
-                    <h3 class="bg-dark p-3 mb-3"><%= project.title %></h2><!-- p-1 px-3 block-inline -->
+                    <h3 class="d-inline-block bg-dark p-3 mb-3"><%= project.title %></h2><!-- p-1 px-3 block-inline -->
                     <p class="desc text-justify"><%= project.description %></p>
+                    <% if (false) { %>
+                    <div class="platforms">
+                      <% if (project.platforms.split(",").includes("web") === true) { %><span title="Web app" class="web d-inline-block"></span><% } %>
+                      <% if (project.platforms.split(",").includes("mobile") === true) { %><span title="Mobile app" class="mobile d-inline-block"></span><% } %>
+                    </div>
+                    <% } %>
                     <hr/>
+                    <h4 class="text-white">..what I did</h4>
                     <p class="job-desc text-justify"><%= project.jobDescription %></p>
                     <small class="year"><%= project.year %></small>
                     <hr/>
@@ -170,7 +177,7 @@
           <div class="row">
             <div class="col-12 col-lg-8">
               <article class="sticky text-justify bg-B p-5 shadow">
-                <h1 class="display-4 bg-dark p-1 px-3">
+                <h1 class="display-4 bg-dark p-1 px-3 d-inline-block">
                   ...so
                 </h1>
                 <br/>
@@ -185,7 +192,7 @@
           </div>
           <div class="row">
             <section id="technologies" class="technologies col-12 offset-md-2 col-md-10 pt-5">
-              <h2 class="p-3 px-md-0">Technologies...</h2> <!-- And here is a since when I am a friend with these .. -->
+              <h2 class="d-inline-block p-3 px-md-0">Technologies...</h2> <!-- And here is a since when I am a friend with these .. -->
               <% (y => y.filter((v, i) => y.indexOf(v) === i))(technologies.map(item => item.year)).forEach(function(year){ _%>
                 <div class="item year-<%= year %> d-flex flex-column flex-sm-row">
                   <div class="tl-date">
@@ -215,7 +222,7 @@
           <div class="row">
             <div class="offset-lg-2 col-lg-10 py-5 p-lg-5">
               <div class="projects bg-B p-5 shadow animated">
-                  <h2 class="bg-dark p-1 px-3">Projects</h2>
+                  <h2 class="d-inline-block bg-dark p-1 px-3">Projects</h2>
                   <div class="text-center pt-3">
                     <% projects.forEach(function(project){ %>
                       <button 

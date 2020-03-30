@@ -27,7 +27,7 @@ $enable-responsive-font-sizes: true;
 
 $body-bg: $gray-800;
 $text-color: color-yiq(theme-color("dark"));
-$headings-color: $colorC;
+// $headings-color: $colorC;
 $link-hover-decoration: none;
 
 $enable-rounded: false;
@@ -200,8 +200,13 @@ section {
 }
 
 h1,
-h2 {
-    display: inline-block;
+h2,
+h3 {
+
+    &.bg-dark {
+        color: $colorC;
+    }
+
 }
 
 button {
@@ -557,10 +562,6 @@ button {
 
             .job {
 
-                h3 {
-                    display: inline-block;
-                }
-
                 .circle-lg {
 
                     border: {
@@ -571,8 +572,37 @@ button {
 
                 }
 
+                h4 {
+                    font-size: $font-size-base * .9;
+                }
+
                 .job-desc {
                     // color: $body-color;
+                }
+
+                .platforms {
+
+                    .web,
+                    .mobile {
+
+                        background: {
+                            position: center;
+                            repeat: no-repeat;
+                            size: 60%;
+                        }
+
+                        width: $spacer * 4;
+                        height: $spacer * 4;
+                    }
+
+                    .web {
+                        background-image: url(../images/icon-platform-web.svg);
+                    }
+
+                    .mobile {
+                        background-image: url(../images/icon-platform-mobile.svg);
+                    }
+
                 }
 
                 .used-technologies {

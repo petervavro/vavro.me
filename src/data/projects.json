@@ -7,7 +7,7 @@
     "jobDescription": "Back-end & Front-end development.",
     "backgroundImage": "logo-terminal.png",
     "technologies": "javascript,react,jss,nodejs,hapi,orientdb",
-    "platforms": "web",
+    "platforms": "web,mobile",
     "year": 2019
   },
   {
@@ -15,7 +15,7 @@
     "title": "CareConnect 365",
     "url": "http://www.careconnect365.com",
     "description": "CareConnect is a technology designed specifically for seniors to help them stay independent, healthy and connected to family and friends.",
-    "jobDescription": "Mobile application development & project management.",
+    "jobDescription": "Mobile & Back-end development + project management.",
     "backgroundImage": "thumbnail-careconnect365.png",
     "technologies": "javascript,react-native,nodejs,hapi,mongodb",
     "platforms": "mobile",
@@ -36,11 +36,11 @@
     "id": "calali",
     "title": "CALALI",
     "url": "http://www.calali.com/",
-    "description": "CALALI, a unique chat application.",
+    "description": "A unique chat application.",
     "jobDescription": "CALALI is built on the Ionic platform that uses the Angular.js framework to build cross-platform mobile applications. On the backend, it uses a Sails/Node.js app with MongoDB to handle user accounts, chat operations and authentication.",
     "backgroundImage": "thumbnail-calaliapp-100.jpg",
     "technologies": "ionic,nodejs,mongodb,angularjs,javascript",
-    "platforms": "web",
+    "platforms": "mobile",
     "year": 2016
   },
   {
@@ -50,7 +50,7 @@
     "description": "The most popular transport mobile app in Slovakia since 2012. Order a taxi, limo or find your right public transport line.",
     "jobDescription": "Front-end development.",
     "backgroundImage": "logo-hopin.svg",
-    "technologies": "html,css,sass,php,codeigniter,mysql,jquery",
+    "technologies": "html,css,sass,php,codeigniter,mysql,javascript,jquery",
     "platforms": "web",
     "year": 2016
   },
