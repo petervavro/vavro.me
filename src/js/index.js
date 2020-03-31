@@ -205,8 +205,10 @@ window.addEventListener('resize', function() {
   // Get window height
   gHeight = $(window).height();
 
-  // Adjust paper size
-  paper.setSize(gWidth, gHeight);
+  if (paper !== undefined) {
+    // Adjust paper size
+    paper.setSize(gWidth, gHeight);
+  }
 });
 
 // On scroll
