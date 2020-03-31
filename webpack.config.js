@@ -10,6 +10,7 @@ const glob = require('glob');
 
 const projects = require('./src/data/projects.json');
 const technologies = require('./src/data/technologies.json');
+const codes = require('./src/data/codes.json');
 
 const IS_DEV = process.env.NODE_ENV === 'development';
 
@@ -206,6 +207,7 @@ files = files.map(file => {
     templateParameters: {
       projects,
       technologies,
+      codes,
     },
   });
 });
