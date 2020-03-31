@@ -1,3 +1,5 @@
+<% var mailto = '&#112;&#101;&#116;&#101;&#114;&#064;&#118;&#097;&#118;&#114;&#111;&#046;&#109;&#101;?&subject=Hi&body=Hi+Peter%2C%0D%0A%0D%0A'; %>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -123,7 +125,7 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link bg-logo email" href="mailto:&#112;&#101;&#116;&#101;&#114;&#064;&#118;&#097;&#118;&#114;&#111;&#046;&#109;&#101;">
+              <a class="nav-link bg-logo email" href="mailto:<%= mailto %>">
                 <span class="sr-only">Email</span>
               </a>
             </li>
@@ -244,7 +246,7 @@
     <footer class="container pb-5">
       <div class="row">
         <div class="col d-flex justify-content-center align-items-center py-5 my-5">
-          <a class="btn email-me bg-A d-flex justify-content-center align-items-center circle-lg hover-animation-type-1" href="mailto:&#112;&#101;&#116;&#101;&#114;&#064;&#118;&#097;&#118;&#114;&#111;&#046;&#109;&#101;">
+          <a class="btn email-me bg-A d-flex justify-content-center align-items-center circle-lg hover-animation-type-1" href="mailto:<%= mailto %>">
               Contact me
           </a>
         </div>
