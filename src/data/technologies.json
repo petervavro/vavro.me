@@ -222,5 +222,12 @@
     "url": "https://en.wikipedia.org/wiki/OrientDB",
     "thumbnailImage": "logo-Orientdb.png",
     "id": "orientdb"
+  },
+  {
+    "year": 2019,
+    "title": "Typescript",
+    "url": "https://en.wikipedia.org/wiki/TypeScript",
+    "thumbnailImage": "logo-TypeScript.svg",
+    "id": "typescript"
   }
 ]
