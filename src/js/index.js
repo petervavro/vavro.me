@@ -1,6 +1,7 @@
 import 'bootstrap';
 import 'SCSS/main.scss';
 import Typed from 'typed.js';
+var WebFont = require('webfontloader');
 
 // DEFINE GLOBAL VARS
 let colorsCombinations = ['#81c6dd', '#e9b64d', '#90ca77'];
@@ -10,6 +11,14 @@ let paper;
 let hits = 0; // Points counter
 let circles = [];
 let paperVisible = false;
+
+// Eliminate render-blocking resources
+// https://www.keycdn.com/blog/web-font-performance
+WebFont.load({
+  google: {
+    families: ['Ubuntu'],
+  },
+});
 
 // Returns a random integer between min and max , Using Math.round() will give you a non-uniform distribution!
 // http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range

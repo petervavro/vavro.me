@@ -22,7 +22,8 @@
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
     "raphael": "^2.3.0",
-    "typed.js": "^2.0.11"
+    "typed.js": "^2.0.11",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

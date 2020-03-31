@@ -55,20 +55,20 @@ $jumbotron-bg: $colorA;
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/nav";
 @import "~bootstrap/scss/navbar";
 @import "~bootstrap/scss/jumbotron";
 @import "~bootstrap/scss/modal";
-@import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/transitions";
 @import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/card";
-@import "~bootstrap/scss/breadcrumb";
-@import "~bootstrap/scss/pagination";
 @import "~bootstrap/scss/print";
-@import "~bootstrap/scss/alert";
+// @import "~bootstrap/scss/forms";
+// @import "~bootstrap/scss/carousel";
+// @import "~bootstrap/scss/card";
+// @import "~bootstrap/scss/breadcrumb";
+// @import "~bootstrap/scss/pagination";
+// @import "~bootstrap/scss/alert";
 // @import "~bootstrap/scss/dropdown";
 // @import "~bootstrap/scss/images";
 // @import "~bootstrap/scss/code";
@@ -85,8 +85,6 @@ $jumbotron-bg: $colorA;
 // @import "~bootstrap/scss/tooltip";
 // @import "~bootstrap/scss/popover";
 // @import "~bootstrap/scss/spinners";
-
-// // @include keyframes(~'fadeInTop, 0%{ border-width:0px; height:0px; opacity: 0; } 100%{ height: #{rsize}; opacity: 1; border-width:6px; }');
 
 // https://gist.github.com/mirisuzanne/1607696
 // keyframes mixin
