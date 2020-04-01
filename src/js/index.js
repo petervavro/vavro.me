@@ -93,7 +93,7 @@ var steps = [
     new Typed('.story-part-2 .story-text', {
       stringsElement: '.story-part-2 .typed-strings',
       // loop: true,
-      typeSpeed: 40,
+      typeSpeed: 60,
       fadeOut: true,
       fadeOutDelay: 500,
       onComplete: () => {
@@ -207,6 +207,7 @@ const renderCircle = function() {
   circles.push(circle);
 };
 
+// On resize
 window.addEventListener('resize', function() {
   // Get window width
   gWidth = $(window).width();
@@ -214,10 +215,10 @@ window.addEventListener('resize', function() {
   // Get window height
   gHeight = $(window).height();
 
-  if (paper !== undefined) {
-    // Adjust paper size
-    paper.setSize(gWidth, gHeight);
-  }
+  if (paper !== undefined) paper.setSize(gWidth, gHeight); // Adjust paper size
+
+  // Adjust "intro" section to height of browser viewport
+  $('#intro').height(gHeight);
 });
 
 // On scroll
