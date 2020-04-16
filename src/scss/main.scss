@@ -540,6 +540,12 @@ button {
             style: solid;
             color: $colorA;
           }
+
+          overflow: hidden;
+
+          img {
+            width: 70%;
+          }
         }
 
         h4 {

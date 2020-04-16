@@ -17,7 +17,7 @@ const IS_DEV = process.env.NODE_ENV === 'development';
 const config = {
   mode: IS_DEV ? 'development' : 'production',
   devtool: IS_DEV ? 'eval' : 'inline-source-map',
-  entry: ['./src/js/index.js'],
+  entry: './src/js/index.js',
   output: {
     filename: 'js/[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
@@ -170,10 +170,10 @@ const config = {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test: /[\\/]node_modules[\\/]/, // test: /node_modules/,
+          test: /[\\/]node_modules[\\/]/,
           chunks: 'initial',
           name: 'vendor',
-          priority: 10,
+          priority: -10,
           enforce: true,
         },
       },

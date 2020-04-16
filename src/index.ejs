@@ -66,65 +66,6 @@
 
 <body>
   <% var mailto = '&#112;&#101;&#116;&#101;&#114;&#064;&#118;&#097;&#118;&#114;&#111;&#046;&#109;&#101;?&subject=Hi&body=Hi+Peter%2C%0D%0A%0D%0A'; %>
-  <!-- Modal -->
-  <div class="modal fade" id="projectsModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header-custom text-right py-3">
-          <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close">
-            <span class="sr-only">(Close)</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="container-fluid">
-            <div class="row">
-            </div>
-            <% projects.forEach(function(project){ %>
-            <div class="row job <%= project.id %> d-none bg-C shadow text-dark py-5 p-3">
-              <div class="col-lg-8">
-                <h3 class="d-inline-block bg-dark p-3 mb-3"><%= project.title %></h3><!-- p-1 px-3 block-inline -->
-                <p class="desc"><%= project.description %></p>
-                <% if (false) { %>
-                <div class="platforms">
-                  <% if (project.platforms.split(",").includes("web") === true) { %><span title="Web app"
-                    class="web d-inline-block"></span><% } %>
-                  <% if (project.platforms.split(",").includes("mobile") === true) { %><span title="Mobile app"
-                    class="mobile d-inline-block"></span><% } %>
-                </div>
-                <% } %>
-                <hr />
-                <h4>..what I did</h4>
-                <p class="job-desc"><%= project.jobDescription %></p>
-                <small class="year"><%= project.year %></small>
-                <hr />
-                <div class="used-technologies d-flex flex-wrap justify-content-center py-3 text-center animated">
-                  <% project.technologies.split(",").forEach(function(projectTechnology){
-                        technologies.forEach(function(technology){ 
-                          if (technology.id === projectTechnology) { _%>
-                  <div
-                    class="technology <%= technology.id %> d-flex flex-column justify-content-center text-center animated m-3"
-                    title="<%= technology.title %>">
-                    <span class="bg-logo circle-sm d-flex justify-content-center align-items-center shadow"
-                      style="background-image: url(images/<%= technology.thumbnailImage %>);"></span>
-                  </div>
-                  <% }
-                        })
-                      }) %>
-                </div>
-              </div>
-              <div class="col-lg-4 pt-5 p-lg-0">
-                <<% if (project.url !== "") { %>a<% } else{ %>span<% } %> target="_blank" href="<%= project.url %>"
-                  title="<%= project.description %>" class="bg-thumbnail circle-lg d-flex justify-content-center align-items-center mx-auto shadow">
-                  <img src="images/<%= project.backgroundImage %>" alt="Project <%= project.backgroundImage %> logo." class="">
-                </<% if (project.url !== "") { %>a<% } else{ %>span<% } %>>
-              </div>
-            </div>
-            <% }) %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <header>
     <nav class="navbar fixed-top navbar-expand">
       <a class="navbar-brand bg-dark px-3 animated fadeIn" href="#">Peter Vavro</a>
@@ -132,18 +73,18 @@
         <ul class="navbar-nav ml-auto p-1">
           <li class="nav-item">
             <a class="nav-link bg-logo email" href="mailto:<%= mailto %>">
-              <span class="sr-only">Email</span>
+              <span class="sr-only">My Email</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link bg-logo github" href="https://github.com/petervavro" target="_blank">
-              <span class="sr-only">GitHub</span>
+              <span class="sr-only">My GitHub</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link bg-logo linkedin" href="https://www.linkedin.com/in/peter-vavro-44604163"
               target="_blank">
-              <span class="sr-only">Linkedin</span>
+              <span class="sr-only">My Linkedin</span>
             </a>
           </li>
         </ul>
@@ -290,6 +231,65 @@
         </div>
       </div>
     </article>
+    <!-- Modal -->
+    <div class="modal fade" id="projectsModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header-custom text-right py-3">
+            <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close">
+              <span class="sr-only">(Close)</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+              </div>
+              <% projects.forEach(function(project){ %>
+              <div class="row job <%= project.id %> d-none bg-C shadow text-dark py-5 p-3">
+                <div class="col-lg-8">
+                  <h3 class="d-inline-block bg-dark p-3 mb-3"><%= project.title %></h3><!-- p-1 px-3 block-inline -->
+                  <p class="desc"><%= project.description %></p>
+                  <% if (false) { %>
+                  <div class="platforms">
+                    <% if (project.platforms.split(",").includes("web") === true) { %><span title="Web app"
+                      class="web d-inline-block"></span><% } %>
+                    <% if (project.platforms.split(",").includes("mobile") === true) { %><span title="Mobile app"
+                      class="mobile d-inline-block"></span><% } %>
+                  </div>
+                  <% } %>
+                  <hr />
+                  <h4>..what I did</h4>
+                  <p class="job-desc"><%= project.jobDescription %></p>
+                  <small class="year"><%= project.year %></small>
+                  <hr />
+                  <div class="used-technologies d-flex flex-wrap justify-content-center py-3 text-center animated">
+                    <% project.technologies.split(",").forEach(function(projectTechnology){
+                          technologies.forEach(function(technology){ 
+                            if (technology.id === projectTechnology) { _%>
+                    <div
+                      class="technology <%= technology.id %> d-flex flex-column justify-content-center text-center animated m-3"
+                      title="<%= technology.title %>">
+                      <span class="bg-logo circle-sm d-flex justify-content-center align-items-center shadow"
+                        style="background-image: url(images/<%= technology.thumbnailImage %>);"></span>
+                    </div>
+                    <% }
+                          })
+                        }) %>
+                  </div>
+                </div>
+                <div class="col-lg-4 pt-5 p-lg-0">
+                  <<% if (project.url !== "") { %>a<% } else{ %>span<% } %> target="_blank" href="<%= project.url %>"
+                    title="<%= project.description %>" class="bg-thumbnail circle-lg d-flex justify-content-center align-items-center mx-auto shadow">
+                    <img src="images/<%= project.backgroundImage %>" alt="Project <%= project.backgroundImage %> logo." class="">
+                  </<% if (project.url !== "") { %>a<% } else{ %>span<% } %>>
+                </div>
+              </div>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="container pb-5">
     <div class="row">
