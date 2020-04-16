@@ -1,13 +1,13 @@
-// @import "~animate.css/animate.css"; // For development purposes 
+// @import "~animate.css/animate.css"; // For development purposes
 @import "~animate.css/source/_base.css";
 @import "~animate.css/source/attention_seekers/bounce.css";
 @import "~animate.css/source/attention_seekers/pulse.css";
 @import "~animate.css/source/fading_entrances/fadeIn.css";
 @import "~animate.css/source/zooming_entrances/zoomInRight.css";
 
-$colorA: rgba(#81c6dd,1);
-$colorB: rgba(#e9b64d,1);
-$colorC: rgba(#90ca77,1);
+$colorA: rgba(#81c6dd, 1);
+$colorB: rgba(#e9b64d, 1);
+$colorC: rgba(#90ca77, 1);
 $colorBase: #343a40;
 
 $theme-colors: (
@@ -21,8 +21,7 @@ $theme-colors: (
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-
-$font-family-base: 'Ubuntu', sans-serif;
+$font-family-base: "Ubuntu", sans-serif;
 
 $font-size-base: 1.1rem;
 $enable-responsive-font-sizes: true;
@@ -36,11 +35,11 @@ $enable-rounded: false;
 $border-radius: 0;
 
 $modal-content-bg: none;
-$modal-backdrop-bg: rgba( $colorB, 0.98 );
+$modal-backdrop-bg: rgba($colorB, 0.98);
 $modal-backdrop-opacity: 1;
 $modal-content-border-width: 0;
 
-$jumbotron-padding:$spacer * 4;
+$jumbotron-padding: $spacer * 4;
 // $jumbotron-color: $text-color;
 $jumbotron-bg: $colorA;
 
@@ -90,320 +89,325 @@ $jumbotron-bg: $colorA;
 // keyframes mixin
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
-    @content; 
+    @content;
   }
+
   @-moz-keyframes #{$name} {
     @content;
   }
+
   @-ms-keyframes #{$name} {
     @content;
   }
+
   @keyframes #{$name} {
     @content;
-  } 
+  }
 }
 
 // https://brandonbrule.github.io/scss-animation-keyframe-mixin/
-@mixin animation (
-    $animation,
-    $duration, 
-    $delay:0,
-    $iterationCount: loop,
-    $timingFunction: ease,
-    $direction: forward, 
-    $fillmode: fowards
+@mixin animation(
+  $animation,
+  $duration,
+  $delay: 0,
+  $iterationCount: loop,
+  $timingFunction: ease,
+  $direction: forward,
+  $fillmode: fowards
 ) {
-    -webkit-animation-delay: $delay;
-    -webkit-animation-duration: $duration;
-    -webkit-animation-name: $animation;
-    -webkit-animation-fill-mode: $fillmode;
-    -webkit-animation-direction: $direction;
-    -webkit-animation-timing-function: $timingFunction;
-    -webkit-animation-iteration-count: $iterationCount;
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: $fillmode;
+  -webkit-animation-direction: $direction;
+  -webkit-animation-timing-function: $timingFunction;
+  -webkit-animation-iteration-count: $iterationCount;
 
-    -moz-animation-delay: $delay;
-    -moz-animation-duration: $duration;
-    -moz-animation-name: $animation;
-    -moz-animation-fill-mode: $fillmode;
-    -moz-animation-direction: $direction;
-    -moz-animation-timing-function: $timingFunction;
-    -moz-animation-iteration-count: $iterationCount;
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: $fillmode;
+  -moz-animation-direction: $direction;
+  -moz-animation-timing-function: $timingFunction;
+  -moz-animation-iteration-count: $iterationCount;
 
-    animation-delay: $delay;
-    animation-duration: $duration;
-    animation-name: $animation;
-    animation-fill-mode: $fillmode;
-    animation-direction: $direction;
-    animation-timing-function: $timingFunction;
-    animation-iteration-count: $iterationCount;
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: $fillmode;
+  animation-direction: $direction;
+  animation-timing-function: $timingFunction;
+  animation-iteration-count: $iterationCount;
 }
 
 @mixin circle-with-image($url) {
+  @extend .circle-sm;
 
-    @extend .circle-sm;
+  background-image: url($url);
 
+  a {
     background-image: url($url);
-
-    a {
-        background-image: url($url);
-    }
+  }
 }
 
 @include keyframes(bounceScroll) {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
 
-    0%,
-    100%,
-    20%,
-    50%,
-    80% {
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-    }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 
-    40% {
-        -webkit-transform: translateY(-10px);
-        -ms-transform: translateY(-10px);
-        transform: translateY(-10px);
-    }
-
-    60% {
-        -webkit-transform: translateY(-5px);
-        -ms-transform: translateY(-5px);
-        transform: translateY(-5px);
-    }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
 }
 
-
 @include keyframes(spin) {
-
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform:rotate(360deg);
-    }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @include keyframes(spinToZero) {
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
 
-    100% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
+// https://stackoverflow.com/questions/7539125/can-i-target-all-h-tags-with-a-single-selector
+@mixin headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @content;
+  }
+}
+
+// https://css-tricks.com/snippets/sass/sass-things-links/
+@mixin link-colors(
+  $link,
+  $visit: lighten($link, 10%),
+  $hover: darken($link, 10%),
+  $active: lighten($link, 30%)
+) {
+  color: $link;
+  &:visited {
+    color: $visit;
+  }
+  &:hover {
+    color: $hover;
+  }
+  &:active {
+    color: $active;
+  }
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 section {
-	outline: 0;
+  outline: 0;
 }
 
 h1,
 h2,
 h3 {
-
-    &.bg-dark {
-        color: $colorC;
-    }
-
+  &.bg-dark {
+    color: $colorC;
+  }
 }
 
 button {
-
-    &:focus {
-      outline: none;
-    }
+  &:focus {
+    outline: none;
+  }
 }
 
 .bg-A {
-    background-color: $colorA;
+  background-color: $colorA;
+
+  @include headings {
+    color: $colorBase;
+  }
+  .btn-link {
+    @include link-colors($colorBase);
+  }
 }
 
 .bg-B {
-    background-color: $colorB;
+  background-color: $colorB;
 }
 
 .bg-C {
-    background-color: $colorC;
+  background-color: $colorC;
 }
 
 .text-color-A {
-    color: $colorA;
+  color: $colorA !important;
 }
 
 .text-color-B {
-    color: $colorB;
+  color: $colorB !important;
 }
 
 .text-color-C {
-    color: $colorC;
+  color: $colorC !important;
 }
 
 .btn-close {
-    background-image: url(../images/icon-close-white.svg);
-    width: $spacer * 2;
-    height: $spacer * 2;
-    background-size: 80%;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url(../images/icon-close-white.svg);
+  width: $spacer * 2;
+  height: $spacer * 2;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 
-    &:before,
-    &:after {
-        content: '';
-        display: table;
-    }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
 }
 
 .points-counter {
-    position:absolute;
-    color: $text-color;     
-    font-size: $font-size-lg;
+  position: absolute;
+  color: $text-color;
+  font-size: $font-size-lg;
 }
 
 .story-text-wrapper {
-
-    .story-text {
-    	color: $text-color;
-    }
+  .story-text {
+    color: $text-color;
+  }
 }
 
 .scroll-down {
-	display:none;
-	opacity:0;
+  display: none;
+  opacity: 0;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  margin-left: -16px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #fff;
+  background-size: 14px auto;
+  z-index: 1001;
+  border-radius: 50%;
+
+  -webkit-animation: bounceScroll 2s infinite 2s;
+  animation: bounceScroll 2s infinite 2s;
+
+  &:before {
+    display: block;
     position: absolute;
-    bottom: 10%;
-    left: 50%;
-    margin-left: -16px;
-    width: 32px;
-    height: 32px;
-    border: 1px solid #FFF;
-    background-size: 14px auto;
-    z-index: 1001;
-    border-radius: 50%;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid white;
+    border-width: 0px 0 2px 2px;
+  }
 
-    -webkit-animation: bounceScroll 2s infinite 2s;
-    animation: bounceScroll 2s infinite 2s;
-
-    &:before {
-        display: block;
-        position: absolute;
-        top: calc(50% - 8px);
-        left: calc(50% - 6px);
-        transform: rotate(-45deg);
-        width: 12px;
-        height: 12px;
-        content: "";
-        border: 2px solid white;
-        border-width: 0px 0 2px 2px;
-    }
-
-	&.withTransition {
-
-		-webkit-transition: all .2s ease-in;
-		transition: all .2s ease-in;
-
-	}
-
+  &.withTransition {
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
 }
 
+*[class*="circle-"] {
+  background-color: $white;
+  border-color: $colorA;
 
-*[class*='circle-'] {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 
-    background-color: $white;
-    border-color: $colorA;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-
-    &:hover {
-
-        -webkit-transform: rotate(0deg);
-        transform:rotate(0deg);
-
-    }
-
+  &:hover {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
 }
 
 .circle-sm {
+  width: $spacer * 3.4;
+  height: $spacer * 3.4;
 
-    width: $spacer * 3.4;
-    height: $spacer * 3.4;
+  @include media-breakpoint-up(md) {
+    width: $spacer * 4;
+    height: $spacer * 4;
+  }
 
-    @include media-breakpoint-up(md) {
-
-        width: $spacer * 4;
-        height: $spacer * 4;
-        
-    }
-
-    @include media-breakpoint-up(xl) {
-
-        width: $spacer * 5;
-        height: $spacer * 5;
-        
-    }
-
+  @include media-breakpoint-up(xl) {
+    width: $spacer * 5;
+    height: $spacer * 5;
+  }
 }
 
 .circle-md {
+  width: $spacer * 5;
+  height: $spacer * 5;
 
-    width: $spacer * 5;
-    height: $spacer * 5;
-
-    @include media-breakpoint-up(xl) {
-
-        width: $spacer * 7;
-        height: $spacer * 7;
-        
-    }
-
+  @include media-breakpoint-up(xl) {
+    width: $spacer * 7;
+    height: $spacer * 7;
+  }
 }
 
 .circle-lg {
-
-    width: $spacer * 12;
-    height: $spacer * 12;
-
+  width: $spacer * 12;
+  height: $spacer * 12;
 }
 
 .item {
+  transition: transform 1s, border-radius 1s, opacity 1s;
 
-    transition: transform 1s, border-radius 1s, opacity 1s;
-
-    &:hover {
-
-        opacity: 1;
-        border-radius: 0;
-
-    }
+  &:hover {
+    opacity: 1;
+    border-radius: 0;
+  }
 }
 
 .hover-animation-type-1 {
-
-    &:hover {
-        transform: rotate(360deg);
-    }
-
+  &:hover {
+    transform: rotate(360deg);
+  }
 }
 
 .spin {
-
-    opacity: 1;
-    border-radius: 0;
-    transform: rotate(360deg);
-
+  opacity: 1;
+  border-radius: 0;
+  transform: rotate(360deg);
 }
 
 .spinToStop {
@@ -412,436 +416,304 @@ button {
 
 .bg-logo,
 .bg-thumbnail {
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: 60%;
+  }
 
-	background: {
-        position: center;
-        repeat: no-repeat;
-        size: 60%;
-    }
+  opacity: 0.8;
 
-    opacity: 0.8;
-
-    &:hover {
-        opacity: 1;
-    }
-
+  &:hover {
+    opacity: 1;
+  }
 }
 
 // Icons
 
 .email {
-
-    &.bg-logo {
-
-        background-image: url(../images/icon-email.svg);
-
-    }
-
+  &.bg-logo {
+    background-image: url(../images/icon-email.svg);
+  }
 }
 
 .github {
-
-    &.bg-logo {
-
-        background-image: url(../images/logo-GitHub-Light.png);
-
-    }
-
+  &.bg-logo {
+    background-image: url(../images/logo-GitHub-Light.png);
+  }
 }
 
 .linkedin {
-
-    &.bg-logo {
-
-        background-image: url(../images/logo-linkedin.svg);
-
-    }
-
+  &.bg-logo {
+    background-image: url(../images/logo-linkedin.svg);
+  }
 }
 
 // Technologies
 .html {
-
-    .bg-logo {
-
-        background: {
-            size: 40%;
-        }
-
+  .bg-logo {
+    background: {
+      size: 40%;
     }
-
+  }
 }
 
 .css {
-
-    .bg-logo {
-
-        background: {
-            size: 40%;
-        }
-
+  .bg-logo {
+    background: {
+      size: 40%;
     }
-
+  }
 }
 
 .postgresql {
-
-    .bg-logo {
-
-        background: {
-            size: 40%;
-        }
-
+  .bg-logo {
+    background: {
+      size: 40%;
     }
-
+  }
 }
 
 .javascript {
-
-    .bg-logo {
-
-        background: {
-            size: 40%;
-        }
-
+  .bg-logo {
+    background: {
+      size: 40%;
     }
-
+  }
 }
 
 .codeigniter {
-
-    .bg-logo {
-
-        background: {
-            size: 40%;
-        }
-
+  .bg-logo {
+    background: {
+      size: 40%;
     }
-
+  }
 }
 
 .drupal {
-
-    .bg-logo {
-
-        background: {
-            size: 40%;
-        }
-
+  .bg-logo {
+    background: {
+      size: 40%;
     }
-
+  }
 }
 
 .react {
-
-    .bg-logo {
-
-        background: {
-            size: 40%;
-        }
-
+  .bg-logo {
+    background: {
+      size: 40%;
     }
-
+  }
 }
 
 .react-native {
-
-    .bg-logo {
-
-        background: {
-            size: 40%;
-        }
-
+  .bg-logo {
+    background: {
+      size: 40%;
     }
-
+  }
 }
 
 .typescript {
-
-    .bg-logo {
-
-        background: {
-            size: 40%;
-        }
-
+  .bg-logo {
+    background: {
+      size: 40%;
     }
-
+  }
 }
 
 // Projects
 .terminal {
-
-    .bg-thumbnail,
-    &.bg-thumbnail {
-        background-size: 160%;
-    }
-
+  .bg-thumbnail,
+  &.bg-thumbnail {
+    background-size: 160%;
+  }
 }
 
 #projectsModal {
+  .modal-content {
+    .modal-body {
+      .job {
+        .circle-lg {
+          border: {
+            width: $border-width * 3;
+            style: solid;
+            color: $colorA;
+          }
+        }
 
-    .modal-content {
+        h4 {
+          font-size: $font-size-base * 0.9;
+          color: lighten($colorA, 20);
+        }
 
-        .modal-body {
-
-            .job {
-
-                .circle-lg {
-
-                    border: {
-                        width: $border-width *3;
-                        style: solid;
-                        color: $colorA;
-                    }
-
-                }
-
-                h4 {
-                    font-size: $font-size-base * .9;
-                    color: lighten($colorA, 20);
-                }
-
-                .platforms {
-
-                    .web,
-                    .mobile {
-
-                        background: {
-                            position: center;
-                            repeat: no-repeat;
-                            size: 60%;
-                        }
-
-                        width: $spacer * 4;
-                        height: $spacer * 4;
-                    }
-
-                    .web {
-                        background-image: url(../images/icon-platform-web.svg);
-                    }
-
-                    .mobile {
-                        background-image: url(../images/icon-platform-mobile.svg);
-                    }
-
-                }
-
-                .used-technologies {
-
-                    .bg-thumbnail {
-                        opacity: 0.84;
-                    }
-                }
-
-                > div {
-
-                    &:first-child {
-
-                        border: {
-                            style: dotted;
-                            color: $dark;
-                            width: 0 0 $border-width 0;
-                        };
-
-                        @include media-breakpoint-up(lg) {
-
-                            border-width: 0 $border-width 0 0;
-                            
-                        }
-
-
-
-                    }
-
-                }
-
+        .platforms {
+          .web,
+          .mobile {
+            background: {
+              position: center;
+              repeat: no-repeat;
+              size: 60%;
             }
 
+            width: $spacer * 4;
+            height: $spacer * 4;
+          }
+
+          .web {
+            background-image: url(../images/icon-platform-web.svg);
+          }
+
+          .mobile {
+            background-image: url(../images/icon-platform-mobile.svg);
+          }
         }
+
+        .used-technologies {
+          .bg-thumbnail {
+            opacity: 0.84;
+          }
+        }
+
+        > div {
+          &:first-child {
+            border: {
+              style: dotted;
+              color: $dark;
+              width: 0 0 $border-width 0;
+            }
+
+            @include media-breakpoint-up(lg) {
+              border-width: 0 $border-width 0 0;
+            }
+          }
+        }
+      }
     }
-
-
+  }
 }
 
-
 header {
+  .navbar {
+    .navbar-nav {
+      > li + li {
+        margin-left: $spacer * 1;
+      }
 
-    .navbar {
+      .nav-item {
+        .nav-link {
+          opacity: 0.4;
 
-        .navbar-nav {
+          &:hover {
+            opacity: 0.9;
+          }
 
-            > li + li {
-                margin-left: $spacer * 1;
-            }
-
-            .nav-item {
-
-                .nav-link {
-
-                    opacity: 0.4;
-
-                    &:hover {
-                        opacity: 0.9;
-                    }
-
-                    &.bg-logo {
-                        width: $spacer * 2.2;
-                        height: $spacer * 2.2;
-                        background-size: 80%;
-
-                    }
-
-                }
-
-            }
-
-            @include media-breakpoint-up(md) {
-
-                
-            }
+          &.bg-logo {
+            width: $spacer * 2.2;
+            height: $spacer * 2.2;
+            background-size: 80%;
+          }
         }
+      }
 
+      @include media-breakpoint-up(md) {
+      }
     }
-
+  }
 }
 
 #intro {
+  height: 800px;
 
-    height: 800px;
+  background-color: transparent;
 
-    background-color: transparent;
+  z-index: 1;
 
-    z-index: 1;
-
-    svg {
-
-        position: absolute;
-
-    }
-
+  svg {
+    position: absolute;
+  }
 }
 
-
 #about {
-
-    article {
-
-        &.sticky {
-            top: $spacer*3;
-        }
+  article {
+    &.sticky {
+      top: $spacer * 3;
     }
-
+  }
 }
 
 .technologies {
+  overflow-x: hidden;
 
-    overflow-x: hidden;
+  > .item + .item {
+    padding-top: $spacer;
+    margin-top: $spacer;
+  }
 
-    h2 {
+  .item {
+    .tl-date {
+      width: $spacer * 5;
+
+      padding-bottom: $spacer;
+      padding-left: $spacer;
+      padding-right: $spacer;
+
+      @include media-breakpoint-up(sm) {
+        border-right: {
+          style: dotted;
+          color: $text-color;
+          width: $border-width;
+        }
+      }
+    }
+
+    .tl-desc {
+      border-top: {
+        style: dotted;
         color: $text-color;
-    }
+        width: $border-width;
+      }
 
-    > .item + .item {
+      .technology {
+        padding: $spacer;
 
-        padding-top: $spacer;
-        margin-top: $spacer;
-
-    }
-
-	.item {
-
-		color: $text-color;
-
-		.tl-date {
-
-            width: $spacer * 5;
-
-            padding-bottom: $spacer;
-			padding-left: $spacer;
-			padding-right: $spacer;
-
-            @include media-breakpoint-up(sm) {
-
-                border-right: {
-                    style: dotted;
-                    color : $text-color;
-                    width: $border-width;
-                };
-
-            }
-
-		}
-
-		.tl-desc {
-
-            border-top: {
-                style: dotted;
-                color : $text-color;
-                width: $border-width;
-            };
-
-			.technology {
-
-				padding: $spacer;
-
-				> span {
-					display: block;
-				}
-
-				.technology-label {
-					color: $text-color;
-					font-size: $font-size-base * .7;
-					padding-bottom: $spacer;
-				}
-
-			}
-
-            @include media-breakpoint-up(sm) {
-
-                border-top: none;
-
-            }
-
-		}
-
-        @include media-breakpoint-up(md) {
-
-
+        > span {
+          display: block;
         }
 
-	}
+        .technology-label {
+          font-size: $font-size-base * 0.7;
+          padding-bottom: $spacer;
+        }
+      }
+
+      @include media-breakpoint-up(sm) {
+        border-top: none;
+      }
+    }
+  }
 }
 
 #projects {
-
-    button {
-
-        &.circle-md {
-            border: 4px solid $colorA;
-        }
-
+  button {
+    &.circle-md {
+      border: 4px solid $colorA;
     }
-
-}
-
-#code {
-
+  }
 }
 
 footer {
+  .email-me {
+    background-color: transparent;
+    color: $colorA;
 
-    .email-me {
-        background-color: transparent;
-        color: $colorA;
-
-        &:hover {
-            background-color: $colorA;
-            border-color: $colorA;
-        }
+    &:hover {
+      background-color: $colorA;
+      border-color: $colorA;
     }
+  }
 
-    small {
-        color: $colorA;       
-    }
+  small {
+    color: $colorA;
+  }
 }
-
