@@ -125,6 +125,31 @@ $(function() {
   // Adjust "intro" section to height of browser viewport
   $('#intro').height($(window).height());
 
+  // Add start button functionality
+  $('.story-part-1 .btn-start').click(() => {
+    // Toggle is started signal
+    started = true;
+
+    // Hide text part one
+    $('.story-part-1').addClass('d-none');
+
+    // Display text part two
+    $('.story-part-2').removeClass('d-none');
+
+    // Start typed text
+    new Typed('.story-part-2 .story-text', {
+      stringsElement: '.story-part-2 .typed-strings',
+      typeSpeed: 40,
+      fadeOut: true,
+      fadeOutDelay: 500,
+      smartBackspace: true,
+      onComplete: () => {
+        // Start game
+        game.startGame();
+      },
+    });
+  });
+
   // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
   // Add smooth scrolling to all links
   $('a').on('click', function(/*event*/) {
@@ -144,30 +169,18 @@ $(function() {
   });
 });
 
-// Finish 1st step
-$('.story-part-1 .btn-start').click(() => {
-  started = true;
+$(window).on('load', function() {
+  // Disable scrolling to get people to play the game
 
-  // Hide text part one
-  $('.story-part-1').addClass('d-none');
-
-  // Display text part two
-  $('.story-part-2').removeClass('d-none');
-
-  new Typed('.story-part-2 .story-text', {
-    stringsElement: '.story-part-2 .typed-strings',
-    typeSpeed: 40,
-    fadeOut: true,
-    fadeOutDelay: 500,
-    smartBackspace: true,
-    onComplete: () => {
-      // Start game
-      game.startGame();
-    },
-  });
+  // BUG with $(window).scrollTop() on Safari
+  // https://github.com/nuxt/nuxt.js/issues/2512
+  if (
+    Math.max(
+      window.pageYOffset,
+      document.documentElement.scrollTop,
+      document.body.scrollTop
+    ) === 0
+  ) {
+    $('body').addClass('overflow-hidden');
+  }
 });
-
-// Disable scrolling to get people to play the game
-if ($(window).scrollTop() === 0) {
-  $('body').addClass('overflow-hidden');
-}
