@@ -126,7 +126,9 @@ $(function() {
   $('#intro').height($(window).height());
 
   // Add start button functionality
-  $('.story-part-1 .btn-start').click(() => {
+  $('.story-part-1 .btn-start').click(function(event) {
+    event.preventDefault();
+
     // Toggle is started signal
     started = true;
 
@@ -162,7 +164,7 @@ $(function() {
     // Hide all
     $('#projectsModal .job').addClass('d-none');
 
-    // Unhide desired only
+    // Show desired only
     $(`#projectsModal .job.${e.relatedTarget.getAttribute('data-selector')}`)
       .removeClass('d-none')
       .removeClass('d-flex');
@@ -183,4 +185,9 @@ $(window).on('load', function() {
   ) {
     $('body').addClass('overflow-hidden');
   }
+
+  // Remove overlap
+  $('#overlap').fadeTo('slow', 0, function() {
+    $(this).hide();
+  });
 });
