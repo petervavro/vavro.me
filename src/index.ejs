@@ -63,32 +63,56 @@
   <meta property="twitter:image" content="https://www.vavro.me/logo-vavro_me.png">
 
 </head>
-
-<body>
+<body data-spy="scroll" data-target="#navbar-menu" data-offset="0">
   <% var mailto = '&#112;&#101;&#116;&#101;&#114;&#064;&#118;&#097;&#118;&#114;&#111;&#046;&#109;&#101;?&subject=Hi&body=Hi+Peter%2C%0D%0A%0D%0A'; %>
   <header>
-    <nav class="navbar fixed-top navbar-expand">
+    <nav id="navbar-menu" class="navbar navbar-dark fixed-top navbar-expand">
       <a class="navbar-brand bg-dark px-3 animated fadeIn" href="#">Peter Vavro</a>
-      <div class="collapse navbar-collapse animated fadeIn" id="navbarTogglerDemo03">
-        <ul class="navbar-nav ml-auto p-1">
-          <li class="nav-item">
-            <a class="nav-link bg-logo email" href="mailto:<%= mailto %>">
-              <span class="sr-only">My Email</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bg-logo github" href="https://github.com/petervavro" target="_blank">
-              <span class="sr-only">My GitHub</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link bg-logo linkedin" href="https://www.linkedin.com/in/peter-vavro-44604163"
-              target="_blank">
-              <span class="sr-only">My Linkedin</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto bg-dark px-3 animated fadeIn">
+        <li class="nav-item d-none d-sm-block">
+          <a class="nav-link" href="#intro" title="Intro">
+            Intro
+          </a>
+        </li>
+        <li class="nav-item d-none d-sm-block">
+          <a class="nav-link" href="#about" title="About me">
+            About me
+          </a>
+        </li>
+        <li class="nav-item d-none d-sm-block">
+          <a class="nav-link" href="#code" title="See my code">
+            Code
+          </a>
+        </li>
+        <li class="nav-item d-none d-sm-block">
+          <a class="nav-link" href="#projects" title="See my code">
+            Projects
+          </a>
+        </li>
+        <li class="nav-item d-flex align-items-center">
+          <a class="nav-link bg-logo email" href="mailto:<%= mailto %>" title="My Email">
+            <span class="sr-only">My Email</span>
+          </a>
+        </li>
+        <li class="nav-item d-flex align-items-center">
+          <a class="nav-link bg-logo github" href="https://github.com/petervavro" target="_blank" title="My Github">
+            <span class="sr-only">My GitHub</span>
+          </a>
+        </li>
+        <li class="nav-item d-flex align-items-center">
+          <a class="nav-link bg-logo linkedin" href="https://www.linkedin.com/in/peter-vavro-44604163" target="_blank"
+            title="My Linkedin">
+            <span class="sr-only">My Linkedin</span>
+          </a>
+        </li>
+      </ul>
+    </div>
     </nav>
   </header>
   <main id="main">
@@ -99,9 +123,9 @@
             <div class="h-100 d-flex justify-content-center align-items-center">
               <div class="p-5">
                 <div class="story-part-1">
-                  <p class="text-white">Welcome.</p>
-                  <button type="button" class="btn btn-outline-primary btn-start animated pulse infinite"
-                    aria-label="Start">Let's start</button>
+                  <p class="text-color-B">Welcome.</p>
+                  <button type="button" class="btn btn-outline-primary btn-start" aria-label="Start">Let's
+                    start</button>
                 </div>
                 <div class="story-part-2 text-center d-none">
                   <div class="typed-strings d-none">
@@ -113,7 +137,7 @@
                       Go.
                     </p>
                   </div>
-                  <p class="story-text-wrapper text-white">
+                  <p class="story-text-wrapper text-color-B">
                     <span class="story-text"></span>
                   </p>
                 </div>
@@ -160,14 +184,14 @@
                 <div class="tl-desc d-flex">
                   <% technologies.forEach(function(technology){
                     if (technology.year === year) { %>
-                      <a class="technology <%= technology.id %> d-flex flex-column justify-content-center text-center animated btn btn-link"
-                        target="_blank" href="<%= technology.url %>">
-                        <span class="technology-label"><%= technology.title %></span>
-                        <span
-                          class="bg-logo <%= technology.id %> circle-sm d-flex justify-content-center align-items-center shadow"
-                          style="background-image: url(images/<%= technology.thumbnailImage %>);"></span>
-                      </a>
-                    <% }
+                  <a class="technology <%= technology.id %> d-flex flex-column justify-content-center text-center animated btn btn-link"
+                    target="_blank" href="<%= technology.url %>">
+                    <span class="technology-label"><%= technology.title %></span>
+                    <span
+                      class="bg-logo <%= technology.id %> circle-sm d-flex justify-content-center align-items-center shadow"
+                      style="background-image: url(images/<%= technology.thumbnailImage %>);"></span>
+                  </a>
+                  <% }
                   }) %>
                 </div>
               </div>
@@ -175,8 +199,8 @@
             </section>
           </div>
           <div class="row">
-            <div id="code" class="offset-lg-2 col-lg-10 py-5 p-lg-5">
-              <section class="code bg-C p-5 shadow animated">
+            <div class="offset-lg-2 col-lg-10 py-5 p-lg-5">
+              <section id="code" class="code bg-C p-5 shadow animated">
                 <h2 class="d-inline-block bg-dark text-color-A p-1 px-3">See my code</h2>
                 <div class="pt-3">
                   <% codes.forEach(function(code, i){ %>
@@ -210,17 +234,17 @@
           </div>
         </div>
       </div>
-      <div id="projects" class="bg-C">
+      <div class="bg-C">
         <div class="container">
           <div class="row">
             <div class="offset-lg-2 col-lg-10 py-5 p-lg-5">
-              <section class="projects bg-B p-5 shadow animated">
+              <section id="projects" class="projects bg-B p-5 shadow animated">
                 <h2 class="d-inline-block bg-dark p-1 px-3">Projects</h2>
                 <div class="text-center pt-3">
                   <% projects.forEach(function(project){ %>
                   <button type="button" data-toggle="modal" data-target="#projectsModal"
                     data-selector="<%= project.id %>"
-                    class="item bg-thumbnail <%= project.id %> spin shadow circle-md hover-animation-type-1 m-3"
+                    class="item bg-thumbnail <%= project.id %> shadow circle-md hover-animation-type-1 m-3"
                     style="background-image: url(images/<%= project.backgroundImage %>);" title="<%= project.title %>"
                     aria-label="Project <%= project.title %>"></button>
                   <% }); %>
@@ -279,8 +303,10 @@
                 </div>
                 <div class="col-lg-4 pt-5 p-lg-0">
                   <<% if (project.url !== "") { %>a<% } else{ %>span<% } %> target="_blank" href="<%= project.url %>"
-                    title="<%= project.description %>" class="bg-thumbnail circle-lg d-flex justify-content-center align-items-center mx-auto shadow">
-                    <img src="images/<%= project.backgroundImage %>" alt="Project <%= project.backgroundImage %> logo." class="">
+                    title="<%= project.description %>"
+                    class="bg-thumbnail circle-lg d-flex justify-content-center align-items-center mx-auto shadow">
+                    <img src="images/<%= project.backgroundImage %>" alt="Project <%= project.backgroundImage %> logo."
+                      class="">
                   </<% if (project.url !== "") { %>a<% } else{ %>span<% } %>>
                 </div>
               </div>
