@@ -159,7 +159,7 @@ $('.story-part-1 .btn-start').click(() => {
 
   new Typed('.story-part-2 .story-text', {
     stringsElement: '.story-part-2 .typed-strings',
-    typeSpeed: 20,
+    typeSpeed: 40,
     fadeOut: true,
     fadeOutDelay: 500,
     smartBackspace: true,
