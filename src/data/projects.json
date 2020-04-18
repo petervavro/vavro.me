@@ -1,5 +1,16 @@
 [
   {
+    "id": "vavrome",
+    "title": "vavro.me",
+    "url": "https://www.vavro.me/",
+    "description": "My personal website",
+    "jobDescription": "Everything you see here.",
+    "backgroundImage": "thumbnail-vavro_me.png",
+    "technologies": "webpack,babel,es6,bootstrap,jquery,ejs",
+    "platforms": "web",
+    "year": 2020
+  },
+  {
     "id": "terminal",
     "title": "terminal.com.co",
     "url": "https://terminal.com.co/",
@@ -93,7 +104,7 @@
     "url": "https://www.filesplit.org/",
     "description": "An online tool to split text files.",
     "jobDescription": "Back-end & Front-end development.",
-    "backgroundImage": "thumbnail-splitfile-100.jpg",
+    "backgroundImage": "thumbnail-filesplit-100.jpg",
     "technologies": "html,css,sass,php,codeigniter,mysql,jquery",
     "platforms": "web",
     "year": 2014
@@ -104,7 +115,7 @@
     "url": "http://joomla.vavro.me/",
     "description": "My personal e-commerce platform to sell Joomla CMS extensions.",
     "jobDescription": "I offer my services and expertise in Joomla CMS. On this website, you can find Joomla extensions developed by me.",
-    "backgroundImage": "thumbnail-joomla.vavro.me.png",
+    "backgroundImage": "thumbnail-joomla_vavro_me.png",
     "technologies": "html,css,less,php,joomla,mysql,jquery,bootstrap",
     "platforms": "web",
     "year": 2014

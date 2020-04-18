@@ -62,6 +62,50 @@ window.addEventListener('resize', function() {
   $('#intro').height(gHeight);
 });
 
+/**
+ * Run Animations
+ * @param {function} loopEvent
+ */
+const startAnimations = loopEvent => {
+  // Start timer
+  return setInterval(loopEvent, 1000);
+};
+
+/**
+ * Pause Animations
+ * @param {number} timer
+ */
+const stopAnimations = t => {
+  // Reset render
+  clearInterval(t);
+
+  // Reset variable
+  return undefined;
+};
+
+/**
+ * Method to start animation in projects element
+ * @param {*} t
+ */
+const startProjectsAnimations = t => {
+  if (t === undefined) {
+    t = startAnimations(() => {
+      // https://stackoverflow.com/questions/5766263/run-settimeout-only-when-tab-is-active
+      if (document.hidden) {
+        return;
+      }
+
+      // Remove "spin" class of all
+      projects.removeClass('spin');
+
+      // Add spin to random item
+      $(projects[getRandomInt(0, projects.length - 1)]).addClass('spin');
+    });
+  }
+
+  return t;
+};
+
 // Get projects
 const projectsWrapper = $('.projects');
 const projects = $('.projects .item');
@@ -77,34 +121,16 @@ window.addEventListener('scroll', function() {
 
   // Spin projects
   if (projectsWrapper.isOnScreen()) {
-    if (projectsTimer === undefined) {
-      // Start timer
-      projectsTimer = setInterval(() => {
-        // https://stackoverflow.com/questions/5766263/run-settimeout-only-when-tab-is-active
-        if (document.hidden) {
-          return;
-        }
-
-        // Remove "spin" class of all
-        projects.removeClass('spin');
-
-        // Add spin to random item
-        $(projects[getRandomInt(0, projects.length - 1)]).addClass('spin');
-      }, 1000);
-    }
+    projectsTimer = startProjectsAnimations(projectsTimer);
   } else {
-    // Reset render
-    clearInterval(projectsTimer);
-
-    // Reset variable
-    projectsTimer = undefined;
+    projectsTimer = stopAnimations(projectsTimer);
   }
 
   /*
   if ($('#technologies').isOnScreen()) {
     // Add animation to all items in technology section
     $('.technology').each(function() {
-      console.log('loop');
+
       let el = $(this);
 
       // Check item is visible
@@ -168,6 +194,16 @@ $(function() {
     $(`#projectsModal .job.${e.relatedTarget.getAttribute('data-selector')}`)
       .removeClass('d-none')
       .removeClass('d-flex');
+
+    // Stop project animation
+    projectsTimer = stopAnimations(projectsTimer);
+  });
+
+  $('#projectsModal').on('hide.bs.modal', function() {
+    // Start projects animations if in view
+    if ($('.projects').isOnScreen()) {
+      projectsTimer = startProjectsAnimations(projectsTimer);
+    }
   });
 });
 
