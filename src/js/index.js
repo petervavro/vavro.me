@@ -56,9 +56,6 @@ window.addEventListener('resize', function() {
   // Get window height
   gHeight = $(window).height();
 
-  // Set canvas
-  this.setCanvas();
-
   if (game.paper !== undefined) game.paper.setSize(gWidth, gHeight); // Adjust paper size
 
   // Adjust "intro" section to height of browser viewport

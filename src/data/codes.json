@@ -1,14 +1,20 @@
 [
   {
-    "title": "Front-end skills",
-    "desc": "The code reflects my front-end skills with Typescript and React.",
-    "technologies": "typescript,react",
-    "repoURL": "https://github.com/petervavro/react-coding-test"
+     "title": "Front-end skills",
+     "desc": "The code reflects my front-end skills with Typescript and React.",
+     "technologies": "typescript,react",
+     "repoURL": "https://github.com/petervavro/react-coding-test"
   },
   {
-    "title": "Back-end skills",
-    "desc": "There you can check my back-end skills with Docker, Typescript, Node.js,  Express.js, and PostgreSQL. API Documentation is done in Postman.",
-    "technologies": "docker,typescript,nodejs,express,postgresql",
-    "repoURL": "https://github.com/petervavro/Developer-Test-Challenge"
+     "title": "Back-end skills",
+     "desc": "There you can check my back-end skills with Docker, Typescript, Node.js,  Express.js, and PostgreSQL. API Documentation is done in Postman.",
+     "technologies": "docker,typescript,nodejs,express,postgresql",
+     "repoURL": "https://github.com/petervavro/Developer-Test-Challenge"
+  },
+  {
+     "title": "A JS challenge",
+     "desc": "Find the integer that appears an odd number of times.",
+     "technologies": "es6",
+     "repoURL": "https://codepen.io/PeterVa/pen/dyYGJxV"
   }
 ]
