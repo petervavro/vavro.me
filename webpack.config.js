@@ -104,9 +104,6 @@ const config = {
               gifsicle: {
                 interlaced: false,
               },
-              webp: {
-                quality: 75,
-              },
             },
           },
         ],
