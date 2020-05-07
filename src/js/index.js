@@ -180,7 +180,7 @@ $(function() {
 
   // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
   // Add smooth scrolling to all links
-  $('a').on('click', function(/*event*/) {
+  $('a').on('click', function() {
     // Allow scrolling
     $('body').removeClass('overflow-hidden');
   });
