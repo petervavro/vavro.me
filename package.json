@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://gitlab.com/petervavro/intro.vavro.me.git"
   },
-  "version": "2.0.3",
+  "version": "2.0.4",
   "scripts": {
     "build": "webpack -p --progress --mode production --config webpack.config.js",
     "predeploy": "npm run build",
