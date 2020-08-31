@@ -3,7 +3,7 @@
     "id": "vavrome",
     "title": "vavro.me",
     "url": "https://www.vavro.me/",
-    "description": "My personal website",
+    "description": "My personal website.",
     "jobDescription": "Everything you see here.",
     "backgroundImage": "thumbnail-vavro_me.png",
     "technologies": "webpack,babel,es6,bootstrap,jquery,ejs",
@@ -31,6 +31,17 @@
     "technologies": "javascript,react-native,nodejs,hapi,mongodb",
     "platforms": "mobile",
     "year": 2018
+  },
+  {
+    "id": "infocyte",
+    "title": "Infocyte",
+    "url": "https://www.infocyte.com",
+    "description": "Infocyte is a cybersecurity company providing the leading platform for Incident Response and delivering cost-effective MDR services.",
+    "jobDescription": "I contributed with modifications of Infocyte's administrative UI, where the goal was to reduce the boilerplate and also to improve its performance. This was achieved by replacement of Redux state management for MobX and also by implementation of React performance optimization hooks.",
+    "backgroundImage": "logo-Infocyte.png",
+    "technologies": "react,mobx,loopback,postgresql",
+    "platforms": "web",
+    "year": 2020
   },
   {
     "id": "duenio",
