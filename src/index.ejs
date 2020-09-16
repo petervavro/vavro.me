@@ -85,8 +85,8 @@
           </a>
         </li>
         <li class="nav-item d-none d-sm-block">
-          <a class="nav-link" href="#coding" title="See my code">
-            Coding
+          <a class="nav-link" href="#code-samples" title="See my code">
+            Code samples
           </a>
         </li>
         <li class="nav-item d-none d-sm-block">
@@ -151,7 +151,7 @@
               <h1 class="p-3">Peter Vavro = Full Stack Engineer</h1>
               <section class="sticky bg-B p-5 shadow">
                 <h2 class="display-4 bg-dark p-1 px-3 d-inline-block text-color-C">
-                  ...so
+                  About me
                 </h2>
                 <br />
                 <div class="pt-3">
@@ -163,10 +163,10 @@
                       class="react-years"><%= ((new Date()).getFullYear() - technologies.find(function(technology){ return (technology.id === 'react')}).year) %></span>+
                     years), React Native (<span
                       class="react-native-years"><%= ((new Date()).getFullYear() - technologies.find(function(technology){ return (technology.id === 'react-native')}).year) %></span>+
-                    years), AngularJS and many other interesting frameworks and libraries. In back-end, my experience
-                    includes <span
-                      class="nodejs-years"><%= ((new Date()).getFullYear() - technologies.find(function(technology){ return (technology.id === 'nodejs')}).year) %></span>+
-                    years with Node.js working with various frameworks such as Express.js, Sails.js, and HapiJS.</p>
+                    years), Vue.js, AngularJS and many other interesting frameworks and libraries. In back-end, my experience includes <span class="nodejs-years">
+                      <%= ((new Date()).getFullYear() - technologies.find(function(technology){ return (technology.id === 'nodejs')}).year) %>
+                    </span>+
+                    years with Node.js working with various frameworks such as Express.js, Sails.js, LoopBack and HapiJS.</p>
                 </div>
               </section>
             </div>
@@ -200,8 +200,8 @@
           </div>
           <div class="row">
             <div class="offset-lg-2 col-lg-10 py-5 p-lg-5">
-              <section id="coding" class="code bg-C p-5 shadow animated">
-                <h2 class="d-inline-block bg-dark text-color-A p-1 px-3">Coding</h2>
+              <section id="code-samples" class="code bg-C p-5 shadow animated">
+                <h2 class="d-inline-block bg-dark text-color-A p-1 px-3">Code samples</h2>
                 <div class="pt-3">
                   <% codes.forEach(function(code, i){ %>
                   <div class="code <% if (i !== (codes.length - 1)) { %>mb-5<% } %>">
@@ -209,7 +209,7 @@
                     <div class="code-content">
                       <p><%= code.desc %></p>
                       <a class="repo-url btn btn-outline-secondary" target="_blank" href="<%= code.sourceURL %>"
-                        rel="external" title="<%= code.title %>">See code here</a>
+                        rel="external" title="<%= code.title %>">Link to code sample</a>
                     </div>
                     <hr />
                     <div class="used-technologies d-flex flex-wrap animated">
