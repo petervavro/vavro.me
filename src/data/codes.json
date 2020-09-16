@@ -12,6 +12,12 @@
     "sourceURL": "https://github.com/petervavro/Developer-Test-Challenge"
   },
   {
+    "title": "Code Challenge - JavaScript Array Methods",
+    "desc": "The challenge is composed of various tasks, with focus on use of ES6 features, while working with Array object.",
+    "technologies": "js,es6",
+    "sourceURL": "https://github.com/petervavro/Code-Challenge---JavaScript-Array-Methods"
+  },
+  {
     "title": "JS challenge",
     "desc": "The task was to find the integer that appears an odd number of times.",
     "technologies": "es6",
