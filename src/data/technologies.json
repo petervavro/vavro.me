@@ -278,5 +278,12 @@
     "url": "https://mobx.js.org",
     "thumbnailImage": "logo-mobx.png",
     "id": "mobx"
+  },
+  {
+    "year": 2020,
+    "title": "Vue.js",
+    "url": "https://vuejs.org/",
+    "thumbnailImage": "logo-vuejs.svg",
+    "id": "vuejs"
   }
 ]
