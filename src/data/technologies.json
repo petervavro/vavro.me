@@ -238,6 +238,13 @@
     "id": "react-native"
   },
   {
+    "year": 2017,
+    "title": "Koa",
+    "url": "https://koajs.com",
+    "thumbnailImage": "logo-KoaJS.svg",
+    "id": "koa"
+  },
+  {
     "year": 2018,
     "title": "Docker",
     "url": "https://en.wikipedia.org/wiki/Docker_(software)",
@@ -285,5 +292,12 @@
     "url": "https://vuejs.org/",
     "thumbnailImage": "logo-vuejs.svg",
     "id": "vuejs"
+  },
+  {
+    "year": 2020,
+    "title": "NestJS",
+    "url": "https://nestjs.com",
+    "thumbnailImage": "logo-NestJS.svg",
+    "id": "nestjs"
   }
 ]
