@@ -1,9 +1,15 @@
 [
   {
-    "title": "Code Challenge - JavaScript Array Methods",
+    "title": "Array Methods",
     "desc": "The challenge is composed of various tasks, with focus on use of ES6 features, while working with Array object.",
     "technologies": "js,es6",
     "sourceURL": "https://github.com/petervavro/Code-Challenge---JavaScript-Array-Methods"
+  },
+  {
+    "title": "Image Matching Challenge",
+    "desc": "The task objective is to count total number of matched regions in two images. The challenge is also sometimes called \"Number of Islands challenge\".",
+    "technologies": "js,es6",
+    "sourceURL": "https://codesandbox.io/s/image-matching-js-challenge-t5p6x"
   },
   {
     "title": "Front-end skills",
