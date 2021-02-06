@@ -273,6 +273,13 @@
     "id": "typescript"
   },
   {
+    "year": 2019,
+    "title": "Vue.js",
+    "url": "https://vuejs.org/",
+    "thumbnailImage": "logo-vuejs.svg",
+    "id": "vuejs"
+  },
+  {
     "year": 2020,
     "title": "LoopBack",
     "url": "https://loopback.io",
@@ -288,16 +295,16 @@
   },
   {
     "year": 2020,
-    "title": "Vue.js",
-    "url": "https://vuejs.org/",
-    "thumbnailImage": "logo-vuejs.svg",
-    "id": "vuejs"
-  },
-  {
-    "year": 2020,
     "title": "NestJS",
     "url": "https://nestjs.com",
     "thumbnailImage": "logo-NestJS.svg",
     "id": "nestjs"
+  },
+  {
+    "year": 2020,
+    "title": "Next.js",
+    "url": "https://nextjs.org",
+    "thumbnailImage": "logo-NEXTjs.svg",
+    "id": "nextjs"
   }
 ]
