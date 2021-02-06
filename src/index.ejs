@@ -1,6 +1,11 @@
+<%
+var TITLE='Peter Vavro = Full-Stack Engineer/Scrum Master',
+DESC='Accomplished Full-Stack Engineer, in to programming since 1994, specialized in web and mobile technologies.',
+URL='https://www.vavro.me/',
+KEYWORDS='Peter,Vavro,full-stack,developer,engineer,computer programmer,programmer,back-end,front-end,,backend,frontend,programming,personal,website,presentation, technologies,history,scrum master';
+%>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-13090749-7"></script>
@@ -8,16 +13,13 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'UA-13090749-7');
   </script>
-  <title>Peter Vavro = Full Stack Engineer</title>
+  <title><%= TITLE %></title>
   <meta charset="utf-8">
   <meta name="Charset" content="UTF-8">
-  <meta name="description"
-    content="I am a Full Stack Engineer, programming since 1994, and my main language is JavaScript.">
-  <meta name="keywords"
-    content="Peter Vavro,developer,backen,frontend,programming,engineer,personal,website,presentation, presentation of work">
+  <meta name="description" content="<%= DESC %>">
+  <meta name="keywords" content="<%= KEYWORDS %>">
   <meta name="author" content="Peter Vavro">
   <meta name="copyright" content="Peter Vavro">
   <meta name="Rating" content="General">
@@ -43,31 +45,33 @@
   <meta name="msapplication-TileColor" content="#343a40">
   <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
   <meta name="theme-color" content="#343a40">
-  <% /* if (process.env.NODE_ENV !== 'development') { %><base href="https://www.vavro.me/" target="_blank"><% } */ %>
+  <% /* if (process.env.NODE_ENV !== 'development') { %><base href="<%= URL %>" target="_blank"><% } */ %>
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.vavro.me/">
-  <meta property="og:title" content="Peter Vavro = Full Stack Engineer">
-  <meta property="og:description"
-    content="I am a Full Stack Engineer, programming since 1994, and my main language is JavaScript.">
-  <meta property="og:image" content="https://www.vavro.me/logo-vavro_me.png">
+  <meta property="og:url" content="<%= URL %>">
+  <meta property="og:title" content="<%= TITLE %>">
+  <meta property="og:description" content="<%= DESC %>">
+  <meta property="og:image" content="<%= URL %>logo-vavro_me.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.vavro.me/">
-  <meta property="twitter:title" content="Peter Vavro = Full Stack Engineer">
+  <meta property="twitter:url" content="<%= URL %>">
+  <meta property="twitter:title" content="<%= TITLE %>">
   <meta property="twitter:description"
-    content="I am a Full Stack Engineer, programming since 1994, and my main language is JavaScript.">
-  <meta property="twitter:image" content="https://www.vavro.me/logo-vavro_me.png">
+    content="<%= DESC %>">
+  <meta property="twitter:image" content="<%= URL %>logo-vavro_me.png">
 
 </head>
 <body data-spy="scroll" data-target="#navbar-menu" data-offset="0">
   <% var mailto = '&#112;&#101;&#116;&#101;&#114;&#064;&#118;&#097;&#118;&#114;&#111;&#046;&#109;&#101;?&subject=Hi&body=Hi+Peter%2C%0D%0A%0D%0A'; %>
   <header>
     <nav id="navbar-menu" class="navbar navbar-dark fixed-top navbar-expand">
-      <a class="navbar-brand bg-dark px-3" href="#">Peter Vavro</a>
-
+      <a class="navbar-brand bg-dark px-3" href="#">
+        <span>Peter Vavro</span>
+        <br/>
+        <small class="text-color-B">Full-Stack Engineer&nbsp;/&nbsp;Scrum Master</small>
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -122,7 +126,7 @@
             <div class="h-100 d-flex justify-content-center align-items-center">
               <div class="p-5">
                 <div class="story-part-1">
-                  <p class="text-color-B">Welcome.</p>
+                  <p class="text-color-C">Welcome.</p>
                   <button type="button" class="btn btn-outline-primary btn-start animated pulse delay-2s infinite" aria-label="Start">Let's
                     start</button>
                 </div>
@@ -148,15 +152,15 @@
         <div class="container py-5">
           <div class="row">
             <div class="col-12 col-lg-8">
-              <h1 class="p-3">Peter Vavro = Full Stack Engineer</h1>
+              <h1 class="p-3">Peter Vavro<br/>Full-Stack Engineer / Scrum Master</h1>
               <section class="sticky bg-B p-5 shadow">
-                <h2 class="display-4 bg-dark p-1 px-3 d-inline-block text-color-C">
+                <h2 class="display-5 bg-dark p-1 px-3 d-inline-block text-color-C">
                   About me
                 </h2>
                 <br />
                 <div class="pt-3">
                   <p>
-                    I am a Full Stack Engineer, programming since 1994, specialized in JavaScript.
+                    I am a Full-Stack Engineer / Scrum Master, specialized in JavaScript, interested in programming since 1994.
                   </p>
                   <p>My experience includes 13+ years with JS and I am efficient in both, front and back end. In
                     front-end web and mobile: React (<span
