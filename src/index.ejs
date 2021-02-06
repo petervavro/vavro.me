@@ -208,14 +208,14 @@ KEYWORDS='Peter,Vavro,full-stack,developer,engineer,computer programmer,programm
                 <h2 class="d-inline-block bg-dark text-color-A p-1 px-3">Code samples</h2>
                 <div class="pt-3">
                   <% codes.forEach(function(code, i){ %>
+                  <hr />
                   <div class="code <% if (i !== (codes.length - 1)) { %>mb-5<% } %>">
                     <h3><%= code.title %></h3>
                     <div class="code-content">
                       <p><%= code.desc %></p>
                       <a class="repo-url btn btn-outline-secondary" target="_blank" href="<%= code.sourceURL %>"
-                        rel="external" title="<%= code.title %>">Link to code sample</a>
+                        rel="external" title="<%= code.title %>">Link to the code</a>
                     </div>
-                    <hr />
                     <div class="used-technologies d-flex flex-wrap animated">
                       <% code.technologies.split(",").forEach(function(cTechnology){
                             technologies.forEach(function(technology){ 
