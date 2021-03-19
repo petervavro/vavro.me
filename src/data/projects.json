@@ -3,12 +3,12 @@
     "id": "vavrome",
     "title": "vavro.me",
     "url": "https://www.vavro.me/",
-    "description": "My personal website.",
+    "description": "The website about my professional experience.",
     "jobDescription": "Everything you see here.",
     "backgroundImage": "thumbnail-vavro_me.png",
     "technologies": "webpack,babel,es6,bootstrap,jquery,ejs",
     "platforms": "web",
-    "year": 2020
+    "year": 2019
   },
   {
     "id": "terminal",
@@ -41,6 +41,17 @@
     "backgroundImage": "logo-Infocyte.png",
     "technologies": "react,mobx,loopback,postgresql",
     "platforms": "web",
+    "year": 2020
+  },
+  {
+    "id": "cropswap",
+    "title": "CropSwap",
+    "url": "https://cropswap.com",
+    "description": "CropSwap is a marketplace type app that connects a global consumer-base with produce local to them.",
+    "jobDescription": "Tech Lead.",
+    "backgroundImage": "thumbnail-cropswap.svg",
+    "technologies": "react native, nodejs",
+    "platforms": "mobile",
     "year": 2020
   },
   {
@@ -121,10 +132,21 @@
     "year": 2014
   },
   {
+    "id": "joomlaextensions",
+    "title": "Extensions for Joomla!",
+    "url": "https://extensions.joomla.org/profile/profile/details/205993/#extensions",
+    "description": "I am a creator of variety of custom extensions for Joomla!, many of them registered and published at Joomla! Extensions Directory.",
+    "jobDescription": "Full Development Life Cycle.",
+    "backgroundImage": "logo-Joomla.svg",
+    "technologies": "php,html,css,joomla,mysql,jquery",
+    "platforms": "web",
+    "year": 2014
+  },
+  {
     "id": "joomla",
     "title": "JOOMLA.vavro.me",
     "url": "http://joomla.vavro.me/",
-    "description": "My personal e-commerce platform to sell Joomla CMS extensions.",
+    "description": "My e-commerce space to offer my extensions for Joomla CMS for sale.",
     "jobDescription": "I offer my services and expertise in Joomla CMS. On this website, you can find Joomla extensions developed by me.",
     "backgroundImage": "thumbnail-joomla_vavro_me.png",
     "technologies": "html,css,less,php,joomla,mysql,jquery,bootstrap",
