@@ -198,6 +198,17 @@
     "year": 2012
   },
   {
+    "id": "inmovis",
+    "title": "Inmovis",
+    "url": "https://web.archive.org/web/20120509093301/http://www.inmovis.com/",
+    "description": "Inmovis was a web application developed for real estate agents, which helps to promote and socialize properties between agents to increase sales and happy customers.",
+    "jobDescription": "Full application development lifecycle.",
+    "backgroundImage": "thumbnail-Inmovis.png",
+    "technologies": "php,codeigniter,jquery,html,css",
+    "platforms": "web",
+    "year": 2011
+  },
+  {
     "id": "icl",
     "title": "icl.com.co",
     "url": "http://icl.com.co/",
