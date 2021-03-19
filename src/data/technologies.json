@@ -245,6 +245,13 @@
     "id": "koa"
   },
   {
+    "year": 2017,
+    "title": "Amazon Web Services",
+    "url": "https://aws.amazon.com",
+    "thumbnailImage": "logo-AWS.svg",
+    "id": "aws"
+  },
+  {
     "year": 2018,
     "title": "Docker",
     "url": "https://en.wikipedia.org/wiki/Docker_(software)",
@@ -303,7 +310,7 @@
   {
     "year": 2020,
     "title": "Next.js",
-    "url": "https://nextjs.org",
+    "url": "https://en.wikipedia.org/wiki/Next.js",
     "thumbnailImage": "logo-NEXTjs.svg",
     "id": "nextjs"
   }
