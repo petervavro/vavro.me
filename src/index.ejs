@@ -27,7 +27,7 @@ KEYWORDS='Peter,Vavro,full-stack,developer,engineer,computer programmer,programm
   <meta name="Distribution" content="Global">
   <meta name="Revisit-after" content="7 Days">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="msvalidate.01" content="FEBB973C4B6B911E33AF5D4E3AE8E074" />
   <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -64,61 +64,102 @@ KEYWORDS='Peter,Vavro,full-stack,developer,engineer,computer programmer,programm
   <meta property="twitter:image" content="<%= URL %>logo-vavro_me.png">
 
 </head>
-<body data-spy="scroll" data-target="#navbar-menu" data-offset="0">
+<body>
   <% var mailto = '&#112;&#101;&#116;&#101;&#114;&#064;&#118;&#097;&#118;&#114;&#111;&#046;&#109;&#101;?&subject=Hi&body=Hi+Peter%2C%0D%0A%0D%0A'; %>
   <header>
-    <nav id="navbar-menu" class="navbar navbar-dark fixed-top navbar-expand">
-      <a class="navbar-brand bg-dark px-3" href="#">
-        <span>Peter Vavro</span>
-        <br/>
-        <small class="text-color-B">Full-Stack Engineer&nbsp;/&nbsp;Scrum Master</small>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-dark fixed-top">
+      <div class="d-flex flex-row bg-dark">
+        <a class="navbar-brand px-2" href="#">
+          <span>Peter Vavro</span>
+          <br/>
+          <small class="text-color-B">Full-Stack Engineer&nbsp;/&nbsp;Scrum Master</small>
+        </a>
+        <div class="d-none d-sm-block px-2">
+          <ul class="nav d-flex justify-content-center py-1">
+            <li class="nav-item mx-3 mx-lg-2">
+              <a class="nav-link bg-logo email" href="mailto:<%= mailto %>" title="My Email">
+                <span class="sr-only">My Email</span>
+              </a>
+            </li>
+            <li class="nav-item mx-3 mx-lg-2">
+              <a class="nav-link bg-logo github" href="https://github.com/petervavro" target="_blank" title="My Github">
+                <span class="sr-only">My GitHub</span>
+              </a>
+            </li>
+            <li class="nav-item mx-3 mx-lg-2">
+              <a class="nav-link bg-logo linkedin" href="https://www.linkedin.com/in/peter-vavro-44604163" target="_blank" title="My Linkedin">
+                <span class="sr-only">My Linkedin</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Button trigger menu in modal -->
+      <button type="button" class="btn btn-primary p-2" data-toggle="modal" data-target="#mainMenuModal">
+        <span class='sr-only'>Menu</span>
         <span class="navbar-toggler-icon"></span>
       </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto bg-dark px-3">
-        <li class="nav-item d-none d-sm-block">
-          <a class="nav-link" href="#intro" title="Intro">
-            Intro
-          </a>
-        </li>
-        <li class="nav-item d-none d-sm-block">
-          <a class="nav-link" href="#about" title="About me">
-            About me
-          </a>
-        </li>
-        <li class="nav-item d-none d-sm-block">
-          <a class="nav-link" href="#code-samples" title="See my code">
-            Code samples
-          </a>
-        </li>
-        <li class="nav-item d-none d-sm-block">
-          <a class="nav-link" href="#projects" title="Projects">
-            Projects
-          </a>
-        </li>
-        <li class="nav-item d-flex align-items-center">
-          <a class="nav-link bg-logo email" href="mailto:<%= mailto %>" title="My Email">
-            <span class="sr-only">My Email</span>
-          </a>
-        </li>
-        <li class="nav-item d-flex align-items-center">
-          <a class="nav-link bg-logo github" href="https://github.com/petervavro" target="_blank" title="My Github">
-            <span class="sr-only">My GitHub</span>
-          </a>
-        </li>
-        <li class="nav-item d-flex align-items-center">
-          <a class="nav-link bg-logo linkedin" href="https://www.linkedin.com/in/peter-vavro-44604163" target="_blank"
-            title="My Linkedin">
-            <span class="sr-only">My Linkedin</span>
-          </a>
-        </li>
-      </ul>
-    </div>
     </nav>
   </header>
+  <!-- Menu Modal -->
+  <div class="modal fade" id="mainMenuModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body d-flex justify-content-center">
+          <div>
+            <ul class="nav menu-links flex-column ml-auto px-3">
+              <li class="nav-item">
+                <a class="nav-link text-center" href="#intro" title="Intro" data-dismiss='modal'>
+                  Intro
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center" href="#about" title="About me" data-dismiss='modal'>
+                  About me
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center" href="#code-samples" title="See my code" data-dismiss='modal'>
+                  Code samples
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center" href="#projects" title="Projects" data-dismiss='modal'>
+                  Projects
+                </a>
+              </li>
+            </ul>
+            <hr/>
+            <ul class="nav d-flex justify-content-center p-3">
+              <li class="nav-item p-3">
+                <a class="nav-link bg-logo email" href="mailto:<%= mailto %>" title="My Email">
+                  <span class="sr-only">My Email</span>
+                </a>
+              </li>
+              <li class="nav-item p-3">
+                <a class="nav-link bg-logo github" href="https://github.com/petervavro" target="_blank" title="My Github">
+                  <span class="sr-only">My GitHub</span>
+                </a>
+              </li>
+              <li class="nav-item p-3">
+                <a class="nav-link bg-logo linkedin" href="https://www.linkedin.com/in/peter-vavro-44604163" target="_blank" title="My Linkedin">
+                  <span class="sr-only">My Linkedin</span>
+                </a>
+              </li>
+            </ul>
+            <hr/>
+            <div class="d-flex justify-content-center bd-highlight mb-3">
+              <div class="p-2">
+                <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close">
+                  <span class="sr-only">(Close)</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <main id="main">
     <article>
       <div id="intro" class="container-fluid">
@@ -126,16 +167,18 @@ KEYWORDS='Peter,Vavro,full-stack,developer,engineer,computer programmer,programm
           <div class="col h-100">
             <div class="h-100 d-flex justify-content-center align-items-center">
               <div class="p-5">
-                <div class="story-part-1">
+                <div class="story-part-1 d-none">
                   <p class="text-color-C">Welcome.</p>
-                  <button type="button" class="btn btn-outline-primary btn-start animated pulse delay-2s infinite" aria-label="Start">Let's
-                    start</button>
+                  <button type="button" class="btn btn-outline-secondary btn-start animated pulse delay-2s infinite" aria-label="Start">Let's
+                    start ?</button>
                 </div>
-                <div class="story-part-2 text-center d-none">
-                  <div class="typed-strings d-none">
+                <div class="story-part-2 text-center">
+                  <div class="typed-strings">
                     <p>
-                      Hi.^500 it's me,^500 <strong>Peter Vavro</strong>,^500 most probably your new <strong>web & mobile developer</strong>.<br />
-                      How about to know more about me...<br />
+                      Hi.^500 it's me,^500 <strong>Peter Vavro</strong>,^500 the web & mobile developer you're looking for<strong></strong>.<br />
+                      How about to know more about me...^500
+                    </p>
+                    <p>
                       To start, click/tap on some circles.<br />
                       Go.
                     </p>
@@ -153,7 +196,10 @@ KEYWORDS='Peter,Vavro,full-stack,developer,engineer,computer programmer,programm
         <div class="container py-5">
           <div class="row">
             <div class="col-12 col-lg-8">
-              <h1 class="p-3">Peter Vavro<br/>Full-Stack Engineer / Scrum Master</h1>
+              <h1 class="p-3">
+                Peter Vavro<br/>
+                <small>Full-Stack Engineer / Scrum Master</small>
+              </h1>
               <section class="sticky bg-B p-5 shadow">
                 <h2 class="display-5 bg-dark p-1 px-3 d-inline-block text-color-C">
                   About me
@@ -214,7 +260,7 @@ KEYWORDS='Peter,Vavro,full-stack,developer,engineer,computer programmer,programm
                     <h3><%= code.title %></h3>
                     <div class="code-content">
                       <p><%= code.desc %></p>
-                      <a class="repo-url btn btn-outline-secondary" target="_blank" href="<%= code.sourceURL %>"
+                      <a class="repo-url btn btn-outline-primary" target="_blank" href="<%= code.sourceURL %>"
                         rel="external" title="<%= code.title %>">Link to the code</a>
                     </div>
                     <div class="used-technologies d-flex flex-wrap animated">
@@ -242,18 +288,19 @@ KEYWORDS='Peter,Vavro,full-stack,developer,engineer,computer programmer,programm
           </div>
         </div>
       </div>
-      <div class="bg-C">
+      <div id="projects" class="bg-C">
         <div class="container">
           <div class="row">
             <div class="offset-lg-2 col-lg-10 py-5 p-lg-5">
-              <section id="projects" class="projects bg-B p-5 shadow animated">
-                <h2 class="d-inline-block bg-dark p-1 px-3">Projects</h2>
-                <div class="text-center pt-3">
+              <section class="projects bg-B shadow animated">
+                <h2 class="d-inline-block bg-dark p-1 px-3 m-5 ">Projects</h2>
+                <div class="text-center pb-5">
                   <% projects.forEach(function(project){ %>
                   <button type="button" data-toggle="modal" data-target="#projectsModal"
                     data-selector="<%= project.id %>"
-                    class="item bg-thumbnail <%= project.id %> shadow circle-md hover-animation-type-1 m-3"
-                    style="background-image: url(images/<%= project.backgroundImage %>);" title="<%= project.title %>"
+                    class="item bg-thumbnail <%= project.id %> shadow circle-md hover-animation-type-1 m-3 <%= (project.backgroundImage.substring(0, 10) === 'thumbnail-' ? 'full' : '') %>"
+                    style="background-image: url(images/<%= project.backgroundImage %>);" 
+                    title="<%= project.title %>"
                     aria-label="Project <%= project.title %>"></button>
                   <% }); %>
                 </div>
@@ -263,23 +310,16 @@ KEYWORDS='Peter,Vavro,full-stack,developer,engineer,computer programmer,programm
         </div>
       </div>
     </article>
-    <!-- Modal -->
+    <!-- Project Modal -->
     <div class="modal fade" id="projectsModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document"> 
         <div class="modal-content">
-          <div class="modal-header-custom text-right py-3">
-            <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close">
-              <span class="sr-only">(Close)</span>
-            </button>
-          </div>
           <div class="modal-body">
             <div class="container-fluid">
-              <div class="row">
-              </div>
               <% projects.forEach(function(project){ %>
               <div class="row job <%= project.id %> d-none bg-C shadow text-dark py-5 p-3">
                 <div class="col-lg-8">
-                  <h3 class="d-inline-block bg-dark p-3 mb-3"><%= project.title %></h3><!-- p-1 px-3 block-inline -->
+                  <h3 class="d-inline-block bg-dark p-3 mb-3"><%= project.title %></h3>
                   <h4>Project description</h4>
                   <p class="desc"><%= project.description %></p>
                   <% if (false) { %>
@@ -290,40 +330,47 @@ KEYWORDS='Peter,Vavro,full-stack,developer,engineer,computer programmer,programm
                       class="mobile d-inline-block"></span><% } %>
                   </div>
                   <% } %>
+                  <% if (project.url !== "") { %>
+                    <a class="btn btn-outline-primary" target="_blank" href="<%= project.url %>" rel="external" title="<%= project.title %>">Link to project</a>
+                  <% } %>
                   <hr />
                   <h4>Job description</h4>
                   <p class="job-desc"><%= project.jobDescription %></p>
                   <small class="year"><%= project.year %></small>
                   <hr />
-                  <div class="used-technologies d-flex flex-wrap justify-content-center py-3 text-center animated">
+                  <div class="used-technologies d-flex flex-wrap py-3 animated ">
                     <% project.technologies.split(",").forEach(function(projectTechnology){
                           technologies.forEach(function(technology){ 
                             if (technology.id === projectTechnology) { _%>
-                    <div
-                      class="technology <%= technology.id %> d-flex flex-column justify-content-center text-center animated m-3"
-                      title="<%= technology.title %>">
-                      <span
-                        class="bg-logo <%= technology.id %> circle-sm d-flex justify-content-center align-items-center shadow"
-                        <%= (technology.thumbnailImage !== '' ? 'style="background-image: url(images/' + technology.thumbnailImage + ');"' : '') %>>
-                        <%= (technology.thumbnailImage === '' ? technology.title : '') %>
-                      </span>
-                    </div>
-                    <% }
+                            <div
+                              class="technology <%= technology.id %> d-flex flex-column justify-content-center text-center animated m-3"
+                              title="<%= technology.title %>">
+                              <span
+                                class="bg-logo <%= technology.id %> circle-sm d-flex justify-content-center align-items-center shadow"
+                                <%= (technology.thumbnailImage !== '' ? 'style="background-image: url(images/' + technology.thumbnailImage + ');"' : '') %>>
+                                <%= (technology.thumbnailImage === '' ? technology.title : '') %>
+                              </span>
+                            </div>
+                            <% }
                           })
                         }) %>
                   </div>
                 </div>
                 <div class="col-lg-4 pt-5 p-lg-0">
-                  <<% if (project.url !== "") { %>a<% } else{ %>span<% } %> target="_blank" href="<%= project.url %>"
+                  <span
                     title="<%= project.description %>"
                     class="bg-thumbnail circle-lg d-flex justify-content-center align-items-center mx-auto shadow">
-                    <img src="images/<%= project.backgroundImage %>" alt="Project <%= project.backgroundImage %> logo."
-                      class="">
-                  </<% if (project.url !== "") { %>a<% } else{ %>span<% } %>>
+                    <img src="images/<%= project.backgroundImage %>" alt="Project <%= project.backgroundImage %> logo."<%= (project.backgroundImage.substring(0, 10) === 'thumbnail-' ? 'class="full"' : '') %>>
+                  </span>
                 </div>
               </div>
               <% }) %>
             </div>
+          </div>
+          <div class="modal-footer py-3 d-flex justify-content-center">
+            <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close">
+              <span class="sr-only">(Close)</span>
+            </button>
           </div>
         </div>
       </div>
@@ -341,15 +388,13 @@ KEYWORDS='Peter,Vavro,full-stack,developer,engineer,computer programmer,programm
     <div class="row">
       <div class="col">
         <p class="float-right">
-          <a href="#" class="btn btn-outline-primary">Back to top</a>
+          <a href="#" class="btn btn-outline-secondary">Back to top</a>
         </p>
-        <p>
+        <p class="p-1">
           <small>&copy; 2013-<%= new Date().getFullYear() %> Peter Vavro.</small>
         </p>
       </div>
     </div>
   </footer>
-  <div id="overlap"></div>
 </body>
-
 </html>

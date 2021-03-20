@@ -45,23 +45,11 @@ const scrollTo = hash => {
     {
       scrollTop: $(hash).offset().top,
     },
-    800,
+    300,
     function() {
       // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = '';
       window.location.hash = hash;
-
-      // https://css-tricks.com/snippets/jquery/smooth-scrolling/
-      // Callback after animation
-      // Must change focus!
-      var $target = $(hash);
-      $target.focus();
-      if ($target.is(':focus')) {
-        // Checking if the target was focused
-        return false;
-      } else {
-        $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-        $target.focus(); // Set focus again
-      }
     }
   );
 };

@@ -9,32 +9,57 @@ var WebFont = require('webfontloader');
 let gWidth = $(window).width();
 let gHeight = $(window).height();
 
-let started = false;
-
 let hits = 0;
 let projectsTimer;
 
+// Typed animation object
+const textAnimation = new Typed('.story-part-2 .story-text', {
+  stringsElement: '.story-part-2 .typed-strings',
+  typeSpeed: 40,
+  fadeOut: true,
+  fadeOutDelay: 500,
+  smartBackspace: true,
+  startDelay: 1000,
+  onComplete: () => {
+    // Start game
+    game.start();
+  },
+});
+
+// Circle game object
 const game = new Game({
   container: document.getElementById('intro'),
   width: gWidth - 30,
   height: gHeight,
+  handleOnCircleClick: () => {
+    // Set handler when user click on the circle
+    // Increment
+    hits += 1;
+
+    //  If there are more than 2 scroll down
+    if (hits > 2) {
+      // Scroll to next section
+      scrollTo('#about');
+
+      stopIntro();
+    }
+
+    return hits;
+  },
 });
 
-// Set handler when user click on the circle
-game.handleOnCircleClick = () => {
-  // Increment
-  hits += 1;
+const stopIntro = () => {
+  // Stop game
+  game.destroy();
 
-  //  If there are more than 2 scroll down
-  if (hits > 2) {
-    // Allow scrolling from this point
-    $('body').removeClass('overflow-hidden');
+  // Destroy type animation
+  textAnimation.destroy();
 
-    // Scroll to next section
-    scrollTo('#about');
-  }
+  // Hide text part two
+  $('.story-part-2').addClass('d-none');
 
-  return hits;
+  // Display text part one
+  $('.story-part-1').removeClass('d-none');
 };
 
 // Eliminate render-blocking resources
@@ -56,7 +81,7 @@ window.addEventListener('resize', function() {
   // Get window height
   gHeight = $(window).height();
 
-  if (game.paper !== undefined) game.paper.setSize(gWidth, gHeight); // Adjust paper size
+  if (game.paper) game.paper.setSize(gWidth, gHeight); // Adjust paper size
 
   // Adjust "intro" section to height of browser viewport
   $('#intro').height(gHeight);
@@ -114,9 +139,7 @@ const projects = $('.projects .item');
 window.addEventListener('scroll', function() {
   // Remove circle animation when is not on the screen
   if (!$('#intro').isOnScreen()) {
-    game.stopRenderCircles();
-  } else {
-    if (started === true) game.startRenderCircles();
+    stopIntro();
   }
 
   // Spin projects
@@ -155,27 +178,14 @@ $(function() {
   $('.story-part-1 .btn-start').click(function(event) {
     event.preventDefault();
 
-    // Toggle is started signal
-    started = true;
-
     // Hide text part one
     $('.story-part-1').addClass('d-none');
 
     // Display text part two
     $('.story-part-2').removeClass('d-none');
 
-    // Start typed text
-    new Typed('.story-part-2 .story-text', {
-      stringsElement: '.story-part-2 .typed-strings',
-      typeSpeed: 40,
-      fadeOut: true,
-      fadeOutDelay: 500,
-      smartBackspace: true,
-      onComplete: () => {
-        // Start game
-        game.startGame();
-      },
-    });
+    // Start animation
+    textAnimation.reset();
   });
 
   // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
@@ -208,22 +218,15 @@ $(function() {
 });
 
 $(window).on('load', function() {
-  // Disable scrolling to get people to play the game
+  // Add smooth scrolling links
+  // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+  $('#mainMenuModal .menu-links .nav-link').on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== '') {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-  // BUG with $(window).scrollTop() on Safari
-  // https://github.com/nuxt/nuxt.js/issues/2512
-  if (
-    Math.max(
-      window.pageYOffset,
-      document.documentElement.scrollTop,
-      document.body.scrollTop
-    ) === 0
-  ) {
-    $('body').addClass('overflow-hidden');
-  }
-
-  // Remove overlap
-  $('#overlap').fadeTo('slow', 0, function() {
-    $(this).hide();
+      scrollTo(this.hash);
+    }
   });
 });

@@ -1,11 +1,14 @@
+const Raphael = require('raphael');
+
 import { getRandomInt, colorsCombinations } from './helpers.js';
 
 class Game {
-  constructor(props) {
+  constructor({ container, width, height, handleOnCircleClick }) {
     if (!Game.instance) {
-      this.container = props.container;
-      this.width = props.width;
-      this.height = props.height;
+      this.container = container;
+      this.width = width;
+      this.height = height;
+      this.handleOnCircleClick = handleOnCircleClick;
 
       Game.instance = this;
     }
@@ -98,81 +101,50 @@ class Game {
   }
 
   /**
-   * Get Raphael object
+   * Start circle game
+   * @param {function} cb
    */
-  async getRaphael() {
-    if (!this.Raphael) {
-      let module = await import('raphael');
-
-      // Get default
-      this.Raphael = module.default;
-    }
-
-    return this.Raphael;
-  }
-
-  /**
-   * Set canvas
-   */
-  async setCanvas() {
-    if (!this.paper) {
-      const Raphael = await this.getRaphael();
-
-      // Creates canvas
-      this.paper = Raphael(this.container, this.width, this.height);
-    }
-
-    // Set in back but clickable
-    $(this.paper.canvas)
-      .css('position', 'absolute')
-      .css('z-index', 1000);
-
-    return this.paper;
-  }
-
-  /**
-   * Method to start timer for circle rendering
-   */
-  startRenderCircles() {
-    if (this.timer === undefined) {
+  start(cb) {
+    if (!this.timer) {
       // Set canvas
-      this.setCanvas();
+      if (!this.paper) {
+        // Creates canvas
+        this.paper = Raphael(this.container, this.width, this.height);
+      }
+
+      // Set in back but clickable
+      $(this.paper.canvas)
+        .css('position', 'absolute')
+        .css('z-index', 1000);
 
       // Generate circles
       // + Start Timer
       this.timer = setInterval(() => {
-        // https://stackoverflow.com/questions/5766263/run-settimeout-only-when-tab-is-active
-        if (document.hidden) {
-          return;
-        }
-
         // Create new circle
         this.renderCircle();
       }, 1000);
+
+      // Execute callback
+      if (cb !== undefined) cb();
     }
   }
 
   /**
-   * Method to stop timer for circle rendering
+   * Method to destroy the game object
    */
-  stopRenderCircles() {
-    // Clear interval
-    clearInterval(this.timer);
+  destroy() {
+    if (this.timer) {
+      // Clear interval
+      clearInterval(this.timer);
 
-    // Destroy interval prop
-    this.timer = undefined;
-  }
+      // Destroy interval prop
+      this.timer = undefined;
+    }
 
-  /**
-   * Start circle game
-   * @param {function} cb
-   */
-  async startGame(cb) {
-    // Start render circles
-    this.startRenderCircles();
-
-    // Execute callback
-    if (cb !== undefined) cb();
+    if (this.paper) {
+      // Remove canvas
+      this.paper.remove();
+    }
   }
 }
 

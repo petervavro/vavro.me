@@ -16,7 +16,7 @@
     "url": "https://terminal.com.co/",
     "description": "A portal where you can find bus routes and timetables information, updated directly by transport companies.",
     "jobDescription": "Back-end & Front-end development.",
-    "backgroundImage": "logo-terminal.png",
+    "backgroundImage": "thumbnail-terminal.png",
     "technologies": "javascript,react,jss,nodejs,hapi,orientdb",
     "platforms": "web,mobile",
     "year": 2019
@@ -27,7 +27,7 @@
     "url": "http://www.careconnect365.com",
     "description": "CareConnect is a technology designed specifically for seniors to help them stay independent, healthy and connected to family and friends.",
     "jobDescription": "Mobile & Back-end development + project management.",
-    "backgroundImage": "thumbnail-careconnect365.png",
+    "backgroundImage": "logo-careconnect365.png",
     "technologies": "javascript,react-native,nodejs,hapi,mongodb",
     "platforms": "mobile",
     "year": 2018
@@ -49,7 +49,7 @@
     "url": "https://cropswap.com",
     "description": "CropSwap is a marketplace type app that connects a global consumer-base with produce local to them.",
     "jobDescription": "Tech Lead.",
-    "backgroundImage": "thumbnail-cropswap.svg",
+    "backgroundImage": "logo-cropswap.svg",
     "technologies": "react native, nodejs",
     "platforms": "mobile",
     "year": 2020
@@ -148,7 +148,7 @@
     "url": "http://joomla.vavro.me/",
     "description": "My e-commerce space to offer my extensions for Joomla CMS for sale.",
     "jobDescription": "I offer my services and expertise in Joomla CMS. On this website, you can find Joomla extensions developed by me.",
-    "backgroundImage": "thumbnail-joomla_vavro_me.png",
+    "backgroundImage": "logo-joomla_vavro_me.png",
     "technologies": "html,css,less,php,joomla,mysql,jquery,bootstrap",
     "platforms": "web",
     "year": 2014
