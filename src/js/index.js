@@ -84,7 +84,7 @@ window.addEventListener('resize', function() {
   if (game.paper) game.paper.setSize(gWidth, gHeight); // Adjust paper size
 
   // Adjust "intro" section to height of browser viewport
-  $('#intro').height(gHeight);
+  // $('#intro').height(gHeight); // Replaced for Grid
 });
 
 /**
@@ -172,7 +172,7 @@ window.addEventListener('scroll', function() {
 
 $(function() {
   // Adjust "intro" section to height of browser viewport
-  $('#intro').height($(window).height());
+  // $('#intro').height($(window).height()); // Replaced for Grid
 
   // Add start button functionality
   $('.story-part-1 .btn-start').click(function(event) {

@@ -671,6 +671,8 @@ header {
 
 #intro {
   z-index: 1;
+  display: grid;
+  height: calc(100vh);
 }
 
 #about {
