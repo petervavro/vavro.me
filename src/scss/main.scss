@@ -66,6 +66,7 @@ $navbar-dark-brand-hover-color: $navbar-dark-brand-color;
 @import "~bootstrap/scss/transitions";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
+@import "~bootstrap/scss/spinners";
 // @import "~bootstrap/scss/forms";
 // @import "~bootstrap/scss/carousel";
 // @import "~bootstrap/scss/card";
@@ -87,7 +88,6 @@ $navbar-dark-brand-hover-color: $navbar-dark-brand-color;
 // @import "~bootstrap/scss/toasts";
 // @import "~bootstrap/scss/tooltip";
 // @import "~bootstrap/scss/popover";
-// @import "~bootstrap/scss/spinners";
 
 // https://gist.github.com/mirisuzanne/1607696
 // keyframes mixin
@@ -142,6 +142,12 @@ $navbar-dark-brand-hover-color: $navbar-dark-brand-color;
   animation-direction: $direction;
   animation-timing-function: $timingFunction;
   animation-iteration-count: $iterationCount;
+}
+
+@mixin smooth-opacity() {
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
 }
 
 @mixin circle-with-image($url) {
@@ -510,18 +516,6 @@ button {
   }
 }
 
-
-/*
-.modal-dialog {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 768px;
-  display: flex;
-  height: 100%;
-  align-items: center;
-}
-*/
-
 #projectsModal {
   .modal-content {
     .modal-body {
@@ -597,9 +591,8 @@ button {
 
 header {
   .navbar {
-    .navbar-brand {
-      @include transition($btn-transition);
-    }
+
+    opacity: 0.9;
 
     .nav-item {
       .nav-link {
@@ -614,35 +607,6 @@ header {
       }
     }
 
-    /*
-    .navbar-nav {
-
-      // > li + li {
-      //   margin-left: $spacer * 1;
-      // }
-      
-      .nav-item {
-        .nav-link {
-          @include transition($btn-transition);
-          opacity: 0.6;
-
-          &:hover {
-            opacity: 0.9;
-          }
-
-          &.bg-logo {
-            width: $spacer * 2.2;
-            height: $spacer * 2.2;
-            background-size: 62%;
-          }
-        }
-      }
-
-      @include media-breakpoint-down(xs) {
-        background-color: transparent !important;
-      }
-    }
-    */
   }
 }
 
@@ -702,7 +666,7 @@ header {
       @include media-breakpoint-up(sm) {
         border-right: {
           style: dotted;
-          color: $body-bg; // $text-color;
+          color: $body-bg;
           width: $border-width;
         }
       }

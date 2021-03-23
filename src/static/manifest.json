@@ -1,5 +1,8 @@
 {
  "name": "vavro.me",
+ "theme_color": "#343a40",
+ "background_color": "#343a40",
+ "display": "browser",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",

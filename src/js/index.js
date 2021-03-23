@@ -24,6 +24,14 @@ const textAnimation = new Typed('.story-part-2 .story-text', {
     // Start game
     game.start();
   },
+  /**
+   * Before it begins typing
+   * @param {Typed} self
+   */
+  onBegin: () => {
+    // Hide spinner
+    $('.spinner-border').addClass('fade');
+  },
 });
 
 // Circle game object
@@ -170,63 +178,56 @@ window.addEventListener('scroll', function() {
   this.oldScroll = this.scrollY;
 });
 
-$(function() {
-  // Adjust "intro" section to height of browser viewport
-  // $('#intro').height($(window).height()); // Replaced for Grid
+// Add start button functionality
+$('.story-part-1 .btn-start').on('click', function(event) {
+  event.preventDefault();
 
-  // Add start button functionality
-  $('.story-part-1 .btn-start').click(function(event) {
-    event.preventDefault();
+  // Hide text part one
+  $('.story-part-1').addClass('d-none');
 
-    // Hide text part one
-    $('.story-part-1').addClass('d-none');
+  // Display text part two
+  $('.story-part-2').removeClass('d-none');
 
-    // Display text part two
-    $('.story-part-2').removeClass('d-none');
+  // Start animation
+  textAnimation.reset();
+});
 
-    // Start animation
-    textAnimation.reset();
-  });
-
-  // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
-  // Add smooth scrolling to all links
-  $('a').on('click', function() {
-    // Allow scrolling
-    $('body').removeClass('overflow-hidden');
-  });
-
-  // Modal : "Projects"
-  $('#projectsModal').on('show.bs.modal', function(e) {
+// Modal : "Projects"
+$('#projectsModal')
+  .on('show.bs.modal', function(e) {
     // Hide all
     $('#projectsModal .job').addClass('d-none');
 
-    // Show desired only
+    // Show only selected project
     $(`#projectsModal .job.${e.relatedTarget.getAttribute('data-selector')}`)
       .removeClass('d-none')
       .removeClass('d-flex');
 
     // Stop project animation
     projectsTimer = stopAnimations(projectsTimer);
-  });
-
-  $('#projectsModal').on('hide.bs.modal', function() {
-    // Start projects animations if in view
+  })
+  .on('hide.bs.modal', function() {
+    // Start projects animations if on screen
     if ($('.projects').isOnScreen()) {
       projectsTimer = startProjectsAnimations(projectsTimer);
     }
   });
+
+// Add smooth scrolling links
+// https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+$('#mainMenuModal .menu-links .nav-link').on('click', function(event) {
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== '') {
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    scrollTo(this.hash);
+  }
 });
 
-$(window).on('load', function() {
-  // Add smooth scrolling links
-  // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
-  $('#mainMenuModal .menu-links .nav-link').on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== '') {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      scrollTo(this.hash);
-    }
-  });
+$(function() {
+  // Adjust "intro" section to height of browser viewport
+  // $('#intro').height($(window).height()); // Replaced for Grid
 });
+
+$(window).on('load', function() {});
