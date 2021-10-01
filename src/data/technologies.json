@@ -313,5 +313,12 @@
     "url": "https://en.wikipedia.org/wiki/Next.js",
     "thumbnailImage": "logo-NEXTjs.svg",
     "id": "nextjs"
+  },
+  {
+    "year": 2021,
+    "title": "Electron",
+    "url": "https://www.electronjs.org",
+    "thumbnailImage": "logo-Electron.svg",
+    "id": "electron"
   }
 ]
