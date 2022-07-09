@@ -2,8 +2,8 @@
   <div class="bg-primary/50 fixed w-full p-5 flex justify-between"> 
     <div class="text-primary-contrast flex">
       <div class="pr-5">
-        <NuxtLink to="/"><h1 class="text-2xl font-bold">Peter Vavro</h1></NuxtLink>
-        <p class="text-secondary border-t-4 pt-2 mt-2">
+        <NuxtLink to="/"><h1 class="text-2xl">Peter Vavro</h1></NuxtLink>
+        <p class="text-secondary border-secondary border-t-4 pt-2 mt-2">
           Full-Stack Engineer with preferce for Front-end
         </p>
       </div>
@@ -29,16 +29,10 @@
           </li>
         </ul>
         -->
-        <button class="pl-5">
+        <!-- <button class="pl-5">
           <img src="~assets/icon-menu.svg" />
-        </button>
+        </button> -->
       </nav>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'TheHeader',
-}
-</script>
