@@ -1,9 +1,12 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'vavrome',
+    title: 'vavro.me',
     htmlAttrs: {
       lang: 'en',
+    },
+    bodyAttrs: {
+      class: 'bg-primary',
     },
     meta: [
       { charset: 'utf-8' },
@@ -29,6 +32,10 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://www.npmjs.com/package/@nuxtjs/svg
+    '@nuxtjs/svg',
+    // https://google-fonts.nuxtjs.org/setup
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -36,4 +43,13 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // https://google-fonts.nuxtjs.org/options/
+  googleFonts: {
+    families: {
+      'Roboto+Mono': {
+        wght: [100, 700],
+      },
+    },
+  },
 }
