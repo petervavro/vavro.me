@@ -11,9 +11,6 @@
       </div>
       <div>
         <ul class="flex">
-          <!-- class="bg-[url('~assets/icon-email-blue.svg')]" -->
-          <!-- :style="{'background-image': `url(${require('@/assets/icon-email-blue.svg')})`}" -->
-          <!-- class=" w-5 h-5 bg-[url('~/assets/icon-email-blue.svg')]" -->
           <li class="px-2 py-2">
             <a href="mailto:<%= mailto %>" title="My Email" rel="noreferrer" class="block text-primary-contrast hover:text-blue-50 border-2 transition p-3 rounded-full transform transition duration-300 hover:scale-125">
               <IconEmail/>
