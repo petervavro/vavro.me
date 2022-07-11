@@ -2,7 +2,7 @@
   <Transition name="modal">
     <div
       v-if="show"
-      class="fixed top-0 bottom-0 left-0 right-0 z-10 grid w-full h-full bg-secondary text-primary"
+      class="fixed top-0 bottom-0 left-0 right-0 z-20 grid w-full h-full bg-secondary text-primary"
     >
       <div class="self-center justify-self-center">
         <button

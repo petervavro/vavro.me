@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primary/50 fixed w-full p-10 px-20 flex justify-between">
+  <div class="bg-primary/50 fixed w-full p-10 px-20 flex justify-between z-10">
     <div class="flex">
       <div class="pr-5">
         <NuxtLink to="/"
