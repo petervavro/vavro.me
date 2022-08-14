@@ -25,7 +25,7 @@
         <h2 class="text-2xl pb-2">Technologies</h2>
         <list-technologies />
       </section>
-      <section class="p-10 bg-tertiary drop-shadow-xl">
+      <section class="container mx-auto lg:max-w-screen-lg p-10 bg-tertiary drop-shadow-xl">
         <h2 class="text-2xl pb-2">Code samples</h2>
         <list-code-samples />
       </section>
