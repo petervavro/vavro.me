@@ -21,7 +21,7 @@
           various frameworks such as Express.js, Sails.js, LoopBack and HapiJS.
         </p>
       </section>
-      <section class="py-5">
+      <section class="container mx-auto lg:max-w-screen-lg py-5">
         <h2 class="text-2xl pb-2">Technologies</h2>
         <list-technologies />
       </section>
