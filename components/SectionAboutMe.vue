@@ -23,6 +23,7 @@
       </section>
       <section class="container mx-auto lg:max-w-screen-lg py-5">
         <h2 class="text-2xl pb-2">Technologies</h2>
+        <p>My experience includes following technologies:</p>
         <list-technologies />
       </section>
       <section class="container mx-auto lg:max-w-screen-lg p-10 bg-tertiary drop-shadow-xl">
