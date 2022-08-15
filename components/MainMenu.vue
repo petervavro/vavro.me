@@ -10,19 +10,17 @@
           <div class="pb-5">
             <ul class="flex flex-col">
               <li class="px-2 py-2">
-                <a href="/intro" class="text-xl hover:font-bold hover:text-2xl transition-all duration-300">Intro</a>
+                <a href="/intro" class="text-xl transition-all duration-300">Intro</a>
               </li>
               <li class="px-2 py-2">
-                <a href="/me" class="text-xl hover:font-bold hover:text-2xl transition-all duration-300">About
+                <a href="/me" class="text-xl transition-all duration-300">About
                   me</a>
               </li>
               <li class="px-2 py-2">
-                <a href="/code-samples"
-                  class="text-xl hover:font-bold hover:text-2xl transition-all duration-300">Code</a>
+                <a href="/code-samples" class="text-xl transition-all duration-300">Code</a>
               </li>
               <li class="px-2 py-2">
-                <a href="/projects"
-                  class="text-xl hover:font-bold hover:text-2xl transition-all duration-300">Projects</a>
+                <a href="/projects" class="text-xl transition-all duration-300">Projects</a>
               </li>
             </ul>
           </div>
