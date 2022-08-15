@@ -6,9 +6,15 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        primary: '#343a40',
-        'primary-contrast': '#81c6dd',
-        secondary: '#e9b64d',
+        primary: {
+          light: '#67e8f9',
+          DEFAULT: '#343a40',
+          'contrast': '#81c6dd',
+        },
+        secondary: {
+          DEFAULT: '#e9b64d',
+          dark: '#cc9119',
+        },
         tertiary: '#90ca77',
       },
       fontFamily: {

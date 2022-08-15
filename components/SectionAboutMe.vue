@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div class="bg-primary-contrast p-20">
+  <div class="bg-primary-contrast p-5">
     <h1 class="text-3xl">
       Peter Vavro<br /><small>Full-Stack Engineer / Scrum Master</small>
     </h1>
@@ -26,8 +26,12 @@
         <list-technologies />
       </section>
       <section class="container mx-auto lg:max-w-screen-lg p-10 bg-tertiary drop-shadow-xl">
-        <h2 class="text-2xl pb-2">Code samples</h2>
+        <h2 class="text-2xl pb-5">Code samples</h2>
         <list-code-samples />
+      </section>
+      <section class="container mx-auto lg:max-w-screen-lg p-5 sm:p-10 mt-10 bg-secondary drop-shadow-xl">
+        <h2 class="text-2xl drop-shadow-md pb-10">Projects</h2>
+        <list-projects />
       </section>
     </div>
   </div>
@@ -36,7 +40,9 @@
 <script>
 import ListTechnologies from './ListTechnologies.vue'
 import ListCodeSamples from './ListCodeSamples.vue'
+import ListProjects from './ListProjects.vue'
+
 export default {
-  components: { ListTechnologies, ListCodeSamples }
+  components: { ListTechnologies, ListCodeSamples, ListProjects }
 }
 </script>

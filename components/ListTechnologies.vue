@@ -5,7 +5,9 @@
         {{ key }}
       </div>
       <div class="px-3 border-l border-dotted border-primary">
-        <the-thumbnail v-bind="t" v-for="t in items[key]" :key="t.id" class="p-3 inline-block" />
+        <a :href="t.url" target="_blank" v-for="t in items[key]" :key="t.id">
+          <the-thumbnail v-bind="t" class="p-3 inline-block" />
+        </a>
       </div>
     </li>
   </ul>
