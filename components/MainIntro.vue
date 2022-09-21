@@ -1,26 +1,21 @@
 <template>
-  <div class="h-screen pt-[20vh] w-full flex justify-center">
-    <div class="w-96 p-10 text-xl text-tertiary border-r border-dotted border-secondary">
-      <p v-if="!isIntroTextVisible">Welcome.</p>
-      <div class="intro" :class="{ show: isIntroTextVisible }">
-        <div style="--delay: 0;" class="py-2 text-tertiary">
-          <p :style="`--index: 0;`">Hi.</p>
-          <p :style="`--index: 1;`">It's me, Peter Vavro,</p>
-          <p :style="`--index: 2;`">your new <span class="text-primary-light">web &
-              mobile</span> developer</p>
-          <p :style="`--index: 3;`">you're looking for.</p>
+  <div class="grid place-items-center h-screen grid-rows-1 grid-cols-1">
+    <div class="intro" :class="{ show: isIntroTextVisible }">
+      <div class=" px-10 py-5 text-tertiary text-lg border-primary-light/50 border-l-2 border-dotted">
+        <div style="--delay: 0;">
+          <p :style="`--index: 0;`">Hi, it's me,</p>
+          <p :style="`--index: 1;`" class="text-6xl py-1">Peter Vavro</p>
+          <p :style="`--index: 2;`">your next <span class="text-secondary">web & mobile</span> developer you're looking
+            for.</p>
         </div>
-        <div style="--delay: 4;" class="py-1 text-secondary">
-          <p :style="`--index: 0;`">let me show you why...</p>
-        </div>
-        <div style="--delay: 5;" class="py-2 text-white">
-          <p :style="`--index: 0;`">but before, ...</p>
-          <p :style="`--index: 1;`">catch some circles first</p>
-          <p :style="`--index: 2;`">Go.</p>
+        <div style="--delay: 2;" class="pt-10">
+          <p :style="`--index: 0;`" class="text-primary-light transition-all">Please, let me show you why to hire me...
+          </p>
         </div>
       </div>
+      <i
+        class="p-3 border-dotted border-primary-light border-r-2 border-b-2 inline-block -ml-3 rotate-45 animate-pulse"></i>
     </div>
-    <div class="grow"></div>
   </div>
 </template>
 
@@ -34,12 +29,12 @@ export default {
     return {
       isIntroTextVisible: false,
     }
-  }
+  },
 }
 </script>
 <style scoped>
 .intro p {
-  @apply opacity-0 duration-1000 delay-500 ease-out transition-all translate-x-0 translate-y-1/2;
+  @apply opacity-0 duration-1000 delay-1000 ease-out transition-all translate-x-0 translate-y-1/2;
 }
 
 .intro.show p {
