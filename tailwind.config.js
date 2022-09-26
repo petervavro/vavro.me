@@ -6,10 +6,13 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
+        neutral: {
+          light: 'hsl(214deg 10% 33%)',
+          DEFAULT: '#343a40',
+        },
         primary: {
           light: '#67e8f9',
-          DEFAULT: '#343a40',
-          'contrast': '#81c6dd',
+          DEFAULT: '#81c6dd',
           dark: '#6fbdd8',
         },
         secondary: {

@@ -4,321 +4,413 @@
     "title": "BASIC",
     "url": "https://en.wikipedia.org/wiki/BASIC",
     "thumbnailImage": "logo-BASIC.png",
-    "id": "basic"
+    "id": "basic",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 1996,
     "title": "Turbo Pascal",
     "url": "https://en.wikipedia.org/wiki/Turbo_Pascal",
     "thumbnailImage": "logo-Turbo_Pascal.png",
-    "id": "turbo-pascal"
+    "id": "turbo-pascal",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 1998,
     "title": "C++",
     "url": "https://en.wikipedia.org/wiki/C%2B%2B",
     "thumbnailImage": "logo-C++.svg",
-    "id": "c-plus-plus"
+    "id": "c-plus-plus",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 1999,
     "title": "Assembly language",
     "url": "https://en.wikipedia.org/wiki/Assembly_language",
     "thumbnailImage": "logo-Assembly_language.png",
-    "id": "assembly-language"
+    "id": "assembly-language",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 1999,
     "title": "HTML",
     "url": "https://en.wikipedia.org/wiki/HTML",
     "thumbnailImage": "logo-html5.svg",
-    "id": "html"
+    "id": "html",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 1999,
     "title": "CSS",
     "url": "https://en.wikipedia.org/wiki/Cascading_Style_Sheets",
     "thumbnailImage": "logo-css.svg",
-    "id": "css"
+    "id": "css",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2003,
     "title": "Visual Basic",
     "url": "https://en.wikipedia.org/wiki/Visual_Basic",
     "thumbnailImage": "logo-Visual_Basic-NL.png",
-    "id": "visual-basic"
+    "id": "visual-basic",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2003,
     "title": "ASP.NET",
     "url": "https://en.wikipedia.org/wiki/ASP.NET",
     "thumbnailImage": "logo-ASP.NET-NL.png",
-    "id": "asp"
+    "id": "asp",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2004,
     "title": "PHP",
     "url": "https://en.wikipedia.org/wiki/PHP",
     "thumbnailImage": "logo-PHP.svg",
-    "id": "php"
+    "id": "php",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2004,
     "title": "MySQL",
     "url": "https://en.wikipedia.org/wiki/MySQL",
     "thumbnailImage": "logo-MySQL.svg",
-    "id": "mysql"
+    "id": "mysql",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2004,
     "title": "JavaScript",
     "url": "https://en.wikipedia.org/wiki/JavaScript",
     "thumbnailImage": "logo-Javascript.svg",
-    "id": "javascript"
+    "id": "javascript",
+    "preferred": 8,
+    "note": "Excepteur elit minim consequat nulla occaecat non magna voluptate exercitation."
   },
   {
     "year": 2005,
     "title": "PostgresSQL",
     "url": "https://en.wikipedia.org/wiki/PostgreSQL",
     "thumbnailImage": "logo-Postgresql.svg",
-    "id": "postgresql"
+    "id": "postgresql",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2007,
     "title": "Joomla",
     "url": "https://en.wikipedia.org/wiki/Joomla",
     "thumbnailImage": "logo-Joomla.svg",
-    "id": "joomla"
+    "id": "joomla",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2007,
     "title": "MooTools",
     "url": "https://en.wikipedia.org/wiki/MooTools",
     "thumbnailImage": "logo-MooTools.png",
-    "id": "mootools"
+    "id": "mootools",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2007,
     "title": "jQuery",
     "url": "https://en.wikipedia.org/wiki/JQuery",
     "thumbnailImage": "logo-JQuery.svg",
-    "id": "jquery"
+    "id": "jquery",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2010,
     "title": "Wordpress",
     "url": "https://en.wikipedia.org/wiki/WordPress",
     "thumbnailImage": "logo-Wordpress.svg",
-    "id": "wordpress"
+    "id": "wordpress",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2011,
     "title": "CodeIgniter",
     "url": "https://en.wikipedia.org/wiki/CodeIgniter",
     "thumbnailImage": "logo-Codeigniter.svg",
-    "id": "codeigniter"
+    "id": "codeigniter",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2011,
     "title": "Bootstrap",
     "url": "https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)",
     "thumbnailImage": "logo-bootstrap.svg",
-    "id": "bootstrap"
+    "id": "bootstrap",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2012,
     "title": "Less",
     "url": "https://en.wikipedia.org/wiki/Less_(stylesheet_language)",
     "thumbnailImage": "logo-less.svg",
-    "id": "less"
+    "id": "less",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2012,
     "title": "Sass",
     "url": "https://en.wikipedia.org/wiki/Sass_(stylesheet_language)",
     "thumbnailImage": "logo-sass.svg",
-    "id": "sass"
+    "id": "sass",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2013,
     "title": "Drupal",
     "url": "https://en.wikipedia.org/wiki/Drupal",
     "thumbnailImage": "logo-Drupal.svg",
-    "id": "drupal"
+    "id": "drupal",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2013,
     "title": "Laravel",
     "url": "https://laravel.com",
     "thumbnailImage": "logo-laravel.svg",
-    "id": "laravel"
+    "id": "laravel",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2013,
     "title": "Bower",
     "url": "https://bower.io/",
     "thumbnailImage": "logo-bower.svg",
-    "id": "bower"
+    "id": "bower",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2013,
     "title": "AngularJS",
     "url": "https://en.wikipedia.org/wiki/AngularJS",
     "thumbnailImage": "logo-AngularJS.svg",
-    "id": "angularjs"
+    "id": "angularjs",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2014,
     "title": "Node.js",
     "url": "https://en.wikipedia.org/wiki/Node.js",
     "thumbnailImage": "logo-Nodejs.svg",
-    "id": "nodejs"
+    "id": "nodejs",
+    "preferred": 5,
+    "note": "My favorite back-end JavaScript runtime environment. We worked together on various APIs with help of Express.js, Sails.js, LoopBack, Koa.js and HapiJS."
   },
   {
     "year": 2014,
     "title": "MongoDB",
     "url": "https://en.wikipedia.org/wiki/MongoDB",
     "thumbnailImage": "logo-mongoDB.svg",
-    "id": "mongodb"
+    "id": "mongodb",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2014,
     "title": "Express.js",
     "url": "https://en.wikipedia.org/wiki/Express.js",
     "thumbnailImage": "logo-Express.svg",
-    "id": "express"
+    "id": "express",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2015,
     "title": "EJS",
     "url": "https://github.com/mde/ejs",
     "thumbnailImage": "logo-ejs.png",
-    "id": "ejs"
+    "id": "ejs",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2015,
     "title": "Webpack",
     "url": "https://en.wikipedia.org/wiki/Webpack",
     "thumbnailImage": "logo-webpack.svg",
-    "id": "webpack"
+    "id": "webpack",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2015,
     "title": "Babel",
     "url": "https://en.wikipedia.org/wiki/Babel_(transcompiler)",
     "thumbnailImage": "logo-Babel.svg",
-    "id": "babel"
+    "id": "babel",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2016,
     "title": "ES6",
     "url": "https://en.wikipedia.org/wiki/ECMAScript",
     "thumbnailImage": "logo-es6.svg",
-    "id": "es6"
+    "id": "es6",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2016,
     "title": "React",
     "url": "https://en.wikipedia.org/wiki/React_(web_framework)",
     "thumbnailImage": "logo-React.svg",
-    "id": "react"
+    "id": "react",
+    "preferred": 1,
+    "note": "We meet daily and we meet when component could be only a class. Since then, we evolved together and now we use hooks inside of the functional component. Material UI is a library I had oportunity to work with the most. Sometimes Redux, MobX helped us to manage the state of app. Refs, context, Higher-Order Component, Memoization, and now SSR using Next.js... React is my favorite tool build."
   },
   {
     "year": 2016,
     "title": "Redux",
     "url": "https://redux.js.org",
     "thumbnailImage": "logo-redux.svg",
-    "id": "redux"
+    "id": "redux",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2017,
     "title": "React Native",
     "url": "https://en.wikipedia.org/wiki/React_Native",
     "thumbnailImage": "logo-React.svg",
-    "id": "react-native"
+    "id": "react-native",
+    "preferred": 2,
+    "note": "Excepteur elit minim consequat nulla occaecat non magna voluptate exercitation."
   },
   {
     "year": 2017,
     "title": "Koa",
     "url": "https://koajs.com",
     "thumbnailImage": "logo-KoaJS.svg",
-    "id": "koa"
+    "id": "koa",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2017,
     "title": "Amazon Web Services",
     "url": "https://aws.amazon.com",
     "thumbnailImage": "logo-AWS.svg",
-    "id": "aws"
+    "id": "aws",
+    "preferred": 6,
+    "note": "Excepteur elit minim consequat nulla occaecat non magna voluptate exercitation."
   },
   {
     "year": 2018,
     "title": "Docker",
     "url": "https://en.wikipedia.org/wiki/Docker_(software)",
     "thumbnailImage": "logo-docker.svg",
-    "id": "docker"
+    "id": "docker",
+    "preferred": 7,
+    "note": "Excepteur elit minim consequat nulla occaecat non magna voluptate exercitation."
   },
   {
     "year": 2018,
     "title": "Hapi",
     "url": "https://hapi.dev",
     "thumbnailImage": "logo-hapi.svg",
-    "id": "hapi"
+    "id": "hapi",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2018,
     "title": "OrientDB",
     "url": "https://en.wikipedia.org/wiki/OrientDB",
     "thumbnailImage": "logo-Orientdb.png",
-    "id": "orientdb"
+    "id": "orientdb",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2019,
     "title": "Typescript",
     "url": "https://en.wikipedia.org/wiki/TypeScript",
     "thumbnailImage": "logo-TypeScript.svg",
-    "id": "typescript"
+    "id": "typescript",
+    "preferred": 4,
+    "note": "In 85% of projects I worked in recent years, TypeScript was the language we used."
   },
   {
     "year": 2019,
     "title": "Vue.js",
     "url": "https://vuejs.org/",
     "thumbnailImage": "logo-vuejs.svg",
-    "id": "vuejs"
+    "id": "vuejs",
+    "preferred": 3,
+    "note": "Really nice framework I had opportunity to work with in few projects. Btw, I use NuxtJS to build this website."
   },
   {
     "year": 2020,
     "title": "LoopBack",
     "url": "https://loopback.io",
     "thumbnailImage": "logo-loopback.svg",
-    "id": "loopback"
+    "id": "loopback",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2020,
     "title": "MobX",
     "url": "https://mobx.js.org",
     "thumbnailImage": "logo-mobx.png",
-    "id": "mobx"
+    "id": "mobx",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2020,
     "title": "NestJS",
     "url": "https://nestjs.com",
     "thumbnailImage": "logo-NestJS.svg",
-    "id": "nestjs"
+    "id": "nestjs",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2020,
     "title": "Next.js",
     "url": "https://en.wikipedia.org/wiki/Next.js",
     "thumbnailImage": "logo-NEXTjs.svg",
-    "id": "nextjs"
+    "id": "nextjs",
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2021,
     "title": "Electron",
     "url": "https://www.electronjs.org",
     "thumbnailImage": "logo-Electron.svg",
-    "id": "electron"
+    "id": "electron",
+    "preferred": 0,
+    "note": ""
   }
 ]

@@ -10,5 +10,8 @@
     "@nuxtjs/tailwindcss": "^5.1.3",
     "nuxt": "3.0.0-rc.4",
     "@volar-plugins/prettier": "latest"
+  },
+  "dependencies": {
+    "gsap": "^3.11.0"
   }
 }
