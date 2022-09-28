@@ -62,7 +62,7 @@ export default {
 <style scoped>
 .title-enter-active,
 .title-leave-active {
-    transition: opacity 0.5s ease 0.5s;
+    @apply transition delay-1000 duration-500 ease-in-out;
 }
 
 .title-enter-from,
