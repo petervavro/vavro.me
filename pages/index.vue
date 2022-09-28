@@ -1,4 +1,5 @@
 <template>
-	<MainIntro />
-	<SectionAboutMe />
+    <MainIntro />
+    <SectionAboutMe />
+    <SectionTechnologies />
 </template>

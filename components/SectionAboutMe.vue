@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-    <div class="">
+    <div>
         <div class="container mx-auto lg:max-w-4xl">
             <!-- <h1 class="text-3xl pb-5">
 				Peter Vavro<br />
@@ -34,17 +34,6 @@
                 <intro-animation />
             </section>
         </div>
-        <div class="my-20 py-28 container mx-auto lg:max-w-4xl text-primary">
-            <section class="p-10">
-                <div class="pb-10">
-                    <h2 class="text-2xl pb-2 uppercase">
-                        What did I learn and when
-                    </h2>
-                    <p>My experience includes following technologies:</p>
-                </div>
-                <list-technologies />
-            </section>
-        </div>
         <div class="py-28 container mx-auto lg:max-w-4xl">
             <section class="p-10 text-tertiary">
                 <h2 class="text-2xl pb-5 uppercase">Samples of my coding</h2>
@@ -63,14 +52,12 @@
 </template>
 
 <script>
-import ListTechnologies from './ListTechnologies.vue'
 import ListCodeSamples from './ListCodeSamples.vue'
 import ListProjects from './ListProjects.vue'
 import IntroAnimation from './IntroAnimation.vue'
 
 export default {
     components: {
-        ListTechnologies,
         ListCodeSamples,
         ListProjects,
         IntroAnimation
