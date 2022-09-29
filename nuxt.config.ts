@@ -3,6 +3,7 @@ import svgLoader from 'vite-svg-loader'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  target: 'static',
   meta: {
     title: 'vavro.me'
     // charset: 'utf-8'
@@ -26,5 +27,5 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt'],
   vite: {
     plugins: [svgLoader()]
-  }
+  },
 })
