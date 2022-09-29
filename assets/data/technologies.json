@@ -95,8 +95,8 @@
     "url": "https://en.wikipedia.org/wiki/JavaScript",
     "thumbnailImage": "logo-Javascript.svg",
     "id": "javascript",
-    "preferred": 8,
-    "note": "Excepteur elit minim consequat nulla occaecat non magna voluptate exercitation."
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2005,
@@ -302,8 +302,8 @@
     "url": "https://en.wikipedia.org/wiki/React_Native",
     "thumbnailImage": "logo-React.svg",
     "id": "react-native",
-    "preferred": 2,
-    "note": "Excepteur elit minim consequat nulla occaecat non magna voluptate exercitation."
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2017,
@@ -320,8 +320,8 @@
     "url": "https://aws.amazon.com",
     "thumbnailImage": "logo-AWS.svg",
     "id": "aws",
-    "preferred": 6,
-    "note": "Excepteur elit minim consequat nulla occaecat non magna voluptate exercitation."
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2018,
@@ -329,8 +329,8 @@
     "url": "https://en.wikipedia.org/wiki/Docker_(software)",
     "thumbnailImage": "logo-docker.svg",
     "id": "docker",
-    "preferred": 7,
-    "note": "Excepteur elit minim consequat nulla occaecat non magna voluptate exercitation."
+    "preferred": 0,
+    "note": ""
   },
   {
     "year": 2018,
