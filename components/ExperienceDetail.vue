@@ -1,55 +1,5 @@
-<template>
-	<div class="flex">
-		<div class="flex-1 pr-3">
-			<div @pointermove="moveHighlight">
-				<button
-					v-for="t in technologies"
-					:key="t.id"
-					:class="[
-						'technology',
-						selected === t ? 'selected' : '',
-						t?.alreadySelected === true ? 'active' : 'inactive'
-					]"
-					ref="technology"
-					@click="doSelect(t.id)"
-				>
-					{{ t.title }}
-				</button>
-			</div>
-		</div>
-		<div class="flex-1 pl-3 text-secondary">
-			<Transition>
-				<div v-if="selected !== null">
-					<h4 class="text-lg pb-3">
-						{{ selected.title }}
-					</h4>
-					<div
-						class="text-base py-5 border-tertiary border-t border-dotted"
-					>
-						<p>
-							tasted for first time in <br />
-							<span class="text-xl inline-block py-1">
-								{{ selected.year }}
-							</span>
-							<span>
-								|&nbsp;{{
-									new Date().getFullYear() - selected.year
-								}}
-								years ago.
-							</span>
-						</p>
-						<p class="pt-3">
-							{{ selected.note }}
-						</p>
-					</div>
-				</div>
-			</Transition>
-		</div>
-	</div>
-</template>
 <script>
 import JSON_DATA from 'assets/data/technologies.json'
-import { gsap } from 'gsap'
 
 const technologies = JSON_DATA.filter(({ preferred }) => preferred).sort(
 	function (a, b) {
@@ -62,107 +12,25 @@ export default {
 		return {
 			technologies,
 			pointer: [0, 0],
-			selected: null
+			selected: technologies[0],
+			loopInterval: null
 		}
 	},
-	/*
-    watch: {
-        // whenever question changes, this function will run
-        pointer(newV, oldV) {
-
-            const [x, y] = newV
-
-            this.$refs.technology.forEach((t) => {
-
-                // Not optimized yet, I know
-                const rect = t.getBoundingClientRect();
-
-                t.style.setProperty("--x", x - rect.left);
-                t.style.setProperty("--y", y - rect.top);
-
-            });
-        }
-    },
-    */
 	methods: {
-		getElementHighPosition(e) {
-			console.log(e)
-		},
 		doSelect(pickedId) {
 			this.selected = technologies.find(({ id }) => id === pickedId)
 		},
+		switchSelection(event) {
+			this.doSelect(event.target.value)
+
+			clearInterval(this.loopInterval)
+		},
 		moveHighlight(e) {
 			this.pointer = [e.clientX, e.clientY]
-			/*
-            console.count()
-            console.log();
-            const anim = () => {
-
-                let pointX = e.target.style.getPropertyValue('--pointX') || 0;
-                let pointY = e.target.style.getPropertyValue('--pointY') || 0;
-
-                pointX += (e.clientX - pointX) * 0.1;
-                pointY += (e.clientY - pointY) * 0.1;
-
-                e.target.style.setProperty("--pointX", pointX);
-                e.target.style.setProperty("--pointY", pointY);
-                console.log(pointX, pointY);
-                this.$refs.technology.forEach((t) => {
-
-                    // Not optimized yet, I know
-                    const rect = t.getBoundingClientRect();
-
-                    t.style.setProperty("--x", pointX - rect.left);
-                    t.style.setProperty("--y", pointY - rect.top);
-
-                });
-
-                if (e.clientX !== pointX) window.requestAnimationFrame(anim);
-            }
-
-            anim();
-    */
-
-			/*
-            const featuresEl = this.$el.querySelector(".wrapper");
-            const featureEls = this.$el.querySelectorAll(".technology");
-        
-            featureEls.forEach((featureEl) => {
-        
-                // Not optimized yet, I know
-                const rect = featureEl.getBoundingClientRect();
-        
-                featureEl.style.setProperty("--x", ev.clientX - rect.left);
-                featureEl.style.setProperty("--y", ev.clientY - rect.top);
-            });
-            */
 		}
 	},
 	mounted() {
-		const tl = gsap.timeline({ repeatDelay: 1, duration: 0.4 })
-		// tl.set(".technology", {
-		//     className: "technology inactive opacity-0", // "inline-block m-1 p-2 px-5 rounded-full border-2 border-neutral-light text-neutral-light opacity-0"
-		// });
-		// tl.to(".technology", {
-		//     yoyo: true,
-		//     stagger: 0.025,
-		//     className: "technology inactive", // "technology inline-block m-1 p-2 px-5 rounded-full border-2 border-neutral-light text-neutral-light opacity-100"
-		// });
-		// tl.to(".technology", {
-		//     // opacity: 0.6,
-		//     stagger: {
-		//         each: 0.1,
-		//         // ease: "power4.out",
-		//         // amount: 2
-		//     }, className: "technology active hover:opacity-100", // "technology inline-block m-1 p-2 px-5 rounded-full border-2 border-secondary text-secondary opacity-60 hover:opacity-100"
-		// }, "-=25%");
-
-		// const anim = () => {
-		//     console.log('anim', this.pointer);
-		//     window.requestAnimationFrame(anim)
-		// }
-
-		const anim = () => {
+		const setPointerCoordinates = () => {
 			const [x, y] = this.pointer
 
 			this.$refs.technology.forEach((t) => {
@@ -187,12 +55,15 @@ export default {
 					t.style.setProperty('--y', newPointY)
 			})
 
-			window.requestAnimationFrame(anim)
+			window.requestAnimationFrame(setPointerCoordinates)
 		}
 
-		anim()
+		setPointerCoordinates()
 
-		const loopInterval = setInterval(() => {
+		const loopInterval = this.loopInterval
+
+		// Select between options loop
+		this.loopInterval = setInterval(() => {
 			if (
 				technologies.every(({ alreadySelected }) => !!alreadySelected)
 			) {
@@ -215,16 +86,79 @@ export default {
 			selected.alreadySelected = true
 
 			this.selected = selected
-		}, 3000)
+		}, 4000)
 	}
 }
 </script>
-<style scoped lang="css">
-*,
-*:before,
-*:after {
+	
+<template>
+	<select
+		class="select md:hidden"
+		@change="switchSelection($event)"
+		v-model="selected.id"
+	>
+		<option v-for="(t, index) in technologies" v-bind:value="t.id">
+			{{ t.title }}
+		</option>
+	</select>
+	<div class="flex flex-col md:flex-row">
+		<div class="flex-1 pr-3 hidden md:block">
+			<div @pointermove="moveHighlight">
+				<button
+					v-for="t in technologies"
+					:key="t.id"
+					:class="[
+						'technology',
+						selected === t ? 'selected' : '',
+						t?.alreadySelected === true ? 'active' : 'inactive'
+					]"
+					ref="technology"
+					@click="doSelect(t.id)"
+				>
+					{{ t.title }}
+				</button>
+			</div>
+		</div>
+		<div class="flex-1 pl-3 text-secondary">
+			<Transition>
+				<div v-if="selected !== null">
+					<h4
+						class="text-lg pb-3 hidden md:block border-tertiary border-b border-dotted"
+					>
+						{{ selected.title }}
+					</h4>
+					<div class="text-base py-5">
+						<p>
+							tasted for first time in <br />
+							<span class="text-xl inline-block py-1">
+								{{ selected.year }}
+							</span>
+							<span>
+								|&nbsp;{{
+									new Date().getFullYear() - selected.year
+								}}
+								years ago.
+							</span>
+						</p>
+						<p class="pt-3 h-48">
+							{{ selected.note }}
+						</p>
+					</div>
+				</div>
+			</Transition>
+		</div>
+	</div>
+</template>
+
+<style scoped>
+.select {
+	@apply appearance-none bg-no-repeat bg-right w-full p-2 px-5 rounded-full border-2 border-tertiary text-tertiary text-base bg-neutral;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZmlsbDogIzkwY2E3NzsiPjxwYXRoIGQ9Ik0xNDcuNiAyMTAuN2MtNy41IDcuNS03LjUgMTkuOCAwIDI3LjNsOTUuNyA5NS40YzcuMyA3LjMgMTkuMSA3LjUgMjYuNi42bDk0LjMtOTRjMy44LTMuOCA1LjctOC43IDUuNy0xMy43IDAtNC45LTEuOS05LjktNS42LTEzLjYtNy41LTcuNS0xOS43LTcuNi0yNy4zIDBsLTgxIDc5LjgtODEuMS04MS45Yy03LjUtNy41LTE5LjctNy41LTI3LjMuMXoiLz48cGF0aCBkPSJNNDggMjU2YzAgMTE0LjkgOTMuMSAyMDggMjA4IDIwOHMyMDgtOTMuMSAyMDgtMjA4UzM3MC45IDQ4IDI1NiA0OCA0OCAxNDEuMSA0OCAyNTZ6bTMzMi40LTEyNC40QzQxMy43IDE2NC44IDQzMiAyMDkgNDMyIDI1NnMtMTguMyA5MS4yLTUxLjYgMTI0LjRDMzQ3LjIgNDEzLjcgMzAzIDQzMiAyNTYgNDMycy05MS4yLTE4LjMtMTI0LjQtNTEuNkM5OC4zIDM0Ny4yIDgwIDMwMyA4MCAyNTZzMTguMy05MS4yIDUxLjYtMTI0LjRDMTY0LjggOTguMyAyMDkgODAgMjU2IDgwczkxLjIgMTguMyAxMjQuNCA1MS42eiIvPjwvc3ZnPg==);
+	/* form-select appearance-none block w-full  text-xl font-normal text-gray-700 bg-neutral bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none */
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	position: relative;
 }
 
 .technology.active {
