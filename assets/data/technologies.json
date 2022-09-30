@@ -316,7 +316,7 @@
   },
   {
     "year": 2017,
-    "title": "Amazon Web Services",
+    "title": "AWS",
     "url": "https://aws.amazon.com",
     "thumbnailImage": "logo-AWS.svg",
     "id": "aws",
@@ -369,7 +369,7 @@
     "note": "Really nice framework I had opportunity to work with in few projects. Btw, I use NuxtJS to build this website."
   },
   {
-    "year": 2020,
+    "year": 2019,
     "title": "LoopBack",
     "url": "https://loopback.io",
     "thumbnailImage": "logo-loopback.svg",
@@ -378,7 +378,7 @@
     "note": ""
   },
   {
-    "year": 2020,
+    "year": 2019,
     "title": "MobX",
     "url": "https://mobx.js.org",
     "thumbnailImage": "logo-mobx.png",
@@ -405,11 +405,38 @@
     "note": ""
   },
   {
+    "year": 2020,
+    "title": "Jest",
+    "url": "https://jestjs.io",
+    "thumbnailImage": "logo-JEST.svg",
+    "id": "jest",
+    "preferred": 0,
+    "note": ""
+  },
+  {
+    "year": 2020,
+    "title": "Testing Library",
+    "url": "https://testing-library.com",
+    "thumbnailImage": "logo-TestingLibrary.png",
+    "id": "testing-library",
+    "preferred": 0,
+    "note": ""
+  },
+  {
     "year": 2021,
     "title": "Electron",
     "url": "https://www.electronjs.org",
     "thumbnailImage": "logo-Electron.svg",
     "id": "electron",
+    "preferred": 0,
+    "note": ""
+  },
+  {
+    "year": 2022,
+    "title": "GSAP",
+    "url": "https://greensock.com/gsap/",
+    "thumbnailImage": "logo-GSAP.svg",
+    "id": "gsap",
     "preferred": 0,
     "note": ""
   }
