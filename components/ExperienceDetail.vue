@@ -12,24 +12,68 @@ export default {
 		return {
 			technologies,
 			pointer: [0, 0],
-			selected: technologies[0],
+			selected: false,
 			loopInterval: null
 		}
 	},
 	methods: {
 		doSelect(pickedId) {
-			this.selected = technologies.find(({ id }) => id === pickedId)
+			this.selected = this.technologies.find(({ id }) => id === pickedId)
+		},
+		stopLoop() {
+			if (this.loopInterval) {
+				clearInterval(this.loopInterval)
+
+				this.technologies = this.technologies.map((t) => ({
+					...t,
+					alreadySelected: true
+				}))
+			}
 		},
 		switchSelection(event) {
 			this.doSelect(event.target.value)
-
-			clearInterval(this.loopInterval)
 		},
 		moveHighlight(e) {
 			this.pointer = [e.clientX, e.clientY]
 		}
 	},
 	mounted() {
+		// Set first item
+		this.selected = this.technologies[0]
+		this.technologies[0].alreadySelected = true
+
+		// Select between options loop
+		const loopInterval = this.loopInterval
+
+		this.loopInterval = setInterval(() => {
+			if (
+				this.technologies.every(
+					({ alreadySelected }) => !!alreadySelected
+				)
+			) {
+				this.selected = this.technologies.find(
+					({ id }) => id === 'react'
+				)
+
+				clearInterval(loopInterval)
+
+				return
+			}
+
+			let selected = null
+
+			do {
+				selected =
+					this.technologies[
+						Math.floor(Math.random() * this.technologies.length)
+					]
+			} while (selected?.alreadySelected)
+
+			selected.alreadySelected = true
+
+			this.selected = selected
+		}, 3000)
+
 		/*
         const setPointerCoordinates = () => {
             const [x, y] = this.pointer
@@ -61,34 +105,6 @@ export default {
 
         setPointerCoordinates()
         */
-
-		const loopInterval = this.loopInterval
-
-		// Select between options loop
-		this.loopInterval = setInterval(() => {
-			if (
-				technologies.every(({ alreadySelected }) => !!alreadySelected)
-			) {
-				this.selected = technologies.find(({ id }) => id === 'react')
-
-				clearInterval(loopInterval)
-
-				return
-			}
-
-			let selected = null
-
-			do {
-				selected =
-					technologies[
-						Math.floor(Math.random() * technologies.length)
-					]
-			} while (selected?.alreadySelected)
-
-			selected.alreadySelected = true
-
-			this.selected = selected
-		}, 4000)
 	}
 }
 </script>
@@ -96,6 +112,7 @@ export default {
 <template>
 	<select
 		class="select md:hidden"
+		@click="stopLoop"
 		@change="switchSelection($event)"
 		v-model="selected.id"
 	>
@@ -104,14 +121,14 @@ export default {
 		</option>
 	</select>
 	<div class="flex flex-col md:flex-row">
-		<div class="flex-1 pr-3 hidden md:block">
+		<div class="pr-3 hidden md:block">
 			<div @pointermove="moveHighlight">
 				<button
 					v-for="t in technologies"
 					:key="t.id"
 					:class="[
 						'technology',
-						selected === t ? 'selected' : '',
+						selected.id === t.id ? 'selected' : '',
 						t?.alreadySelected === true ? 'active' : 'inactive'
 					]"
 					ref="technology"
@@ -122,32 +139,26 @@ export default {
 			</div>
 		</div>
 		<div class="flex-1 pl-3 text-secondary">
-			<Transition>
-				<div v-if="selected !== null">
-					<h4
-						class="text-lg pb-3 hidden md:block border-tertiary border-b border-dotted"
-					>
-						{{ selected.title }}
-					</h4>
-					<div class="text-base py-5">
-						<p>
-							tasted for first time in <br />
-							<span class="text-xl inline-block py-1">
-								{{ selected.year }}
-							</span>
-							<span>
-								|&nbsp;{{
-									new Date().getFullYear() - selected.year
-								}}
-								years ago.
-							</span>
-						</p>
-						<p class="pt-3 h-48">
-							{{ selected.note }}
-						</p>
-					</div>
-				</div>
-			</Transition>
+			<h4
+				class="text-lg pb-3 hidden md:block border-tertiary border-b border-dotted"
+			>
+				{{ selected.title }}
+			</h4>
+			<div class="text-base py-5">
+				<p>
+					tasted for first time in <br />
+					<span class="text-xl inline-block py-1">
+						{{ selected.year }}
+					</span>
+					<span>
+						|&nbsp;{{ new Date().getFullYear() - selected.year }}
+						years ago.
+					</span>
+				</p>
+				<p class="pt-3 h-48">
+					{{ selected.note }}
+				</p>
+			</div>
 		</div>
 	</div>
 </template>
@@ -172,53 +183,43 @@ export default {
 }
 
 .technology {
-	@apply inline-block m-1 p-2 px-5 rounded-full border-2 text-sm transition-all opacity-100 hover:text-tertiary hover:border-tertiary hover:opacity-100;
+	@apply block overflow-hidden m-1 p-2 px-5 rounded-full border-2 text-sm transition-all duration-300 opacity-100 hover:text-tertiary hover:border-tertiary hover:opacity-100;
 	--x-px: calc(var(--x) * 1px);
 	--y-px: calc(var(--y) * 1px);
 	--border: 2px;
-
-	overflow: hidden;
 }
 
+/*
 .technology:before,
 .technology:after {
-	content: '';
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	inset: 0px;
-	border-radius: inherit;
-	background: radial-gradient(
-		20rem circle at var(--x-px) var(--y-px),
-		rgba(144, 202, 119, 0.3),
-		transparent 40%
-	);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    border-radius: inherit;
+    background: radial-gradient(
+        20rem circle at var(--x-px) var(--y-px),
+        rgba(144, 202, 119, 0.3),
+        transparent 40%
+    );
 }
 
 .technology:before {
-	z-index: 1;
+    z-index: 1;
 }
 
 .technology:after {
-	z-index: 2;
-	opacity: 0;
-	transition: opacity 0.4s ease;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .technology:hover:after {
-	opacity: 1;
+    opacity: 1;
 }
-
-.v-enter-active,
-.v-leave-active {
-	transition: opacity 0.5s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-	opacity: 0;
-}
+*/
 </style>
