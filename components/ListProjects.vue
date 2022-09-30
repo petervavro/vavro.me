@@ -121,7 +121,7 @@ export default {
 				v-if="isVisible"
 			>
 				<div
-					:class="`flex-none mt-3 w-20 h-20 rounded-full border-2 border-tertiary group-hover:border-secondary transition-all duration-300 ease-out bg-white bg-cover bg-no-repeat bg-center ${
+                    :class="`flex-none mt-3 w-20 h-20 border-2 rounded-50p group-hover:rounded-none group-hover:rotate-[360deg] border-tertiary group-hover:border-secondary transition-all duration-500 ease-out bg-white bg-cover bg-no-repeat bg-center ${
 						[
 							'infocyte',
 							'cropswap',

@@ -8,3 +8,9 @@
         font-family: 'Roboto Mono', monospace;
     }
 }
+
+@layer components {
+    .rounded-50p {
+        border-radius: 50%;
+    }
+  }
