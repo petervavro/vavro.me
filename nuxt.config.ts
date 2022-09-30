@@ -4,25 +4,26 @@ import svgLoader from 'vite-svg-loader'
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   target: 'static',
-  meta: {
-    title: 'vavro.me'
-    // charset: 'utf-8'
-  },
-  head: {
-    title: 'vavro.me',
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-        crossorigin: true
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&family=Varela+Round&display=swap'
-      }
-    ]
+  app: {
+    head: {
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+      meta: [
+        { name: 'description', content: "Accomplished Full-Stack Engineer, in to programming since 1994, specialized in web and mobile technologies." },
+        { name: 'keywords', content: "Peter,Vavro,full-stack,developer,engineer,computer programmer,programmer,back-end,front-end,,backend,frontend,programming,personal,website,presentation, technologies,history,scrum master" },
+        { name: 'author', content: 'Peter Vavro' },
+        { name: 'copyright', content: 'Peter Vavro' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossorigin: true
+        }
+      ]
+    },
   },
   modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt'],
   vite: {
