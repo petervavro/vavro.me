@@ -1,7 +1,7 @@
 <template>
-	<div class="tracking-tight">
+	<main class="tracking-tight">
 		<TheHeader />
 		<slot />
 		<TheFooter />
-	</div>
+	</main>
 </template>
