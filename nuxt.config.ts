@@ -8,8 +8,11 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
+      htmlAttrs: {
+        lang: 'en'
+      },
       meta: [
-        { name: 'description', content: "Accomplished Full-Stack Engineer, in to programming since 1994, specialized in web and mobile technologies." },
+        { name: 'description', content: "Peter Vavro is a Full-Stack Engineer, in to programming since 1994, specialized in web&mobile technologies." },
         { name: 'keywords', content: "Peter,Vavro,full-stack,developer,engineer,computer programmer,programmer,back-end,front-end,,backend,frontend,programming,personal,website,presentation, technologies,history,scrum master" },
         { name: 'author', content: 'Peter Vavro' },
         { name: 'copyright', content: 'Peter Vavro' },
