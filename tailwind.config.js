@@ -19,7 +19,7 @@ module.exports = {
           DEFAULT: '#e9b64d',
           dark: '#cc9119',
         },
-        tertiary: '#90ca77',
+        tertiary: 'hsl(102deg 44% 70%)',
       },
       fontFamily: {
         sans: ['"Roboto Mono"'],
