@@ -4,7 +4,6 @@ import JSON_DATA from 'assets/data/projects.json'
 import gsap from 'gsap'
 
 export default {
-	name: 'ListProjects',
 	data() {
 		return {
 			isVisible: false,
