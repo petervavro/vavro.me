@@ -31,8 +31,8 @@
   },
   {
     "title": "This webpage",
-    "desc": "If you wondering what would be the code behind this, please feel free to check it out.",
-    "technologies": "vuejs,tailwind,es6",
-    "url": "https://codepen.io/PeterVa/pen/dyYGJxV"
+    "desc": "If you are wondering what would be the code behind this webpage, please feel free to check it out.",
+    "technologies": "tailwind,vuejs,nuxtjs,es6",
+    "url": "https://github.com/petervavro/vavro.me"
   }
 ]
