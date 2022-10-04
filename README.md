@@ -1,19 +1,42 @@
-# Boostrap + Webpack + JQuery Boilerplate
+# Nuxt 3 Minimal Starter
 
-## Based on : [https://github.com/xxhomey19/bootstrap-webpack-jquery-boilerplate](https://github.com/xxhomey19/bootstrap-webpack-jquery-boilerplate)
+Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
-## Development
+## Setup
 
-Run development page on **localhost:8080**
+Make sure to install the dependencies:
 
+```bash
+# yarn
+yarn install
+
+# npm
+npm install
+
+# pnpm
+pnpm install --shamefully-hoist
 ```
-$ yarn dev
+
+## Development Server
+
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
 ```
 
-## Build
+## Production
 
-Build for production.
+Build the application for production:
 
+```bash
+npm run build
 ```
-$ yarn build
+
+Locally preview production build:
+
+```bash
+npm run preview
 ```
+
+Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
