@@ -1,8 +1,28 @@
+<script>
+import IconEmail from '~/assets/icon-Email.svg'
+import IconGithub from '~/assets/logo-Github.svg'
+import IconLinkedIn from '~/assets/icon-LinkedIn.svg'
+
+export default {
+	components: { IconEmail, IconGithub, IconLinkedIn },
+	props: {
+		inverted: {
+			type: Boolean,
+			default: false
+		},
+		isGithubVisible: {
+			type: Boolean,
+			default: true
+		}
+	}
+}
+</script>
+    
 <template>
 	<ul class="flex flex-row items-center">
 		<li class="p-2">
 			<a
-				href="mailto:<%= mailto %> "
+				href="mailto:peter@vavro.me"
 				title="My Email"
 				rel="noreferrer"
 				class="p-3"
@@ -40,25 +60,6 @@
 		</li>
 	</ul>
 </template>
-<script>
-import IconEmail from '~/assets/icon-Email.svg'
-import IconGithub from '~/assets/logo-Github.svg'
-import IconLinkedIn from '~/assets/icon-LinkedIn.svg'
-
-export default {
-	components: { IconEmail, IconGithub, IconLinkedIn },
-	props: {
-		inverted: {
-			type: Boolean,
-			default: false
-		},
-		isGithubVisible: {
-			type: Boolean,
-			default: true
-		}
-	}
-}
-</script>
 
 <style scoped>
 ul a {
