@@ -285,7 +285,7 @@
     "thumbnailImage": "logo-React.svg",
     "id": "react",
     "preferred": 1,
-    "note": "We meet daily and we meet when component could be only a class. Since then, we evolved together and now we use hooks inside of the functional component. Material UI is a library I had oportunity to work with the most. Sometimes Redux, MobX helped us to manage the state of app. Refs, context, Higher-Order Component, Memoization, and now SSR using Next.js... React is my favorite tool build."
+    "note": "I am using it daily. Oftenly I use Material UI library, sometimes combined with Redux, MobX to manage the state of app. Refs, context, Higher-Order Component, Memoization, and now SSR using Next.js.. React is my favorite."
   },
   {
     "year": 2016,
@@ -347,6 +347,15 @@
     "url": "https://en.wikipedia.org/wiki/OrientDB",
     "thumbnailImage": "logo-Orientdb.png",
     "id": "orientdb",
+    "preferred": 0,
+    "note": ""
+  },
+  {
+    "year": 2018,
+    "title": "Tailwind CSS",
+    "url": "https://tailwindcss.com",
+    "thumbnailImage": "logo-TailwindCSS.svg",
+    "id": "tailwind",
     "preferred": 0,
     "note": ""
   },

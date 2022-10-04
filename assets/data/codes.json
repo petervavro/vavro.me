@@ -1,32 +1,38 @@
 [
-    {
-      "title": "Array Methods",
-      "desc": "The challenge is composed of various tasks, with focus on use of ES6 features, while working with Array object.",
-      "technologies": "js,es6",
-      "url": "https://github.com/petervavro/Code-Challenge---JavaScript-Array-Methods"
-    },
-    {
-      "title": "Image Matching Challenge",
-      "desc": "The task objective is to count total number of matched regions in two images. The challenge is also sometimes called \"Number of Islands challenge\".",
-      "technologies": "js,es6",
-      "url": "https://codesandbox.io/s/image-matching-js-challenge-t5p6x"
-    },
-    {
-      "title": "Front-end skills",
-      "desc": "The code reflects my front-end skills with Typescript and React.",
-      "technologies": "typescript,react",
-      "url": "https://github.com/petervavro/react-coding-test"
-    },
-    {
-      "title": "Back-end skills",
-      "desc": "There you can check my back-end skills with Docker, Typescript, Node.js,  Express.js, and PostgreSQL. API Documentation is done in Postman.",
-      "technologies": "docker,typescript,nodejs,express,postgresql",
-      "url": "https://github.com/petervavro/Developer-Test-Challenge"
-    },
-    {
-      "title": "JS challenge",
-      "desc": "The task was to find the integer that appears an odd number of times.",
-      "technologies": "es6",
-      "url": "https://codepen.io/PeterVa/pen/dyYGJxV"
-    }
-  ]
+  {
+    "title": "Array Methods",
+    "desc": "The challenge is composed of various tasks, with focus on use of ES6 features, while working with Array object.",
+    "technologies": "js,es6",
+    "url": "https://github.com/petervavro/Code-Challenge---JavaScript-Array-Methods"
+  },
+  {
+    "title": "Image Matching Challenge",
+    "desc": "The task objective is to count total number of matched regions in two images. The challenge is also sometimes called \"Number of Islands challenge\".",
+    "technologies": "js,es6",
+    "url": "https://codesandbox.io/s/image-matching-js-challenge-t5p6x"
+  },
+  {
+    "title": "Front-end skills",
+    "desc": "The code reflects my front-end skills with Typescript and React.",
+    "technologies": "typescript,react",
+    "url": "https://github.com/petervavro/react-coding-test"
+  },
+  {
+    "title": "Back-end skills",
+    "desc": "There you can check my back-end skills with Docker, Typescript, Node.js,  Express.js, and PostgreSQL. API Documentation is done in Postman.",
+    "technologies": "docker,typescript,nodejs,express,postgresql",
+    "url": "https://github.com/petervavro/Developer-Test-Challenge"
+  },
+  {
+    "title": "JS challenge",
+    "desc": "The task was to find the integer that appears an odd number of times.",
+    "technologies": "es6",
+    "url": "https://codepen.io/PeterVa/pen/dyYGJxV"
+  },
+  {
+    "title": "This webpage",
+    "desc": "If you wondering what would be the code behind this, please feel free to check it out.",
+    "technologies": "vuejs,tailwind,es6",
+    "url": "https://codepen.io/PeterVa/pen/dyYGJxV"
+  }
+]
