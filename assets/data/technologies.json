@@ -285,7 +285,7 @@
     "thumbnailImage": "logo-React.svg",
     "id": "react",
     "preferred": 1,
-    "note": "I am using it daily. Oftenly I use Material UI library, sometimes combined with Redux, MobX to manage the state of app. Refs, context, Higher-Order Component, Memoization, and now SSR using Next.js.. React is my favorite."
+    "note": "Using it daily. I often work with the Material UI library, sometimes combined with Redux, MobX to manage application state. Refs, context, Higher-Order Component, Memoization, and now SSR using Next.js.. React is my favorite."
   },
   {
     "year": 2016,
@@ -366,7 +366,7 @@
     "thumbnailImage": "logo-TypeScript.svg",
     "id": "typescript",
     "preferred": 4,
-    "note": "In 85% of projects I worked in recent years, TypeScript was the language we used."
+    "note": "In 85% of the projects I've worked on over the last few years, TypeScript was the language we used."
   },
   {
     "year": 2019,
@@ -375,7 +375,7 @@
     "thumbnailImage": "logo-vuejs.svg",
     "id": "vuejs",
     "preferred": 3,
-    "note": "Really nice framework I had opportunity to work with in few projects. Btw, I use NuxtJS to build this website."
+    "note": "Really nice framework I had opportunity to work with in a few projects. BTW, I used NuxtJS to build this website."
   },
   {
     "year": 2019,
@@ -446,6 +446,15 @@
     "url": "https://greensock.com/gsap/",
     "thumbnailImage": "logo-GSAP.svg",
     "id": "gsap",
+    "preferred": 0,
+    "note": ""
+  },
+  {
+    "year": 2022,
+    "title": "NuxtJS",
+    "url": "https://nuxtjs.org",
+    "thumbnailImage": "logo-NuxtJS.svg",
+    "id": "nuxtjs",
     "preferred": 0,
     "note": ""
   }
