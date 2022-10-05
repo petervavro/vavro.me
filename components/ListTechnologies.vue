@@ -4,17 +4,16 @@ import { ref } from 'vue'
 
 import JSON_DATA from 'assets/data/technologies.json'
 
+const items = JSON_DATA.map((item) => ({
+	...item,
+	thumbnailImage: new URL(`../assets/${item.thumbnailImage}`, import.meta.url)
+		.href
+})).reverse()
+
 export default {
 	setup() {
 		const isVisible = ref(false)
 		const selectedRange = ref(2)
-
-		const items = JSON_DATA.map((item) => ({
-			...item,
-			thumbnailImage: item?.thumbnailImage
-				? `assets/${item.thumbnailImage}`
-				: undefined
-		})).reverse()
 
 		const ranges = [
 			[1994, 1999],

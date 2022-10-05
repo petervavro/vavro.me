@@ -7,11 +7,11 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^5.1.3",
+    "@nuxtjs/tailwindcss": "^5.3.3",
     "@volar-plugins/prettier": "latest",
     "@vueuse/nuxt": "^9.3.0",
-    "nuxt": "3.0.0-rc.4",
-    "vite-svg-loader": "^3.4.0"
+    "nuxt": "^3.0.0-rc.11",
+    "vite-svg-loader": "^3.6.0"
   },
   "dependencies": {
     "gsap": "^3.11.0"
