@@ -1,6 +1,8 @@
-# Nuxt 3 Minimal Starter
+# vavro.me
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+Web page can be seen live at [vavro.me](https://vavro.me/).
+
+NUXT 3: Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
 ## Setup
 
