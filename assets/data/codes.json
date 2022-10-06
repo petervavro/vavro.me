@@ -1,15 +1,9 @@
 [
   {
-    "title": "Array Methods",
-    "desc": "The challenge is composed of various tasks, with focus on use of ES6 features, while working with Array object.",
-    "technologies": "js,es6",
-    "url": "https://github.com/petervavro/Code-Challenge---JavaScript-Array-Methods"
-  },
-  {
-    "title": "Image Matching Challenge",
-    "desc": "The task objective is to count total number of matched regions in two images. The challenge is also sometimes called \"Number of Islands challenge\".",
-    "technologies": "js,es6",
-    "url": "https://codesandbox.io/s/image-matching-js-challenge-t5p6x"
+    "title": "This webpage",
+    "desc": "If you are wondering what would be the code behind this webpage, please feel free to check it out.",
+    "technologies": "tailwind,vuejs,nuxtjs,es6",
+    "url": "https://github.com/petervavro/vavro.me"
   },
   {
     "title": "Front-end skills",
@@ -24,15 +18,21 @@
     "url": "https://github.com/petervavro/Developer-Test-Challenge"
   },
   {
+    "title": "Array Methods",
+    "desc": "The challenge is composed of various tasks, with focus on use of ES6 features, while working with Array object.",
+    "technologies": "js,es6",
+    "url": "https://github.com/petervavro/Code-Challenge---JavaScript-Array-Methods"
+  },
+  {
     "title": "JS challenge",
     "desc": "The task was to find the integer that appears an odd number of times.",
     "technologies": "es6",
     "url": "https://codepen.io/PeterVa/pen/dyYGJxV"
   },
   {
-    "title": "This webpage",
-    "desc": "If you are wondering what would be the code behind this webpage, please feel free to check it out.",
-    "technologies": "tailwind,vuejs,nuxtjs,es6",
-    "url": "https://github.com/petervavro/vavro.me"
+    "title": "Image Matching Challenge",
+    "desc": "The task objective is to count total number of matched regions in two images. The challenge is also sometimes called \"Number of Islands challenge\".",
+    "technologies": "js,es6",
+    "url": "https://codesandbox.io/s/image-matching-js-challenge-t5p6x"
   }
 ]
