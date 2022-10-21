@@ -1,22 +1,60 @@
 <script>
+import gsap from 'gsap'
+import JSON_DATA from 'assets/data/technologies.json'
+
+const items = JSON_DATA.filter(({ preferred }) => preferred).sort(
+    (a, b) => a.preferred - b.preferred
+)
+
 export default {
     data() {
         return {
             isVisible: false,
-            show: false
+            show: false,
+            items
         }
     },
-    mounted: function () {
-        this.$nextTick(function () {
-            this.show = true
+    mounted() {
+        var tl = gsap.timeline({
+            onComplete: () => {
+                this.$nextTick(function () {
+                    this.show = true
+                })
+                this.isVisible = true
+            }
         })
-        this.isVisible = true
+
+        this.$refs.blocks.forEach((element) =>
+            tl
+                .to(element, {
+                    transformOrigin: '50% 50%',
+                    duration: 0.7,
+                    rotation: 360,
+                    opacity: 1
+                })
+                .to(element, { duration: 0.3, opacity: 0 })
+        )
     }
 }
 </script>
 	
 <template>
-    <div class="grid place-items-center h-screen grid-rows-1 grid-cols-1">
+    <div
+        class="grid place-items-center h-screen grid-rows-1 grid-cols-1"
+        ref="canvas"
+    >
+        <div
+            class="flex justify-center items-center rounded-full border-2 border-secondary text-secondary w-80 h-80"
+            v-if="!isVisible"
+        >
+            <span
+                v-for="{ title } in items"
+                class="block absolute text-3xl opacity-0"
+                ref="blocks"
+            >
+                {{ title }}
+            </span>
+        </div>
         <Transition>
             <div class="intro pl-10" v-if="isVisible">
                 <div
