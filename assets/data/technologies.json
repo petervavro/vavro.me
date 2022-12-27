@@ -222,7 +222,7 @@
     "thumbnailImage": "logo-Nodejs.svg",
     "id": "nodejs",
     "preferred": 5,
-    "note": "My favorite back-end JavaScript runtime environment. We worked together on various APIs with help of Express.js, Sails.js, LoopBack, Koa.js and HapiJS."
+    "note": "My favorite JavaScript runtime server environment. I had opportunities to work with various Node.js frameworks, mainly Express.js, Sails.js, LoopBack, Koa.js and HapiJS."
   },
   {
     "year": 2014,
@@ -285,7 +285,7 @@
     "thumbnailImage": "logo-React.svg",
     "id": "react",
     "preferred": 1,
-    "note": "Using it daily. I often work with the Material UI library, sometimes combined with Redux, MobX to manage application state. Refs, context, Higher-Order Component, Memoization, and now SSR using Next.js.. React is my favorite."
+    "note": "I often work with the MATERIAL-UI library, sometimes combined with Redux, MobX to manage application state. Refs, context, Higher-Order Component, Memoization, and also SSR using Next.js. React is my favorite library."
   },
   {
     "year": 2016,
@@ -320,6 +320,15 @@
     "url": "https://aws.amazon.com",
     "thumbnailImage": "logo-AWS.svg",
     "id": "aws",
+    "preferred": 0,
+    "note": ""
+  },
+  {
+    "year": 2017,
+    "title": "Material-UI",
+    "url": "https://v4.mui.com/",
+    "thumbnailImage": "logo-MaterialUI.svg",
+    "id": "Material-UI",
     "preferred": 0,
     "note": ""
   },
@@ -396,6 +405,24 @@
     "note": ""
   },
   {
+    "year": 2019,
+    "title": "GraphQL",
+    "url": "https://graphql.org/",
+    "thumbnailImage": "logo-graphql.svg",
+    "id": "graphql",
+    "preferred": 0,
+    "note": ""
+  },
+  {
+    "year": 2019,
+    "title": "Apollo",
+    "url": "https://www.apollographql.com",
+    "thumbnailImage": "logo-apollographql.svg",
+    "id": "apollographql",
+    "preferred": 0,
+    "note": ""
+  },
+  {
     "year": 2020,
     "title": "NestJS",
     "url": "https://nestjs.com",
@@ -424,7 +451,7 @@
   },
   {
     "year": 2020,
-    "title": "Testing Library",
+    "title": "Testing Lib",
     "url": "https://testing-library.com",
     "thumbnailImage": "logo-TestingLibrary.png",
     "id": "testing-library",
@@ -437,6 +464,15 @@
     "url": "https://www.electronjs.org",
     "thumbnailImage": "logo-Electron.svg",
     "id": "electron",
+    "preferred": 0,
+    "note": ""
+  },
+  {
+    "year": 2021,
+    "title": "MUI",
+    "url": "https://mui.com/",
+    "thumbnailImage": "logo-MUI.svg",
+    "id": "mui",
     "preferred": 0,
     "note": ""
   },
