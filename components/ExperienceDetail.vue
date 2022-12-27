@@ -28,8 +28,6 @@ export default {
           ...t,
           alreadySelected: true
         }))
-
-        console.log('stopLoop', this.loopInterval)
       }
     },
     switchSelection(e) {
@@ -118,8 +116,8 @@ export default {
       {{ t.title }}
     </option>
   </select>
-  <div class="flex flex-col md:flex-row">
-    <div class="pr-3 hidden md:block">
+  <div class="flex flex-col sm:flex-row-reverse">
+    <div class="sm:pl-5 hidden md:block">
       <div @pointermove="moveHighlight">
         <button
           v-for="t in technologies"
@@ -136,24 +134,20 @@ export default {
         </button>
       </div>
     </div>
-    <div class="flex-1 pl-3 text-secondary">
+    <div class="pr-5 flex-1 text-secondary">
       <h4
         class="text-lg pb-3 hidden md:block border-tertiary border-b border-dotted"
       >
         {{ selected.title }}
       </h4>
-      <div class="text-base py-5">
+      <div class="text-base pt-3">
         <p>
-          tasted for first time in <br />
-          <span class="text-xl inline-block py-1">
-            {{ selected.year }}
-          </span>
-          <span>
-            |&nbsp;{{ new Date().getFullYear() - selected.year }}
-            years ago.
-          </span>
+          since {{ selected.year }}&nbsp;|&nbsp;{{
+            new Date().getFullYear() - selected.year
+          }}
+          years ago.
         </p>
-        <p class="pt-3 h-32">
+        <p class="pt-2 sm:h-32">
           {{ selected.note }}
         </p>
       </div>
@@ -180,7 +174,7 @@ export default {
 }
 
 .technology {
-  @apply block overflow-hidden m-1 p-2 px-5 rounded-full border-2 text-sm transition-all duration-300 opacity-100 hover:text-tertiary hover:border-tertiary hover:opacity-100;
+  @apply block overflow-hidden m-3 p-2 px-5 rounded-full border-2 text-sm transition-all duration-300 opacity-100 hover:text-tertiary hover:border-tertiary hover:opacity-100;
   --x-px: calc(var(--x) * 1px);
   --y-px: calc(var(--y) * 1px);
   --border: 2px;
