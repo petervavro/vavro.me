@@ -41,7 +41,7 @@ export default {
       tl
         .to(element, {
           transformOrigin: '50% 50%',
-          duration: 0.7,
+          duration: 0.5,
           rotation: 360,
           opacity: 1
         })
@@ -77,8 +77,8 @@ export default {
       </span>
     </div>
     <Transition>
-      <div class="intro" v-if="isVisible">
-        <div class="flex py-10">
+      <div v-if="isVisible">
+        <div class="flex py-10 mt-10 sm:mt-0">
           <div class="w-1/3 px-5">
             <TransitionGroup
               name="list"
