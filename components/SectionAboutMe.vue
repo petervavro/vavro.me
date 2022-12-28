@@ -10,7 +10,7 @@ const getExperienceYears = (technologyId) => {
 </script>
 
 <template>
-  <div class="container mx-auto lg:max-w-4xl" id="content" ref="content">
+  <div class="container mx-auto lg:max-w-4xl">
     <div ref="target">
       <section
         class="opacity-0 transition-all duration-500 ease-out p-10 pb-20 max-w-xl bg-secondary drop-shadow-custom"
