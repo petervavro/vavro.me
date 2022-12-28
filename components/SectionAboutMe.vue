@@ -13,7 +13,7 @@ const getExperienceYears = (technologyId) => {
   <div class="container mx-auto lg:max-w-4xl" id="content" ref="content">
     <div ref="target">
       <section
-        class="transition-all duration-500 ease-out p-10 pb-20 max-w-xl bg-secondary drop-shadow-custom"
+        class="opacity-0 transition-all duration-500 ease-out p-10 pb-20 max-w-xl bg-secondary drop-shadow-custom"
         v-display-when-in-view
       >
         <h2 class="pb-5 text-2xl uppercase">Who am I ?</h2>
@@ -35,7 +35,7 @@ const getExperienceYears = (technologyId) => {
     </div>
     <div ref="targetDetail">
       <section
-        class="transition-all duration-500 ease-out p-10 bg-neutral max-w-3xl border-neutral-light/50 border-l border-t border-b border-dotted -translate-y-10 sm:translate-x-20 m-3 sm:m-0"
+        class="opacity-0 transition-all duration-500 ease-out p-10 bg-neutral max-w-3xl border-neutral-light/50 border-l border-t border-b border-dotted -translate-y-10 sm:translate-x-20 m-3 sm:m-0"
         v-display-when-in-view="0.4"
       >
         <h3 class="pb-5 text-xl text-tertiary">
