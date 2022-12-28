@@ -59,8 +59,10 @@ const onLeave = (el, done) => {
         v-for="([rangeStart, rangeEnd], index) in ranges"
         @click="selectedRange = index"
         :class="[
-          'inline-block m-3 p-2 px-5 rounded-full border-2 border-tertiary text-tertiary opacity-60 text-sm transition-all hover:opacity-100',
-          selectedRange === index ? 'selected' : ''
+          'inline-block m-3 p-2 px-5 rounded-full border-2 text-sm transition-all hover:opacity-100',
+          selectedRange === index
+            ? 'border-secondary text-secondary opacity-100'
+            : 'border-tertiary text-tertiary opacity-60'
         ]"
         :key="index"
       >
@@ -81,7 +83,7 @@ const onLeave = (el, done) => {
           v-for="(t, index) in getItemsInRange"
           :key="t.id"
           :data-index="index"
-          class="group transition-all duration-500 ease-out"
+          class="group opacity-0 transition-all duration-500 ease-out"
           :href="t.url"
           target="_blank"
           v-display-when-in-view
@@ -100,9 +102,6 @@ const onLeave = (el, done) => {
 </template>
 
 <style scoped>
-.range.selected {
-  @apply border-secondary text-secondary opacity-100;
-}
 .select {
   @apply mb-5 appearance-none box-border bg-no-repeat bg-right w-full p-2 px-5 rounded-full border-2 border-tertiary text-tertiary text-base bg-neutral;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZmlsbDogIzkwY2E3NzsiPjxwYXRoIGQ9Ik0xNDcuNiAyMTAuN2MtNy41IDcuNS03LjUgMTkuOCAwIDI3LjNsOTUuNyA5NS40YzcuMyA3LjMgMTkuMSA3LjUgMjYuNi42bDk0LjMtOTRjMy44LTMuOCA1LjctOC43IDUuNy0xMy43IDAtNC45LTEuOS05LjktNS42LTEzLjYtNy41LTcuNS0xOS43LTcuNi0yNy4zIDBsLTgxIDc5LjgtODEuMS04MS45Yy03LjUtNy41LTE5LjctNy41LTI3LjMuMXoiLz48cGF0aCBkPSJNNDggMjU2YzAgMTE0LjkgOTMuMSAyMDggMjA4IDIwOHMyMDgtOTMuMSAyMDgtMjA4UzM3MC45IDQ4IDI1NiA0OCA0OCAxNDEuMSA0OCAyNTZ6bTMzMi40LTEyNC40QzQxMy43IDE2NC44IDQzMiAyMDkgNDMyIDI1NnMtMTguMyA5MS4yLTUxLjYgMTI0LjRDMzQ3LjIgNDEzLjcgMzAzIDQzMiAyNTYgNDMycy05MS4yLTE4LjMtMTI0LjQtNTEuNkM5OC4zIDM0Ny4yIDgwIDMwMyA4MCAyNTZzMTguMy05MS4yIDUxLjYtMTI0LjRDMTY0LjggOTguMyAyMDkgODAgMjU2IDgwczkxLjIgMTguMyAxMjQuNCA1MS42eiIvPjwvc3ZnPg==);
