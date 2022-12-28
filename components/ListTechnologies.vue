@@ -1,61 +1,45 @@
-<script>
+<script setup>
 import gsap from 'gsap'
-import { ref } from 'vue'
-
 import JSON_DATA from 'assets/data/technologies.json'
 
 const items = JSON_DATA.map((item) => ({
   ...item,
-  thumbnailImage: new URL(`../assets/${item.thumbnailImage}`, import.meta.url)
-    .href
+  thumbnailImage: `/assets/${item.thumbnailImage}`
 })).reverse()
 
-export default {
-  setup() {
-    const isVisible = ref(false)
-    const selectedRange = ref(2)
+const selectedRange = ref(2)
 
-    const ranges = [
-      [1994, 1999],
-      [2000, 2009],
-      [2010, 2022]
-    ]
+const ranges = [
+  [1994, 1999],
+  [2000, 2009],
+  [2010, 2022]
+]
 
-    const getItemsInRange = computed(() => {
-      return items.filter(
-        ({ year }) =>
-          year >= ranges[selectedRange.value][0] &&
-          year <= ranges[selectedRange.value][1]
-      )
-    })
+const getItemsInRange = computed(() => {
+  return items.filter(
+    ({ year }) =>
+      year >= ranges[selectedRange.value][0] &&
+      year <= ranges[selectedRange.value][1]
+  )
+})
 
-    return {
-      isVisible,
-      items,
-      ranges,
-      selectedRange,
-      getItemsInRange,
-      onBeforeEnter: (el) => {
-        el.style.opacity = 0
-      },
-      onEnter: (el, done) => {
-        gsap.to(el, {
-          opacity: 1,
-          delay: el.dataset.index * 0.15,
-          onComplete: done
-        })
-      },
-      onLeave: (el, done) => {
-        gsap.to(el, {
-          opacity: 0,
-          onComplete: done
-        })
-      }
-    }
-  },
-  mounted() {
-    this.isVisible = true
-  }
+const onBeforeEnter = (el) => {
+  el.style.opacity = 0
+}
+
+const onEnter = (el, done) => {
+  gsap.to(el, {
+    opacity: 1,
+    delay: el.dataset.index * 0.15,
+    onComplete: done
+  })
+}
+
+const onLeave = (el, done) => {
+  gsap.to(el, {
+    opacity: 0,
+    onComplete: done
+  })
 }
 </script>
 
@@ -64,6 +48,7 @@ export default {
     <option
       v-for="([rangeStart, rangeEnd], index) in ranges"
       v-bind:value="index"
+      :key="index"
     >
       {{ rangeStart }}&nbsp;-&nbsp;{{ rangeEnd }}
     </option>
@@ -73,7 +58,11 @@ export default {
       <button
         v-for="([rangeStart, rangeEnd], index) in ranges"
         @click="selectedRange = index"
-        :class="['range', selectedRange === index ? 'selected' : '']"
+        :class="[
+          'inline-block m-3 p-2 px-5 rounded-full border-2 border-tertiary text-tertiary opacity-60 text-sm transition-all hover:opacity-100',
+          selectedRange === index ? 'selected' : ''
+        ]"
+        :key="index"
       >
         {{ rangeStart }}&nbsp;-&nbsp;{{ rangeEnd }}
       </button>
@@ -89,13 +78,13 @@ export default {
         @leave="onLeave"
       >
         <a
-          :href="t.url"
-          target="_blank"
           v-for="(t, index) in getItemsInRange"
           :key="t.id"
           :data-index="index"
-          class="group opacity-90"
-          v-if="isVisible"
+          class="group transition-all duration-500 ease-out"
+          :href="t.url"
+          target="_blank"
+          v-display-when-in-view
         >
           <span class="inline-block -rotate-90 text-xs text-terniary">
             {{ t.year }}
@@ -111,10 +100,6 @@ export default {
 </template>
 
 <style scoped>
-.range {
-  @apply inline-block m-3 p-2 px-5 rounded-full border-2 border-tertiary text-tertiary opacity-60 text-sm transition-all hover:opacity-100;
-}
-
 .range.selected {
   @apply border-secondary text-secondary opacity-100;
 }
