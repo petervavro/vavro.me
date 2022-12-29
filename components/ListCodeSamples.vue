@@ -21,7 +21,7 @@ const items = JSON_DATA.map(({ technologies, ...rest }) => ({
       :href="item.url"
       target="_blank"
       v-for="(item, index) in items"
-      class="shadow-lg shadow-black/10 p-5 border-neutral-light/50 border-t border-l hover:border-dotted hover:border-secondary hover:text-secondary transition-all duration-500 ease-out"
+      class="hover:shadow-lg shadow-black/10 p-5 border-neutral-light/50 border-t border-l hover:border-dotted hover:border-secondary hover:text-secondary transition-all duration-500 ease-out"
       :key="item.title"
       :data-index="index"
       v-display-when-in-view
