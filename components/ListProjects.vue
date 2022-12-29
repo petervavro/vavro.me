@@ -6,7 +6,6 @@ import gsap from 'gsap'
 export default {
   data() {
     return {
-      isVisible: false,
       selectedProjectId: false,
       items: JSON_DATA.map((item) => ({
         ...item,
@@ -18,9 +17,6 @@ export default {
         })
       }))
     }
-  },
-  mounted() {
-    this.isVisible = true
   },
   methods: {
     onBeforeEnter(el) {
@@ -106,7 +102,7 @@ export default {
   <div>
     <TransitionGroup
       tag="div"
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
       :css="false"
       @before-enter="onBeforeEnter"
       @enter="onEnter"
@@ -118,11 +114,13 @@ export default {
         :id="item.id"
         :data-index="index"
         @click="selectedProjectId = item.id"
-        class="flex flex-row group text-primary hover:text-secondary transition-all duration-300 ease-out"
-        v-if="isVisible"
+        :class="[
+          'flex flex-row group text-primary hover:text-secondary transition-all duration-300 ease-out py-5 md:p-5'
+        ]"
+        v-display-when-in-view
       >
         <div
-          :class="`flex-none mt-3 w-20 h-20 border-2 rounded-50p group-hover:rounded-none group-hover:rotate-[360deg] border-tertiary group-hover:border-secondary transition-all duration-500 ease-out bg-white bg-cover bg-no-repeat bg-center ${
+          :class="`flex-none w-20 h-20 rounded-50p group-hover:rounded-none shadow-black/80 shadow-inner group-hover:shadow-2xl group-hover:rotate-[360deg] border-primary border-2 group-hover:border-secondary transition-all duration-700 ease-out bg-white bg-cover bg-no-repeat bg-center saturate-150 ${
             [
               'infocyte',
               'cropswap',
@@ -140,9 +138,9 @@ export default {
             'background-image': `url(${item.backgroundImage})`
           }"
         ></div>
-        <div class="grow min-w-0">
+        <div class="grow min-w-0 p-1 pl-3">
           <div
-            class="text-ellipsis overflow-hidden border-b border-dotted border-tertiary group-hover:border-secondary p-3 text-left"
+            class="title p-2 text-left text-ellipsis overflow-hidden border-b border-r border-dotted border-neutral-light/50 group-hover:border-secondary transition-all duration-500 ease-out"
           >
             {{ item.title }}
           </div>
