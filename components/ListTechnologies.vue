@@ -93,7 +93,9 @@ const onLeave = (el, done) => {
           </span>
           <the-thumbnail
             v-bind="t"
+            titleClasses="group-hover:text-primary"
             class="inline-block text-secondary md:group-hover:scale-105 transition"
+            thumbnailClasses="group-hover:bg-primary/50 group-hover:border-primary"
           />
         </a>
       </TransitionGroup>
