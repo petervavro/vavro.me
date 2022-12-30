@@ -18,7 +18,6 @@ const stopLoop = () => {
 }
 
 const doSelect = (selectIndex, doStopLoop = false) => {
-  console.log('doSelect', selectIndex, doStopLoop)
   selectedIndex.value = selectIndex
 
   if (selectIndex < technologies.value.length) {
@@ -38,7 +37,6 @@ watch(selectedIndex, (newValue) => {
 watch(targetIsVisible, (newValue, oldValue) => {
   if (loopInterval.value === null) {
     loopInterval.value = setInterval(() => {
-      console.log('by interval')
       doSelect(selectedIndex.value + 1)
     }, 3000)
   }
