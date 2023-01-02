@@ -2,10 +2,7 @@
 import gsap from 'gsap'
 import JSON_DATA from 'assets/data/technologies.json'
 
-const items = JSON_DATA.map((item) => ({
-  ...item,
-  thumbnailImage: `/assets/${item.thumbnailImage}`
-})).reverse()
+const items = JSON_DATA.reverse()
 
 const selectedRange = ref(2)
 
@@ -73,7 +70,7 @@ const onLeave = (el, done) => {
       <TransitionGroup
         name="list"
         tag="div"
-        class="p-5 md:p-10 grid grid-flow-row grid-cols-2 md:grid-cols-3 gap-4"
+        class="p-5 md:p-10 grid grid-flow-row grid-cols-2 md:grid-cols-3 gap-4 md:gap-10"
         :css="false"
         @before-enter="onBeforeEnter"
         @enter="onEnter"
@@ -83,14 +80,16 @@ const onLeave = (el, done) => {
           v-for="(t, index) in getItemsInRange"
           :key="t.id"
           :data-index="index"
-          class="group opacity-0 transition-all duration-500 ease-out"
+          class="group flex opacity-0 transition-all duration-500 ease-out"
           :href="t.url"
           target="_blank"
           v-display-when-in-view
         >
-          <span class="inline-block -rotate-90 text-xs text-terniary">
-            {{ t.year }}
-          </span>
+          <div class="">
+            <div class="text-xs text-terniary origin-bottom -rotate-90">
+              {{ t.year }}
+            </div>
+          </div>
           <the-thumbnail
             v-bind="t"
             titleClasses="group-hover:text-primary"

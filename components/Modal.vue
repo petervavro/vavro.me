@@ -27,51 +27,42 @@ export default {
 </script>
 
 <template>
-  <Teleport to="body">
-    <Transition name="modal">
-      <div
-        v-if="show"
-        :class="[
-          'fixed top-0 left-0 w-full h-full z-20 display-block overflow-x-hidden overflow-y-auto',
-          modalContentClass
-        ]"
-      >
-        <div class="w-screen max-w-none h-full m-0 relative">
-          <div class="relative flex flex-col w-full h-full">
-            <div class="overflow-y-auto relative grow shrink basis-auto">
-              <div
-                class="p-11 my-3 hidden md:flex shrink-0 items-center justify-between"
-              >
-                <!-- <div></div>
-                <div>
+  <div>
+    <Teleport to="body">
+      <Transition name="modal">
+        <div
+          v-if="show"
+          :class="[
+            'fixed top-0 left-0 w-full h-full z-20 display-block overflow-x-hidden overflow-y-auto',
+            modalContentClass
+          ]"
+        >
+          <div class="w-screen max-w-none h-full m-0 relative">
+            <div class="relative flex flex-col w-full h-full">
+              <div class="overflow-y-auto relative grow shrink basis-auto">
+                <div
+                  class="p-11 my-3 hidden md:flex shrink-0 items-center justify-between"
+                ></div>
+                <slot />
+                <div class="w-full text-center py-10">
                   <button
                     @click="$emit('close')"
-                    class="p-2 border-2 text-white/50 hover:text-white hover:bg-neutral-light border-white/50 transition duration-300"
-                    ref="target"
+                    :class="[
+                      'p-2 border-2 transition duration-300',
+                      buttonClass ||
+                        'bg-secondary hover:bg-neutral border-neutral text-neutral hover:text-secondary'
+                    ]"
                   >
                     Close
                   </button>
-                </div> -->
-              </div>
-              <slot />
-              <div class="w-full text-center py-10">
-                <button
-                  @click="$emit('close')"
-                  :class="[
-                    'p-2 border-2 transition duration-300',
-                    buttonClass ||
-                      'bg-secondary hover:bg-neutral border-neutral text-neutral hover:text-secondary'
-                  ]"
-                >
-                  Close
-                </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </Transition>
-  </Teleport>
+      </Transition>
+    </Teleport>
+  </div>
 </template>
 
 <style scoped>

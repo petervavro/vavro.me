@@ -7,14 +7,14 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^5.3.3",
+    "@nuxt/image-edge": "^1.0.0-27840416.dc1ed65",
+    "@nuxtjs/tailwindcss": "^6.2.0",
     "@volar-plugins/prettier": "latest",
     "@vueuse/nuxt": "^9.3.0",
-    "nuxt": "3.0.0-rc.10",
+    "gsap": "^3.11.4",
+    "nuxt": "^3.0.0",
     "vite-svg-loader": "^3.6.0",
     "vue-gtag-next": "^1.14.0"
   },
-  "dependencies": {
-    "gsap": "^3.11.0"
-  }
+  "dependencies": {}
 }

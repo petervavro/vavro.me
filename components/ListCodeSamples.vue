@@ -6,12 +6,7 @@ const items = JSON_DATA.map(({ technologies, ...rest }) => ({
   ...rest,
   technologies: TECHNOLOGIES.filter(({ id }) =>
     technologies.split(',').includes(id)
-  ).map((item) => ({
-    ...item,
-    ...(item?.thumbnailImage && {
-      thumbnailImage: `/assets/${item.thumbnailImage}`
-    })
-  }))
+  )
 }))
 </script>
 

@@ -57,7 +57,7 @@
   {
     "id": "cropswap",
     "title": "CropSwap",
-    "url": "https://cropswap.com",
+    "url": "https://web.archive.org/web/20220521095931/https://cropswap.com/",
     "description": "CropSwap is a marketplace type app that connects a global consumer-base with produce local to them.",
     "jobDescription": "Tech Lead.",
     "backgroundImage": "logo-cropswap.svg",
@@ -78,8 +78,8 @@
   },
   {
     "id": "vavromeV2",
-    "title": "vavro.me",
-    "url": "https://www.vavro.me/",
+    "title": "vavro.me (V1)",
+    "url": "https://github.com/petervavro/vavro.me/tree/version/2",
     "description": "The website about my professional experience.",
     "jobDescription": "Everything you see here.",
     "backgroundImage": "thumbnail-vavro_me.png",
@@ -115,7 +115,7 @@
     "url": "http://ding.ai",
     "description": "ding.ai, an advanced application for package management designed for parcel companies.",
     "jobDescription": "Front-end development.",
-    "backgroundImage": "thumbnail-parcel.png",
+    "backgroundImage": "logo-parcel_manager.png",
     "technologies": "angularjs,html,sass",
     "platforms": "web",
     "year": 2016
@@ -137,7 +137,7 @@
     "url": "http://ding.ai",
     "description": "A startup company offering parcel tracking products.",
     "jobDescription": "Website development.",
-    "backgroundImage": "thumbnail-no.png",
+    "backgroundImage": "logo-ding.png",
     "technologies": "html,css,sass,angularjs",
     "platforms": "web",
     "year": 2015

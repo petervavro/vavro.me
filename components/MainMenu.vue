@@ -1,14 +1,7 @@
-<script lang="ts">
+<script lang="ts" setup>
 import IconMenu from '~/assets/icon-menu.svg'
 
-export default {
-  components: { IconMenu },
-  data() {
-    return {
-      showModal: false
-    }
-  }
-}
+const showModal = ref(false)
 </script>
 
 <template>

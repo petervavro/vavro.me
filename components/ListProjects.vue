@@ -1,39 +1,24 @@
 <script setup>
 import TECHNOLOGIES from 'assets/data/technologies.json'
-import JSON_DATA from 'assets/data/projects.json'
+import ITEMS from 'assets/data/projects.json'
 
 const selectedProjectId = ref(false)
-const items = ref(
-  JSON_DATA.map((item) => ({
-    ...item,
-    ...(item?.backgroundImage && {
-      backgroundImage: `/assets/${item.backgroundImage}`
-    })
-  }))
-)
 
 const projectData = computed(() => {
-  const project = items.value.find(({ id }) => id === selectedProjectId.value)
+  const project = ITEMS.find(({ id }) => id === selectedProjectId.value)
+
   return {
     ...project,
     technologies: TECHNOLOGIES.filter(({ id }) =>
       project.technologies.split(',').includes(id)
-    ).map((t) => ({
-      ...t,
-      ...(t?.thumbnailImage && {
-        thumbnailImage: new URL(
-          `../assets/${t.thumbnailImage}`,
-          import.meta.url
-        ).href
-      })
-    }))
+    )
   }
 })
 </script>
 
 <template>
   <modal
-    :show="selectedProjectId"
+    :show="!!selectedProjectId"
     @close="selectedProjectId = false"
     modalContentClass="bg-neutral text-secondary"
     buttonClass="text-white/50 hover:text-white hover:bg-neutral-light border-white/50"
@@ -57,12 +42,14 @@ const projectData = computed(() => {
           <p>{{ projectData.jobDescription }}</p>
           <p>{{ projectData.year }}</p>
         </section>
-        <section class="pb-5">
+        <section class="pb-5 flex flex-wrap">
           <the-thumbnail
-            v-bind="t"
+            :id="t.id"
+            :title="t.title"
+            :thumbnailImage="t.thumbnailImage"
             v-for="t in projectData.technologies"
             :key="t.id"
-            class="p-3 inline-block"
+            class="p-3"
           />
         </section>
       </div>
@@ -74,7 +61,7 @@ const projectData = computed(() => {
       v-display-when-in-view="0.1"
     >
       <button
-        v-for="(item, index) in items"
+        v-for="(item, index) in ITEMS"
         :key="item.id"
         :id="item.id"
         :data-index="index"
@@ -84,27 +71,20 @@ const projectData = computed(() => {
         ]"
       >
         <div
-          :class="`flex-none w-20 h-20 rounded-50p group-hover:rounded-none shadow-black/80 shadow-inner group-hover:shadow-2xl group-hover:rotate-[360deg] border-primary border-2 group-hover:border-secondary transition-all duration-700 ease-out bg-white bg-cover bg-no-repeat bg-center saturate-150 ${
-            [
-              'infocyte',
-              'cropswap',
-              'hopin',
-              'joomlaextensions',
-              'joomla',
-              'careconnect365',
-              'acrolinx'
-            ].includes(item.id)
-              ? 'bg-[length:70%]'
-              : ''
-          }`"
-          v-if="item.backgroundImage"
-          :style="{
-            'background-image': `url(${item.backgroundImage})`
-          }"
-        ></div>
+          :class="[
+            item.id,
+            'flex shrink-0 items-center w-20 h-20 p-3 overflow-hidden rounded-50p group-hover:rounded-none shadow-black/80 group-hover:shadow-2xl group-hover:rotate-[360deg] border-primary border-2 group-hover:border-secondary transition-all duration-700 ease-out bg-white bg-cover bg-no-repeat bg-center saturate-150'
+          ]"
+        >
+          <nuxt-img
+            :src="`/img/${item.backgroundImage}`"
+            :width="item.id === 'duenio' ? 180 : 80"
+            class="saturate-150"
+          />
+        </div>
         <div class="grow min-w-0 p-1 pl-3">
           <div
-            class="title p-2 text-left text-ellipsis overflow-hidden border-b border-r border-dotted border-neutral-light/50 group-hover:border-secondary transition-all duration-500 ease-out"
+            class="title p-2 pr-1 text-left text-ellipsis overflow-hidden border-b border-r border-dotted border-neutral-light/50 group-hover:border-secondary transition-all duration-500 ease-out"
           >
             {{ item.title }}
           </div>
@@ -138,5 +118,29 @@ const projectData = computed(() => {
   syntax: '<angle>';
   inherits: true;
   initial-value: 0turn;
+}
+
+.vavromeV3,
+.vavromeV2 {
+  background-color: #1c2127;
+}
+
+.terminal {
+  background-color: #00b0ff;
+  @apply p-0;
+}
+
+.duenio img {
+  @apply scale-[3] translate-x-10 translate-y-1;
+}
+
+.yovoca,
+.daysalive,
+.galeriaremix,
+.epsa,
+.inmovis,
+.icl,
+.justmassage {
+  @apply p-0;
 }
 </style>

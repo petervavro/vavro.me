@@ -1,33 +1,84 @@
+<script setup>
+const props = defineProps({
+  id: String,
+  title: String,
+  titleClasses: String,
+  thumbnailImage: String,
+  thumbnailClasses: String
+})
+</script>
+
 <template>
   <div>
     <div
       :class="[
-        titleClasses || '',
-        'text-xs pb-3 text-center  transition duration-300'
+        props.titleClasses || '',
+        'text-xs pb-3 transition duration-300'
       ]"
     >
-      {{ title }}
+      {{ props.title }}
     </div>
     <div
-      v-if="thumbnailImage"
       :class="[
-        thumbnailClasses || '',
-        'w-20 h-20 rounded-full bg-secondary/50  border-2 border-secondary bg-[length:50%] bg-no-repeat bg-center contrast-125 transition duration-300'
+        props.id,
+        props.thumbnailClasses || '',
+        'rounded-full bg-secondary/50  border-2 border-secondary contrast-125',
+        'transition duration-300',
+        'flex items-center w-20 h-20 p-5 overflow-hidden'
       ]"
-      :style="{
-        'background-image': `url(${thumbnailImage})`
-      }"
-    ></div>
+    >
+      <nuxt-img
+        :src="`/img/${props.thumbnailImage}`"
+        :width="100"
+        fit="cover"
+      />
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    title: String,
-    titleClasses: String,
-    thumbnailImage: String,
-    thumbnailClasses: String
-  }
+<style scoped>
+img {
+  @apply block;
 }
-</script>
+
+.orientdb {
+  @apply p-1 py-5;
+}
+.orientdb img,
+.babel img {
+  @apply max-w-none;
+}
+
+.babel {
+  @apply p-2 justify-center;
+}
+
+.babel img {
+  @apply block scale-50;
+}
+
+.express {
+  @apply p-3;
+}
+
+.loopback,
+.angularjs,
+.mongodb,
+.gsap,
+.wordpress,
+.joomla,
+.mysql {
+  @apply p-2;
+}
+
+.gsap img {
+  @apply rounded-sm;
+}
+
+.php img,
+.ejs img,
+.react img,
+.react-native img {
+  @apply rounded-md;
+}
+</style>
