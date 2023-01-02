@@ -13,7 +13,7 @@
     "@vueuse/nuxt": "^9.3.0",
     "gsap": "^3.11.4",
     "nuxt": "^3.0.0",
-    "vite-svg-loader": "^3.6.0",
+    "nuxt-svgo": "^1.1.0",
     "vue-gtag-next": "^1.14.0"
   },
   "dependencies": {}

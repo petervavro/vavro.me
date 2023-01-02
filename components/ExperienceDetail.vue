@@ -1,5 +1,5 @@
 <script setup>
-import JSON_DATA from 'assets/data/technologies.json'
+import JSON_DATA from '~/assets/data/technologies.json'
 
 const target = ref(null)
 const targetIsVisible = useElementVisibility(target)

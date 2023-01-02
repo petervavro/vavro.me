@@ -27,11 +27,7 @@ const props = defineProps({
         'flex items-center w-20 h-20 p-5 overflow-hidden'
       ]"
     >
-      <nuxt-img
-        :src="`/img/${props.thumbnailImage}`"
-        :width="100"
-        fit="cover"
-      />
+      <nuxt-img :src="`img/${props.thumbnailImage}`" width="100" />
     </div>
   </div>
 </template>

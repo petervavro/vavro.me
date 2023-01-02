@@ -1,6 +1,6 @@
 <script setup>
 import gsap from 'gsap'
-import JSON_DATA from 'assets/data/technologies.json'
+import JSON_DATA from '~/assets/data/technologies.json'
 
 const items = JSON_DATA.reverse()
 
@@ -85,7 +85,7 @@ const onLeave = (el, done) => {
           target="_blank"
           v-display-when-in-view
         >
-          <div class="">
+          <div>
             <div class="text-xs text-terniary origin-bottom -rotate-90">
               {{ t.year }}
             </div>

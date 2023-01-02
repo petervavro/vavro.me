@@ -1,6 +1,6 @@
 <script setup>
-import TECHNOLOGIES from 'assets/data/technologies.json'
-import JSON_DATA from 'assets/data/codes.json'
+import TECHNOLOGIES from '~/assets/data/technologies.json'
+import JSON_DATA from '~/assets/data/codes.json'
 
 const items = JSON_DATA.map(({ technologies, ...rest }) => ({
   ...rest,

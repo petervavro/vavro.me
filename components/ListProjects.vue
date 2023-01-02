@@ -1,6 +1,6 @@
 <script setup>
-import TECHNOLOGIES from 'assets/data/technologies.json'
-import ITEMS from 'assets/data/projects.json'
+import TECHNOLOGIES from '~/assets/data/technologies.json'
+import ITEMS from '~/assets/data/projects.json'
 
 const selectedProjectId = ref(false)
 
@@ -77,7 +77,7 @@ const projectData = computed(() => {
           ]"
         >
           <nuxt-img
-            :src="`/img/${item.backgroundImage}`"
+            :src="`img/${item.backgroundImage}`"
             :width="item.id === 'duenio' ? 180 : 80"
             class="saturate-150"
           />

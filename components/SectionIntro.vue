@@ -1,6 +1,6 @@
 <script>
 import gsap from 'gsap'
-import JSON_DATA from 'assets/data/technologies.json'
+import JSON_DATA from '~/assets/data/technologies.json'
 
 const items = JSON_DATA.filter(({ preferred }) => preferred).sort(
   (a, b) => a.preferred - b.preferred

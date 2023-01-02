@@ -34,8 +34,10 @@ export default defineNuxtConfig({
       ]
     }
   },
-  modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@nuxt/image-edge'],
-  vite: {
-    plugins: [svgLoader()]
-  }
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@vueuse/nuxt',
+    '@nuxt/image-edge',
+    'nuxt-svgo'
+  ]
 })
