@@ -78,6 +78,7 @@ const projectData = computed(() => {
         >
           <nuxt-img
             :src="`img/${item.backgroundImage}`"
+            :alt="`Project ${item.title}`"
             :width="item.id === 'duenio' ? 180 : 80"
             class="saturate-150"
           />
