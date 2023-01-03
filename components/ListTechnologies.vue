@@ -1,10 +1,6 @@
 <script setup>
 import gsap from 'gsap'
-import JSON_DATA from '~/assets/data/technologies.json'
-
-const items = JSON_DATA.reverse()
-
-const selectedRange = ref(2)
+import ITEMS from '~/assets/data/technologies.json'
 
 const ranges = [
   [1994, 1999],
@@ -12,13 +8,15 @@ const ranges = [
   [2010, 2022]
 ]
 
-const getItemsInRange = computed(() => {
-  return items.filter(
+const selectedRange = ref(2)
+
+const itemsInRange = computed(() =>
+  ITEMS.filter(
     ({ year }) =>
       year >= ranges[selectedRange.value][0] &&
       year <= ranges[selectedRange.value][1]
-  )
-})
+  ).reverse()
+)
 
 const onBeforeEnter = (el) => {
   el.style.opacity = 0
@@ -77,7 +75,7 @@ const onLeave = (el, done) => {
         @leave="onLeave"
       >
         <a
-          v-for="(t, index) in getItemsInRange"
+          v-for="(t, index) in itemsInRange"
           :key="t.id"
           :data-index="index"
           class="group flex opacity-0 transition-all duration-500 ease-out"
