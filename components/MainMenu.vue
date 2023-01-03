@@ -52,7 +52,7 @@ const showModal = ref(false)
           </ul>
         </div>
         <div class="pb-5">
-          <PanelContact inverted="true" />
+          <PanelContact :inverted="true" />
         </div>
       </div>
     </modal>
