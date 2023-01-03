@@ -25,12 +25,14 @@ const items = JSON_DATA.map(({ technologies, ...rest }) => ({
         {{ item.title }}
       </h3>
       <p class="pb-3">{{ item.desc }}&nbsp;🔗</p>
-      <the-thumbnail
-        v-bind="t"
-        v-for="t in item.technologies"
-        :key="t.id"
-        class="pr-2 pb-2 inline-block scale-90 border-secondary"
-      />
+      <div class="flex flex-wrap">
+        <the-thumbnail
+          v-bind="t"
+          v-for="t in item.technologies"
+          :key="t.id"
+          class="pr-5 pb-5 inline-block scale-90 border-secondary"
+        />
+      </div>
     </a>
   </div>
 </template>
