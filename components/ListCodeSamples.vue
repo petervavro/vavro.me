@@ -1,84 +1,38 @@
-<script>
-import TECHNOLOGIES from 'assets/data/technologies.json'
-import JSON_DATA from 'assets/data/codes.json'
-import gsap from 'gsap'
+<script setup>
+import TECHNOLOGIES from '~/assets/data/technologies.json'
+import JSON_DATA from '~/assets/data/codes.json'
 
-export default {
-    data() {
-        return {
-            isVisible: false,
-            items: JSON_DATA.map(({ technologies, ...rest }) => ({
-                ...rest,
-                technologies: TECHNOLOGIES.filter(({ id }) =>
-                    technologies.split(',').includes(id)
-                ).map((item) => ({
-                    ...item,
-                    ...(item?.thumbnailImage && {
-                        thumbnailImage: new URL(
-                            `../assets/${item.thumbnailImage}`,
-                            import.meta.url
-                        ).href
-                    })
-                }))
-            }))
-        }
-    },
-    mounted() {
-        this.isVisible = true
-    },
-    methods: {
-        onBeforeEnter(el) {
-            el.style.opacity = 0
-        },
-        onEnter(el, done) {
-            gsap.to(el, {
-                opacity: 1,
-                delay: el.dataset.index * 0.3,
-                onComplete: done
-            })
-        },
-        onLeave(el, done) {
-            gsap.to(el, {
-                opacity: 0,
-                onComplete: done
-            })
-        }
-    }
-}
+const items = JSON_DATA.map(({ technologies, ...rest }) => ({
+  ...rest,
+  technologies: TECHNOLOGIES.filter(({ id }) =>
+    technologies.split(',').includes(id)
+  )
+}))
 </script>
 
 <template>
-    <TransitionGroup
-        tag="div"
-        class="grid grid-cols md:grid-cols-2 lg:grid-cols-3 gap-4"
-        :css="false"
-        @before-enter="onBeforeEnter"
-        @enter="onEnter"
-        @leave="onLeave"
+  <div class="grid grid-cols md:grid-cols-2 lg:grid-cols-3 gap-3 group">
+    <a
+      :href="item.url"
+      target="_blank"
+      v-for="(item, index) in items"
+      class="hover:shadow-lg shadow-black/10 p-5 border-neutral-light/50 border-t border-l hover:border-dotted hover:border-secondary hover:text-secondary transition-all duration-500 ease-out"
+      :key="item.title"
+      :data-index="index"
+      v-display-when-in-view
     >
-        <a
-            :href="item.url"
-            target="_blank"
-            v-for="(item, index) in items"
-            class="p-3 py-5 border-dotted border-t border-primary hover:border-secondary hover:text-secondary lg:hover:-translate-y-1 transition-all duration-300 ease-out"
-            :key="item.title"
-            :data-index="index"
-            v-if="isVisible"
-        >
-            <h3 class="h-16 text-xl pb-3">
-                {{ item.title }}
-            </h3>
-            <p class="md:h-44">
-                {{ item.desc }}
-            </p>
-            <div class="pt-3">
-                <the-thumbnail
-                    v-bind="t"
-                    v-for="t in item.technologies"
-                    :key="t.id"
-                    class="p-1 inline-block scale-90"
-                />
-            </div>
-        </a>
-    </TransitionGroup>
+      <h3 class="h-16 text-xl pb-3">
+        {{ item.title }}
+      </h3>
+      <p class="pb-3">{{ item.desc }}&nbsp;🔗</p>
+      <div class="flex flex-wrap">
+        <the-thumbnail
+          v-bind="t"
+          v-for="t in item.technologies"
+          :key="t.id"
+          class="pr-5 pb-5 inline-block scale-90 border-secondary"
+        />
+      </div>
+    </a>
+  </div>
 </template>

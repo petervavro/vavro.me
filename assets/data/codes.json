@@ -1,38 +1,44 @@
 [
   {
     "title": "This webpage",
-    "desc": "If you are wondering what would be the code behind this webpage, please feel free to check it out.",
+    "desc": "Please feel free to check this webpage code here.",
     "technologies": "tailwind,vuejs,nuxtjs,es6",
     "url": "https://github.com/petervavro/vavro.me"
   },
   {
-    "title": "Front-end skills",
-    "desc": "The code reflects my front-end skills with Typescript and React.",
-    "technologies": "typescript,react",
-    "url": "https://github.com/petervavro/react-coding-test"
+    "title": "Web-based client",
+    "desc": "A front-end challenge to develop web-based client to list and review the latest blocks on blockchain.",
+    "technologies": "typescript,graphql,apollographql,nextjs,react,nodejs,tailwind",
+    "url": "https://github.com/petervavro/Coding_Challenge-TypeScript_Next.js_GraphQL_TailwindCSS"
   },
   {
-    "title": "Back-end skills",
-    "desc": "There you can check my back-end skills with Docker, Typescript, Node.js,  Express.js, and PostgreSQL. API Documentation is done in Postman.",
+    "title": "Node.js web app",
+    "desc": "A back-end challenge. The objective was to develop simple Node.js web application with documentation in Postman.",
     "technologies": "docker,typescript,nodejs,express,postgresql",
     "url": "https://github.com/petervavro/Developer-Test-Challenge"
   },
   {
+    "title": "React App",
+    "desc": "A front-end challenge, focused on assessment of Typescript and React skills.",
+    "technologies": "typescript,react",
+    "url": "https://github.com/petervavro/react-coding-test"
+  },
+  {
     "title": "Array Methods",
-    "desc": "The challenge is composed of various tasks, with focus on use of ES6 features, while working with Array object.",
+    "desc": "The JS challenge, designed to assess experience with Array object methods.",
     "technologies": "js,es6",
     "url": "https://github.com/petervavro/Code-Challenge---JavaScript-Array-Methods"
   },
   {
     "title": "JS challenge",
-    "desc": "The task was to find the integer that appears an odd number of times.",
+    "desc": "This challenge objective is to find the integer that appears an odd number of times.",
     "technologies": "es6",
     "url": "https://codepen.io/PeterVa/pen/dyYGJxV"
   },
   {
-    "title": "Image Matching Challenge",
-    "desc": "The task objective is to count total number of matched regions in two images. The challenge is also sometimes called \"Number of Islands challenge\".",
-    "technologies": "js,es6",
-    "url": "https://codesandbox.io/s/image-matching-js-challenge-t5p6x"
+    "title": "Social Media Query",
+    "desc": "A JS challenge designed to assess capabilities in data processing.",
+    "technologies": "es6,javascript",
+    "url": "https://gist.github.com/petervavro/0d10292d5c655fed3c52bb70fbb3d769"
   }
 ]
