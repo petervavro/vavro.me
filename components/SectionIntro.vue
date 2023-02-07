@@ -54,15 +54,53 @@ export default {
       }.bind(this),
       2000
     )
+
+    const tl1 = gsap.timeline({ repeat: -1, repeatDelay: 0.5 })
+
+    tl1
+      .to('#pattern-circle', {
+        duration: 3,
+        attr: { r: 1 }
+      })
+      .to('#pattern-circle', {
+        duration: 3,
+        attr: { r: 0 }
+      })
+
+    gsap.to('#pattern-circles', {
+      duration: 100,
+      rotation: 360,
+      repeat: -1
+    })
   }
 }
 </script>
 
 <template>
-  <div
-    class="grid place-items-center h-screen grid-rows-1 grid-cols-1"
-    ref="canvas"
-  >
+  <svg width="100%" height="100%" class="h-screen absolute">
+    <defs>
+      <pattern
+        id="pattern-circles"
+        x="0"
+        y="0"
+        width="50"
+        height="50"
+        patternUnits="userSpaceOnUse"
+        patternContentUnits="userSpaceOnUse"
+      >
+        <circle id="pattern-circle" cx="10" cy="10" r="0" fill="#6c7984" />
+      </pattern>
+    </defs>
+    <rect
+      id="rect"
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      fill="url(#pattern-circles)"
+    ></rect>
+  </svg>
+  <div class="grid place-items-center h-screen grid-rows-1 grid-cols-1">
     <div
       class="flex justify-center items-center rounded-full border-2 border-secondary text-secondary w-80 h-80"
       v-if="!isVisible"
@@ -161,5 +199,9 @@ p {
 
 .list-leave-active {
   @apply absolute;
+}
+
+#pattern-circles {
+  transform-origin: center;
 }
 </style>
