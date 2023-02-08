@@ -37,7 +37,13 @@ export default {
       }
     })
 
-    this.$refs.blocks.forEach((element) =>
+    gsap.to('.intro-blocks', {
+      duration: 2,
+      transform: 'rotate3d(0, 0, 0, 0deg)',
+      opacity: 1
+    })
+
+    this.$refs.introBlocks.forEach((element) =>
       tl
         .to(element, {
           transformOrigin: '50% 50%',
@@ -102,13 +108,13 @@ export default {
   </svg>
   <div class="grid place-items-center h-screen grid-rows-1 grid-cols-1">
     <div
-      class="flex justify-center items-center rounded-full border-2 border-secondary text-secondary w-80 h-80"
+      class="intro-blocks flex justify-center items-center w-80 h-80 rounded-full border-2 border-secondary text-secondary"
       v-if="!isVisible"
     >
       <span
         v-for="{ title, index } in items"
         class="block absolute text-3xl opacity-0"
-        ref="blocks"
+        ref="introBlocks"
         :key="index"
       >
         {{ title }}
@@ -117,7 +123,7 @@ export default {
     <Transition>
       <div v-if="isVisible">
         <div class="flex py-10 mt-10 sm:mt-0">
-          <div class="w-1/3 px-5">
+          <div class="w-1/3 px-5 sm:pr-14">
             <TransitionGroup
               name="list"
               tag="div"
@@ -134,7 +140,7 @@ export default {
           </div>
           <div class="w-2/3">
             <div
-              class="py-5 sm:py-14 px-5 sm:pl-7 text-tertiary text-lg border-neutral-light/50 border-l-2"
+              class="py-5 sm:py-14 px-5 sm:pl-14 text-tertiary text-lg border-neutral-light/50 border-l-2"
               :class="{ show }"
             >
               <div style="--delay: 0">
@@ -203,5 +209,9 @@ p {
 
 #pattern-circles {
   transform-origin: center;
+}
+
+.intro-blocks {
+  opacity: 0;
 }
 </style>
