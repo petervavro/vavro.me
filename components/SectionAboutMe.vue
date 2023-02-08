@@ -21,7 +21,6 @@ onMounted(() => {
       start: 'top 80%',
       end: '+=200',
       scrub: 0.5,
-      markers: true,
       toggleActions: 'play none none reverse'
     }
   })
