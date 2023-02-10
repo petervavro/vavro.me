@@ -44,12 +44,13 @@ const projectData = computed(() => {
         </section>
         <section class="pb-5 flex flex-wrap">
           <the-thumbnail
+            v-for="t in projectData.technologies"
+            :key="t.id"
             :id="t.id"
             :title="t.title"
             :thumbnailImage="t.thumbnailImage"
-            v-for="t in projectData.technologies"
-            :key="t.id"
             class="p-3"
+            thumbnailClasses="border-white/10"
           />
         </section>
       </div>
