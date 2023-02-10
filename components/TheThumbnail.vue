@@ -4,26 +4,21 @@ const props = defineProps({
   title: String,
   titleClasses: String,
   thumbnailImage: String,
-  thumbnailClasses: String
+  thumbnailClasses: String,
+  thumbnailImageClasses: String
 })
 </script>
 
 <template>
   <div>
-    <div
-      :class="[
-        props.titleClasses || '',
-        'text-xs pb-3 transition duration-300 text-center'
-      ]"
-    >
+    <div :class="['text-xs pb-3', props.titleClasses || 'text-center']">
       {{ props.title }}
     </div>
     <div
       :class="[
         props.id,
-        props.thumbnailClasses || '',
-        'rounded-full bg-secondary/50  border-2 border-secondary contrast-125',
-        'transition duration-300',
+        props.thumbnailClasses || 'bg-neutral-light/50',
+        'rounded-full border-2 border-neutral-light contrast-125',
         'flex items-center w-20 h-20 p-5 overflow-hidden'
       ]"
     >
@@ -31,6 +26,7 @@ const props = defineProps({
         :src="`img/${props.thumbnailImage}`"
         :alt="props.title"
         width="100"
+        :class="[props.thumbnailImageClasses || '']"
       />
     </div>
   </div>
