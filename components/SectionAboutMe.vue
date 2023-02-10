@@ -1,20 +1,38 @@
 <script setup>
 import JSON_DATA from '~/assets/data/technologies.json'
 
-const technologies = JSON_DATA
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const getExperienceYears = (technologyId) => {
   const t = JSON_DATA.find(({ id }) => id === technologyId)
   return t ? new Date().getFullYear() - t.year : 0
 }
+
+onMounted(() => {
+  gsap.set('#me', { x: 0, opacity: 0 })
+  gsap.to('#me', {
+    opacity: 1,
+    y: -100,
+    scrollTrigger: {
+      trigger: '#me',
+      start: 'top 80%',
+      end: '+=200',
+      scrub: 0.5,
+      toggleActions: 'play none none reverse'
+    }
+  })
+})
 </script>
 
 <template>
   <div class="container mx-auto lg:max-w-4xl">
     <div ref="target">
       <section
-        class="opacity-0 transition-all duration-500 ease-out p-10 pb-20 max-w-xl bg-secondary drop-shadow-custom"
-        v-display-when-in-view
+        id="me"
+        class="transition-all duration-500 ease-out p-10 pb-20 max-w-xl bg-secondary drop-shadow-custom"
       >
         <h2 class="pb-5 text-2xl uppercase">Who am I ?</h2>
         <p>

@@ -18,24 +18,26 @@ const itemsInRange = computed(() =>
   ).reverse()
 )
 
-const onBeforeEnter = (el) => {
-  el.style.opacity = 0
-}
+const selectedYear = ref(2022)
 
-const onEnter = (el, done) => {
-  gsap.to(el, {
-    opacity: 1,
-    delay: el.dataset.index * 0.15,
-    onComplete: done
-  })
-}
+onMounted(() => {
+  gsap.to('#techs-list', {
+    scrollTrigger: {
+      trigger: '#techs-list',
+      start: 'top 30%',
+      end: 'bottom center',
+      toggleActions: 'play none none reverse',
+      onUpdate: (self) => {
+        const endYear = itemsInRange.value[0].year
+        const startYear = itemsInRange.value[itemsInRange.value.length - 1].year
 
-const onLeave = (el, done) => {
-  gsap.to(el, {
-    opacity: 0,
-    onComplete: done
+        selectedYear.value = Math.round(
+          endYear - self.progress * (endYear - startYear)
+        )
+      }
+    }
   })
-}
+})
 </script>
 
 <template>
@@ -65,37 +67,50 @@ const onLeave = (el, done) => {
       </button>
     </div>
     <div class="flex flex-col w-full border-l border-tertiary border-dotted">
-      <TransitionGroup
-        name="list"
-        tag="div"
+      <div
+        id="techs-list"
         class="p-5 md:p-10 grid grid-flow-row grid-cols-2 md:grid-cols-3 gap-4 md:gap-10"
-        :css="false"
-        @before-enter="onBeforeEnter"
-        @enter="onEnter"
-        @leave="onLeave"
       >
         <a
           v-for="(t, index) in itemsInRange"
           :key="t.id"
           :data-index="index"
-          class="group flex opacity-0 transition-all duration-500 ease-out"
+          class="group flex ease-out"
           :href="t.url"
           target="_blank"
-          v-display-when-in-view
         >
           <div>
-            <div class="text-xs text-terniary origin-bottom -rotate-90">
+            <div
+              class="text-md origin-bottom -rotate-90 antialiased tracking-widest"
+              :class="[
+                selectedYear === t.year ? 'text-primary' : 'text-neutral-light'
+              ]"
+            >
               {{ t.year }}
             </div>
           </div>
           <the-thumbnail
             v-bind="t"
-            titleClasses="group-hover:text-primary"
-            class="inline-block text-secondary md:group-hover:scale-105 transition"
-            thumbnailClasses="group-hover:bg-primary/50 group-hover:border-primary"
+            class="inline-block text-neutral-light md:group-hover:scale-105 antialiased"
+            :titleClasses="[
+              'text-left',
+              selectedYear === t.year ? 'text-secondary scale-105' : '',
+              'group-hover:text-primary'
+            ]"
+            :thumbnailClasses="[
+              'transition-all duration-300',
+              'group-hover:bg-primary/50 group-hover:border-primary',
+              selectedYear === t.year ? 'bg-secondary/60 border-secondary' : ''
+            ]"
+            :thumbnailImageClasses="[
+              'transition-all duration-500',
+              selectedYear === t.year
+                ? 'grayscale-0 opacity-100'
+                : 'grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-100'
+            ]"
           />
         </a>
-      </TransitionGroup>
+      </div>
     </div>
   </div>
 </template>

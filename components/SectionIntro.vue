@@ -37,7 +37,13 @@ export default {
       }
     })
 
-    this.$refs.blocks.forEach((element) =>
+    gsap.to('.intro-blocks', {
+      duration: 2,
+      transform: 'rotate3d(0, 0, 0, 0deg)',
+      opacity: 1
+    })
+
+    this.$refs.introBlocks.forEach((element) =>
       tl
         .to(element, {
           transformOrigin: '50% 50%',
@@ -54,23 +60,61 @@ export default {
       }.bind(this),
       2000
     )
+
+    const tl1 = gsap.timeline({ repeat: -1 })
+
+    tl1
+      .to('#pattern-circle', {
+        duration: 3,
+        attr: { r: 1 }
+      })
+      .to('#pattern-circle', {
+        duration: 3,
+        attr: { r: 0 }
+      })
+
+    gsap.to('#pattern-circles', {
+      duration: 100,
+      rotation: 360,
+      repeat: -1
+    })
   }
 }
 </script>
 
 <template>
-  <div
-    class="grid place-items-center h-screen grid-rows-1 grid-cols-1"
-    ref="canvas"
-  >
+  <svg width="100%" height="100%" class="h-screen absolute">
+    <defs>
+      <pattern
+        id="pattern-circles"
+        x="0"
+        y="0"
+        width="50"
+        height="50"
+        patternUnits="userSpaceOnUse"
+        patternContentUnits="userSpaceOnUse"
+      >
+        <circle id="pattern-circle" cx="10" cy="10" r="0" fill="#a5d4919e" />
+      </pattern>
+    </defs>
+    <rect
+      id="rect"
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      fill="url(#pattern-circles)"
+    ></rect>
+  </svg>
+  <div class="grid place-items-center h-screen grid-rows-1 grid-cols-1">
     <div
-      class="flex justify-center items-center rounded-full border-2 border-secondary text-secondary w-80 h-80"
+      class="intro-blocks flex justify-center items-center w-80 h-80 rounded-full border-2 border-secondary text-secondary"
       v-if="!isVisible"
     >
       <span
         v-for="{ title, index } in items"
         class="block absolute text-3xl opacity-0"
-        ref="blocks"
+        ref="introBlocks"
         :key="index"
       >
         {{ title }}
@@ -79,7 +123,7 @@ export default {
     <Transition>
       <div v-if="isVisible">
         <div class="flex py-10 mt-10 sm:mt-0">
-          <div class="w-1/3 px-5">
+          <div class="w-1/3 px-5 sm:pr-14">
             <TransitionGroup
               name="list"
               tag="div"
@@ -88,7 +132,7 @@ export default {
               <div
                 v-for="{ value, id } in zeroOrOneAnimationElements"
                 :key="id"
-                class="text-center"
+                class="text-center border-tertiary/20 border"
               >
                 {{ value }}
               </div>
@@ -96,7 +140,7 @@ export default {
           </div>
           <div class="w-2/3">
             <div
-              class="py-5 sm:py-14 px-5 sm:pl-7 text-tertiary text-lg border-neutral-light/50 border-l-2"
+              class="py-5 sm:py-14 px-5 sm:pl-14 text-tertiary text-lg border-neutral-light/50 border-l-2"
               :class="{ show }"
             >
               <div style="--delay: 0">
@@ -161,5 +205,13 @@ p {
 
 .list-leave-active {
   @apply absolute;
+}
+
+#pattern-circles {
+  transform-origin: center;
+}
+
+.intro-blocks {
+  opacity: 0;
 }
 </style>
