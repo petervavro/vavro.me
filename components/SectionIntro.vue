@@ -61,7 +61,7 @@ export default {
       2000
     )
 
-    const tl1 = gsap.timeline({ repeat: -1, repeatDelay: 0.5 })
+    const tl1 = gsap.timeline({ repeat: -1 })
 
     tl1
       .to('#pattern-circle', {
@@ -94,7 +94,7 @@ export default {
         patternUnits="userSpaceOnUse"
         patternContentUnits="userSpaceOnUse"
       >
-        <circle id="pattern-circle" cx="10" cy="10" r="0" fill="#6c7984" />
+        <circle id="pattern-circle" cx="10" cy="10" r="0" fill="#a5d4919e" />
       </pattern>
     </defs>
     <rect
@@ -132,7 +132,7 @@ export default {
               <div
                 v-for="{ value, id } in zeroOrOneAnimationElements"
                 :key="id"
-                class="text-center"
+                class="text-center border-tertiary/20 border"
               >
                 {{ value }}
               </div>

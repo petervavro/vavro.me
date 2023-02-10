@@ -20,7 +20,7 @@ export default {
     <div class="container mx-auto lg:max-w-4xl">
       <section class="p-10">
         <h2
-          class="text-2xl pb-5 uppercase text-primary"
+          class="text-4xl uppercase text-primary"
           :class="[
             titleClass
               ? titleClass
@@ -29,7 +29,9 @@ export default {
         >
           {{ title }}
         </h2>
-        <slot :class="[isVisible ? 'opacity-100' : 'opacity-0']" />
+        <div class="pt-5">
+          <slot :class="[isVisible ? 'opacity-100' : 'opacity-0']" />
+        </div>
       </section>
     </div>
   </div>
