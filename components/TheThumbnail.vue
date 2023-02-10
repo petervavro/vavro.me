@@ -2,10 +2,10 @@
 const props = defineProps({
   id: String,
   title: String,
-  titleClasses: String,
+  titleClasses: [String, Array],
   thumbnailImage: String,
-  thumbnailClasses: String,
-  thumbnailImageClasses: String
+  thumbnailClasses: [String, Array],
+  thumbnailImageClasses: [String, Array]
 })
 </script>
 
