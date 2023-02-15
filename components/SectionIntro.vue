@@ -132,7 +132,7 @@ export default {
               <div
                 v-for="{ value, id } in zeroOrOneAnimationElements"
                 :key="id"
-                class="text-center border-tertiary/20 border"
+                class="text-center border-tertiary/20 border rounded-full"
               >
                 {{ value }}
               </div>

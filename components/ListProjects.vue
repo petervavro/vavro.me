@@ -44,12 +44,13 @@ const projectData = computed(() => {
         </section>
         <section class="pb-5 flex flex-wrap">
           <the-thumbnail
+            v-for="t in projectData.technologies"
+            :key="t.id"
             :id="t.id"
             :title="t.title"
             :thumbnailImage="t.thumbnailImage"
-            v-for="t in projectData.technologies"
-            :key="t.id"
             class="p-3"
+            thumbnailClasses="border-white/10"
           />
         </section>
       </div>
@@ -79,7 +80,8 @@ const projectData = computed(() => {
           <nuxt-img
             :src="`img/${item.backgroundImage}`"
             :alt="`Project ${item.title}`"
-            :width="item.id === 'duenio' ? 180 : 80"
+            width="80"
+            height="80"
             class="saturate-150"
           />
         </div>

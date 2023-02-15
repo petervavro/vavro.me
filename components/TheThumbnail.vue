@@ -2,10 +2,10 @@
 const props = defineProps({
   id: String,
   title: String,
-  titleClasses: String,
+  titleClasses: [String, Array],
   thumbnailImage: String,
-  thumbnailClasses: String,
-  thumbnailImageClasses: String
+  thumbnailClasses: [String, Array],
+  thumbnailImageClasses: [String, Array]
 })
 </script>
 
@@ -26,6 +26,7 @@ const props = defineProps({
         :src="`img/${props.thumbnailImage}`"
         :alt="props.title"
         width="100"
+        height="100"
         :class="[props.thumbnailImageClasses || '']"
       />
     </div>
