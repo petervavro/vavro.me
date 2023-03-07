@@ -83,7 +83,7 @@ export default {
 </script>
 
 <template>
-  <svg width="100%" height="100%" class="h-screen absolute">
+  <IntroAnimation />
   <!-- <svg width="100%" height="100%" class="h-screen absolute">
     <defs>
       <pattern
