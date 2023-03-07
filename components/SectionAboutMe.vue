@@ -32,7 +32,7 @@ onMounted(() => {
     <div ref="target">
       <section
         id="me"
-        class="transition-all duration-500 ease-out p-10 pb-20 max-w-xl bg-secondary drop-shadow-custom"
+        class="transition-all duration-500 ease-out p-10 pb-20 max-w-xl bg-secondary/80 drop-shadow-custom"
       >
         <h2 class="pb-5 text-2xl uppercase">Who am I ?</h2>
         <p>
@@ -53,7 +53,7 @@ onMounted(() => {
     </div>
     <div ref="targetDetail">
       <section
-        class="opacity-0 transition-all duration-500 ease-out p-10 bg-neutral max-w-3xl border-neutral-light/50 border-l border-t border-b border-dotted -translate-y-10 sm:translate-x-20 m-3 sm:m-0"
+        class="opacity-0 transition-all duration-500 ease-out p-10 max-w-3xl bg-neutral border-neutral-light/50 border-l border-t border-b border-dotted -translate-y-10 sm:translate-x-20 m-3 sm:m-0"
         v-display-when-in-view="0.4"
       >
         <h3 class="pb-5 text-xl text-tertiary">

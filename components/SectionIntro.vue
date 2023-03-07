@@ -84,6 +84,7 @@ export default {
 
 <template>
   <svg width="100%" height="100%" class="h-screen absolute">
+  <!-- <svg width="100%" height="100%" class="h-screen absolute">
     <defs>
       <pattern
         id="pattern-circles"
@@ -105,7 +106,7 @@ export default {
       height="100%"
       fill="url(#pattern-circles)"
     ></rect>
-  </svg>
+  </svg> -->
   <div class="grid place-items-center h-screen grid-rows-1 grid-cols-1">
     <div
       class="intro-blocks flex justify-center items-center w-80 h-80 rounded-full border-2 border-secondary text-secondary"
@@ -122,35 +123,28 @@ export default {
     </div>
     <Transition>
       <div v-if="isVisible">
-        <div class="flex py-10 mt-10 sm:mt-0">
-          <div class="w-1/3 px-5 sm:pr-14">
-            <TransitionGroup
-              name="list"
-              tag="div"
-              class="grid grid-cols-5 lg:gap-4 text-primary"
-            >
-              <div
-                v-for="{ value, id } in zeroOrOneAnimationElements"
-                :key="id"
-                class="text-center border-tertiary/20 border rounded-full"
-              >
-                {{ value }}
-              </div>
-            </TransitionGroup>
-          </div>
-          <div class="w-2/3">
-            <div
-              class="py-5 sm:py-14 px-5 sm:pl-14 text-tertiary text-lg border-neutral-light/50 border-l-2"
-              :class="{ show }"
-            >
+        <div class="flex">
+          <div class="">
+            <div class="text-tertiary text-lg p-10" :class="{ show }">
               <div style="--delay: 0">
                 <p :style="`--index: 0;`">Hi, I am</p>
-                <p :style="`--index: 1;`" class="text-6xl py-1">Peter Vavro</p>
-                <p :style="`--index: 2;`">
-                  the full-stack
-                  <span class="text-secondary"> web & mobile </span>
-                  developer you're looking for.
+                <p
+                  :style="`--index: 1;`"
+                  class="text-7xl py-1"
+                  style="font-family: 'Staatliches', cursive"
+                >
+                  Peter Vavro
                 </p>
+                <ul class="list-disc list-inside relative leading-loose">
+                  <li class="text-primary">
+                    the full-stack
+                    <span class="text-secondary"> web & mobile </span>developer,
+                  </li>
+                  <li>
+                    <TypedFeatures />
+                  </li>
+                  <li>the developer you're looking for.</li>
+                </ul>
               </div>
               <div style="--delay: 1.5" class="pt-10">
                 <span
@@ -159,12 +153,14 @@ export default {
                 >
                   Please, let me show why you should hire me...
                 </span>
+                <div class="pt-5">
+                  <i
+                    class="p-3 border-primary-light border-r-2 border-b-2 inline-block ml-2 rotate-45 animate-pulse"
+                  >
+                  </i>
+                </div>
               </div>
             </div>
-            <i
-              class="p-3 border-primary-light border-r-2 border-b-2 inline-block -ml-3 rotate-45 animate-pulse"
-            >
-            </i>
           </div>
         </div>
       </div>
