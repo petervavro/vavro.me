@@ -1,213 +1,218 @@
 <script>
 import gsap from 'gsap'
+
 import JSON_DATA from '~/assets/data/technologies.json'
 
 const items = JSON_DATA.filter(({ preferred }) => preferred).sort(
   (a, b) => a.preferred - b.preferred
 )
 
+let elCoordinates = [
+  [-220, -220],
+  [10, 150],
+  [120, -150],
+  [150, 0]
+]
+
 export default {
   data() {
     return {
-      isVisible: false,
-      show: false,
-      items,
-      zeroOrOneAnimationElements: [
-        ...Array(5 * 5)
-          .fill()
-          .map(() => ({
-            id: Math.floor(Math.random() * 100000),
-            value: Math.round(Math.random())
-          }))
-      ]
-    }
-  },
-  methods: {
-    changeZeroOrOneAnimationOrder: function () {
-      this.zeroOrOneAnimationElements.sort(() => (Math.random() > 0.5 ? 1 : -1))
+      items
     }
   },
   mounted() {
-    var tl = gsap.timeline({
-      onComplete: () => {
-        this.$nextTick(function () {
-          this.show = true
-        })
-        this.isVisible = true
-      }
+    if (window.innerWidth < 640) {
+      elCoordinates = [
+        [-100, 0],
+        [-80, 40],
+        [50, 0],
+        [0, 42]
+      ]
+    }
+
+    const tl1 = gsap.timeline()
+    tl1.set(this.$refs.wrap, {
+      opacity: 0,
+      scale: 0,
+      filter: 'blur(4px)'
+    })
+    tl1.to(this.$refs.wrap, {
+      opacity: 1,
+      scale: 1,
+      filter: 'blur(0px)'
     })
 
-    gsap.to('.intro-blocks', {
-      duration: 2,
-      transform: 'rotate3d(0, 0, 0, 0deg)',
-      opacity: 1
-    })
-
-    this.$refs.introBlocks.forEach((element) =>
-      tl
-        .to(element, {
-          transformOrigin: '50% 50%',
-          duration: 0.5,
-          rotation: 360,
-          opacity: 1
-        })
-        .to(element, { duration: 0.3, opacity: 0 })
-    )
-
-    setInterval(
-      function () {
-        this.changeZeroOrOneAnimationOrder()
-      }.bind(this),
-      2000
-    )
-
-    const tl1 = gsap.timeline({ repeat: -1 })
-
-    tl1
-      .to('#pattern-circle', {
-        duration: 3,
-        attr: { r: 1 }
-      })
-      .to('#pattern-circle', {
-        duration: 3,
-        attr: { r: 0 }
+    this.$refs.bullet.forEach((child, index) => {
+      const tl = gsap.timeline({
+        // DEV: repeat: -1,
+        repeatDelay: 1,
+        delay: 1 + (1 + +index)
       })
 
-    gsap.to('#pattern-circles', {
-      duration: 100,
-      rotation: 360,
-      repeat: -1
+      tl.set(child, {
+        opacity: 0,
+        x: elCoordinates[+index][0],
+        y: elCoordinates[+index][1]
+      })
+
+      tl.to(child, {
+        opacity: 1,
+        duration: 0.2
+      })
+
+      tl.set(this.$refs.wrap, { scale: 1 })
+
+      tl.fromTo(
+        this.$refs.wrap,
+        {
+          x: -5,
+          scale: 0.99
+        },
+        {
+          x: 5,
+          scale: 1,
+          clearProps: 'x',
+          repeat: 5,
+          duration: 0.01
+        }
+      )
+
+      tl.fromTo(
+        this.$refs.wrap,
+        { y: -5 },
+        {
+          y: 5,
+          clearProps: 'y',
+          repeat: 5,
+          duration: 0.01
+        }
+      )
+
+      tl.to(child, {
+        opacity: 0,
+        duration: 4
+      })
     })
   }
 }
 </script>
 
 <template>
-  <IntroAnimation />
-  <!-- <svg width="100%" height="100%" class="h-screen absolute">
-    <defs>
-      <pattern
-        id="pattern-circles"
-        x="0"
-        y="0"
-        width="50"
-        height="50"
-        patternUnits="userSpaceOnUse"
-        patternContentUnits="userSpaceOnUse"
-      >
-        <circle id="pattern-circle" cx="10" cy="10" r="0" fill="#a5d4919e" />
-      </pattern>
-    </defs>
-    <rect
-      id="rect"
-      x="0"
-      y="0"
-      width="100%"
-      height="100%"
-      fill="url(#pattern-circles)"
-    ></rect>
-  </svg> -->
   <div class="grid place-items-center h-screen grid-rows-1 grid-cols-1">
-    <div
-      class="intro-blocks flex justify-center items-center w-80 h-80 rounded-full border-2 border-secondary text-secondary"
-      v-if="!isVisible"
-    >
-      <span
-        v-for="{ title, index } in items"
-        class="block absolute text-3xl opacity-0"
-        ref="introBlocks"
-        :key="index"
-      >
-        {{ title }}
-      </span>
-    </div>
-    <Transition>
-      <div v-if="isVisible">
-        <div class="flex">
-          <div class="">
-            <div class="text-tertiary text-lg p-10" :class="{ show }">
-              <div style="--delay: 0">
-                <p :style="`--index: 0;`">Hi, I am</p>
-                <p
-                  :style="`--index: 1;`"
-                  class="text-7xl py-1"
-                  style="font-family: 'Staatliches', cursive"
+    <div class="flex px-5" ref="wrap">
+      <div class="corners relative">
+        <div
+          class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center"
+        >
+          <span
+            v-for="{ title, index } in items"
+            class="item block absolute w-5 h-5 rounded-full border-2 border-neutral-light opacity-0 bg-black"
+            :key="index"
+            ref="bullet"
+          >
+            <span class="pl-7 text-neutral-light text-sm lg:text-lg">{{
+              title
+            }}</span>
+          </span>
+        </div>
+        <div
+          class="text-tertiary text-sm md:text-lg p-5 md:p-20 text-animation"
+        >
+          <div>
+            <p>Hi, I am</p>
+            <p class="title-text text-4xl md:text-7xl py-1">Peter Vavro</p>
+            <ul class="list-disc list-inside relative leading-relaxed">
+              <li class="text-primary">
+                the full-stack
+                <span class="text-secondary"> web & mobile </span>developer,
+              </li>
+              <li>
+                <TypedFeatures />
+              </li>
+              <li>the developer you're looking for.</li>
+            </ul>
+          </div>
+          <div class="border-neutral-light border-t-2 pt-10 mt-10">
+            <span class="text-primary-light">
+              Please, let me show why you should hire me...
+            </span>
+            <div class="pt-3">
+              <div>
+                <i
+                  class="p-3 border-primary-light border-r-2 border-b-2 inline-block ml-2 rotate-45 animate-pulse"
                 >
-                  Peter Vavro
-                </p>
-                <ul class="list-disc list-inside relative leading-loose">
-                  <li class="text-primary">
-                    the full-stack
-                    <span class="text-secondary"> web & mobile </span>developer,
-                  </li>
-                  <li>
-                    <TypedFeatures />
-                  </li>
-                  <li>the developer you're looking for.</li>
-                </ul>
+                </i>
               </div>
-              <div style="--delay: 1.5" class="pt-10">
-                <span
-                  :style="`--index: 0;`"
-                  class="text-primary-light transition-all"
+              <div class="-translate-y-4">
+                <i
+                  class="p-3 border-primary-light border-r-2 border-b-2 inline-block ml-2 rotate-45 animate-pulse"
                 >
-                  Please, let me show why you should hire me...
-                </span>
-                <div class="pt-5">
-                  <i
-                    class="p-3 border-primary-light border-r-2 border-b-2 inline-block ml-2 rotate-45 animate-pulse"
-                  >
-                  </i>
-                </div>
+                </i>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </Transition>
+    </div>
   </div>
 </template>
 
-<style scoped>
-p {
-  @apply opacity-0 duration-500 ease-out transition-all translate-x-0 translate-y-1/2;
+<style scoped lang="scss">
+.title-text {
+  font-family: 'Staatliches', cursive;
 }
 
-.show p {
-  @apply opacity-100 translate-x-0 translate-y-0;
-  transition-delay: calc(var(--delay) * 1s + 0.3s * var(--index));
-}
+.corners {
+  background: linear-gradient(
+        to right,
+        theme('colors.secondary.DEFAULT') 1px,
+        transparent 1px
+      )
+      0 0,
+    linear-gradient(
+        to right,
+        theme('colors.secondary.DEFAULT') 1px,
+        transparent 1px
+      )
+      0 100%,
+    linear-gradient(
+        to left,
+        theme('colors.secondary.DEFAULT') 1px,
+        transparent 1px
+      )
+      100% 0,
+    linear-gradient(
+        to left,
+        theme('colors.secondary.DEFAULT') 1px,
+        transparent 1px
+      )
+      100% 100%,
+    linear-gradient(
+        to bottom,
+        theme('colors.secondary.DEFAULT') 1px,
+        transparent 1px
+      )
+      0 0,
+    linear-gradient(
+        to bottom,
+        theme('colors.secondary.DEFAULT') 1px,
+        transparent 1px
+      )
+      100% 0,
+    linear-gradient(
+        to top,
+        theme('colors.secondary.DEFAULT') 1px,
+        transparent 1px
+      )
+      0 100%,
+    linear-gradient(
+        to top,
+        theme('colors.secondary.DEFAULT') 1px,
+        transparent 1px
+      )
+      100% 100%;
 
-.v-enter-active,
-.v-leave-active {
-  @apply transition duration-500 ease-out;
-}
-
-.v-enter-from,
-.v-leave-to {
-  @apply opacity-0 transition duration-500 ease-out;
-}
-
-.list-move,
-.list-enter-active,
-.list-leave-active {
-  @apply blur-[2px] transition-all duration-500 ease-out;
-}
-
-.list-enter-from,
-.list-leave-to {
-  @apply opacity-0 translate-x-64;
-}
-
-.list-leave-active {
-  @apply absolute;
-}
-
-#pattern-circles {
-  transform-origin: center;
-}
-
-.intro-blocks {
-  opacity: 0;
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
 }
 </style>
