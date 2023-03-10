@@ -2,22 +2,23 @@
 import gsap from 'gsap'
 
 onMounted(() => {
-  var tl = gsap.timeline({ repeat: -1, delay: 2 })
+  var tl = gsap.timeline({ repeat: -1, delay: 3 })
   tl.from('.slider > div', { top: 40, opacity: 0 })
   tl.to('.slider > div', { top: 0, opacity: 1 })
-  tl.to('.slider > div', { top: -40, opacity: 0, delay: 2 })
+  tl.to('.slider > div', { top: -40, opacity: 0, delay: 3 })
   tl.to('.slider > div', { top: -80, opacity: 1 })
-  tl.to('.slider > div', { top: -120, opacity: 0, delay: 2 })
+  tl.to('.slider > div', { top: -120, opacity: 0, delay: 3 })
   tl.to('.slider > div', { top: -160, opacity: 1 })
-  tl.to('.slider > div', { top: -200, opacity: 0, delay: 2 })
+  tl.to('.slider > div', { top: -200, opacity: 0, delay: 3 })
   tl.to('.slider > div', { top: 40 })
 })
 </script>
 <template>
-  <span class="slider list-inside">
-    <div>dolor enim esse anim commodo amet,</div>
-    <div>ex pariatur reprehenderit fugiat ipsum,</div>
-    <div>dolore laboris veniam,</div>
+  <span class="slider">
+    <div>with analytical and critical thinking;</div>
+    <div>passionate for clean, tested code;</div>
+    <div>self-starter able to deliver on time;</div>
+    <div>ability to execute new ideas with autonomy;</div>
   </span>
 </template>
 <style lang="scss">

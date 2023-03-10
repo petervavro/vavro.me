@@ -121,19 +121,19 @@ export default {
           <div>
             <p>Hi, I am</p>
             <p class="title-text text-4xl md:text-7xl py-1">Peter Vavro</p>
-            <ul class="list-disc list-inside relative leading-relaxed">
+            <ul class="relative leading-relaxed">
               <li class="text-primary">
-                the full-stack
-                <span class="text-secondary"> web & mobile </span>developer,
+                The full-stack
+                <span class="text-secondary"> web & mobile </span>developer;
               </li>
-              <li>
-                <TypedFeatures />
+              <li class="h-7">
+                <TextSlider />
               </li>
               <li>the developer you're looking for.</li>
             </ul>
           </div>
-          <div class="border-neutral-light border-t-2 pt-10 mt-10">
-            <span class="text-primary-light">
+          <div class="border-neutral-light border-t-2 pt-8 mt-8">
+            <span class="text-primary-light text-base">
               Please, let me show why you should hire me...
             </span>
             <div class="pt-3">
