@@ -2,6 +2,7 @@
   <Head>
     <Title> Peter Vavro = Full-Stack Engineer/Scrum Master </Title>
   </Head>
+  <BackgroundAnimation />
   <SectionIntro />
   <SectionAboutMe id="about-me" class="py-20" />
   <TheSection
@@ -14,7 +15,7 @@
   </TheSection>
   <TheSection
     id="code-samples"
-    title="My code samples"
+    title="Coding samples"
     class="py-20 text-tertiary"
     titleClass="lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-16"
   >
@@ -22,7 +23,7 @@
   </TheSection>
   <TheSection
     id="projects"
-    title="Things I've helped to build"
+    title="Things I've helped build"
     class="py-20 text-secondary"
     titleClass="lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:translate-y-52"
   >
