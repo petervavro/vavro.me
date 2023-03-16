@@ -8,8 +8,8 @@ const items = JSON_DATA.filter(({ preferred }) => preferred).sort(
 )
 
 let elCoordinates = [
-  [-220, -220],
-  [10, 150],
+  [-130, -180],
+  [10, 80],
   [120, -150],
   [150, 0]
 ]
@@ -62,6 +62,7 @@ export default {
 
       tl.set(this.$refs.wrap, { scale: 1 })
 
+      // Shake wrapper
       tl.fromTo(
         this.$refs.wrap,
         {
@@ -71,7 +72,7 @@ export default {
         {
           x: 5,
           scale: 1,
-          clearProps: 'x',
+          clearProps: 'all',
           repeat: 5,
           duration: 0.01
         }
@@ -82,7 +83,7 @@ export default {
         { y: -5 },
         {
           y: 5,
-          clearProps: 'y',
+          clearProps: 'all',
           repeat: 5,
           duration: 0.01
         }
@@ -121,19 +122,21 @@ export default {
           <div>
             <p>Hi, I am</p>
             <p class="title-text text-4xl md:text-7xl py-1">Peter Vavro</p>
-            <ul class="relative leading-relaxed">
+            <ul class="relative leading-relaxed list-disc list-outside ml-4">
               <li class="text-primary">
-                The full-stack
+                the full-stack
                 <span class="text-secondary"> web & mobile </span>developer;
               </li>
-              <li class="h-7">
-                <TextSlider />
+              <li class="h-16 relative">
+                <TextCarousel />
               </li>
-              <li>the developer you're looking for.</li>
             </ul>
+            <span class="underline underline-offset-1"
+              >The developer you're looking for.</span
+            >
           </div>
           <div class="border-neutral-light border-t-2 pt-8 mt-8">
-            <span class="text-primary-light text-base">
+            <span class="text-primary-light text-sm md:text-base">
               Please, let me show why you should hire me...
             </span>
             <div class="pt-3">
