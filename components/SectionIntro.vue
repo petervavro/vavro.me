@@ -8,10 +8,10 @@ const items = JSON_DATA.filter(({ preferred }) => preferred).sort(
 )
 
 let elCoordinates = [
-  [-130, -120],
-  [50, -140],
-  [-170, -150],
-  [0, -110]
+  [-130, -100],
+  [50, -110],
+  [-170, -120],
+  [0, -90]
 ]
 
 export default {
@@ -123,21 +123,21 @@ export default {
           <div>
             <p>Hi, I am</p>
             <p class="title-text text-4xl md:text-7xl py-1">Peter Vavro</p>
-            <ul class="relative leading-relaxed list-disc list-inside">
+            <ul class="relative leading-relaxed list-disc list-outside ml-5">
               <li class="text-primary">
                 the full-stack
                 <span class="text-secondary"> web & mobile </span>developer;
               </li>
               <li class="h-14 relative">
-                <TextCarousel class="ml-6" />
+                <TextCarousel />
               </li>
             </ul>
             <span class="underline underline-offset-1"
               >The developer you're looking for.</span
             >
           </div>
-          <div class="border-neutral-light border-t-2 pt-8 mt-8">
-            <span class="text-primary-light text-sm md:text-base">
+          <div class="pt-8">
+            <span class="text-neutral-light text-sm md:text-sm">
               Please, let me show why you should hire me...
             </span>
             <div class="pt-3">
