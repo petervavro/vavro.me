@@ -23,11 +23,7 @@ const showModal = ref(false)
         <div class="pb-5">
           <ul class="flex flex-col">
             <li class="px-2 py-3">
-              <a
-                href="#about-me"
-                @click="showModal = false"
-                class="text-xl transition-all duration-300 hover:underline"
-              >
+              <a href="#about-me" @click="showModal = false" class="menu-link">
                 About me
               </a>
             </li>
@@ -35,17 +31,13 @@ const showModal = ref(false)
               <a
                 href="#code-samples"
                 @click="showModal = false"
-                class="text-xl transition-all duration-300 hover:underline"
+                class="menu-link"
               >
                 Code
               </a>
             </li>
             <li class="px-2 py-3">
-              <a
-                href="#projects"
-                @click="showModal = false"
-                class="text-xl transition-all duration-300 hover:underline"
-              >
+              <a href="#projects" @click="showModal = false" class="menu-link">
                 Projects
               </a>
             </li>
@@ -58,3 +50,8 @@ const showModal = ref(false)
     </modal>
   </div>
 </template>
+<style lang="scss">
+.menu-link {
+  @apply text-xl transition-all duration-300 hover:underline;
+}
+</style>
