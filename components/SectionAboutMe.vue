@@ -32,7 +32,7 @@ onMounted(() => {
     <div ref="target">
       <section
         id="me"
-        class="transition-all duration-500 ease-out p-10 pb-20 max-w-xl bg-secondary/80 drop-shadow-custom"
+        class="transition-all duration-500 ease-out p-10 pb-20 max-w-xl bg-secondary/90 drop-shadow-custom"
       >
         <h2 class="pb-5 text-2xl uppercase">Who am I ?</h2>
         <p>
