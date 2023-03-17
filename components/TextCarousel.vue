@@ -19,7 +19,7 @@ onMounted(() => {
   const slides = [...slider.value.children]
 
   // Set delay
-  const delay = 1
+  const delay = 2
 
   var tl = gsap.timeline({ repeat: -1, delay })
 

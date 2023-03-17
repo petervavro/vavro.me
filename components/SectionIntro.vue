@@ -8,10 +8,10 @@ const items = JSON_DATA.filter(({ preferred }) => preferred).sort(
 )
 
 let elCoordinates = [
-  [-130, -180],
-  [10, 80],
-  [120, -150],
-  [150, 0]
+  [-130, -120],
+  [50, -140],
+  [-170, -150],
+  [0, -110]
 ]
 
 export default {
@@ -44,8 +44,8 @@ export default {
 
     this.$refs.bullet.forEach((child, index) => {
       const tl = gsap.timeline({
-        // DEV: repeat: -1,
-        repeatDelay: 1,
+        repeat: -1,
+        repeatDelay: 10,
         delay: 1 + (1 + +index)
       })
 
@@ -107,28 +107,29 @@ export default {
         >
           <span
             v-for="{ title, index } in items"
-            class="item block absolute w-5 h-5 rounded-full border-2 border-neutral-light opacity-0 bg-black"
+            class="bullet-hole block absolute w-10 h-10 bg-black opacity-0"
             :key="index"
             ref="bullet"
           >
-            <span class="pl-7 text-neutral-light text-sm lg:text-lg">{{
-              title
-            }}</span>
+            <span
+              class="ml-9 p-1 px-2 bg-neutral-light text-white rounded text-sm lg:text-lg"
+              >{{ title }}</span
+            >
           </span>
         </div>
         <div
-          class="text-tertiary text-sm md:text-lg p-5 md:p-20 text-animation"
+          class="text-tertiary text-sm md:text-base p-5 md:p-20 text-animation"
         >
           <div>
             <p>Hi, I am</p>
             <p class="title-text text-4xl md:text-7xl py-1">Peter Vavro</p>
-            <ul class="relative leading-relaxed list-disc list-outside ml-4">
+            <ul class="relative leading-relaxed list-disc list-inside">
               <li class="text-primary">
                 the full-stack
                 <span class="text-secondary"> web & mobile </span>developer;
               </li>
-              <li class="h-16 relative">
-                <TextCarousel />
+              <li class="h-14 relative">
+                <TextCarousel class="ml-6" />
               </li>
             </ul>
             <span class="underline underline-offset-1"
@@ -161,6 +162,16 @@ export default {
 </template>
 
 <style scoped lang="scss">
+.bullet-hole {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 29%,
+    rgba(76, 83, 93, 1) 30%,
+    rgba(51, 58, 64, 0) 67%
+  );
+}
+
 .title-text {
   font-family: 'Staatliches', cursive;
 }
