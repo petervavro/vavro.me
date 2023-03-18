@@ -24,7 +24,7 @@
     id="projects"
     title="Things I've helped build"
     class="section py-20 text-secondary"
-    titleClass="lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:translate-y-52"
+    titleClass="lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:translate-y-[10rem]"
   >
     <ListProjects />
   </TheSection>
@@ -38,5 +38,4 @@
 .section {
   @apply relative z-10;
 }
-
 </style>
