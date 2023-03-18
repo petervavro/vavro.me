@@ -81,7 +81,6 @@ const projectData = computed(() => {
             :src="`img/${item.backgroundImage}`"
             :alt="`Project ${item.title}`"
             width="80"
-            height="80"
             class="saturate-150"
           />
         </div>

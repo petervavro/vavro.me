@@ -26,7 +26,6 @@ const props = defineProps({
         :src="`img/${props.thumbnailImage}`"
         :alt="props.title"
         width="100"
-        height="100"
         :class="[props.thumbnailImageClasses || '']"
       />
     </div>
