@@ -1,4 +1,5 @@
 <script setup>
+import { gsap } from 'gsap'
 import TECHNOLOGIES from '~/assets/data/technologies.json'
 import ITEMS from '~/assets/data/projects.json'
 
@@ -13,6 +14,40 @@ const projectData = computed(() => {
       project.technologies.split(',').includes(id)
     )
   }
+})
+
+const tl = gsap.timeline({ repeat: 0, repeatDelay: 0.5 })
+
+onMounted(() => {
+  tl.fromTo(
+    '.grid-box',
+    {
+      scale: 0.1,
+      y: 60,
+      opacity: 0
+    },
+    {
+      scale: 1,
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: 'power1.inOut',
+      stagger: {
+        amount: 1.5,
+        grid: [8, 3],
+        axis: null,
+        ease: 'power3.inOut',
+        from: 'center'
+      },
+      scrollTrigger: {
+        trigger: '#projects',
+        start: 'top 40%',
+        end: '+=100',
+        scrub: 0.5,
+        toggleActions: 'play none none reverse'
+      }
+    }
+  )
 })
 </script>
 
@@ -56,7 +91,7 @@ const projectData = computed(() => {
       </div>
     </article>
   </modal>
-  <div>
+  <div id="projects">
     <div
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 opacity-0 transition-all duration-700 ease-out"
       v-display-when-in-view="0.1"
@@ -68,7 +103,7 @@ const projectData = computed(() => {
         :data-index="index"
         @click="selectedProjectId = item.id"
         :class="[
-          'flex flex-row group text-primary hover:text-secondary py-5 md:p-5'
+          'grid-box flex flex-row group text-primary hover:text-secondary py-5 md:p-5'
         ]"
       >
         <div
@@ -81,7 +116,6 @@ const projectData = computed(() => {
             :src="`img/${item.backgroundImage}`"
             :alt="`Project ${item.title}`"
             width="80"
-            height="80"
             class="saturate-150"
           />
         </div>

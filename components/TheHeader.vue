@@ -12,7 +12,7 @@ export default {
 <template>
   <Transition>
     <div
-      class="bg-neutral/50 fixed w-full p-5 lg:p-10 flex justify-between items-center z-10"
+      class="bg-neutral/50 fixed w-full p-5 lg:p-10 flex justify-between items-center z-20"
       v-show="isVisible"
     >
       <div class="flex">
