@@ -33,7 +33,7 @@ export default {
         <div
           v-if="show"
           :class="[
-            'fixed top-0 left-0 w-full h-full z-20 display-block overflow-x-hidden overflow-y-auto',
+            'fixed top-0 left-0 w-full h-full z-30 display-block overflow-x-hidden overflow-y-auto',
             modalContentClass
           ]"
         >
