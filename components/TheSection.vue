@@ -9,6 +9,7 @@ export default {
     }
   },
   props: {
+    id: String,
     title: String,
     titleClass: String
   }
@@ -16,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <div ref="target">
+  <div ref="target" :id="id">
     <div class="container mx-auto lg:max-w-4xl">
       <section class="p-10">
         <h2
@@ -27,7 +28,7 @@ export default {
               : 'lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem]'
           ]"
         >
-          {{ title }}
+          <a :href="'#' + id">{{ title }}</a>
         </h2>
         <div class="pt-5">
           <slot :class="[isVisible ? 'opacity-100' : 'opacity-0']" />
