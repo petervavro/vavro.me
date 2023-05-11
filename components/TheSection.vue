@@ -21,7 +21,7 @@ export default {
     <div class="container mx-auto lg:max-w-4xl">
       <section class="p-10">
         <h2
-          class="text-xl md:text-2xl uppercase text-gray-300"
+          class="text-2xl md:text-2xl uppercase text-gray-300"
           :class="[
             titleClass
               ? titleClass
