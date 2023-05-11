@@ -96,9 +96,9 @@ onMounted(() => {
               since {{ item.year }}&nbsp;|&nbsp;{{
                 new Date().getFullYear() - item.year
               }}
-              years ago.
+              years
             </p>
-            <p class="pt-3 h-64 sm:h-32">
+            <p class="pt-3">
               {{ item.note }}
             </p>
           </div>
