@@ -4,77 +4,84 @@
     "title": "vavro.me",
     "url": "https://www.vavro.me/",
     "description": "My personal web presentation.",
-    "jobDescription": "Everything you see here.",
+    "jobDescription": "",
     "backgroundImage": "thumbnail-vavro_me.png",
     "technologies": "vuejs,nuxtjs,typescript",
     "platforms": "web",
-    "year": 2022
+    "BE": 0,
+    "FE": 1
   },
   {
     "id": "acrolinx",
     "title": "Acrolinx",
     "url": "https://www.acrolinx.com",
     "description": "Acrolinx is a Content Governance Solution, a software platform designed to create amazing content.",
-    "jobDescription": "As a Senior Frontend Engineer, I participated on development of web application for administration. My daily task was to implement features in form of React functional components written in Typescript and frontend testing using Jest and React Testing Library.",
+    "jobDescription": "In my role as a Senior Frontend Engineer, I played a key part in the development of a web application for administration. On a daily basis, I focused on implementing features using React functional components written in Typescript. Additionally, I was responsible for conducting frontend testing using Jest and React Testing Library.",
     "backgroundImage": "logo-acrolinx.png",
     "technologies": "typescript,react,jss,nodejs,jest,testing-library",
     "platforms": "web",
-    "year": 2020
+    "BE": 0,
+    "FE": 1
   },
   {
     "id": "terminal",
     "title": "terminal.com.co",
     "url": "https://terminal.com.co/",
-    "description": "A portal where you can find bus routes and timetables information, updated directly by transport companies.",
-    "jobDescription": "Back-end & Front-end development.",
+    "description": "The online platform provides the most current information regarding bus routes and schedules. It is a comprehensive portal that allows you to access the latest data directly from the transportation companies. With our reliable and user-friendly platform, you can say goodbye to outdated information and enjoy a hassle-free commute.",
+    "jobDescription": "",
     "backgroundImage": "thumbnail-terminal.png",
     "technologies": "javascript,react,jss,nodejs,hapi,orientdb",
     "platforms": "web,mobile",
-    "year": 2018
+    "BE": 1,
+    "FE": 1
   },
   {
     "id": "careconnect365",
     "title": "CareConnect365",
     "url": "http://www.careconnect365.com",
-    "description": "CareConnect365 was a US based start-up idea, with focus on a technology designed specifically for seniors to help them stay independent, healthy and connected to family and friends. My team and I, we worked on a remake of an existing native application whose purpose was to simplify communication among family and elderly relatives. We were a small team in charge of the whole development lifecycle. The part of our assignment was also to develop missing backend features where we used Node.js and Hapi.js web framework combined with MongoDB. The main FE challenges were in design and our main effort was to make the new app user-friendly by presenting features in more accessible way.",
-    "jobDescription": "Mobile & Back-end development + project management.",
+    "description": "CareConnect365 was a US-based start-up idea with a focus on technology designed specifically for seniors to help them stay independent, healthy, and connected to family and friends.",
+    "jobDescription": "I was responsible for overseeing the entire development process. Our goal was to use React Native to reproduce an existing native app that facilitates contact between older relatives and their families. The goal was to make the UI easier to use and more accessible. In the project, I also took charge of the backend development of missing API functionalities using the Node.js web framework, Hapi.js, and MongoDB.\n\nIn my role as team lead, I assisted in setting up a fantastic team that put a product into production earlier than expected with complete customer satisfaction. My approach is always to be completely accessible so that I can assist with issues and share my knowledge and understanding with others, but I think this success was brought about by regular interaction with the customer, a mix of best practices we used, efficient cooperation, and open communication to identify the best solutions.",
     "backgroundImage": "logo-careconnect365.png",
     "technologies": "javascript,react-native,nodejs,hapi,mongodb",
     "platforms": "mobile",
-    "year": 2018
+    "BE": 1,
+    "FE": 1
   },
   {
     "id": "infocyte",
     "title": "Infocyte",
     "url": "https://www.infocyte.com",
     "description": "Infocyte is a cybersecurity company providing the leading platform for Incident Response and delivering cost-effective MDR services.",
-    "jobDescription": "I contributed with modifications of Infocyte's administrative UI, where the goal was to reduce the boilerplate and also to improve its performance. This was achieved by replacement of Redux state management for MobX and also by implementation of React performance optimization hooks.",
+    "jobDescription": "During my time at Infocyte, I played an instrumental role in improving the performance and usability of the administrative user interface. Specifically, I made significant contributions by implementing a series of modifications that reduced the amount of boilerplate code and enhanced the UI's overall responsiveness.\n\nTo achieve these objectives, we replaced the Redux state management system with MobX, which streamlined the codebase and improved the UI's performance. Additionally, I leveraged React performance optimization hooks to further optimize the UI, resulting in faster load times and smoother navigation for users. Overall, these changes resulted in a more efficient and user-friendly experience for Infocyte's customers.",
     "backgroundImage": "logo-Infocyte.png",
     "technologies": "react,mobx,loopback,postgresql",
     "platforms": "web",
-    "year": 2019
+    "BE": 0,
+    "FE": 1
   },
   {
     "id": "cropswap",
     "title": "CropSwap",
     "url": "https://web.archive.org/web/20220521095931/https://cropswap.com/",
     "description": "CropSwap is a marketplace type app that connects a global consumer-base with produce local to them.",
-    "jobDescription": "Tech Lead.",
+    "jobDescription": "As tech lead I was responsible for managing the technical aspects of a project, leading a team of engineers, ensuring high-quality technical solutions, and mentoring team members.",
     "backgroundImage": "logo-cropswap.svg",
     "technologies": "react native, nodejs",
     "platforms": "mobile",
-    "year": 2019
+    "BE": 0,
+    "FE": 0
   },
   {
     "id": "duenio",
     "title": "DUENIO",
     "url": "https://www.elpais.com.co/tecnologia/crean-app-para-que-arrendatarios-puedan-elegir-a-un-buen-inquilino.html",
-    "description": "An application designed for landlords to check the background of possible tenants.",
-    "jobDescription": "Mobile application development.",
+    "description": "A start-up, the application is specifically created for landlords to verify the background of potential tenants.",
+    "jobDescription": "Leading the charge as the principal developer, I played a pivotal role in spearheading the development of comprehensive mobile applications using React Native. From conceptualization to deployment, I leveraged my expertise in React Native to ensure seamless and efficient development of high-quality mobile applications that exceeded the expectations of end-users.",
     "backgroundImage": "thumbnail-duenio.jpg",
     "technologies": "javascript,react-native,jss",
     "platforms": "mobile",
-    "year": 2018
+    "BE": 0,
+    "FE": 1
   },
   {
     "id": "vavromeV2",
@@ -85,7 +92,8 @@
     "backgroundImage": "thumbnail-vavro_me.png",
     "technologies": "webpack,babel,es6,bootstrap,jquery,ejs",
     "platforms": "web",
-    "year": 2018
+    "BE": 0,
+    "FE": 1
   },
   {
     "id": "calali",
@@ -96,62 +104,68 @@
     "backgroundImage": "thumbnail-calaliapp-100.jpg",
     "technologies": "ionic,nodejs,mongodb,angularjs,javascript",
     "platforms": "mobile",
-    "year": 2016
+    "BE": 1,
+    "FE": 1
   },
   {
     "id": "hopin",
     "title": "hopin.sk",
     "url": "https://web.archive.org/web/20171113030238/https://hopintaxi.com/",
     "description": "The most popular transport mobile app in Slovakia since 2012. Order a taxi, limo or find your right public transport line.",
-    "jobDescription": "Front-end development.",
+    "jobDescription": "",
     "backgroundImage": "logo-hopin.svg",
     "technologies": "html,css,sass,php,codeigniter,mysql,javascript,jquery",
     "platforms": "web",
-    "year": 2016
+    "BE": 0,
+    "FE": 1
   },
   {
     "id": "parcel",
     "title": "DISPATCHER application",
     "url": "http://ding.ai",
     "description": "ding.ai, an advanced application for package management designed for parcel companies.",
-    "jobDescription": "Front-end development.",
+    "jobDescription": "",
     "backgroundImage": "logo-parcel_manager.png",
     "technologies": "angularjs,html,sass",
     "platforms": "web",
-    "year": 2016
+    "BE": 0,
+    "FE": 1
   },
   {
     "id": "justmassage",
     "title": "justmassage.sk",
     "url": "https://web.archive.org/web/20160304171911/http://www.justmassage.sk/",
     "description": "A company offering massage service.",
-    "jobDescription": "Website development.",
+    "jobDescription": "",
     "backgroundImage": "thumbnail-justmassage.png",
     "technologies": "html,css,sass,php,wordpress,mysql,jquery,bootstrap",
     "platforms": "web",
-    "year": 2015
+    "BE": 1,
+    "FE": 1
   },
   {
     "id": "dingai",
     "title": "ding.ai",
     "url": "http://ding.ai",
     "description": "A startup company offering parcel tracking products.",
-    "jobDescription": "Website development.",
+    "jobDescription": "",
     "backgroundImage": "logo-ding.png",
     "technologies": "html,css,sass,angularjs",
     "platforms": "web",
-    "year": 2015
+    "BE": 0,
+    "FE": 1
   },
   {
     "id": "filesplit",
     "title": "filesplit.org",
     "url": "https://www.filesplit.org/",
     "description": "An online tool to split text files.",
-    "jobDescription": "Back-end & Front-end development.",
+    "jobDescription": "",
     "backgroundImage": "thumbnail-filesplit-100.jpg",
     "technologies": "html,css,sass,php,codeigniter,mysql,jquery",
     "platforms": "web",
-    "year": 2014
+    "BE": 1,
+    "FE": 1
   },
   {
     "id": "joomlaextensions",
@@ -162,7 +176,8 @@
     "backgroundImage": "logo-Joomla.svg",
     "technologies": "php,html,css,joomla,mysql,jquery",
     "platforms": "web",
-    "year": 2014
+    "BE": 1,
+    "FE": 1
   },
   {
     "id": "joomla",
@@ -173,40 +188,44 @@
     "backgroundImage": "logo-joomla_vavro_me.png",
     "technologies": "html,css,less,php,joomla,mysql,jquery,bootstrap",
     "platforms": "web",
-    "year": 2014
+    "BE": 1,
+    "FE": 1
   },
   {
     "id": "yovoca",
     "title": "YOVOCA",
     "url": "https://github.com/petervavro/YOVOCA",
     "description": "An online learning system designed for the purpose of English vocabulary enrichment, using subtitles of movies.",
-    "jobDescription": "Back-end & Front-end development.",
+    "jobDescription": "",
     "backgroundImage": "thumbnail-yovoca-100.jpg",
     "technologies": "html,css,less,php,codeigniter,mysql,jquery",
     "platforms": "web",
-    "year": 2013
+    "BE": 1,
+    "FE": 1
   },
   {
     "id": "daysalive",
     "title": "daysalive.com",
     "url": "http://daysalive.info/",
     "description": "Application to find out how many days have passed since a certain date, e.g. date of birth.",
-    "jobDescription": "Website development.",
+    "jobDescription": "",
     "backgroundImage": "thumbnail-daysalive-100.jpg",
     "technologies": "html,css,less,php,joomla,mysql,jquery,bootstrap",
     "platforms": "web",
-    "year": 2013
+    "BE": 1,
+    "FE": 1
   },
   {
     "id": "galeriaremix",
     "title": "Galeria Remix",
     "url": "http://galeriaremix.com/",
     "description": "A photo sharing platform.",
-    "jobDescription": "Website development.",
+    "jobDescription": "",
     "backgroundImage": "thumbnail-galeriaremix-100.jpg",
     "technologies": "html,css,sass,php,wordpress,mysql,jquery,bootstrap",
     "platforms": "web",
-    "year": 2013
+    "BE": 1,
+    "FE": 1
   },
   {
     "id": "epsa",
@@ -217,7 +236,8 @@
     "backgroundImage": "thumbnail-epsa-100.jpg",
     "technologies": "html,css,asp,jquery",
     "platforms": "web",
-    "year": 2012
+    "BE": 1,
+    "FE": 1
   },
   {
     "id": "inmovis",
@@ -228,17 +248,19 @@
     "backgroundImage": "thumbnail-Inmovis.png",
     "technologies": "php,codeigniter,jquery,html,css",
     "platforms": "web",
-    "year": 2011
+    "BE": 1,
+    "FE": 1
   },
   {
     "id": "icl",
     "title": "icl.com.co",
     "url": "http://icl.com.co/",
     "description": "A company in the metalworking sector founded in 1988.",
-    "jobDescription": "Website development.",
+    "jobDescription": "As the lead web developer, I oversaw every aspect of the website's lifecycle, from initial planning to ongoing maintenance. To create an exceptional online shopping experience for customers, I integrated Joomla and VirtueMart into the website, seamlessly merging an online store with the rest of the site's functionality. In addition to my expertise in these technologies, I leveraged my proficiency in HTML, CSS, and JavaScript to create a dynamic, user-friendly website. By integrating these tools, customers were able to easily browse products, add items to their shopping cart, and complete their purchases without leaving the site. Finally, I provided the client with full control over updating and managing the website's content, ensuring that it remained current and relevant to their evolving needs.",
     "backgroundImage": "thumbnail-icl-100.jpg",
     "technologies": "html,css,less,php,joomla,mysql,jquery",
     "platforms": "web",
-    "year": 2011
+    "BE": 1,
+    "FE": 1
   }
 ]

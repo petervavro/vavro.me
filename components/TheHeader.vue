@@ -21,9 +21,9 @@ export default {
             <h1 class="text-primary text-2xl">Peter Vavro</h1>
           </NuxtLink>
           <p
-            class="hidden lg:block text-secondary border-secondary border-t-2 pt-1 mt-1"
+            class="hidden lg:block text-secondary border-secondary border-t-2 pt-1 mt-1 w-80"
           >
-            Full-Stack Developer with preference for Front-end
+            Full-Stack Engineer<!-- with preference for Front-end -->
           </p>
         </div>
         <div class="hidden lg:block">

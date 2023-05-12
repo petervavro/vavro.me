@@ -126,20 +126,18 @@ export default {
             <ul class="relative leading-relaxed list-disc list-outside ml-5">
               <li class="text-primary">
                 the full-stack
-                <span class="text-secondary"> web & mobile </span>developer;
+                <span class="text-secondary"> web & mobile </span>engineer;
               </li>
               <li class="h-14 relative">
                 <TextCarousel />
               </li>
             </ul>
-            <span class="underline underline-offset-1"
-              >The developer you're looking for.</span
-            >
           </div>
           <div class="pt-8">
-            <span class="text-neutral-light text-sm md:text-sm">
+            <span class="pt-5">The developer you need is right here.</span>
+            <!-- <span class="text-neutral-light text-sm md:text-sm">
               Please, let me show why you should hire me...
-            </span>
+            </span> -->
             <div class="pt-3">
               <div>
                 <i

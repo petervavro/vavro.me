@@ -6,7 +6,8 @@
     "thumbnailImage": "logo-BASIC.png",
     "id": "basic",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 1996,
@@ -15,7 +16,8 @@
     "thumbnailImage": "logo-Turbo_Pascal.png",
     "id": "turbo-pascal",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 1998,
@@ -24,7 +26,8 @@
     "thumbnailImage": "logo-C++.svg",
     "id": "c-plus-plus",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 1999,
@@ -33,7 +36,8 @@
     "thumbnailImage": "logo-Assembly_language.png",
     "id": "assembly-language",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 1999,
@@ -42,7 +46,8 @@
     "thumbnailImage": "logo-html5.svg",
     "id": "html",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 1999,
@@ -51,7 +56,8 @@
     "thumbnailImage": "logo-css.svg",
     "id": "css",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2003,
@@ -60,7 +66,8 @@
     "thumbnailImage": "logo-Visual_Basic-NL.png",
     "id": "visual-basic",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2003,
@@ -69,7 +76,8 @@
     "thumbnailImage": "logo-ASP.NET-NL.png",
     "id": "asp",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2004,
@@ -78,7 +86,8 @@
     "thumbnailImage": "logo-PHP.svg",
     "id": "php",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2004,
@@ -87,7 +96,8 @@
     "thumbnailImage": "logo-MySQL.svg",
     "id": "mysql",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2004,
@@ -96,7 +106,8 @@
     "thumbnailImage": "logo-Javascript.svg",
     "id": "javascript",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2005,
@@ -105,7 +116,8 @@
     "thumbnailImage": "logo-Postgresql.svg",
     "id": "postgresql",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2007,
@@ -114,7 +126,8 @@
     "thumbnailImage": "logo-Joomla.svg",
     "id": "joomla",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2007,
@@ -123,7 +136,8 @@
     "thumbnailImage": "logo-MooTools.png",
     "id": "mootools",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2007,
@@ -132,7 +146,8 @@
     "thumbnailImage": "logo-JQuery.svg",
     "id": "jquery",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2010,
@@ -141,7 +156,8 @@
     "thumbnailImage": "logo-Wordpress.svg",
     "id": "wordpress",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2011,
@@ -150,7 +166,8 @@
     "thumbnailImage": "logo-Codeigniter.svg",
     "id": "codeigniter",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2011,
@@ -159,7 +176,8 @@
     "thumbnailImage": "logo-bootstrap.svg",
     "id": "bootstrap",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2012,
@@ -168,7 +186,8 @@
     "thumbnailImage": "logo-less.svg",
     "id": "less",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2012,
@@ -177,7 +196,8 @@
     "thumbnailImage": "logo-sass.svg",
     "id": "sass",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2013,
@@ -186,7 +206,8 @@
     "thumbnailImage": "logo-Drupal.svg",
     "id": "drupal",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2013,
@@ -195,7 +216,8 @@
     "thumbnailImage": "logo-laravel.svg",
     "id": "laravel",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2013,
@@ -204,7 +226,8 @@
     "thumbnailImage": "logo-bower.svg",
     "id": "bower",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2013,
@@ -213,7 +236,8 @@
     "thumbnailImage": "logo-AngularJS.svg",
     "id": "angularjs",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2014,
@@ -222,7 +246,8 @@
     "thumbnailImage": "logo-Nodejs.svg",
     "id": "nodejs",
     "preferred": 5,
-    "note": "My favorite JavaScript runtime server environment. I had opportunities to work with various Node.js frameworks, mainly Express.js, Sails.js, LoopBack, Koa.js and HapiJS."
+    "note": "My beloved JavaScript runtime server environment I worked with a variety of Node.js frameworks, including Express.js, Sails.js, LoopBack, Koa.js, and HapiJS.",
+    "FE": 1
   },
   {
     "year": 2014,
@@ -231,7 +256,8 @@
     "thumbnailImage": "logo-mongoDB.svg",
     "id": "mongodb",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2014,
@@ -240,7 +266,8 @@
     "thumbnailImage": "logo-Express.svg",
     "id": "express",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2015,
@@ -249,7 +276,8 @@
     "thumbnailImage": "logo-EJS.png",
     "id": "ejs",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2015,
@@ -258,7 +286,8 @@
     "thumbnailImage": "logo-webpack.svg",
     "id": "webpack",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2015,
@@ -267,7 +296,8 @@
     "thumbnailImage": "logo-Babel.svg",
     "id": "babel",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2016,
@@ -276,7 +306,8 @@
     "thumbnailImage": "logo-es6.svg",
     "id": "es6",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2016,
@@ -285,7 +316,8 @@
     "thumbnailImage": "logo-React.svg",
     "id": "react",
     "preferred": 1,
-    "note": "I often work with the MATERIAL-UI library, sometimes combined with Redux, MobX to manage application state. Refs, context, Higher-Order Component, Memoization, and also SSR using Next.js. React is my favorite library."
+    "note": "When it comes to UI tools, I tend to favor MATERIAL-UI/MUI. For managing the state of my applications, I often rely on either Redux or MobX. I enjoy utilizing various techniques such as refs, context, higher-order components, and memorization. Furthermore, I find Next.js to be an excellent framework, not just for server-side rendering.",
+    "FE": 1
   },
   {
     "year": 2016,
@@ -294,7 +326,8 @@
     "thumbnailImage": "logo-redux.svg",
     "id": "redux",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2017,
@@ -303,7 +336,8 @@
     "thumbnailImage": "logo-React.svg",
     "id": "react-native",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2017,
@@ -312,7 +346,8 @@
     "thumbnailImage": "logo-KoaJS.svg",
     "id": "koa",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2017,
@@ -321,7 +356,8 @@
     "thumbnailImage": "logo-AWS.svg",
     "id": "aws",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2017,
@@ -330,7 +366,8 @@
     "thumbnailImage": "logo-MaterialUI.svg",
     "id": "Material-UI",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2018,
@@ -339,7 +376,8 @@
     "thumbnailImage": "logo-docker.svg",
     "id": "docker",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2018,
@@ -348,7 +386,8 @@
     "thumbnailImage": "logo-hapi.svg",
     "id": "hapi",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2018,
@@ -357,7 +396,8 @@
     "thumbnailImage": "logo-Orientdb.png",
     "id": "orientdb",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2018,
@@ -366,7 +406,8 @@
     "thumbnailImage": "logo-TailwindCSS.svg",
     "id": "tailwind",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2019,
@@ -375,7 +416,8 @@
     "thumbnailImage": "logo-TypeScript.svg",
     "id": "typescript",
     "preferred": 4,
-    "note": "In 85% of the projects I've worked on over the last few years, TypeScript was the language we used."
+    "note": "TypeScript was utilized in 85% of the projects I've worked on in the previous several years.",
+    "FE": 1
   },
   {
     "year": 2019,
@@ -384,7 +426,8 @@
     "thumbnailImage": "logo-vuejs.svg",
     "id": "vuejs",
     "preferred": 3,
-    "note": "Really nice framework I had opportunity to work with in a few projects. BTW, I used NuxtJS to build this website."
+    "note": "I had the pleasure of working with this really great framework on a couple projects. I built this website with NuxtJS, by the way.",
+    "FE": 1
   },
   {
     "year": 2019,
@@ -393,7 +436,8 @@
     "thumbnailImage": "logo-loopback.svg",
     "id": "loopback",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2019,
@@ -402,7 +446,8 @@
     "thumbnailImage": "logo-mobx.png",
     "id": "mobx",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2019,
@@ -411,7 +456,8 @@
     "thumbnailImage": "logo-graphql.svg",
     "id": "graphql",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2019,
@@ -420,7 +466,8 @@
     "thumbnailImage": "logo-apollographql.svg",
     "id": "apollographql",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2020,
@@ -429,7 +476,8 @@
     "thumbnailImage": "logo-NestJS.svg",
     "id": "nestjs",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 0
   },
   {
     "year": 2020,
@@ -438,7 +486,8 @@
     "thumbnailImage": "logo-NEXTjs.svg",
     "id": "nextjs",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2020,
@@ -447,7 +496,8 @@
     "thumbnailImage": "logo-JEST.svg",
     "id": "jest",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2020,
@@ -456,7 +506,8 @@
     "thumbnailImage": "logo-TestingLibrary.png",
     "id": "testing-library",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2021,
@@ -465,7 +516,8 @@
     "thumbnailImage": "logo-Electron.svg",
     "id": "electron",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2021,
@@ -474,7 +526,8 @@
     "thumbnailImage": "logo-MUI.svg",
     "id": "mui",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2022,
@@ -483,7 +536,8 @@
     "thumbnailImage": "logo-GSAP.svg",
     "id": "gsap",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   },
   {
     "year": 2022,
@@ -492,6 +546,7 @@
     "thumbnailImage": "logo-NuxtJS.svg",
     "id": "nuxtjs",
     "preferred": 0,
-    "note": ""
+    "note": "",
+    "FE": 1
   }
 ]

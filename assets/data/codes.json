@@ -40,5 +40,11 @@
     "desc": "A JS challenge designed to assess capabilities in data processing.",
     "technologies": "es6,javascript",
     "url": "https://gist.github.com/petervavro/0d10292d5c655fed3c52bb70fbb3d769"
+  },
+  {
+    "title": "OrientDB plugin",
+    "desc": "This is a Hapi plugin that enables the use of OrientDB, allowing for seamless integration and improved functionality.",
+    "technologies": "es6,javascript,hapi,nodejs",
+    "url": "https://www.npmjs.com/package/hapi-orientdb"
   }
 ]
