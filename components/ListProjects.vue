@@ -41,7 +41,7 @@ onMounted(() => {
       },
       scrollTrigger: {
         trigger: '#projects',
-        start: 'top 40%',
+        start: 'top 50%',
         end: '+=100',
         scrub: 0.5,
         toggleActions: 'play none none reverse'
