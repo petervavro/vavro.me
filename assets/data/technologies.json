@@ -558,5 +558,15 @@
     "preferred": 0,
     "note": "",
     "FE": 1
+  },
+  {
+    "year": 2023,
+    "title": "Prisma",
+    "url": "https://www.prisma.io",
+    "thumbnailImage": "logo-Prisma.svg",
+    "id": "prisma",
+    "preferred": 0,
+    "note": "",
+    "FE": 1
   }
 ]

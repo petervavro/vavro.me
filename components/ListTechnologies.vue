@@ -5,7 +5,7 @@ import ITEMS from '~/assets/data/technologies.json'
 const ranges = [
   [1994, 1999],
   [2000, 2009],
-  [2010, 2022]
+  [2010, 2023]
 ]
 
 const selectedRange = ref(2)
@@ -18,7 +18,7 @@ const itemsInRange = computed(() =>
   ).reverse()
 )
 
-const selectedYear = ref(2022)
+const selectedYear = ref(2023)
 
 onMounted(() => {
   gsap.to('#techs-list', {
