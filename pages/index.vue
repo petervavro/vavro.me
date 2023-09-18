@@ -7,9 +7,9 @@
     <SectionAboutMe id="about-me" class="section py-20" />
     <TheSection
       id="technologies"
-      title="My experience"
+      title="Experience"
       class="section py-20 text-primary"
-      titleClass="lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-24"
+      titleClass="lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-36"
     >
       <ListTechnologies />
     </TheSection>
