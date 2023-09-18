@@ -568,5 +568,25 @@
     "preferred": 0,
     "note": "",
     "FE": 1
+  },
+  {
+    "year": 2023,
+    "title": "Android",
+    "url": "https://developer.android.com/",
+    "thumbnailImage": "logo-Android.svg",
+    "id": "android",
+    "preferred": 0,
+    "note": "",
+    "FE": 1
+  },
+  {
+    "year": 2023,
+    "title": "Kotlin",
+    "url": "https://kotlinlang.org/",
+    "thumbnailImage": "logo-Kotlin.svg",
+    "id": "kotlin",
+    "preferred": 0,
+    "note": "",
+    "FE": 0
   }
 ]
