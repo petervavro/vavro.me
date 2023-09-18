@@ -2,10 +2,12 @@
 import gsap from 'gsap'
 import ITEMS from '~/assets/data/technologies.json'
 
+const currentYear = new Date().getFullYear()
+
 const ranges = [
   [1994, 1999],
   [2000, 2009],
-  [2010, 2022]
+  [2010, currentYear]
 ]
 
 const selectedRange = ref(2)
@@ -18,13 +20,13 @@ const itemsInRange = computed(() =>
   ).reverse()
 )
 
-const selectedYear = ref(2022)
+const selectedYear = ref(currentYear)
 
 onMounted(() => {
   gsap.to('#techs-list', {
     scrollTrigger: {
       trigger: '#techs-list',
-      start: 'top 30%',
+      start: 'top 55%',
       end: 'bottom center',
       toggleActions: 'play none none reverse',
       onUpdate: (self) => {
@@ -103,15 +105,11 @@ onMounted(() => {
               :thumbnailClasses="[
                 'transition-all duration-300',
                 'group-hover:bg-primary/50 group-hover:border-primary',
-                selectedYear === t.year
-                  ? 'bg-secondary/60 border-secondary'
-                  : ''
+                'bg-secondary/60 border-secondary'
               ]"
               :thumbnailImageClasses="[
                 'transition-all duration-500',
-                selectedYear === t.year
-                  ? 'grayscale-0 opacity-100'
-                  : 'grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-100'
+                'opacity-80 group-hover:grayscale-0 group-hover:opacity-100'
               ]"
             />
           </a>

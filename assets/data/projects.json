@@ -1,5 +1,17 @@
 [
   {
+    "id": "pl",
+    "title": "Logging Integration",
+    "url": "",
+    "description": "The project encompassed the development of a Production Dashboard, the integration of data from the PLC into a MySQL database, and the implementation of safety measures to guarantee the integrity of production statistics. This system not only improved production monitoring but also ensured that the manufacturer had a dependable source of data for assessing and enhancing production processes.",
+    "jobDescription": "My role in this project encompassed designing and developing the Production Dashboard, creating Python fetchers for data integration from the PLC, and implementing Docker containers for deployment and system management. Additionally, I played a crucial role in creating comprehensive documentation to ensure clarity, transparency, and knowledge transfer throughout the project.",
+    "backgroundImage": "logo-da.png",
+    "technologies": "typescript,nextjs,react,node,mysql,python,docker,prisma",
+    "platforms": "web",
+    "BE": 1,
+    "FE": 1
+  },
+  {
     "id": "vavromeV3",
     "title": "vavro.me",
     "url": "https://www.vavro.me/",

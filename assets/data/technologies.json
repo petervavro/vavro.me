@@ -301,6 +301,16 @@
   },
   {
     "year": 2016,
+    "title": "Python",
+    "url": "https://www.python.org/",
+    "thumbnailImage": "logo-Python.svg",
+    "id": "python",
+    "preferred": 0,
+    "note": "",
+    "FE": 0
+  },
+  {
+    "year": 2016,
     "title": "ES6",
     "url": "https://en.wikipedia.org/wiki/ECMAScript",
     "thumbnailImage": "logo-es6.svg",
@@ -548,5 +558,35 @@
     "preferred": 0,
     "note": "",
     "FE": 1
+  },
+  {
+    "year": 2023,
+    "title": "Prisma",
+    "url": "https://www.prisma.io",
+    "thumbnailImage": "logo-Prisma.svg",
+    "id": "prisma",
+    "preferred": 0,
+    "note": "",
+    "FE": 1
+  },
+  {
+    "year": 2023,
+    "title": "Android",
+    "url": "https://developer.android.com/",
+    "thumbnailImage": "logo-Android.svg",
+    "id": "android",
+    "preferred": 0,
+    "note": "",
+    "FE": 1
+  },
+  {
+    "year": 2023,
+    "title": "Kotlin",
+    "url": "https://kotlinlang.org/",
+    "thumbnailImage": "logo-Kotlin.svg",
+    "id": "kotlin",
+    "preferred": 0,
+    "note": "",
+    "FE": 0
   }
 ]

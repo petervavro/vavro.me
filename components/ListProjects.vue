@@ -41,7 +41,7 @@ onMounted(() => {
       },
       scrollTrigger: {
         trigger: '#projects',
-        start: 'top 40%',
+        start: 'top 50%',
         end: '+=100',
         scrub: 0.5,
         toggleActions: 'play none none reverse'
@@ -59,7 +59,7 @@ onMounted(() => {
       modalContentClass="bg-neutral text-secondary"
       buttonClass="text-white/50 hover:text-white hover:bg-neutral-light border-white/50"
     >
-      <article class="box mx-auto max-w-4xl md:p-10 pt-5 mt-24">
+      <article class="box mx-auto max-w-4xl md:p-10 pt-5">
         <div class="p-10">
           <h3 class="text-2xl pb-5">{{ projectData.title }}</h3>
           <section class="pb-5">
