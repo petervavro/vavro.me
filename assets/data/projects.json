@@ -42,7 +42,7 @@
     "description": "The online platform provides the most current information regarding bus routes and schedules. It is a comprehensive portal that allows you to access the latest data directly from the transportation companies. With our reliable and user-friendly platform, you can say goodbye to outdated information and enjoy a hassle-free commute.",
     "jobDescription": "",
     "backgroundImage": "thumbnail-terminal.png",
-    "technologies": "javascript,react,jss,nodejs,hapi,orientdb",
+    "technologies": "javascript,react,jss,nodejs,hapi,orientdb,aws",
     "platforms": "web,mobile",
     "BE": 1,
     "FE": 1
@@ -64,11 +64,11 @@
     "title": "Infocyte",
     "url": "https://www.infocyte.com",
     "description": "Infocyte is a cybersecurity company providing the leading platform for Incident Response and delivering cost-effective MDR services.",
-    "jobDescription": "During my time at Infocyte, I played an instrumental role in improving the performance and usability of the administrative user interface. Specifically, I made significant contributions by implementing a series of modifications that reduced the amount of boilerplate code and enhanced the UI's overall responsiveness.\n\nTo achieve these objectives, we replaced the Redux state management system with MobX, which streamlined the codebase and improved the UI's performance. Additionally, I leveraged React performance optimization hooks to further optimize the UI, resulting in faster load times and smoother navigation for users. Overall, these changes resulted in a more efficient and user-friendly experience for Infocyte's customers.",
+    "jobDescription": "During my time at Infocyte, I significantly improved the administrative dashboard's performance and usability. I added new features, streamlined the frontend by replacing Redux with MobX, and utilized React performance optimization hooks. These changes resulted in a more efficient and user-friendly experience. On the backend, I created and maintained endpoints, connecting them to PostgresDB and third-party APIs, gaining valuable experience with the LoopBack framework.",
     "backgroundImage": "logo-Infocyte.png",
-    "technologies": "react,mobx,loopback,postgresql",
+    "technologies": "react,mobx,nodejs,loopback,postgresql,aws",
     "platforms": "web",
-    "BE": 0,
+    "BE": 1,
     "FE": 1
   },
   {
