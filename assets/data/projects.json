@@ -6,7 +6,7 @@
     "description": "Saidot is a governance tool for safe, ethical and transparent AI.",
     "jobDescription": "As a Fullstack Developer, I contributed to a dynamic monorepo project, handling both frontend and backend development aspects. My responsibilities included crafting intuitive user interfaces, designing robust APIs using NestJS GraphQL with a 'code-first' approach, and collaborating with cross-functional teams to achieve project goals. I maintained a keen focus on code quality and problem-solving, ensuring seamless functionality and enhancing the overall user experience.",
     "backgroundImage": "logo-Saidot.svg",
-    "technologies": "typescript,react,nestjs,graphql,postgresql,prisma,docker,flowbite,tailwind,figma",
+    "technologies": "typescript,react,nestjs,graphql,postgresql,prisma,docker,flowbite,tailwind,figma,azure-storage-account",
     "platforms": "web",
     "BE": 1,
     "FE": 1
