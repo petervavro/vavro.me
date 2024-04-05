@@ -618,5 +618,15 @@
     "preferred": 0,
     "note": "",
     "FE": 1
+  },
+  {
+    "year": 2023,
+    "title": "Azure storage account",
+    "url": "https://azure.microsoft.com/en-us/products/category/storage/",
+    "thumbnailImage": "logo-Azure.svg",
+    "id": "azure-storage-account",
+    "preferred": 0,
+    "note": "",
+    "FE": 0
   }
 ]
