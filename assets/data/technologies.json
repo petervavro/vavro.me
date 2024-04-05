@@ -111,7 +111,7 @@
   },
   {
     "year": 2005,
-    "title": "PostgresSQL",
+    "title": "PostgreSQL",
     "url": "https://en.wikipedia.org/wiki/PostgreSQL",
     "thumbnailImage": "logo-Postgresql.svg",
     "id": "postgresql",
@@ -540,6 +540,16 @@
     "FE": 1
   },
   {
+    "year": 2021,
+    "title": "PWA",
+    "url": "https://web.dev/explore/progressive-web-apps",
+    "thumbnailImage": "logo-PWA.svg",
+    "id": "pwa",
+    "preferred": 0,
+    "note": "",
+    "FE": 1
+  },
+  {
     "year": 2022,
     "title": "GSAP",
     "url": "https://greensock.com/gsap/",
@@ -588,5 +598,25 @@
     "preferred": 0,
     "note": "",
     "FE": 0
+  },
+  {
+    "year": 2023,
+    "title": "Flowbite",
+    "url": "https://flowbite.com/",
+    "thumbnailImage": "logo-Flowbite.svg",
+    "id": "flowbite",
+    "preferred": 0,
+    "note": "",
+    "FE": 1
+  },
+  {
+    "year": 2023,
+    "title": "Figma",
+    "url": "https://www.figma.com/",
+    "thumbnailImage": "logo-Figma.svg",
+    "id": "figma",
+    "preferred": 0,
+    "note": "",
+    "FE": 1
   }
 ]
