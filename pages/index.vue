@@ -4,8 +4,8 @@
       <Title>Peter Vavro = Full-Stack Engineer</Title>
     </Head>
     <SectionIntro class="section" />
-    <!-- 
     <SectionAboutMe id="about-me" class="section py-20" />
+    <!-- 
     <TheSection
       id="technologies"
       title="Experience"
