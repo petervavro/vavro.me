@@ -10,11 +10,16 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "gsap": "^3.12.5",
     "nuxt": "^3.14.1592",
+    "nuxt-svgo": "4.0.9",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.12.2"
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "fibers": "^5.0.3",
+    "sass": "^1.83.0",
+    "sass-loader": "^16.0.4"
   }
 }
