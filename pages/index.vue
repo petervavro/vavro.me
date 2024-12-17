@@ -21,7 +21,6 @@
     >
       <ListCodeSamples />
     </TheSection>
-    <!-- 
     <TheSection
       id="projects"
       title="Things I've helped build"
@@ -30,6 +29,7 @@
     >
       <ListProjects />
     </TheSection>
+    <!-- 
     <BackgroundAnimation /> -->
   </div>
 </template>
