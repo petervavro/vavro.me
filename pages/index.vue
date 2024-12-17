@@ -13,7 +13,6 @@
     >
       <ListTechnologies />
     </TheSection>
-    <!-- 
     <TheSection
       id="code-samples"
       title="Coding samples"
@@ -22,6 +21,7 @@
     >
       <ListCodeSamples />
     </TheSection>
+    <!-- 
     <TheSection
       id="projects"
       title="Things I've helped build"
