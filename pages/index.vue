@@ -5,7 +5,6 @@
     </Head>
     <SectionIntro class="section" />
     <SectionAboutMe id="about-me" class="section py-20" />
-    <!-- 
     <TheSection
       id="technologies"
       title="Experience"
@@ -14,6 +13,7 @@
     >
       <ListTechnologies />
     </TheSection>
+    <!-- 
     <TheSection
       id="code-samples"
       title="Coding samples"
