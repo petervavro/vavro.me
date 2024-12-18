@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-svgo", "nuxt-gtag", "@nuxt/image"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "nuxt-svgo",
+    "nuxt-gtag",
+    "@nuxt/image",
+    "@nuxtjs/google-fonts",
+  ],
   gtag: {
     enabled: process.env.NODE_ENV === "production",
     id: "G-6Z1S75YS32",
@@ -31,20 +37,14 @@ export default defineNuxtConfig({
         { name: "author", content: "Peter Vavro" },
         { name: "copyright", content: "Peter Vavro" },
       ],
-      link: [
-        { rel: "icon", type: "image/x-icon", href: "favicon.ico" },
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        {
-          rel: "preconnect",
-          href: "https://fonts.gstatic.com",
-          crossorigin: "",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Staatliches&display=swap",
-          crossorigin: "",
-        },
-      ],
+      link: [{ rel: "icon", type: "image/x-icon", href: "favicon.ico" }],
     },
+  },
+  googleFonts: {
+    families: {
+      "Roboto+Mono": true,
+      Staatliches: true,
+    },
+    display: "swap",
   },
 });
