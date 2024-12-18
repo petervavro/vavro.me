@@ -1,12 +1,17 @@
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'TheHeader',
   data() {
-    return { isVisible: false }
+    return {
+      isVisible: false
+    };
   },
   mounted() {
-    this.isVisible = true
+    this.isVisible = true;
   }
-}
+});
 </script>
 
 <template>
@@ -37,7 +42,7 @@ export default {
   </Transition>
 </template>
 
-<style>
+<style scoped>
 .v-enter-active,
 .v-leave-active {
   @apply transition-all duration-500 ease-in-out;
