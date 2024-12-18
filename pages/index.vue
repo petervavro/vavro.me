@@ -29,8 +29,7 @@
     >
       <ListProjects />
     </TheSection>
-    <!-- 
-    <BackgroundAnimation /> -->
+    <BackgroundAnimation />
   </div>
 </template>
 <style>
