@@ -22,7 +22,7 @@ const items = JSON_DATA.map(({ technologies, ...rest }) => ({
       v-display-when-in-view
     >
       <div class="w-full pb-5">
-        <SvgoIconLink class="w-8 h-8 fill-neutral-light" />
+        <SvgoIconLink class="text-3xl text-neutral-light/50" />
       </div>
       <h3 class="h-16 text-xl pb-3">
         {{ item.title }}
