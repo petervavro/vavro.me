@@ -118,12 +118,12 @@ export default {
           </span>
         </div>
         <div
-          class="text-tertiary text-sm md:text-base p-5 md:p-20 text-animation"
+          class="text-tertiary text-sm md:text-base p-5 md:p-16 text-animation"
         >
           <div>
             <p>Hi, I am</p>
             <p class="title-text text-4xl md:text-7xl py-1">Peter Vavro</p>
-            <ul class="relative leading-relaxed list-disc list-outside ml-5">
+            <ul class="relative leading-relaxed list-square list-outside ml-5">
               <li class="text-primary">
                 the full-stack
                 <span class="text-secondary"> web & mobile </span>engineer;

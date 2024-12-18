@@ -25,6 +25,10 @@ export default {
         sans: ['"Roboto Mono"'],
       },
     },
+    listStyleType: {
+      none: "none",
+      square: "square",
+    },
   },
   plugins: [],
 };
