@@ -2,9 +2,6 @@
 import JSON_DATA from '~/assets/data/technologies.json'
 
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
-
 import type { Technology } from '~/types';
 
 const getExperienceYears = (technologyId: string): number => {
