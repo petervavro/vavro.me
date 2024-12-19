@@ -1,10 +1,7 @@
-<script>
-import IconEmail from '~/assets/icon-Email.svg'
-import IconGithub from '~/assets/logo-Github.svg'
-import IconLinkedIn from '~/assets/icon-LinkedIn.svg'
+<script lang="ts">
+import { defineComponent } from 'vue';
 
-export default {
-  components: { IconEmail, IconGithub, IconLinkedIn },
+export default defineComponent({
   props: {
     inverted: {
       type: Boolean,
@@ -15,7 +12,7 @@ export default {
       default: true
     }
   }
-}
+});
 </script>
 
 <template>
@@ -28,7 +25,7 @@ export default {
         class="p-3"
         :class="{ inverted: inverted }"
       >
-        <IconEmail />
+        <SvgoIconEmail class="text-3xl !mb-0" />
         <span class="sr-only"> My Email </span>
       </a>
     </li>
@@ -38,10 +35,10 @@ export default {
         target="_blank"
         title="My Linkedin"
         rel="noreferrer"
-        class="p-2"
+        class="p-[0.5rem]"
         :class="{ inverted: inverted }"
       >
-        <IconLinkedIn />
+        <SvgoIconLinkedIn class="text-4xl !mb-0"/>
         <span class="sr-only"> My Linkedin </span>
       </a>
     </li>
@@ -54,7 +51,7 @@ export default {
         class="p-3"
         :class="{ inverted: inverted }"
       >
-        <IconGithub />
+        <SvgoIconGithub  class="text-3xl !mb-0"/>
         <span class="sr-only"> My GitHub </span>
       </a>
     </li>
@@ -63,10 +60,10 @@ export default {
 
 <style scoped>
 ul a {
-  @apply block border-2 text-primary border-primary hover:text-secondary hover:border-secondary rounded-full transform hover:scale-110 transition duration-300;
+  @apply block border-2 text-primary border-primary hover:text-secondary hover:border-secondary rounded-full transform hover:scale-105 transition duration-200;
 }
 
 ul a.inverted {
-  @apply block border-2 rounded-full transform hover:scale-110 transition duration-300 text-neutral border-neutral hover:text-neutral hover:border-neutral;
+  @apply text-neutral border-neutral hover:text-neutral hover:border-neutral;
 }
 </style>

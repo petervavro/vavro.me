@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import IconMenu from '~/assets/icon-menu.svg'
-
 const showModal = ref(false)
 </script>
 
@@ -9,10 +7,10 @@ const showModal = ref(false)
     <button
       id="show-modal"
       @click="showModal = true"
-      class="p-2 text-tertiary border-tertiary border-2 transition duration-300 hover:text-secondary hover:border-secondary"
+      class="p-2 text-tertiary border-tertiary border-2 transition duration-200 hover:text-secondary hover:border-secondary hover:scale-110"
       aria-label="Menu"
     >
-      <IconMenu class="w-6 h-6" />
+      <SvgoIconMenu class="text-xl !mb-0" />
     </button>
     <modal
       :show="showModal"

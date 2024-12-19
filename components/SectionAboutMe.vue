@@ -1,13 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import JSON_DATA from '~/assets/data/technologies.json'
 
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import gsap from "gsap";
+import type { Technology } from '~/types';
 
-gsap.registerPlugin(ScrollTrigger)
-
-const getExperienceYears = (technologyId) => {
-  const t = JSON_DATA.find(({ id }) => id === technologyId)
+const getExperienceYears = (technologyId: string): number => {
+  const t = JSON_DATA.find(({ id }) => id === technologyId) as Technology | undefined
   return t ? new Date().getFullYear() - t.year : 0
 }
 

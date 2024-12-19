@@ -1,4 +1,5 @@
 <script setup>
+import { useElementVisibility } from '@vueuse/core'
 import JSON_DATA from '~/assets/data/technologies.json'
 
 const target = ref(null)

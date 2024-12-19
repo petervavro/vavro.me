@@ -9,7 +9,7 @@
       id="technologies"
       title="Experience"
       class="section py-20 text-primary"
-      titleClass="lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-36"
+      titleClass="text-primary lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-36"
     >
       <ListTechnologies />
     </TheSection>
@@ -17,7 +17,7 @@
       id="code-samples"
       title="Coding samples"
       class="section py-20 text-tertiary"
-      titleClass="lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-16"
+      titleClass="text-primary lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-16"
     >
       <ListCodeSamples />
     </TheSection>
@@ -25,7 +25,7 @@
       id="projects"
       title="Things I've helped build"
       class="section py-20 text-secondary"
-      titleClass="lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:translate-y-[10rem]"
+      titleClass="text-primary lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:translate-y-[10rem]"
     >
       <ListProjects />
     </TheSection>

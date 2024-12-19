@@ -1,20 +1,13 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 
+# TECHNOLOGY COLOPHON
+HTML5, CSS3, Vue.js, Nuxt.js, Tailwind CSS, GSAP
 
-	# TECHNOLOGY COLOPHON
+# TEAM
+Developer: Peter Vavro
+Contact: peter [at] vavro.me
+Personal web: https://www.vavro.me
 
-		HTML5, CSS3, jQuery
-
-
-	# TEAM
-
-		Developer: Peter Vavro
-		Contact: peter [at] vavro.me
-		Personal web: www.vavro.me
-
-
-	# SITE
-
-		Last update:2013/06/17
-		Language: English
+# SITE
+Language: English
