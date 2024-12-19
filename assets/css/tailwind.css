@@ -2,15 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* width */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-tertiary/80;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-tertiary;
+}
+
 @layer base {
-    body{
-        @apply bg-neutral;
-        font-family: 'Roboto Mono', monospace;
-    }
+  body {
+    @apply bg-neutral;
+    font-family: "Roboto Mono", monospace;
+  }
 }
 
 @layer components {
-    .rounded-50p {
-        border-radius: 50%;
-    }
+  .rounded-50p {
+    border-radius: 50%;
   }
+}
