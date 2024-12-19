@@ -22,7 +22,6 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.2",
-    "fibers": "^5.0.3",
     "sass": "^1.83.0",
     "sass-loader": "^16.0.4"
   }
