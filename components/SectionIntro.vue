@@ -24,18 +24,13 @@ let elCoordinates: [number, number][] = [
 export default defineComponent({
   data() {
     return {
-      items
+      items,
+      isWrapVisible: false
     };
   },
   mounted() {
-    if (window.innerWidth < 640) {
-      elCoordinates = [
-        [-100, 0],
-        [-80, 40],
-        [50, 0],
-        [0, 42]
-      ];
-    }
+
+    this.isWrapVisible = true;
 
     const tl1 = gsap.timeline();
     tl1.set(this.$refs.wrap as HTMLElement, {
@@ -48,6 +43,15 @@ export default defineComponent({
       scale: 1,
       filter: 'blur(0px)'
     });
+
+    if (window.innerWidth < 640) {
+      elCoordinates = [
+        [-100, 0],
+        [-80, 40],
+        [50, 0],
+        [0, 42]
+      ];
+    }
 
     (this.$refs.bullet as HTMLElement[]).forEach((child, index) => {
       const tl = gsap.timeline({
@@ -107,7 +111,7 @@ export default defineComponent({
 
 <template>
   <div class="grid place-items-center h-screen grid-rows-1 grid-cols-1">
-    <div class="flex px-5" ref="wrap">
+    <div class="flex px-5" ref="wrap" v-show="isWrapVisible">
       <div class="corners relative">
         <div class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center">
           <span v-for="(item, index) in items" class="bullet-hole block absolute w-10 h-10 bg-black opacity-0"
