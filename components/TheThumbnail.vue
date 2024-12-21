@@ -14,20 +14,14 @@ const props = defineProps({
     <div :class="['text-xs pb-3', props.titleClasses || 'text-center']">
       {{ props.title }}
     </div>
-    <div
-      :class="[
-        props.id,
-        props.thumbnailClasses || 'bg-neutral-light/50',
-        'rounded-full border-2 border-neutral-light contrast-125',
-        'flex items-center w-20 h-20 p-5 overflow-hidden'
-      ]"
-    >
-      <nuxt-img
-        :src="`img/${props.thumbnailImage}`"
-        :alt="props.title"
-        width="100"
-        :class="[props.thumbnailImageClasses || '']"
-      />
+    <div :class="[
+      props.id,
+      props.thumbnailClasses || 'bg-neutral-light/50',
+      'rounded-full border-2 border-neutral-light contrast-125',
+      'flex items-center w-20 h-20 p-5 overflow-hidden'
+    ]">
+      <nuxt-img :src="`img/${props.thumbnailImage}`" :alt="props.title" width="100"
+        :class="[props.thumbnailImageClasses || '']" />
     </div>
   </div>
 </template>
@@ -40,6 +34,7 @@ img {
 .orientdb {
   @apply p-1 py-5;
 }
+
 .orientdb img,
 .babel img {
   @apply max-w-none;

@@ -22,6 +22,10 @@
   @apply bg-tertiary;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   body {
     @apply bg-neutral;
