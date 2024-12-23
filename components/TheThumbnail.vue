@@ -20,7 +20,7 @@ const props = defineProps({
       'rounded-full border-2 border-neutral-light contrast-125',
       'flex items-center w-20 h-20 p-5 overflow-hidden'
     ]">
-      <nuxt-img :src="`img/${props.thumbnailImage}`" :alt="props.title" width="100"
+      <NuxtImg :src="`img/${props.thumbnailImage}`" :alt="props.title" width="100"
         :class="[props.thumbnailImageClasses || '']" />
     </div>
   </div>
