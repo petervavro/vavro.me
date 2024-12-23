@@ -3,7 +3,7 @@ import technologies from '~/assets/data/technologies.json'
 import type { Technology } from '~/types';
 
 const companyName = ref('');
-const selectedTechnologies = ref<Technology["id"][]>([])
+const selectedTechnologies = ref<Technology["id"][]>(["typescript", "nodejs", "react", "vuejs"])
 const { encryptAndRedirect } = useEncryption();
 
 const configData = computed(() => ({
@@ -14,7 +14,7 @@ const configData = computed(() => ({
 <template>
 
     <Head>
-        <Title>Peter Vavro = Full-Stack Engineer</Title>
+        <Title>Cover Letter Configurator</Title>
     </Head>
     <TheSection>
         <section>
