@@ -33,7 +33,16 @@
             v-if="index === currentStep && (index + 1 !== parts.length)">
             <div class="relative p-5">
               <div class="relative z-10">
-                <feedback-form @next="handleNext"></feedback-form>
+                <div class="flex gap-3">
+                  <button @click="handleNext(index, true)"
+                    class="p-2 transition duration-200 border border-white bg-white/10 hover:bg-white/80 text-white hover:text-neutral">
+                    Great, next
+                  </button>
+                  <button @click="handleNext(index, false)"
+                    class="p-2 transition duration-200 border border-white bg-white/10 hover:bg-white/80 text-white hover:text-neutral">
+                    Next
+                  </button>
+                </div>
               </div>
               <div
                 class="absolute top-0 bottom-0 right-0 left-0 inset-0 bg-gradient-to-r from-blue-500/70 to-purple-500/70 opacity-50 blur-xl"
@@ -111,8 +120,19 @@ const handleBack = () => {
   if (currentStep.value > 0) currentStep.value -= 1;
 };
 
-const handleNext = () => {
+
+const { gtag } = useGtag()
+
+const emit = defineEmits(['next']);
+
+const handleNext = (index: number, like: boolean) => {
+  gtag('event', 'cover-letter', {
+    partIndex: index,
+    like
+  })
+
   if (currentStep.value < parts.value.length) currentStep.value += 1;
+
 };
 
 const scrollToCenter = (targetElement: HTMLElement) => {
