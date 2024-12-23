@@ -80,11 +80,15 @@ onMounted(async () => {
 const currentStep = ref(0);
 
 watch(currentStep, (newValue) => {
-  scrollToCenter(document.querySelectorAll('.paragraph')[newValue] as HTMLElement);
+
+  const paragraphs = document.querySelectorAll('.paragraph');
+  const paragraph = paragraphs[newValue] as HTMLElement;
+
+  scrollToCenter(paragraph);
 })
 
-const parts = ref([
-  'I am excited to apply for the Senior Full-stack Engineer position at your company. With over 10 years of experience in full-stack development, I am confident in my ability to contribute your digital transformation initiatives. The opportunity to work with an international and diverse company, particularly on projects that require collaboration across multiple regions and teams, is highly appealing to me.',
+const parts = computed(() => [
+  `I am excited to apply for the Senior Full-stack Engineer position at ${config.value?.name || 'your company'}. With over 10 years of experience in full-stack development, I am confident in my ability to contribute your digital transformation initiatives. The opportunity to work with an international and diverse company, particularly on projects that require collaboration across multiple regions and teams, is highly appealing to me.`,
   'In my past role, I have led the design and development web applications, working extensively with modern front-end technologies like React and Angular, as well as back-end technologies such as Node.js and Python. Specifically, these technologies:',
   'Leadership and mentorship are also key strengths I bring to this role. I have successfully guided teams in delivering high-quality software products, fostering a culture of continuous learning and innovation. I’m particularly passionate about encouraging best practices through regular code reviews, technical discussions, and Agile methodologies such as Scrum, ensuring that the team delivers high-impact solutions efficiently and on time.',
   'I am confident that my strong technical background, leadership experience, and passion for continuous improvement make me a great fit for you. I am eager to contribute to your team and help drive forward the innovative solutions you are known for. I look forward to the opportunity to further discuss how my skills and experiences align with the needs of your team.'
@@ -117,5 +121,4 @@ const scrollToCenter = (targetElement: HTMLElement) => {
     block: 'center',
   })
 }
-
 </script>
