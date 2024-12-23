@@ -62,7 +62,21 @@
 }
 </style>
 <script setup lang="ts">
-const config = ref({ technologies: ['docker'] })
+const route = useRoute();
+const config = ref<ConfigInURL | null>(null);
+const error = ref<string | null>(null);
+const { decrypt } = useEncryption();
+
+onMounted(async () => {
+  const token = route.params.token as string;
+  try {
+    const { text } = await decrypt(token) || {};
+    if (text) config.value = JSON.parse(text)
+  } catch (e) {
+    error.value = 'Failed to decrypt data';
+  }
+});
+
 const currentStep = ref(0);
 
 watch(currentStep, (newValue) => {
@@ -77,10 +91,17 @@ const parts = ref([
 ])
 
 import TECHNOLOGIES from '~/assets/data/technologies.json'
+import type { ConfigInURL, Technology } from '~/types';
 
-const technologies = TECHNOLOGIES.filter(({ id }) =>
-  config.value.technologies.includes(id)
-)
+const technologies = ref<Technology[]>([]);
+
+watch(config, (newConfig) => {
+  if (newConfig) {
+    technologies.value = TECHNOLOGIES.filter(({ id }) =>
+      (newConfig?.technologies || []).includes(id)
+    );
+  }
+}, { immediate: true });
 
 const handleBack = () => {
   if (currentStep.value > 0) currentStep.value -= 1;
