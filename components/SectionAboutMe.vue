@@ -22,9 +22,11 @@ onMounted(() => {
   }).fromTo(
     '#me',
     {
+      x: -300,
       opacity: 0
     },
     {
+      x: 0,
       opacity: 1,
     })
 
@@ -38,11 +40,13 @@ onMounted(() => {
   }).fromTo(
     '#detail',
     {
-      x: 50,
-      y: 100,
+      x: 300,
+      y: -50,
+      opacity: 0
     },
     {
-      y: -50,
+      x: 50,
+      opacity: 1,
     })
 })
 </script>
