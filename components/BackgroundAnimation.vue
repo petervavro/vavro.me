@@ -4,6 +4,7 @@
 // enables v-focus in templates
 const vBinaryRain = {
   mounted: (el) => {
+
     /************* SHIM ************************/
     window.requestAnimFrame = (function () {
       return (
@@ -131,5 +132,7 @@ const vBinaryRain = {
 </script>
 
 <template>
-  <canvas v-binary-rain class="absolute top-0 bottom-0 left-0 right-0 -z-1" />
+  <Teleport to="body">
+    <canvas v-binary-rain class="h-screen" />
+  </Teleport>
 </template>
