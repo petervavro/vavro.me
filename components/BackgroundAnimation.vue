@@ -133,6 +133,6 @@ const vBinaryRain = {
 
 <template>
   <Teleport to="body">
-    <canvas v-binary-rain class="h-screen" />
+    <canvas v-binary-rain class="absolute top-0 bottom-0 left-0 right-0" />
   </Teleport>
 </template>
