@@ -50,7 +50,6 @@
             </div>
           </div>
         </div>
-        <p class="mb-4">Thank you for considering my application.</p>
         <p class="mb-4">Sincerely,<br>Ing. Peter Vavro</p>
       </div>
     </TheSection>
@@ -97,10 +96,32 @@ watch(currentStep, (newValue) => {
 })
 
 const parts = computed(() => [
-  `I am excited to apply for the Senior Full-stack Engineer position at ${config.value?.name || 'your company'}. With over 10 years of experience in full-stack development, I am confident in my ability to contribute your digital transformation initiatives. The opportunity to work with an international and diverse company, particularly on projects that require collaboration across multiple regions and teams, is highly appealing to me.`,
-  'In my past role, I have led the design and development web applications, working extensively with modern front-end technologies like React and Angular, as well as back-end technologies such as Node.js and Python. Specifically, these technologies:',
-  'Leadership and mentorship are also key strengths I bring to this role. I have successfully guided teams in delivering high-quality software products, fostering a culture of continuous learning and innovation. I’m particularly passionate about encouraging best practices through regular code reviews, technical discussions, and Agile methodologies such as Scrum, ensuring that the team delivers high-impact solutions efficiently and on time.',
-  'I am confident that my strong technical background, leadership experience, and passion for continuous improvement make me a great fit for you. I am eager to contribute to your team and help drive forward the innovative solutions you are known for. I look forward to the opportunity to further discuss how my skills and experiences align with the needs of your team.'
+  [
+    `I am excited to apply for the ${config.value?.positionName || 'Senior Full-stack Engineer'} position at ${config.value?.name || 'your company'}.`,
+    `With over 20 years of experience in ${config.value?.isFrontEndPosition ? 'software development and a strong focus on front-end technologies' : 'full-stack development'}, I am confident that my skills and background make me an excellent fit for this role.`,
+    ...config.value?.isInternational ? `The opportunity to work with an international and diverse company, particularly on projects that require collaboration across multiple regions and teams, is highly appealing to me.` : [],
+  ].join(" "),
+  [
+    `My professional journey has been deeply rooted in creating scalable, secure, and reliable code for public-facing applications.`,
+    ...config.value?.isFrontEndPosition ? [
+      `I have a keen eye for detail and a deep understanding of UX principles, which has consistently allowed me to exceed user expectations.`
+    ] : [],
+    `In my previous roles, I was responsible for developing and maintaining complex front-end systems, ensuring high-quality user experiences for thousands of users, working extensively these modern technologies:`,
+  ].join(" "),
+  [
+    `Leadership and mentorship are also key strengths I bring to this role.`,
+    `I have successfully guided teams in delivering high-quality software products, fostering a culture of continuous learning and innovation.`,
+    `I am well-versed in collaborating with cross-functional teams, including product managers and designers, to take features from conception to production.`,
+    `I’m particularly passionate about encouraging best practices through regular code reviews, technical discussions, and Agile methodologies such as Scrum, ensuring that the team delivers high-impact solutions efficiently and on time.`,
+  ].join(" "),
+  [
+    `I am confident that my strong technical background, leadership experience, and passion for continuous improvement make me a great fit for you.`,
+    `I am eager to contribute to your team and help drive forward the innovative solutions.`,
+  ].join(" "),
+  [
+    `Thank you for considering my application.`,
+    `I look forward to the opportunity to further discuss how my skills and experiences align with the needs of your team.`
+  ].join(" ")
 ])
 
 import TECHNOLOGIES from '~/assets/data/technologies.json'
