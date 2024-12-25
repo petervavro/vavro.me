@@ -10,7 +10,6 @@ export class EncryptionService {
   public static encrypt(text: string): string {
     const iv: Buffer = crypto.randomBytes(16);
     const cipher = crypto.createCipheriv(this.algorithm, this.secretKey, iv);
-
     const encrypted = Buffer.concat([cipher.update(text), cipher.final()]);
 
     // Combine IV and encrypted content into a single string and make it URL-safe
