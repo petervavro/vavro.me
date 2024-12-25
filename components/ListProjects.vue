@@ -25,23 +25,23 @@ onMounted(() => {
       trigger: '#projects',
       start: 'top 50%',
       end: '+=100',
-      toggleActions: 'play none none reverse'
+      toggleActions: 'play none none none'
     }
   }).fromTo(
     '.grid-box',
     {
-      scale: 0.1,
-      y: 60,
-      opacity: 0
+      scale: 0.5,
+      opacity: 0,
+      rotateY: 180,
     },
     {
       scale: 1,
       opacity: 1,
-      y: 0,
+      rotateY: 0,
       duration: 0.5,
       ease: 'power1.inOut',
       stagger: {
-        amount: 1.5,
+        amount: 0.4,
       },
     }
   )
