@@ -1,5 +1,5 @@
 <script setup>
-import gsap from 'gsap'
+const { $gsap } = useNuxtApp()
 import ITEMS from '~/assets/data/technologies.json'
 
 const currentYear = new Date().getFullYear()
@@ -23,10 +23,10 @@ const itemsInRange = computed(() =>
 const selectedYear = ref(currentYear)
 
 onMounted(() => {
-  gsap.to('#techs-list', {
+  $gsap.to('#techs-list', {
     scrollTrigger: {
       trigger: '#techs-list',
-      start: 'top 55%',
+      start: 'top center',
       end: 'bottom center',
       toggleActions: 'play none none reverse',
       onUpdate: (self) => {
@@ -45,73 +45,47 @@ onMounted(() => {
 <template>
   <div>
     <select class="select md:hidden" v-model="selectedRange">
-      <option
-        v-for="([rangeStart, rangeEnd], index) in ranges"
-        v-bind:value="index"
-        :key="index"
-      >
+      <option v-for="([rangeStart, rangeEnd], index) in ranges" v-bind:value="index" :key="index">
         {{ rangeStart }}&nbsp;-&nbsp;{{ rangeEnd }}
       </option>
     </select>
     <div class="flex flex-row">
       <div class="hidden md:flex flex-col p-5">
-        <button
-          v-for="([rangeStart, rangeEnd], index) in ranges"
-          @click="selectedRange = index"
-          :class="[
-            'inline-block m-3 p-2 px-5 rounded-full border-2 text-sm transition-all hover:opacity-100',
-            selectedRange === index
-              ? 'border-secondary text-secondary opacity-100'
-              : 'border-tertiary text-tertiary opacity-60'
-          ]"
-          :key="index"
-        >
+        <button v-for="([rangeStart, rangeEnd], index) in ranges" @click="selectedRange = index" :class="[
+          'inline-block m-3 p-2 px-5 rounded-full border-2 text-sm transition-all hover:opacity-100',
+          selectedRange === index
+            ? 'border-secondary text-secondary opacity-100'
+            : 'border-tertiary text-tertiary opacity-60'
+        ]" :key="index">
           {{ rangeStart }}&nbsp;-&nbsp;{{ rangeEnd }}
         </button>
       </div>
       <div class="flex flex-col w-full border-l border-tertiary border-dotted">
-        <div
-          id="techs-list"
-          class="p-5 md:p-10 grid grid-flow-row grid-cols-2 md:grid-cols-3 gap-4 md:gap-10"
-        >
-          <a
-            v-for="(t, index) in itemsInRange"
-            :key="t.id"
-            :data-index="index"
-            class="group flex ease-out"
-            :href="t.url"
-            target="_blank"
-          >
+        <div id="techs-list" class="p-5 md:p-10 grid grid-flow-row grid-cols-2 md:grid-cols-3 gap-4 md:gap-10">
+          <a v-for="(t, index) in itemsInRange" :key="t.id" :data-index="index" class="group flex ease-out"
+            :href="t.url" target="_blank">
             <div>
-              <div
-                class="text-md origin-bottom -rotate-90 antialiased tracking-widest"
-                :class="[
-                  selectedYear === t.year
-                    ? 'text-primary'
-                    : 'text-neutral-light'
-                ]"
-              >
+              <div class="text-md origin-bottom -rotate-90 antialiased tracking-widest" :class="[
+                selectedYear === t.year
+                  ? 'text-primary'
+                  : 'text-neutral-light'
+              ]">
                 {{ t.year }}
               </div>
             </div>
-            <the-thumbnail
-              v-bind="t"
-              class="inline-block text-neutral-light md:group-hover:scale-105 antialiased"
+            <the-thumbnail v-bind="t" class="inline-block text-neutral-light md:group-hover:scale-105 antialiased"
               :titleClasses="[
                 'text-left',
                 selectedYear === t.year ? 'text-secondary scale-105' : '',
                 'group-hover:text-primary'
-              ]"
-              :thumbnailClasses="[
+              ]" :thumbnailClasses="[
                 'transition-all duration-300',
                 'group-hover:bg-primary/50 group-hover:border-primary',
                 'bg-secondary/60 border-secondary'
-              ]"
-              :thumbnailImageClasses="[
+              ]" :thumbnailImageClasses="[
                 'transition-all duration-500',
                 'opacity-80 group-hover:grayscale-0 group-hover:opacity-100'
-              ]"
-            />
+              ]" />
           </a>
         </div>
       </div>
