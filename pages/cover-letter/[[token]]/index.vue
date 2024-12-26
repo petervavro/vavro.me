@@ -102,7 +102,9 @@ const scrollToCenter = (targetElement: HTMLElement) => {
       titleClass="text-primary lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-30">
       <div class="p-20 border border-primary mt-20">
         <h1 class="mb-4">Dear Hiring Manager,</h1>
-        <div v-for="(part, index) in parts" :key="index" class="paragraph mb-4 relative">
+        <div v-for="(part, index) in parts" :key="index" class="paragraph mb-4 relative" :class="{
+          'focused': index === currentStep
+        }">
           <Transition>
             <div v-if="index === currentStep && index > 0" class="absolute -top-28 left-0">
               <div class="relative p-5">
@@ -116,16 +118,13 @@ const scrollToCenter = (targetElement: HTMLElement) => {
               </div>
             </div>
           </Transition>
-          <p :class="{
-            'blur-sm': index !== currentStep,
-            'text-white': index === currentStep,
-          }">{{ part }}</p>
+          <p>{{ part }}</p>
           <div v-if="index === 1 && index === currentStep" class="flex">
             <the-thumbnail v-for="t in technologies" :key="index" v-bind="t"
               class="pr-5 pb-5 inline-block scale-90 border-secondary pt-10"
               titleClasses="text-primary/90 group-hover:text-secondary text-center" />
           </div>
-          <Transition name="next-buttons">
+          <Transition>
             <div class="feedback-panel absolute bottom-[-7rem] z-10"
               v-if="index === currentStep && (index + 1 !== parts.length)">
               <div class="relative p-5">
@@ -162,37 +161,45 @@ const scrollToCenter = (targetElement: HTMLElement) => {
     </TheSection>
   </div>
 </template>
-<style>
-:target {
-  scroll-margin-top: 100px;
-}
-
-/* we will explain what these classes do next! */
+<style scoped lang="scss">
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s ease;
+  transition: all 0.1s ease;
 }
 
 .v-enter-from,
 .v-leave-to {
+  transform: translateX(3.5rem);
   opacity: 0;
 }
 
-/*
-  Enter and leave animations can use different
-  durations and timing functions.
-*/
-.next-buttons-enter-active {
-  transition: all 0.3s ease-out;
+.paragraph {
+  p {
+    @apply blur-sm
+  }
+
+  &.focused {
+    p {
+      @apply blur-none text-white
+    }
+  }
 }
 
-.next-buttons-leave-active {
-  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
-}
+.no-js {
+  .feedback-panel {
+    @apply opacity-0;
+  }
 
-.next-buttons-enter-from,
-.next-buttons-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
+  .paragraph {
+    p {
+      @apply blur-none
+    }
+
+    &.focused {
+      p {
+        @apply blur-none text-inherit
+      }
+    }
+  }
 }
 </style>
