@@ -1,74 +1,3 @@
-<template>
-
-  <Head>
-    <Title>Cover Letter / Peter Vavro = Full-Stack Engineer</Title>
-  </Head>
-  <div>
-    <TheSection title="Cover letter" class="pt-20 text-primary"
-      titleClass="text-primary lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-30">
-      <div class="p-20 border border-primary mt-20">
-        <h1 class="mb-4">Dear Hiring Manager,</h1>
-        <div v-for="(part, index) in parts" :key="index" class="paragraph mb-4 relative">
-          <div v-if="index === currentStep && index > 0" class="absolute -top-28 left-0">
-            <div class="relative p-5">
-              <div class="relative z-10">
-                <button @click="handleBack"
-                  class="p-2 text-sm transition duration-200 border border-primary bg-primary/10 hover:bg-primary/80 text-primary hover:text-neutral">
-                  Let's see this again
-                </button>
-              </div>
-              <div class="absolute top-0 bottom-0 right-0 left-0 inset-0 bg-neutral blur-xl" aria-hidden="true" />
-            </div>
-          </div>
-          <p :class="{
-            'blur-sm': index !== currentStep,
-            'text-white': index === currentStep,
-          }">{{ part }}</p>
-          <div v-if="index === 1 && index === currentStep" class="flex">
-            <the-thumbnail v-for="t in technologies" :key="index" v-bind="t"
-              class="pr-5 pb-5 inline-block scale-90 border-secondary pt-10"
-              titleClasses="text-primary/90 group-hover:text-secondary text-center" />
-          </div>
-          <div class="feedback-panel absolute bottom-[-7rem] z-10"
-            v-if="index === currentStep && (index + 1 !== parts.length)">
-            <div class="relative p-5">
-              <div class="relative z-10">
-                <div class="flex gap-3">
-                  <button @click="handleNext(index, true)"
-                    class="p-2 transition duration-200 border border-white bg-white/10 hover:bg-white/80 text-white hover:text-neutral">
-                    Great, next
-                  </button>
-                  <button @click="handleNext(index, false)"
-                    class="p-2 transition duration-200 border border-white bg-white/10 hover:bg-white/80 text-white hover:text-neutral">
-                    Next
-                  </button>
-                </div>
-              </div>
-              <div
-                class="absolute top-0 bottom-0 right-0 left-0 inset-0 bg-gradient-to-r from-blue-500/70 to-purple-500/70 opacity-50 blur-xl"
-                aria-hidden="true" />
-            </div>
-          </div>
-        </div>
-        <p class="mb-4">Sincerely,<br>Ing. Peter Vavro</p>
-      </div>
-    </TheSection>
-    <TheSection class="text-tertiary">
-      <div class="px-16">
-        <h2 class="text-tertiary lg:text-2xl mb-2">FAQ</h2>
-        <ul class="list-square list-inside">
-          <li>I tried to tailor this for you; it is dynamically set.</li>
-          <li>This cover letter is dynamically adjusted, which is why you received a sophisticated link.</li>
-        </ul>
-      </div>
-    </TheSection>
-  </div>
-</template>
-<style>
-:target {
-  scroll-margin-top: 100px;
-}
-</style>
 <script setup lang="ts">
 const route = useRoute();
 const config = ref<ConfigInURL | null>(null);
@@ -163,3 +92,107 @@ const scrollToCenter = (targetElement: HTMLElement) => {
   })
 }
 </script>
+<template>
+
+  <Head>
+    <Title>Cover Letter / Peter Vavro = Full-Stack Engineer</Title>
+  </Head>
+  <div>
+    <TheSection title="Cover letter" class="pt-20 text-primary"
+      titleClass="text-primary lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-30">
+      <div class="p-20 border border-primary mt-20">
+        <h1 class="mb-4">Dear Hiring Manager,</h1>
+        <div v-for="(part, index) in parts" :key="index" class="paragraph mb-4 relative">
+          <Transition>
+            <div v-if="index === currentStep && index > 0" class="absolute -top-28 left-0">
+              <div class="relative p-5">
+                <div class="relative z-10">
+                  <button @click="handleBack"
+                    class="p-2 text-sm transition duration-200 border border-primary bg-primary/10 hover:bg-primary/80 text-primary hover:text-neutral">
+                    Let's see this again
+                  </button>
+                </div>
+                <div class="absolute top-0 bottom-0 right-0 left-0 inset-0 bg-neutral blur-xl" aria-hidden="true" />
+              </div>
+            </div>
+          </Transition>
+          <p :class="{
+            'blur-sm': index !== currentStep,
+            'text-white': index === currentStep,
+          }">{{ part }}</p>
+          <div v-if="index === 1 && index === currentStep" class="flex">
+            <the-thumbnail v-for="t in technologies" :key="index" v-bind="t"
+              class="pr-5 pb-5 inline-block scale-90 border-secondary pt-10"
+              titleClasses="text-primary/90 group-hover:text-secondary text-center" />
+          </div>
+          <Transition name="next-buttons">
+            <div class="feedback-panel absolute bottom-[-7rem] z-10"
+              v-if="index === currentStep && (index + 1 !== parts.length)">
+              <div class="relative p-5">
+                <div class="relative z-10">
+                  <div class="flex gap-3">
+                    <button @click="handleNext(index, true)"
+                      class="p-2 transition duration-200 border border-white bg-white/10 hover:bg-white/80 text-white hover:text-neutral">
+                      Great, next
+                    </button>
+                    <button @click="handleNext(index, false)"
+                      class="p-2 transition duration-200 border border-white bg-white/10 hover:bg-white/80 text-white hover:text-neutral">
+                      Next
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-0 bottom-0 right-0 left-0 inset-0 bg-gradient-to-r from-blue-500/70 to-purple-500/70 opacity-50 blur-xl"
+                  aria-hidden="true" />
+              </div>
+            </div>
+          </Transition>
+        </div>
+        <p class="mb-4">Sincerely,<br>Ing. Peter Vavro</p>
+      </div>
+    </TheSection>
+    <TheSection class="text-tertiary">
+      <div class="px-16">
+        <h2 class="text-tertiary lg:text-2xl mb-2">FAQ</h2>
+        <ul class="list-square list-inside">
+          <li>I tried to tailor this for you; it is dynamically set.</li>
+          <li>This cover letter is dynamically adjusted, which is why you received a sophisticated link.</li>
+        </ul>
+      </div>
+    </TheSection>
+  </div>
+</template>
+<style>
+:target {
+  scroll-margin-top: 100px;
+}
+
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+/*
+  Enter and leave animations can use different
+  durations and timing functions.
+*/
+.next-buttons-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.next-buttons-leave-active {
+  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.next-buttons-enter-from,
+.next-buttons-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+</style>
