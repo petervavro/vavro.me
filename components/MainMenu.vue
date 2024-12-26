@@ -14,19 +14,19 @@ const showModal = ref(false)
         <div class="pb-5">
           <ul class="flex flex-col">
             <li class="px-2 py-3">
-              <a href="#about-me" @click="showModal = false" class="menu-link">
+              <NuxtLink to="/#about-me" class="menu-link" @click="showModal = false">
                 About me
-              </a>
+              </NuxtLink>
             </li>
             <li class="px-2 py-3">
-              <a href="#code-samples" @click="showModal = false" class="menu-link">
+              <NuxtLink to="/#code-samples" @click="showModal = false" class="menu-link">
                 Code
-              </a>
+              </NuxtLink>
             </li>
             <li class="px-2 py-3">
-              <a href="#projects" @click="showModal = false" class="menu-link">
+              <NuxtLink to="/#projects" @click="showModal = false" class="menu-link">
                 Projects
-              </a>
+              </NuxtLink>
             </li>
           </ul>
         </div>
