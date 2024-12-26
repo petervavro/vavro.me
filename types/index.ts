@@ -1,6 +1,8 @@
 export interface Technology {
   id: string;
+  title: string;
   year: number;
+  preferred: number;
 }
 
 export interface ConfigInURL {
