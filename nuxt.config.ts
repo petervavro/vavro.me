@@ -25,7 +25,14 @@ export default defineNuxtConfig({
       viewport: "width=device-width, initial-scale=1",
       htmlAttrs: {
         lang: "en",
+        class: "no-js",
       },
+      script: [
+        {
+          type: "text/javascript",
+          innerHTML: 'document.documentElement.classList.remove("no-js");',
+        },
+      ],
       meta: [
         {
           name: "description",
