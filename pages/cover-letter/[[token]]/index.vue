@@ -118,7 +118,7 @@ const scrollToCenter = (targetElement: HTMLElement) => {
               </div>
             </div>
           </Transition>
-          <p>{{ part }}</p>
+          <p @click="currentStep = index">{{ part }}</p>
           <div v-if="index === 1 && index === currentStep" class="flex">
             <the-thumbnail v-for="t in technologies" :key="index" v-bind="t"
               class="pr-5 pb-5 inline-block scale-90 border-secondary pt-10"
