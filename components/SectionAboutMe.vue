@@ -18,16 +18,17 @@ onMounted(() => {
       start: 'top 80%',
       end: '+=100',
       toggleActions: 'play none none none'
-    }
+    },
   }).fromTo(
     '#me',
     {
-      x: -300,
+      x: `-24rem`,
       opacity: 0
     },
     {
-      x: 0,
+      x: `-1rem`,
       opacity: 1,
+      duration: 0.3
     })
 
   $gsap.timeline({
@@ -35,49 +36,50 @@ onMounted(() => {
       trigger: '#detail',
       start: '-=40 80%',
       end: '+=100',
-      toggleActions: 'play none none none',
+      toggleActions: 'play none none none'
     }
   }).fromTo(
     '#detail',
     {
-      x: 300,
-      y: -50,
+      x: `24rem`,
       opacity: 0
     },
     {
-      x: 50,
+      x: `3.5rem`,
       opacity: 1,
+      duration: 0.3
     })
 })
 </script>
 
 <template>
-  <div class="container mx-auto lg:max-w-4xl">
-    <section id="me"
-      class="transition-all duration-500 ease-out p-10 pb-20 max-w-xl bg-secondary/90 drop-shadow-custom">
-      <h2 class="pb-5 text-2xl uppercase">Get to Know Me</h2>
-      <p>
-        <strong>I am a seasoned Full-Stack Engineer with a passion for programming
-          that dates back to 1994.</strong>
-        My focus today is on creating accessible digital experiences using
-        JavaScript/Typescript. Having worked with JS for over
-        {{ getExperienceYears('javascript') }} years, I am equally adept at
-        front-end and back-end development. My extensive experience in
-        front-end web and mobile development includes React ({{
-          getExperienceYears('react')
-        }}+ years), React Native, Vue.js ({{ getExperienceYears('vuejs') }}+
-        years), AngularJS, as well as several other exciting frameworks and
-        libraries. Additionally, I have over
-        {{ getExperienceYears('nodejs') }} years of experience working with
-        Node.js for back-end development, having worked with various
-        frameworks and libraries.
-      </p>
-    </section>
-    <div id="detail" class="h-[32rem] max-w-xl md:max-w-2xl lg:max-w-3xl">
-      <section class="p-10 bg-neutral border-neutral-light/50 border-l border-t border-b border-dotted">
-        <h3 class="pb-5 text-xl text-tertiary">My current focus is on</h3>
-        <ExperienceDetail />
+  <div class="container mx-auto lg:max-w-4xl flex justify-center">
+    <div>
+      <section id="me" class="-translate-x-4 p-10 pb-20 max-w-2xl bg-secondary/90 drop-shadow-custom">
+        <h2 class="pb-5 text-2xl uppercase">Get to Know Me</h2>
+        <p>
+          <strong>I am a seasoned Full-Stack Engineer with a passion for programming
+            that dates back to 1994.</strong>
+          My focus today is on creating accessible digital experiences using
+          JavaScript/Typescript. Having worked with JS for over
+          {{ getExperienceYears('javascript') }} years, I am equally adept at
+          front-end and back-end development. My extensive experience in
+          front-end web and mobile development includes React ({{
+            getExperienceYears('react')
+          }}+ years), React Native, Vue.js ({{ getExperienceYears('vuejs') }}+
+          years), AngularJS, as well as several other exciting frameworks and
+          libraries. Additionally, I have over
+          {{ getExperienceYears('nodejs') }} years of experience working with
+          Node.js for back-end development, having worked with various
+          frameworks and libraries.
+        </p>
       </section>
+      <div id="detail" class="translate-x-14 -translate-y-10 h-[32rem] max-w-xl md:max-w-2xl lg:max-w-3xl">
+        <section class="p-10 bg-neutral border-neutral-light/50 border-l border-t border-b border-dotted">
+          <h3 class="pb-5 text-xl text-tertiary">My current focus is on</h3>
+          <ExperienceDetail />
+        </section>
+      </div>
     </div>
   </div>
 </template>
