@@ -130,12 +130,10 @@ const scrollToCenter = (targetElement: HTMLElement) => {
               <div class="relative p-5">
                 <div class="relative z-10">
                   <div class="flex gap-3">
-                    <button @click="handleNext(index, true)"
-                      class="p-2 transition duration-200 border border-white/20 bg-white/10 hover:bg-white/80 text-white hover:text-neutral">
+                    <button @click="handleNext(index, true)" class="btn">
                       ✔&nbsp;So far so good, next
                     </button>
-                    <button @click="handleNext(index, false)"
-                      class="p-2 transition duration-200 border border-white/30 bg-white/10 hover:bg-white/80 text-white hover:text-neutral">
+                    <button @click="handleNext(index, false)" class="btn">
                       ✗&nbsp;Next
                     </button>
                   </div>
@@ -148,11 +146,18 @@ const scrollToCenter = (targetElement: HTMLElement) => {
           </Transition>
         </div>
         <p class="mb-4">Sincerely,<br>Ing. Peter Vavro</p>
+        <div class="mt-10 flex">
+          <NuxtLink to="/" class="btn text-sm">☛ My online portfolio is available here ☚</NuxtLink>
+        </div>
       </div>
     </TheSection>
   </div>
 </template>
 <style scoped lang="scss">
+.btn {
+  @apply p-2 transition duration-200 border border-white/20 bg-white/10 hover:bg-white/20 text-white
+}
+
 .v-enter-active,
 .v-leave-active {
   transition: all 0.1s ease;
