@@ -14,6 +14,11 @@ const showModal = ref(false)
         <div class="pb-5">
           <ul class="flex flex-col">
             <li class="px-2 py-3">
+              <NuxtLink to="/" class="menu-link" @click="showModal = false">
+                Home
+              </NuxtLink>
+            </li>
+            <li class="px-2 py-3">
               <NuxtLink to="/#about-me" class="menu-link" @click="showModal = false">
                 About me
               </NuxtLink>
