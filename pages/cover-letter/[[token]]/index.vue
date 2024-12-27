@@ -110,7 +110,7 @@ const scrollToCenter = (targetElement: HTMLElement) => {
               <div class="relative p-5">
                 <div class="relative z-10">
                   <button @click="handleBack"
-                    class="p-2 text-sm transition duration-200 border border-primary bg-primary/10 hover:bg-primary/80 text-primary hover:text-neutral">
+                    class="p-2 text-sm transition duration-200 border border-primary/20 bg-primary/10 hover:bg-primary/80 text-primary hover:text-neutral">
                     Let's see this again
                   </button>
                 </div>
@@ -131,12 +131,12 @@ const scrollToCenter = (targetElement: HTMLElement) => {
                 <div class="relative z-10">
                   <div class="flex gap-3">
                     <button @click="handleNext(index, true)"
-                      class="p-2 transition duration-200 border border-white bg-white/10 hover:bg-white/80 text-white hover:text-neutral">
-                      Great, next
+                      class="p-2 transition duration-200 border border-white/20 bg-white/10 hover:bg-white/80 text-white hover:text-neutral">
+                      ✔&nbsp;So far so good, next
                     </button>
                     <button @click="handleNext(index, false)"
-                      class="p-2 transition duration-200 border border-white bg-white/10 hover:bg-white/80 text-white hover:text-neutral">
-                      Next
+                      class="p-2 transition duration-200 border border-white/30 bg-white/10 hover:bg-white/80 text-white hover:text-neutral">
+                      ✗&nbsp;Next
                     </button>
                   </div>
                 </div>
