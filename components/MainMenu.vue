@@ -25,12 +25,12 @@ const showModal = ref(false)
             </li>
             <li class="px-2 py-3">
               <NuxtLink to="/#code-samples" @click="showModal = false" class="menu-link">
-                Code
+                Code Samples
               </NuxtLink>
             </li>
             <li class="px-2 py-3">
               <NuxtLink to="/#projects" @click="showModal = false" class="menu-link">
-                Projects
+                My Contributions
               </NuxtLink>
             </li>
           </ul>
