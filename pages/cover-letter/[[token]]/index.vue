@@ -26,26 +26,28 @@ watch(currentStep, (newValue) => {
 
 const parts = computed(() => [
   [
-    `I am excited to apply for the ${config.value?.positionName || 'Senior Full-stack Engineer'} position at ${config.value?.name || 'your company'}.`,
-    `With over 20 years of experience in ${config.value?.isFrontEndPosition ? 'software development and a strong focus on front-end technologies' : 'full-stack development'}, I am confident that my skills and background make me an excellent fit for this role.`,
+    `The opportunity to contribute to your team as a ${config.value?.positionName || 'Senior Full-stack Engineer'} is highly compelling.`,
+    // `I am excited to apply for the ${config.value?.positionName || 'Senior Full-stack Engineer'} position at ${config.value?.name || 'your company'}.`,
+    `With over 20 years of experience in ${config.value?.isFrontEndPosition ? 'software development with a strong focus on front-end technologies' : 'full-stack development'}, I am confident that my skills and background make me an excellent fit for this role.`,
     ...config.value?.isInternational ? `The opportunity to work with an international and diverse company, particularly on projects that require collaboration across multiple regions and teams, is highly appealing to me.` : [],
   ].join(" "),
   [
     `My professional journey has been deeply rooted in creating scalable, secure, and reliable code for public-facing applications.`,
+    `Previous roles included responsibilities such as developing and maintaining complex front-end systems, ensuring high-quality user experiences for thousands of users.`,
     ...config.value?.isFrontEndPosition ? [
       `I have a keen eye for detail and a deep understanding of UX principles, which has consistently allowed me to exceed user expectations.`
     ] : [],
-    `In my previous roles, I was responsible for developing and maintaining complex front-end systems, ensuring high-quality user experiences for thousands of users, working extensively these modern technologies:`,
+    `My experience encompasses a strong foundation in the following technologies:`,
   ].join(" "),
   [
-    `Leadership and mentorship are also key strengths I bring to this role.`,
-    `I have successfully guided teams in delivering high-quality software products, fostering a culture of continuous learning and innovation.`,
-    `I am well-versed in collaborating with cross-functional teams, including product managers and designers, to take features from conception to production.`,
-    `I’m particularly passionate about encouraging best practices through regular code reviews, technical discussions, and Agile methodologies such as Scrum, ensuring that the team delivers high-impact solutions efficiently and on time.`,
+    `Leadership and mentorship have been significant aspects of my career.`,
+    `I have guided teams to deliver high-quality software products while fostering a culture of continuous learning and innovation.`,
+    `Through close collaboration with cross-functional teams, including product managers and designers, I have consistently taken features from conception to production.`,
+    `By encouraging best practices through regular code reviews, technical discussions, and Agile methodologies such as Scrum, I ensure that high-impact solutions are delivered efficiently and on time.`,
   ].join(" "),
   [
-    `I am confident that my strong technical background, leadership experience, and passion for continuous improvement make me a great fit for you.`,
-    `I am eager to contribute to your team and help drive forward the innovative solutions.`,
+    `This combination of a strong technical background, leadership experience, and a passion for continuous improvement positions me to make a valuable contribution to your team.`,
+    `Supporting ${config.value?.name || 'your company'}’s innovative solutions is an exciting prospect.`,
   ].join(" "),
   [
     `Thank you for considering my application.`,
