@@ -13,7 +13,7 @@ const items = JSON_DATA.map(({ technologies, ...rest }) => ({
 <template>
   <div class="grid grid-cols md:grid-cols-2 lg:grid-cols-3 gap-3">
     <a :href="item.url" target="_blank" v-for="(item, index) in items"
-      class="group hover:shadow-lg shadow-black/10 p-5 border-neutral-light/50 border-t border-l transition-all duration-300 ease-out hover:text-secondary"
+      class="group hover:shadow-lg shadow-black/10 p-5 border-neutral-light/50 border-t border-r transition-all duration-300 ease-out hover:text-secondary"
       :key="item.title" :data-index="index">
       <div class="w-full pb-5">
         <SvgoIconLink class="text-3xl text-neutral-light/50" />
