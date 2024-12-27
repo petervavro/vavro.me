@@ -10,52 +10,58 @@ const getExperienceYears = (technologyId: string): number => {
 
 onMounted(() => {
 
-  $gsap.set('#me', { opacity: 0 })
+  let mm = $gsap.matchMedia();
 
-  $gsap.timeline({
-    scrollTrigger: {
-      trigger: '#me',
-      start: 'top 80%',
-      end: '+=100',
-      toggleActions: 'play none none none'
-    },
-  }).fromTo(
-    '#me',
-    {
-      x: `-24rem`,
-      opacity: 0
-    },
-    {
-      x: `-1rem`,
-      opacity: 1,
-      duration: 0.3
-    })
+  mm.add("(min-width: 768px)", () => {
 
-  $gsap.timeline({
-    scrollTrigger: {
-      trigger: '#detail',
-      start: '-=40 80%',
-      end: '+=100',
-      toggleActions: 'play none none none'
-    }
-  }).fromTo(
-    '#detail',
-    {
-      x: `24rem`,
-      opacity: 0
-    },
-    {
-      x: `3.5rem`,
-      opacity: 1,
-      duration: 0.3
-    })
+    $gsap.set('#me', { opacity: 0 })
+
+    $gsap.timeline({
+      scrollTrigger: {
+        trigger: '#me',
+        start: 'top 80%',
+        end: '+=100',
+        toggleActions: 'play none none none'
+      },
+    }).fromTo(
+      '#me',
+      {
+        x: `-24rem`,
+        opacity: 0
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.3
+      })
+
+    $gsap.timeline({
+      scrollTrigger: {
+        trigger: '#detail',
+        start: '-=40 80%',
+        end: '+=100',
+        toggleActions: 'play none none none'
+      }
+    }).fromTo(
+      '#detail',
+      {
+        x: `24rem`,
+        opacity: 0
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.3
+      })
+  });
 })
+
 </script>
 
 <template>
   <div class="container mx-auto lg:max-w-4xl flex justify-center">
     <div>
-      <section id="me" class="-translate-x-4 p-10 pb-20 max-w-2xl bg-secondary/90 drop-shadow-custom">
+      <section id="me" class="p-10 pb-20 max-w-2xl bg-secondary/90 drop-shadow-custom">
         <h2 class="pb-5 text-2xl uppercase">Get to Know Me</h2>
         <p>
           <strong>I am a seasoned Full-Stack Engineer with a passion for programming
@@ -74,12 +80,10 @@ onMounted(() => {
           frameworks and libraries.
         </p>
       </section>
-      <div id="detail" class="translate-x-14 -translate-y-10 h-[32rem] max-w-xl md:max-w-2xl lg:max-w-3xl">
-        <section class="p-10 bg-neutral border-neutral-light/50 border-l border-t border-b border-dotted">
-          <h3 class="pb-5 text-xl text-tertiary">My current focus is on</h3>
-          <ExperienceDetail />
-        </section>
-      </div>
+      <section id="detail"
+        class="-translate-y-10 max-w-xl md:max-w-2xl lg:max-w-3xl ml-10 p-10 bg-neutral border-secondary/50 border-l border-t border-b border-dotted">
+        <ExperienceDetail />
+      </section>
     </div>
   </div>
 </template>
