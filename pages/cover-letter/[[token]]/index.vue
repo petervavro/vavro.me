@@ -150,15 +150,6 @@ const scrollToCenter = (targetElement: HTMLElement) => {
         <p class="mb-4">Sincerely,<br>Ing. Peter Vavro</p>
       </div>
     </TheSection>
-    <TheSection class="text-tertiary">
-      <div class="px-16">
-        <h2 class="text-tertiary lg:text-2xl mb-2">FAQ</h2>
-        <ul class="list-square list-inside">
-          <li>I tried to tailor this for you; it is dynamically set.</li>
-          <li>This cover letter is dynamically adjusted, which is why you received a sophisticated link.</li>
-        </ul>
-      </div>
-    </TheSection>
   </div>
 </template>
 <style scoped lang="scss">
