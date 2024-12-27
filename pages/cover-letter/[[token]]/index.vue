@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute();
-const config = ref<ConfigInURL | null>(null);
+const config = ref<ConfigInURL>({});
 const error = ref<string | null>(null);
 const { decrypt } = useEncryption();
 
@@ -10,7 +10,7 @@ onMounted(async () => {
     const { text } = await decrypt(token) || {};
     if (text) config.value = JSON.parse(text)
   } catch (e) {
-    error.value = 'Failed to decrypt data';
+    error.value = 'FAILED_TO_DECRYPT_TOKEN';
   }
 });
 
@@ -99,10 +99,17 @@ const scrollToCenter = (targetElement: HTMLElement) => {
   <Head>
     <Title>Cover Letter / Peter Vavro = Full-Stack Engineer</Title>
   </Head>
-  <div>
-    <TheSection title="Cover letter" class="pt-20 text-primary"
+  <div class="pt-20 text-primary">
+    <TheSection title="Cover letter"
       titleClass="text-primary lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-30">
-      <div class="p-20 border border-primary/40 mt-20">
+      <Transition>
+        <p v-if="error === 'FAILED_TO_DECRYPT_TOKEN'" class="text-red-400 px-3 pb-10">
+          Oops! :( It seems there’s an issue loading your personalized content. This could be due to an incomplete or
+          incorrect link. Please double-check that you’ve copied the entire URL, including the token,
+          correctly. In the meantime, you can view a general cover letter below. Apologies for the inconvenience!
+        </p>
+      </Transition>
+      <div class="p-20 border border-primary/40">
         <h1 class="mb-4">Dear Hiring Manager,</h1>
         <div v-for="(part, index) in parts" :key="index" class="paragraph mb-4 relative" :class="{
           'focused': index === currentStep

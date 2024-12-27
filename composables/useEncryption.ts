@@ -19,11 +19,7 @@ export const useEncryption = () => {
   };
 
   const decrypt = async (token: string) => {
-    try {
-      return await $fetch<{ text: string }>(`/api/decrypt/${token}`);
-    } catch (error) {
-      console.error("Decryption error:", error);
-    }
+    return await $fetch<{ text: string }>(`/api/decrypt/${token}`);
   };
 
   return {
