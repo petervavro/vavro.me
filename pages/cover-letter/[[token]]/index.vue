@@ -109,7 +109,7 @@ const scrollToCenter = (targetElement: HTMLElement) => {
           correctly. In the meantime, you can view a general cover letter below. Apologies for the inconvenience!
         </p>
       </Transition>
-      <div class="p-20 border border-primary/40">
+      <div class="p-5 lg:p-20 border border-primary/40">
         <h1 class="mb-4">Dear Hiring Manager,</h1>
         <div v-for="(part, index) in parts" :key="index" class="paragraph mb-4 relative" :class="{
           'focused': index === currentStep
