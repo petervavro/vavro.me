@@ -100,7 +100,7 @@ const scrollToCenter = (targetElement: HTMLElement) => {
   <div>
     <TheSection title="Cover letter" class="pt-20 text-primary"
       titleClass="text-primary lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-30">
-      <div class="p-20 border border-primary mt-20">
+      <div class="p-20 border border-primary/40 mt-20">
         <h1 class="mb-4">Dear Hiring Manager,</h1>
         <div v-for="(part, index) in parts" :key="index" class="paragraph mb-4 relative" :class="{
           'focused': index === currentStep
