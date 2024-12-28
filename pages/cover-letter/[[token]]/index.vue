@@ -101,7 +101,7 @@ const scrollToCenter = (targetElement: HTMLElement) => {
   </Head>
   <div class="pt-20 text-primary">
     <TheSection title="Cover letter"
-      titleClass="text-primary lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-30">
+      titleClass="text-primary lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-24" contentClass="">
       <Transition>
         <p v-if="error === 'FAILED_TO_DECRYPT_TOKEN'" class="text-red-400 px-3 pb-10">
           Oops! :( It seems there’s an issue loading your personalized content. This could be due to an incomplete or

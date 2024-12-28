@@ -1,19 +1,14 @@
-<script>
-export default {
-  setup() {
-    const { target, isVisible } = useIsInViewport()
+<script setup lang="ts">
+import { useIsInViewport } from '~/composables/useIsInViewport';
 
-    return {
-      target,
-      isVisible
-    }
-  },
-  props: {
-    id: String,
-    title: String,
-    titleClass: String
-  }
-}
+const props = defineProps<{
+  id?: string;
+  title?: string;
+  titleClass?: string;
+  contentClass?: string;
+}>();
+
+const { target, isVisible } = useIsInViewport();
 </script>
 
 <template>
@@ -27,7 +22,9 @@ export default {
         ]">
           <a :href="'#' + id">{{ title }}</a>
         </h2>
-        <div class="pl-5 md:pl-10 border-l border-primary border-dotted">
+        <div :class="[
+          contentClass ?? 'pl-5 md:pl-10 border-l border-primary border-dotted'
+        ]">
           <slot :class="[isVisible ? 'opacity-100' : 'opacity-0']" />
         </div>
       </section>
