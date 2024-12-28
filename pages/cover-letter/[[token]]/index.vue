@@ -26,7 +26,7 @@ watch(currentStep, (newValue) => {
 
 const parts = computed(() => [
   [
-    `The opportunity to contribute to your team as a ${config.value?.positionName || 'Senior Full-stack Engineer'} is highly compelling.`,
+    `The opportunity to contribute to your team ${config.value?.positionName ? `as a ${config.value?.positionName}` : ''} is highly compelling.`,
     // `I am excited to apply for the ${config.value?.positionName || 'Senior Full-stack Engineer'} position at ${config.value?.name || 'your company'}.`,
     `With over 20 years of experience in ${config.value?.isFrontEndPosition ? 'software development with a strong focus on front-end technologies' : 'full-stack development'}, I am confident that my skills and background make me an excellent fit for this role.`,
     ...config.value?.isInternational ? `The opportunity to work with an international and diverse company, particularly on projects that require collaboration across multiple regions and teams, is highly appealing to me.` : [],
