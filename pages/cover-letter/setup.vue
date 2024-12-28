@@ -20,9 +20,10 @@ const configData = computed(() => ({
     <Head>
         <Title>Cover Letter Configurator</Title>
     </Head>
-    <TheSection>
+    <TheSection title="Cover letter configurator" class="pt-16"
+        titleClass="text-primary lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:translate-y-44">
         <section>
-            <div class="pt-40 flex gap-5 justify-between w-full">
+            <div class="flex gap-5 justify-between w-full">
                 <div class="w-full">
                     <label for="companyName" class="block pb-1 text-primary-light">Company name</label>
                     <input name="companyName" v-model="companyName" type="text" />
