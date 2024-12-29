@@ -67,7 +67,7 @@ watchEffect(async () => {
                 </div>
             </div>
         </section>
-        <div class="flex gap-5 pt-5 justify-end w-full">
+        <div class="flex gap-5 pt-5 justify-end w-full border-t border-dotted border-primary">
             <a :href="`/api/cover-letter/get-invitation/${token}`" target="_blank" class="btn">Get Invitation PDF</a>
             <NuxtLink :to="`/cover-letter/${token}`" class="btn">
                 Go to cover letter
