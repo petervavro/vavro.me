@@ -54,7 +54,7 @@ export default defineEventHandler(async (event) => {
                     skills.
                 </p>
                 <br />
-                <p class="break-all">🔗 <b class="font-bold">I've crafted this cover letter specifically for your company:</b>&nbsp;
+                <p class="break-all"><b class="font-bold">I've crafted this cover letter specifically for your company:</b>&nbsp;
                     <a href="${requestHost}/cover-letter/${token}" target="_blank">
                         ${requestHost}/cover-letter/${token}
                     </a>
