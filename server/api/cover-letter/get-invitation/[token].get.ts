@@ -1,8 +1,12 @@
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
+import chromium from "@sparticuz/chromium";
 
 export default defineEventHandler(async (event) => {
   const browser = await puppeteer.launch({
-    headless: process.env.NODE_ENV !== "development",
+    args: chromium.args,
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath(),
+    headless: chromium.headless, // process.env.NODE_ENV !== "development"
   });
 
   const page = await browser.newPage();
