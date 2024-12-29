@@ -17,6 +17,7 @@
     "nuxt": "^3.14.1592",
     "nuxt-gtag": "3.0.2",
     "nuxt-svgo": "4.0.9",
+    "puppeteer": "^23.11.1",
     "vue": "latest",
     "vue-router": "latest"
   },

@@ -67,42 +67,8 @@ watchEffect(async () => {
                 </div>
             </div>
         </section>
-        <section>
-            <h2 class="block pb-1 text-primary-light pb-5">Invitation to dynamic Cover Letter</h2>
-            <div class="bg-white p-10">
-                <h3>Hello!</h3>
-                <br />
-                <p>I take a slightly different approach to presenting myself. Rather than providing a traditional static
-                    document, I invite you to explore my cover letter on my portfolio website. There, you’ll find a more
-                    dynamic
-                    and interactive presentation of my professional story, including my projects, achievements, and
-                    skills.
-                </p>
-                <br />
-                <p class="break-all">🔗 <b>I've crafted this cover letter specifically for your company:</b>&nbsp;
-                    <NuxtLink :to="`/cover-letter/${token}`" target="_blank" class="underline">
-                        https://vavro.me/cover-letter/{{ token }}
-                    </NuxtLink>
-                </p>
-                <br />
-                <p>Feel free to browse through my portfolio for additional insights into my work. I greatly appreciate
-                    your
-                    time and collaboration in this process and hope this approach offers a refreshing and engaging
-                    perspective.
-                    If you have any questions or need further information, don’t hesitate to reach out.
-                </p>
-                <br />
-                <p>
-                    Looking forward to connecting!
-                </p>
-                <br />
-                <p>Warm regards,<br />
-                    Ing. Peter Vavro<br />
-                    peter@vavro.me
-                </p>
-            </div>
-        </section>
-        <div class="flex pt-5 justify-end w-full">
+        <div class="flex gap-5 pt-5 justify-end w-full">
+            <a :href="`/api/cover-letter/get-invitation/${token}`" target="_blank" class="btn">Get Invitation PDF</a>
             <NuxtLink :to="`/cover-letter/${token}`" class="btn">
                 Go to cover letter
             </NuxtLink>
