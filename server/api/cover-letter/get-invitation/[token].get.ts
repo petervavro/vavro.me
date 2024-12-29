@@ -2,17 +2,11 @@ import puppeteer from "puppeteer-core";
 import chromium from "@sparticuz/chromium";
 
 export default defineEventHandler(async (event) => {
-  await chromium.font(
-    "https://rawcdn.githack.com/googlefonts/noto-emoji/22e564626297b4df0a40570ad81d6c05cc7c38bd/fonts/NotoColorEmoji.ttf"
-  );
+  // chromium.setHeadlessMode = true;
 
-  await chromium.font(
-    "https://rawcdn.githack.com/googlefonts/RobotoMono/3479a228ba99f69d6e504e7d798a3f8e8239bbe7/fonts/ttf/RobotoMono-Regular.ttf"
-  );
-
-  await chromium.font(
-    "https://rawcdn.githack.com/googlefonts/RobotoMono/3479a228ba99f69d6e504e7d798a3f8e8239bbe7/fonts/ttf/RobotoMono-Bold.ttf"
-  );
+  //   await chromium.font(
+  //     "https://rawcdn.githack.com/googlefonts/noto-emoji/22e564626297b4df0a40570ad81d6c05cc7c38bd/fonts/NotoColorEmoji.ttf"
+  //   );
 
   const browser = await puppeteer.launch({
     args: chromium.args,
@@ -31,6 +25,9 @@ export default defineEventHandler(async (event) => {
   const htmlContent = `
         <html>
             <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
                 <script src="https://cdn.tailwindcss.com"></script>
                 <style>
                     @media print {
@@ -40,11 +37,14 @@ export default defineEventHandler(async (event) => {
                     }
 
                     body {
-                        font-family: "Roboto Mono", monospace;
+                        font-family: "Roboto Mono", serif;
+                        font-optical-sizing: auto;
+                        font-weight: 400;
+                        font-style: normal;
                     }
                 </style>
             </head>
-            <body class="bg-gray-50 p-10">
+            <body class="bg-gray-50 p-10 text-sm">
                 <h1>Hello!</h1>
                 <br />
                 <p>I take a slightly different approach to presenting myself. Rather than providing a traditional static
