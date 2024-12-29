@@ -2,17 +2,13 @@ import puppeteer from "puppeteer-core";
 import chromium from "@sparticuz/chromium";
 
 export default defineEventHandler(async (event) => {
-  // chromium.setHeadlessMode = true;
-
-  //   await chromium.font(
-  //     "https://rawcdn.githack.com/googlefonts/noto-emoji/22e564626297b4df0a40570ad81d6c05cc7c38bd/fonts/NotoColorEmoji.ttf"
-  //   );
+  // chromium.setHeadlessMode = process.env.NODE_ENV !== "development"; // < DEV
 
   const browser = await puppeteer.launch({
     args: chromium.args,
     defaultViewport: chromium.defaultViewport,
     executablePath: await chromium.executablePath(),
-    headless: chromium.headless, // process.env.NODE_ENV !== "development"
+    headless: chromium.headless,
   });
 
   const page = await browser.newPage();
@@ -87,10 +83,21 @@ export default defineEventHandler(async (event) => {
 
   await browser.close();
 
+  const query = getQuery(event);
+
   // Return the PDF as a response
   setHeaders(event, {
     "Content-Type": "application/pdf",
-    "Content-Disposition": "attachment; filename=Peter_VAVRO_CV_invitation.pdf",
+    "Content-Disposition": `attachment; filename=CV-${
+      query?.positionType &&
+      `${(query.positionType as string)
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase())
+        .join("")}-`
+    }${
+      query?.companyName &&
+      `${(query.companyName as string).replaceAll(" ", "_")}-`
+    }Peter_VAVRO-invitation.pdf`,
   });
 
   return pdfBuffer;
