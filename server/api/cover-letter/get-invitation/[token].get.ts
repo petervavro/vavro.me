@@ -2,6 +2,18 @@ import puppeteer from "puppeteer-core";
 import chromium from "@sparticuz/chromium";
 
 export default defineEventHandler(async (event) => {
+  await chromium.font(
+    "https://rawcdn.githack.com/googlefonts/noto-emoji/22e564626297b4df0a40570ad81d6c05cc7c38bd/fonts/NotoColorEmoji.ttf"
+  );
+
+  await chromium.font(
+    "https://rawcdn.githack.com/googlefonts/RobotoMono/3479a228ba99f69d6e504e7d798a3f8e8239bbe7/fonts/ttf/RobotoMono-Regular.ttf"
+  );
+
+  await chromium.font(
+    "https://rawcdn.githack.com/googlefonts/RobotoMono/3479a228ba99f69d6e504e7d798a3f8e8239bbe7/fonts/ttf/RobotoMono-Bold.ttf"
+  );
+
   const browser = await puppeteer.launch({
     args: chromium.args,
     defaultViewport: chromium.defaultViewport,
@@ -25,6 +37,10 @@ export default defineEventHandler(async (event) => {
                         @page {
                             margin: 0;
                         }
+                    }
+
+                    body {
+                        font-family: "Roboto Mono", monospace;
                     }
                 </style>
             </head>
