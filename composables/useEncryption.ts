@@ -13,7 +13,12 @@ export const useEncryption = () => {
   };
 
   const decrypt = async (token: string) => {
-    return await $fetch<{ text: string }>(`/api/decrypt/${token}`);
+    const values = await useFetch(`/api/decrypt/${token}`);
+
+    return {
+      ...values,
+      ...(values.error.value && { error: "FAILED_TO_DECRYPT_TOKEN" }),
+    };
   };
 
   return {

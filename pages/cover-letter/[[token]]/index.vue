@@ -1,18 +1,12 @@
 <script setup lang="ts">
 const route = useRoute();
-const config = ref<ConfigInURL>({});
-const error = ref<string | null>(null);
 const { decrypt } = useEncryption();
 
-onMounted(async () => {
-  const token = route.params.token as string;
-  try {
-    const { text } = await decrypt(token) || {};
-    if (text) config.value = JSON.parse(text)
-  } catch (e) {
-    error.value = 'FAILED_TO_DECRYPT_TOKEN';
-  }
-});
+const token = route.params.token as string;
+
+const { data, error, status } = await decrypt(token)
+
+const config = computed(() => data.value && JSON.parse(data.value))
 
 const currentStep = ref(0);
 
@@ -56,7 +50,7 @@ const parts = computed(() => [
 ])
 
 import TECHNOLOGIES from '~/assets/data/technologies.json'
-import type { ConfigInURL, Technology } from '~/types';
+import type { Technology } from '~/types';
 
 const technologies = ref<Technology[]>([]);
 
@@ -109,7 +103,7 @@ const scrollToCenter = (targetElement: HTMLElement) => {
           correctly. In the meantime, you can view a general cover letter below. Apologies for the inconvenience!
         </p>
       </Transition>
-      <div class="p-5 lg:p-20 border border-primary/40">
+      <div class="p-5 lg:p-20 border border-primary/40" v-if="status !== 'pending'">
         <h1 class="mb-4">Dear Hiring Manager,</h1>
         <div v-for="(part, index) in parts" :key="index" class="paragraph mb-4 relative" :class="{
           'focused': index === currentStep

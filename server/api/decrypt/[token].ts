@@ -1,4 +1,4 @@
-export default defineEventHandler((event): { text: string } => {
+export default defineEventHandler((event) => {
   const token = getRouterParam(event, "token");
 
   if (!token) {
@@ -9,8 +9,7 @@ export default defineEventHandler((event): { text: string } => {
   }
 
   try {
-    const decrypted = EncryptionService.decrypt(token);
-    return { text: decrypted };
+    return EncryptionService.decrypt(token);
   } catch (error) {
     throw createError({
       statusCode: 400,
