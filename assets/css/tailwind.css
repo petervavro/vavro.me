@@ -28,8 +28,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-neutral overflow-x-hidden;
-    font-family: "Roboto Mono", monospace;
+    @apply font-mono bg-neutral overflow-x-hidden;
   }
 }
 

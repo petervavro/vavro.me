@@ -165,7 +165,7 @@ export default defineComponent({
 }
 
 .title-text {
-  font-family: 'Staatliches', cursive;
+  @apply font-serif;
 }
 
 .corners {

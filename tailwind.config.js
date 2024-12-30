@@ -22,7 +22,8 @@ export default {
         tertiary: "hsl(102deg 44% 70%)",
       },
       fontFamily: {
-        sans: ['"Roboto Mono"'],
+        mono: ["Roboto Mono", "monospace"],
+        serif: ["Staatliches", "serif"],
       },
     },
     listStyleType: {

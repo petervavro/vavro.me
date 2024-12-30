@@ -16,6 +16,13 @@ export default defineNuxtConfig({
     enabled: process.env.NODE_ENV === "production",
     id: "G-6Z1S75YS32",
   },
+  googleFonts: {
+    families: {
+      "Roboto+Mono": true,
+      Staatliches: true,
+    },
+    display: "swap",
+  },
   tailwindcss: {
     // Options
   },
@@ -49,12 +56,5 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "favicon.ico" }],
     },
-  },
-  googleFonts: {
-    families: {
-      "Roboto+Mono": true,
-      Staatliches: true,
-    },
-    display: "swap",
   },
 });
