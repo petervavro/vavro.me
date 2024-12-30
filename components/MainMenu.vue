@@ -4,40 +4,34 @@ const showModal = ref(false)
 
 <template>
   <div>
-    <button
-      id="show-modal"
-      @click="showModal = true"
+    <button id="show-modal" @click="showModal = true"
       class="p-2 text-tertiary border-tertiary border-2 transition duration-200 hover:text-secondary hover:border-secondary hover:scale-110"
-      aria-label="Menu"
-    >
+      aria-label="Menu">
       <SvgoIconMenu class="text-xl !mb-0" />
     </button>
-    <modal
-      :show="showModal"
-      @close="showModal = false"
-      modalContentClass="bg-secondary pt-10"
-    >
+    <modal :show="showModal" @close="showModal = false" modalContentClass="bg-secondary pt-10">
       <div class="flex flex-col items-center p-10">
         <div class="pb-5">
           <ul class="flex flex-col">
             <li class="px-2 py-3">
-              <a href="#about-me" @click="showModal = false" class="menu-link">
+              <NuxtLink to="/" class="menu-link" @click="showModal = false">
+                Home
+              </NuxtLink>
+            </li>
+            <li class="px-2 py-3">
+              <NuxtLink to="/#about-me" class="menu-link" @click="showModal = false">
                 About me
-              </a>
+              </NuxtLink>
             </li>
             <li class="px-2 py-3">
-              <a
-                href="#code-samples"
-                @click="showModal = false"
-                class="menu-link"
-              >
-                Code
-              </a>
+              <NuxtLink to="/#code-samples" @click="showModal = false" class="menu-link">
+                Code Samples
+              </NuxtLink>
             </li>
             <li class="px-2 py-3">
-              <a href="#projects" @click="showModal = false" class="menu-link">
-                Projects
-              </a>
+              <NuxtLink to="/#projects" @click="showModal = false" class="menu-link">
+                My Contributions
+              </NuxtLink>
             </li>
           </ul>
         </div>

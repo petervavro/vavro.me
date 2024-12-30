@@ -12,14 +12,20 @@ export default {
   },
   watch: {
     show(newValue) {
+      const html = document.documentElement,
+        body = document.body,
+        header = document.querySelector("header")
+
       if (newValue) {
-        document.body.addEventListener('keyup', this.handleClose)
-
-        document.body.classList.add('overflow-hidden')
+        header.style.marginRight = '14px';
+        html.style.paddingRight = '14px';
+        html.style.overflow = 'hidden';
+        body.addEventListener('keyup', this.handleClose)
       } else {
-        document.body.removeEventListener('keyup', this.handleClose)
-
-        document.body.classList.remove('overflow-hidden')
+        header.style.marginRight = '';
+        html.style.overflow = '';
+        html.style.paddingRight = '';
+        body.removeEventListener('keyup', this.handleClose)
       }
     }
   }
@@ -30,29 +36,21 @@ export default {
   <div>
     <Teleport to="body">
       <Transition name="modal">
-        <div
-          v-if="show"
-          :class="[
-            'fixed top-0 left-0 w-full h-full z-30 display-block overflow-x-hidden overflow-y-auto',
-            modalContentClass
-          ]"
-        >
+        <div v-if="show" :class="[
+          'fixed top-0 bottom-0 left-0 right-0 h-full z-30 display-block overflow-x-hidden overflow-y-auto',
+          modalContentClass
+        ]">
           <div class="w-screen max-w-none h-full m-0 relative">
             <div class="relative flex flex-col w-full h-full">
               <div class="overflow-y-auto relative grow shrink basis-auto">
-                <div
-                  class="p-11 my-3 hidden md:flex shrink-0 items-center justify-between"
-                ></div>
+                <div class="p-11 my-3 hidden md:flex shrink-0 items-center justify-between"></div>
                 <slot />
                 <div class="w-full text-center py-10">
-                  <button
-                    @click="$emit('close')"
-                    :class="[
-                      'p-2 border-2 transition duration-300',
-                      buttonClass ||
-                        'bg-secondary hover:bg-neutral border-neutral text-neutral hover:text-secondary'
-                    ]"
-                  >
+                  <button @click="$emit('close')" :class="[
+                    'p-2 border-2 transition duration-300',
+                    buttonClass ||
+                    'bg-secondary hover:bg-neutral border-neutral text-neutral hover:text-secondary'
+                  ]">
                     Close
                   </button>
                 </div>

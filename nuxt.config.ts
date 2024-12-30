@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
+  runtimeConfig: {
+    encryptionKey: "",
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "nuxt-svgo",
@@ -13,6 +16,13 @@ export default defineNuxtConfig({
     enabled: process.env.NODE_ENV === "production",
     id: "G-6Z1S75YS32",
   },
+  googleFonts: {
+    families: {
+      "Roboto+Mono": true,
+      Staatliches: true,
+    },
+    display: "swap",
+  },
   tailwindcss: {
     // Options
   },
@@ -22,7 +32,14 @@ export default defineNuxtConfig({
       viewport: "width=device-width, initial-scale=1",
       htmlAttrs: {
         lang: "en",
+        class: "no-js",
       },
+      script: [
+        {
+          type: "text/javascript",
+          innerHTML: 'document.documentElement.classList.remove("no-js");',
+        },
+      ],
       meta: [
         {
           name: "description",
@@ -39,12 +56,5 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "favicon.ico" }],
     },
-  },
-  googleFonts: {
-    families: {
-      "Roboto+Mono": true,
-      Staatliches: true,
-    },
-    display: "swap",
   },
 });

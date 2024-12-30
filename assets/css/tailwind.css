@@ -22,10 +22,13 @@
   @apply bg-tertiary;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   body {
-    @apply bg-neutral;
-    font-family: "Roboto Mono", monospace;
+    @apply font-mono bg-neutral overflow-x-hidden;
   }
 }
 
