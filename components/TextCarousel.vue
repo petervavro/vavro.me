@@ -1,64 +1,48 @@
-<script setup>
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
 import gsap from 'gsap'
 
-const slider = ref(null)
+const slider = ref<HTMLElement | null>(null)
 
 onMounted(() => {
-  // Get height of wrapper element
-  const slideHeight = +slider.value.clientHeight
-
-  // Get top padding defined on first slide
-  const topOffset = parseInt(
-    window
-      .getComputedStyle(slider.value.firstChild, null)
-      .getPropertyValue('padding-top'),
-    10
-  )
+  if (!slider.value) return
 
   // Get slides
-  const slides = [...slider.value.children]
+  const slides = Array.from(slider.value.children) as HTMLElement[]
 
   // Set delay
   const delay = 2
 
-  var tl = gsap.timeline({ repeat: -1, delay })
+  const tl = gsap.timeline({ repeat: -1, delay })
 
   slides.forEach((slide, i) => {
     tl.to(slide, {
-      y:
-        -topOffset -
-        slides
-          .slice(0, i)
-          .map((el) => el.clientHeight)
-          .reduce((partialSum, a) => partialSum + a, 0),
       opacity: 1
     })
 
     tl.to(slide, {
-      y: -slides
-        .slice(0, i + 1)
-        .map((el) => el.clientHeight)
-        .reduce((partialSum, a) => partialSum + a, 0),
       opacity: 0,
       delay
     })
   })
 })
 </script>
+
 <template>
-  <span class="slider" ref="slider">
+  <div ref="slider" class="slider">
     <div>with analytical and critical thinking;</div>
     <div>passionate for clean, tested code;</div>
     <div>self-starter able to deliver on time;</div>
     <div>ability to execute new ideas with autonomy;</div>
-  </span>
+  </div>
 </template>
+
 <style lang="scss">
 .slider {
-  @apply overflow-hidden absolute top-0 bottom-0 left-0 right-0;
+  @apply overflow-hidden text-secondary relative pt-16;
 
-  & > div {
-    @apply text-secondary top-0 relative pt-16;
+  &>div {
+    @apply absolute top-0 bottom-0 left-0 right-0 opacity-0;
   }
 }
 </style>
