@@ -2,8 +2,6 @@ import puppeteer from "puppeteer-core";
 import chromium from "@sparticuz/chromium";
 
 export default defineEventHandler(async (event) => {
-  // chromium.setHeadlessMode = process.env.NODE_ENV !== "development"; // < DEV
-
   const browser = await puppeteer.launch({
     args: chromium.args,
     defaultViewport: chromium.defaultViewport,
@@ -50,8 +48,8 @@ export default defineEventHandler(async (event) => {
                     skills.
                 </p>
                 <br />
-                <p class="break-all"><b class="font-bold">I've crafted this cover letter specifically for your company:</b>&nbsp;
-                    <a href="${requestHost}/cover-letter/${token}" target="_blank">
+                <p><b class="font-bold">I've crafted this cover letter specifically for your company:</b>&nbsp;
+                    <a href="${requestHost}/cover-letter/${token}" target="_blank" class="break-all">
                         ${requestHost}/cover-letter/${token}
                     </a>
                 </p>
