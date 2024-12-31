@@ -54,7 +54,7 @@ export default defineNuxtConfig({
         { name: "author", content: "Peter Vavro" },
         { name: "copyright", content: "Peter Vavro" },
       ],
-      link: [{ rel: "icon", type: "image/x-icon", href: "favicon.ico" }],
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
 });
