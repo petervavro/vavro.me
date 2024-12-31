@@ -128,7 +128,7 @@ export default defineComponent({
                 the full-stack
                 <span class="text-secondary"> web & mobile </span>engineer;
               </li>
-              <li class="h-14 relative">
+              <li class=" text-secondary">
                 <TextCarousel />
               </li>
             </ul>

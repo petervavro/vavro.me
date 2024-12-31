@@ -1,30 +1,27 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import gsap from 'gsap'
+const { $gsap } = useNuxtApp()
+
+const delay = 2
 
 const slider = ref<HTMLElement | null>(null)
 
 onMounted(() => {
   if (!slider.value) return
 
-  // Get slides
-  const slides = Array.from(slider.value.children) as HTMLElement[]
+  const tl = $gsap.timeline({ repeat: -1, delay })
 
-  // Set delay
-  const delay = 2
-
-  const tl = gsap.timeline({ repeat: -1, delay })
-
-  slides.forEach((slide, i) => {
-    tl.to(slide, {
-      opacity: 1
+  $gsap.utils.toArray<HTMLElement>(slider.value.children)
+    .forEach((slide, i) => {
+      tl.from(slide, {
+        opacity: 0
+      }).to(slide, {
+        opacity: 1
+      }).to(slide, {
+        opacity: 0,
+        delay: delay + i
+      })
     })
-
-    tl.to(slide, {
-      opacity: 0,
-      delay
-    })
-  })
 })
 </script>
 
@@ -39,10 +36,10 @@ onMounted(() => {
 
 <style lang="scss">
 .slider {
-  @apply overflow-hidden text-secondary relative pt-16;
+  @apply relative h-14 overflow-hidden;
 
   &>div {
-    @apply absolute top-0 bottom-0 left-0 right-0 opacity-0;
+    @apply absolute top-0 bottom-0 left-0 right-0;
   }
 }
 </style>
