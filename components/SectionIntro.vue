@@ -128,9 +128,14 @@ export default defineComponent({
                 the full-stack
                 <span class="text-secondary"> web & mobile </span>engineer;
               </li>
-              <li class=" text-secondary">
-                <TextCarousel />
-              </li>
+              <div class="slider">
+                <TextCarousel>
+                  <li>with analytical and critical thinking;</li>
+                  <li>passionate for clean, tested code;</li>
+                  <li>self-starter able to deliver on time;</li>
+                  <li>ability to execute new ideas with autonomy;</li>
+                </TextCarousel>
+              </div>
             </ul>
           </div>
           <div class="pt-8">
@@ -196,5 +201,13 @@ export default defineComponent({
 
   background-repeat: no-repeat;
   background-size: 1rem 1rem;
+}
+
+.slider {
+  @apply relative h-14;
+
+  &>li {
+    @apply text-secondary absolute top-0 bottom-0 left-0 right-0;
+  }
 }
 </style>
