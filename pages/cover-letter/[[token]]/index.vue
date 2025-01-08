@@ -56,9 +56,9 @@ const technologies = ref<Technology[]>([]);
 
 watch(config, (newConfig) => {
   if (newConfig) {
-    technologies.value = TECHNOLOGIES.filter(({ id }) =>
-      (newConfig?.technologies || []).includes(id)
-    );
+    technologies.value = newConfig?.technologies.map((tId: string) =>
+      TECHNOLOGIES.find(({ id }) => id === tId)
+    ).filter(Boolean) as Technology[];
   }
 }, { immediate: true });
 
@@ -122,9 +122,9 @@ const scrollToCenter = (targetElement: HTMLElement) => {
             </div>
           </Transition>
           <p @click="currentStep = index">{{ part }}</p>
-          <div v-if="index === 1 && index === currentStep" class="flex flex-row-reverse w-fit">
+          <div v-if="index === 1 && index === currentStep" class="py-5 flex w-fit flex-wrap gap-1">
             <the-thumbnail v-for="t in technologies" :key="index" v-bind="t"
-              class="pr-5 pb-5 inline-block scale-90 border-secondary pt-10"
+              class="p-3 inline-block scale-90 border-secondary"
               titleClasses="text-primary/90 group-hover:text-secondary text-center" />
           </div>
           <Transition>
