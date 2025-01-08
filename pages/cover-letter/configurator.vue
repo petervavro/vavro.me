@@ -18,6 +18,14 @@ watchEffect(async () => {
         technologies: selectedTechnologies.value
     });
 });
+
+function toggleTechnology(id: Technology["id"]) {
+    if (selectedTechnologies.value.includes(id)) {
+        selectedTechnologies.value = selectedTechnologies.value.filter(techId => techId !== id);
+    } else {
+        selectedTechnologies.value.push(id);
+    }
+}
 </script>
 <template>
 
@@ -57,8 +65,9 @@ watchEffect(async () => {
                     :value="selectedTechnologies"
                     @input="event => selectedTechnologies = event?.target && (event.target as HTMLInputElement).value.split(',') || []" />
             </div>
-            <div class="p-5 pt-20 grid grid-cols-4 gap-4 divide-x divide-y divide-neutral-600">
-                <div v-for="(t, index) in technologies" :key="index" class="p-3">
+            <div class="p-5 pt-20 grid grid-cols-4 divide-x divide-y divide-neutral-600">
+                <div v-for="(t, index) in technologies" :key="index" class="p-3 cursor-pointer"
+                    @click="toggleTechnology(t.id)" :class="{ 'bg-primary/20': selectedTechnologies.includes(t.id) }">
                     <div class="flex gap-3">
                         <input type="checkbox" :value="t.id" v-model="selectedTechnologies" />
                         <the-thumbnail v-bind="t"
