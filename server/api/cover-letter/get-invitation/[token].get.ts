@@ -1,5 +1,7 @@
 import puppeteer from "puppeteer-core";
 import chromium from "@sparticuz/chromium";
+import { invitationLetter } from "../../../../utils";
+const { greeting, content } = invitationLetter;
 
 export default defineEventHandler(async (event) => {
   const browser = await puppeteer.launch({
@@ -14,6 +16,8 @@ export default defineEventHandler(async (event) => {
   const requestHost = `${
     event.node.req.headers["x-forwarded-proto"] || "http"
   }://${event.node.req.headers["host"]}`;
+
+  const link = `${requestHost}/cover-letter/${token}`;
 
   // Define the HTML content
   const htmlContent = `
@@ -39,33 +43,18 @@ export default defineEventHandler(async (event) => {
                 </style>
             </head>
             <body class="bg-gray-50 p-10 text-sm">
-                <h1>Hello!</h1>
-                <br />
-                <p>I take a slightly different approach to presenting myself. Rather than providing a traditional static
-                    document, I invite you to explore my cover letter on my portfolio website. There, you’ll find a more
-                    dynamic
-                    and interactive presentation of my professional story, including my projects, achievements, and
-                    skills.
-                </p>
-                <br />
-                <p><b class="font-bold">I've crafted this cover letter specifically for your company:</b>&nbsp;
-                    <a href="${requestHost}/cover-letter/${token}" target="_blank" class="break-all">
-                        ${requestHost}/cover-letter/${token}
-                    </a>
-                </p>
-                <br />
-                <p>Feel free to browse through my portfolio for additional insights into my work. I greatly appreciate
-                    your
-                    time and collaboration in this process and hope this approach offers a refreshing and engaging
-                    perspective.
-                    If you have any questions or need further information, don’t hesitate to reach out.
-                </p>
-                <br />
-                <p>
-                    Looking forward to connecting!
-                </p>
-                <br />
-                <p>Warm regards,<br />Ing. Peter Vavro<br />peter@vavro.me</p>
+                <h1>${greeting}</h1>
+                ${content
+                  .map((txt) => {
+                    return `<br />
+                    <p>${txt
+                      .replaceAll("\n", "<br/>")
+                      .replaceAll(
+                        `<LINK>`,
+                        `<br/><br/><span class="font-bold"><a href="${link}" target="_blank" class="break-all">${link}</a></span>`
+                      )}</p>`;
+                  })
+                  .join("")}
             </body>
         </html>
     `;
