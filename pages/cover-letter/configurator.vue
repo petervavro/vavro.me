@@ -33,8 +33,9 @@ function getInvitationLetterText() {
 
     const link = `https://vavro.me/cover-letter/${token.value}`;
 
-    console.log(`${greeting}\n\n${content.map((txt) => `${txt.replace(`<LINK>`,link)}`).join('\n\n')}`);
+    copyContent(`${greeting}\n\n${content.map((txt) => `${txt.replace(`<LINK>`, link)}`).join('\n\n')}`);
 }
+
 </script>
 <template>
 
