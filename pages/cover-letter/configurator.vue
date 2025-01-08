@@ -75,7 +75,7 @@ function getInvitationLetterText() {
                     @input="event => selectedTechnologies = event?.target && (event.target as HTMLInputElement).value.split(',') || []" />
             </div>
             <div class="p-5 pt-20 grid grid-cols-4 divide-x divide-y divide-neutral-600">
-                <div v-for="(t, index) in technologies" :key="index" class="p-3 cursor-pointer"
+                <div v-for="(t, index) in technologies" :key="index" class="p-3 cursor-pointer hover:bg-primary/40"
                     @click="toggleTechnology(t.id)" :class="{ 'bg-primary/20': selectedTechnologies.includes(t.id) }">
                     <div class="flex gap-3">
                         <input type="checkbox" :value="t.id" v-model="selectedTechnologies" />
