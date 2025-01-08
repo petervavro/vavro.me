@@ -57,12 +57,12 @@ watchEffect(async () => {
                     :value="selectedTechnologies"
                     @input="event => selectedTechnologies = event?.target && (event.target as HTMLInputElement).value.split(',') || []" />
             </div>
-            <div class="grid grid-cols-4 gap-4 p-5 pt-20">
-                <div v-for="(t, index) in technologies" :key="index">
+            <div class="p-5 pt-20 grid grid-cols-4 gap-4 divide-x divide-y divide-neutral-600">
+                <div v-for="(t, index) in technologies" :key="index" class="p-3">
                     <div class="flex gap-3">
                         <input type="checkbox" :value="t.id" v-model="selectedTechnologies" />
                         <the-thumbnail v-bind="t"
-                            class="inline-block text-neutral-light md:group-hover:scale-105 antialiased" />
+                            class="inline-block text-primary-light md:group-hover:scale-105 antialiased" />
                     </div>
                 </div>
             </div>
