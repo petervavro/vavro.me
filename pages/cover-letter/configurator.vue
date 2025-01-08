@@ -70,7 +70,7 @@ watchEffect(async () => {
         <div class="flex gap-5 pt-5 justify-end w-full border-t border-dotted border-primary">
             <a :href="`/api/cover-letter/get-invitation/${token}?companyName=${encodeURI(companyName)}&positionType=${encodeURI(positionType)}`"
                 target="_blank" class="btn">Get Invitation PDF</a>
-            <NuxtLink :to="`/cover-letter/${token}`" class="btn">
+            <NuxtLink :to="`/cover-letter/${token}`" class="btn" target="_blank">
                 Go to cover letter
             </NuxtLink>
         </div>
