@@ -26,7 +26,7 @@ const props = defineProps({
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 img {
   @apply block;
 }
@@ -71,5 +71,10 @@ img {
 .react img,
 .react-native img {
   @apply rounded-md;
+}
+
+.shadow-in {
+  @apply bg-white/80;
+  box-shadow: inset 0px 4px 22px theme('colors.primary.DEFAULT');
 }
 </style>

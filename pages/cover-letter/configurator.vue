@@ -81,7 +81,8 @@ function getInvitationLetterText() {
                     <div class="flex gap-3">
                         <input type="checkbox" :value="t.id" v-model="selectedTechnologies" />
                         <the-thumbnail v-bind="t"
-                            class="inline-block text-primary-light md:group-hover:scale-105 antialiased" />
+                            class="inline-block text-primary-light md:group-hover:scale-105 antialiased"
+                            thumbnailClasses="shadow-in border-primary" />
                     </div>
                 </div>
             </div>

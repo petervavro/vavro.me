@@ -125,7 +125,8 @@ const scrollToCenter = (targetElement: HTMLElement) => {
           <div v-if="index === 1 && index === currentStep" class="py-5 flex w-fit flex-wrap gap-1">
             <the-thumbnail v-for="t in technologies" :key="index" v-bind="t"
               class="p-3 inline-block scale-90 border-secondary"
-              titleClasses="text-primary/90 group-hover:text-secondary text-center" />
+              titleClasses="text-primary/90 group-hover:text-secondary text-center"
+              thumbnailClasses="shadow-in border-primary" />
           </div>
           <Transition>
             <div class="feedback-panel absolute bottom-[-7rem] z-10"
