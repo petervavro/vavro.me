@@ -16,6 +16,7 @@ const projectData = computed(() => {
   }
 })
 
+const animationIndex = ref(0)
 
 onMounted(() => {
   $gsap.timeline({
@@ -41,10 +42,14 @@ onMounted(() => {
       duration: 0.5,
       ease: 'power1.inOut',
       stagger: {
-        amount: 0.4,
+        amount: 4.4,
       },
     }
   )
+
+  setInterval(() => {
+    animationIndex.value = Math.floor(Math.random() * ITEMS.length)
+  }, 2000)
 })
 </script>
 
@@ -89,7 +94,8 @@ onMounted(() => {
           ]">
           <div :class="[
             item.id,
-            'flex shrink-0 items-center w-20 h-20 p-3 overflow-hidden rounded-50p group-hover:rounded-none shadow-black/80 group-hover:shadow-2xl group-hover:rotate-[360deg] border-primary border-2 group-hover:border-secondary transition-all duration-700 ease-out bg-white bg-cover bg-no-repeat bg-center saturate-150'
+            'flex shrink-0 items-center w-20 h-20 p-3 overflow-hidden rounded-50p group-hover:rounded-none shadow-black/80 group-hover:shadow-2xl group-hover:rotate-[360deg] border-primary border-2 group-hover:border-secondary transition-all duration-700 ease-out bg-white bg-cover bg-no-repeat bg-center saturate-150',
+            animationIndex === index ? 'rotate-[360deg]' : ''
           ]">
             <nuxt-img :src="`img/${item.backgroundImage}`" :alt="`Project ${item.title}`" width="80"
               class="saturate-150" />
