@@ -12,7 +12,7 @@ onMounted(() => {
       <IntroObject />
       <div class="absolute bottom-10 left-10">
         <div class="pt-3">
-          <NuxtLink to="/#about-me" class="menu-link">
+          <NuxtLink to="/#about-me" class="menu-link" aria-label="Go to About me">
             <i
               class="p-2 border-primary-light hover:border-tertiary border-r-2 border-b-2 inline-block ml-2 rotate-45 animate-pulse">
             </i>
