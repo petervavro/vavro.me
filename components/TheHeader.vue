@@ -13,9 +13,9 @@ onMounted(() => {
     <div class="flex">
       <div>
         <NuxtLink to="/">
-          <h1 class="text-primary text-2xl">Peter Vavro</h1>
+          <h1 class="text-primary text-2xl font-serif">Peter Vavro</h1>
         </NuxtLink>
-        <p class="hidden lg:block text-secondary border-secondary border-t-2 pt-1 mt-1 w-80">
+        <p class="hidden lg:block text-sm text-secondary border-secondary border-t-2 pt-1 mt-1 w-80">
           Full-Stack Engineer<!-- with preference for Front-end -->
         </p>
       </div>
