@@ -1,17 +1,25 @@
 <script setup lang="ts">
-
-const isWrapVisible = ref(false);
+const isVisible = ref(false);
 
 onMounted(() => {
-  isWrapVisible.value = true;
+  isVisible.value = true;
 });
-
 </script>
 
 <template>
   <div class="grid place-items-center h-screen grid-rows-1 grid-cols-1">
-    <div class="flex px-5" v-show="isWrapVisible">
-      <IntroObjectA />
+    <div class="content opacity-0" :class="{ 'opacity-100': isVisible }">
+      <IntroObject />
     </div>
   </div>
 </template>
+
+<style scoped>
+.content {
+  @apply flex transition ease-in-out delay-300;
+}
+
+.no-js .content {
+  @apply opacity-100;
+}
+</style>
