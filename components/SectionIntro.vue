@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const isVisible = ref(true);
+const isVisible = ref(false);
 
 onMounted(() => {
   isVisible.value = true;
