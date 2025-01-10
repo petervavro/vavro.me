@@ -97,7 +97,7 @@ onMounted(() => {
             'flex shrink-0 items-center w-20 h-20 p-3 overflow-hidden rounded-50p group-hover:rounded-none shadow-black/80 group-hover:shadow-2xl group-hover:rotate-[360deg] border-primary border-2 group-hover:border-secondary transition-all duration-700 ease-out bg-white bg-cover bg-no-repeat bg-center saturate-150',
             animationIndex === index ? 'rotate-[360deg]' : ''
           ]">
-            <nuxt-img :src="`img/${item.backgroundImage}`" :alt="`Project ${item.title}`" width="80"
+            <NuxtImg :src="`img/${item.backgroundImage}`" loading="lazy" :alt="`Project ${item.title}`" width="80"
               class="saturate-150" />
           </div>
           <div class="grow min-w-0 p-1 pl-3">
