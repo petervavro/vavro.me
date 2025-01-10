@@ -42,14 +42,6 @@
             <div class="highlight">ability to execute <span class="text-secondary">new ideas</span> with
                 autonomy;</div>
         </div>
-        <div class="absolute bottom-10 left-10">
-            <div class="pt-3">
-                <div>
-                    <i class="p-3 border-primary-light border-r-2 border-b-2 inline-block ml-2 rotate-45 animate-pulse">
-                    </i>
-                </div>
-            </div>
-        </div>
     </div>
 </template>
 
