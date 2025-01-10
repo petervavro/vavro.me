@@ -3,27 +3,27 @@
         <div
             class="p-3 md:w-3/5 flex flex-wrap gap-3 wrapper divide-y divide-dotted divide-neutral-light border-l border-dotted border-neutral-light">
             <div>Innovation</div>
-            <div>Solutions</div>
+            <div class="large-screen-only">Solutions</div>
             <div>Efficiency</div>
-            <div>Optimization</div>
-            <div>Architecture</div>
+            <div class="large-screen-only">Optimization</div>
+            <div class="large-screen-only">Architecture</div>
             <div class="highlight">
                 full-stack
                 <span class="text-secondary"> web & mobile </span>engineer;
             </div>
             <div>Reliability</div>
             <div>Initiative</div>
-            <div>Scalability</div>
+            <div class="large-screen-only">Scalability</div>
             <div class="highlight">
                 <span class="text-secondary">analytical</span> and <span class="text-secondary">critical
                     thinking;</span>
             </div>
-            <div>Commitment</div>
+            <div class="large-screen-only">Commitment</div>
             <div>Quality</div>
-            <div>Evolution</div>
+            <div class="large-screen-only">Evolution</div>
             <div>Learning</div>
             <div>Adaptability</div>
-            <div>Growth</div>
+            <div class="large-screen-only">Growth</div>
             <div class="highlight">
                 <span class="text-secondary">clean, tested code</span>;
             </div>
@@ -36,9 +36,9 @@
             <div class="highlight">
                 <span class="text-secondary">deliver on time</span>;
             </div>
-            <div>Leadership</div>
-            <div>Synergy</div>
-            <div>Partnership</div>
+            <div class="large-screen-only">Leadership</div>
+            <div class="large-screen-only">Synergy</div>
+            <div class="large-screen-only">Partnership</div>
             <div class="highlight">ability to execute <span class="text-secondary">new ideas</span> with
                 autonomy;</div>
         </div>
@@ -56,6 +56,10 @@
 
     >div {
         @apply text-center text-xs xl:text-xl p-2 px-3 transition-all duration-300;
+
+        &.large-screen-only {
+            @apply hidden md:block
+        }
 
         &.highlight {
             @apply text-primary xl:text-lg;
