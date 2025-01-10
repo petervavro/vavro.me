@@ -47,12 +47,11 @@
 
 <style scoped lang="scss">
 .wrapper {
-    @apply text-neutral-light;
-    // @apply bg-clip-text text-transparent;
+    @apply bg-clip-text text-transparent;
 
-    // background-image: radial-gradient(circle, theme('colors.neutral.DEFAULT / 75%') 0%, theme('colors.tertiary / 75%') 45%, theme('colors.primary.DEFAULT / 75%') 65%, theme('colors.secondary.DEFAULT / 75%') 100%);
-    // animation: gradient 10s ease infinite;
-    // background-size: 400% 400%;
+    background-image: radial-gradient(circle, theme('colors.neutral.DEFAULT / 75%') 0%, theme('colors.tertiary / 75%') 45%, theme('colors.primary.DEFAULT / 75%') 65%, theme('colors.secondary.DEFAULT / 75%') 100%);
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
 
     >div {
         @apply text-center text-xs xl:text-xl p-2 px-3 transition-all duration-300;
