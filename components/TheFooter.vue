@@ -14,9 +14,8 @@ export default {
       <div class="flex md:flex-row-reverse p-10 text-primary">
         <div class="md:basis-5/6 md:border-neutral-light md:border-l md:p-10">
           <p class="pb-10 text-secondary leading-relaxed">
-            So what are you waiting for? Reach out to me now and let's start a
-            conversation about how I can help you achieve your objectives. I
-            look forward to hearing from you soon!
+            Please feel free to contact me, and let us begin a discussion on how I can assist
+            you in achieving your objectives. I look forward to hearing from you soon.
           </p>
           <div class="p-1 rounded-full border-2 border-secondary inline-flex items-center">
             <div class="p-3 px-5">Contact me</div>
