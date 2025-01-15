@@ -3,7 +3,7 @@ import technologies from '~/assets/data/technologies.json'
 import type { Technology } from '~/types';
 
 const companyName = ref('');
-const positionType = ref('front-end');
+const positionType = ref('full-stack');
 const positionName = ref('Senior Full-stack Engineer');
 const selectedTechnologies = ref<Technology["id"][]>(["typescript", "nodejs", "react", "vuejs"])
 const { encrypt } = useEncryption();
