@@ -8,7 +8,7 @@ export default defineEventHandler(async (event): Promise<{ token: string }> => {
     });
   }
 
-  const token = EncryptionService.encrypt(JSON.stringify(body));
+  const token = EncryptionServiceV2.encrypt(JSON.stringify(body));
 
   return { token };
 });

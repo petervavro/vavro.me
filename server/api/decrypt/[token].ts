@@ -9,11 +9,15 @@ export default defineEventHandler((event) => {
   }
 
   try {
-    return EncryptionService.decrypt(token);
-  } catch (error) {
-    throw createError({
-      statusCode: 400,
-      message: "Invalid token",
-    });
+    return EncryptionServiceV2.decrypt(token);
+  } catch {
+    try {
+      return EncryptionService.decrypt(token);
+    } catch {
+      throw createError({
+        statusCode: 400,
+        message: "Invalid token",
+      });
+    }
   }
 });
