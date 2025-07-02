@@ -40,9 +40,9 @@ function getInvitationLetterText() {
 <template>
 
     <Head>
-        <Title>Cover Letter Configurator</Title>
+        <Title>Cover Letter Builder</Title>
     </Head>
-    <TheSection title="Cover letter configurator" class="pt-16"
+    <TheSection title="Cover letter builder" class="pt-16"
         titleClass="text-primary lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:translate-y-44"
         contentClass="pl-5 md:pl-10 border-l border-primary border-dotted flex flex-col gap-5">
         <section>
