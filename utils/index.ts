@@ -1,7 +1,7 @@
 export const invitationLetter = {
   greeting: "Hello!",
   content: [
-    `I take a slightly different approach to presenting myself. Rather than providing a traditional static document, I invite you to explore my cover letter on my portfolio website: <LINK>`,
+    `I’ve reimagined the cover letter experience. Rather than a static document, I invite you to view it on my portfolio site for a more interactive introduction: <LINK>`,
     `Looking forward to connecting!`,
     `Warm regards,\nIng. Peter Vavro\npeter@vavro.me`,
   ],
