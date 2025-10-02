@@ -640,11 +640,41 @@
     "FE": 0
   },
   {
+    "year": 2024,
+    "title": "Botpress",
+    "url": "https://botpress.com/",
+    "thumbnailImage": "logo-Botpress.jpeg",
+    "id": "botpress",
+    "preferred": 0,
+    "note": "",
+    "FE": 0
+  },
+  {
+    "year": 2024,
+    "title": "LangChain",
+    "url": "https://github.com/langchain-ai/langchain",
+    "thumbnailImage": "logo-langchain.svg",
+    "id": "langchain",
+    "preferred": 0,
+    "note": "",
+    "FE": 0
+  },
+  {
     "year": 2025,
     "title": "n8n",
     "url": "https://n8n.io/",
     "thumbnailImage": "logo-n8n.png",
     "id": "n8n",
+    "preferred": 0,
+    "note": "",
+    "FE": 0
+  },
+  {
+    "year": 2025,
+    "title": "Rasa",
+    "url": "https://rasa.com/",
+    "thumbnailImage": "logo-Rasa.svg",
+    "id": "rasa",
     "preferred": 0,
     "note": "",
     "FE": 0
