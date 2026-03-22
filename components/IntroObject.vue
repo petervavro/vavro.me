@@ -43,7 +43,7 @@
 }
 
 .tagline {
-    @apply text-lg md:text-2xl text-primary leading-relaxed;
+    @apply text-sm md:text-lg text-primary leading-relaxed;
 }
 
 .stack {
