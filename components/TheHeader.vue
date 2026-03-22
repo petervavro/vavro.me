@@ -13,7 +13,13 @@ onMounted(() => {
     <div class="flex">
       <div>
         <NuxtLink to="/">
-          <h1 class="text-primary text-2xl font-serif">Peter Vavro</h1>
+          <h1 class="text-primary text-2xl font-serif flex items-center gap-3">
+            Peter Vavro
+            <span class="relative flex h-2.5 w-2.5" title="Available for work">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+            </span>
+          </h1>
         </NuxtLink>
         <p class="hidden lg:block text-sm text-secondary border-secondary border-t-2 pt-1 mt-1 w-80">
           Full-Stack Engineer<!-- with preference for Front-end -->
