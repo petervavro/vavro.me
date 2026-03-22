@@ -63,27 +63,8 @@
 }
 
 .seeking {
-    @apply relative rounded-lg px-6 py-4 text-left max-w-lg;
-    background: theme('colors.neutral.DEFAULT / 80%');
-
-    &::before {
-        content: '';
-        position: absolute;
-        inset: -1px;
-        border-radius: inherit;
-        padding: 1px;
-        background: linear-gradient(
-            var(--angle),
-            theme('colors.tertiary'),
-            theme('colors.secondary.DEFAULT'),
-            theme('colors.primary.DEFAULT'),
-            theme('colors.tertiary')
-        );
-        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-        animation: border-spin 4s linear infinite;
-    }
+    @apply border border-tertiary/30 rounded-lg px-6 py-4 text-left bg-tertiary/5 max-w-lg;
+    animation: fade-in 1.5s ease 0.8s both;
 
     .seeking-label {
         @apply text-tertiary text-xs uppercase tracking-widest mb-3;
@@ -98,14 +79,9 @@
     }
 }
 
-@property --angle {
-    syntax: '<angle>';
-    initial-value: 0deg;
-    inherits: false;
-}
-
-@keyframes border-spin {
-    to { --angle: 360deg; }
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes gradient {
