@@ -8,8 +8,7 @@
 
             <p class="tagline">
                 20+ years crafting <span class="text-secondary">clean, scalable</span>
-                web &amp; mobile products.<br>
-                Currently <span class="text-tertiary">open to new opportunities</span>.
+                web &amp; mobile products.
             </p>
 
             <div class="stack">
@@ -19,6 +18,14 @@
                 <span>Node.js</span>
                 <span>GraphQL</span>
                 <span>AWS</span>
+            </div>
+
+            <div class="seeking">
+                <p class="seeking-label">Currently Seeking</p>
+                <ul>
+                    <li>Software Engineer roles building <span class="text-secondary">AI-powered applications</span>.</li>
+                    <li>Bringing a strong frontend/fullstack foundation into <span class="text-secondary">LLM systems, LangChain, and AI agents</span>.</li>
+                </ul>
             </div>
 
         </div>
@@ -52,6 +59,22 @@
     span {
         @apply text-sm md:text-base px-4 py-1.5 rounded-full border border-primary/40 text-primary/80
                hover:border-primary hover:text-primary transition-colors duration-200;
+    }
+}
+
+.seeking {
+    @apply border border-tertiary/30 rounded-lg px-6 py-4 text-left bg-tertiary/5 max-w-lg;
+
+    .seeking-label {
+        @apply text-tertiary text-xs uppercase tracking-widest mb-3;
+    }
+
+    ul {
+        @apply space-y-2;
+
+        li {
+            @apply text-xs md:text-sm text-white/60 leading-relaxed pl-3 border-l border-tertiary/30;
+        }
     }
 }
 
