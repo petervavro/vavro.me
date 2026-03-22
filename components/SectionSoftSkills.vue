@@ -58,7 +58,7 @@ const skills = [
 
 <style scoped lang="scss">
 .card {
-  @apply border border-primary/10 rounded-lg p-5 bg-neutral/40
+  @apply border border-primary/10 p-5 bg-neutral/40
          hover:border-primary/30 hover:bg-neutral/60 transition-all duration-300;
 
   .card-icon {
