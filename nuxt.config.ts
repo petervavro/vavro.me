@@ -44,15 +44,32 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Peter Vavro is a Full-Stack Engineer, in to programming since 1994, specialized in web&mobile technologies.",
+            "Peter Vavro — Full-Stack Engineer with 20+ years of experience building web & mobile products. Specialized in React, Vue, TypeScript, Node.js and AI-powered applications. Open to new opportunities.",
         },
         {
           name: "keywords",
           content:
-            "Peter,Vavro,full-stack,developer,engineer,computer programmer,programmer,back-end,front-end,,backend,frontend,programming,personal,website,presentation, technologies,history,scrum master",
+            "Peter Vavro, full-stack engineer, frontend developer, backend developer, React, Vue, TypeScript, Node.js, GraphQL, AWS, LangChain, AI engineer, software engineer, web developer, mobile developer",
         },
         { name: "author", content: "Peter Vavro" },
         { name: "copyright", content: "Peter Vavro" },
+        // Open Graph
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: "https://www.vavro.me" },
+        { property: "og:title", content: "Peter Vavro — Full-Stack Engineer" },
+        {
+          property: "og:description",
+          content:
+            "Full-Stack Engineer with 20+ years of experience. React, Vue, TypeScript, Node.js, AI-powered applications. Open to new opportunities.",
+        },
+        // Twitter / X
+        { name: "twitter:card", content: "summary" },
+        { name: "twitter:title", content: "Peter Vavro — Full-Stack Engineer" },
+        {
+          name: "twitter:description",
+          content:
+            "Full-Stack Engineer with 20+ years of experience. React, Vue, TypeScript, Node.js, AI-powered applications. Open to new opportunities.",
+        },
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },

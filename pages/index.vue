@@ -6,6 +6,7 @@
     </Head>
     <SectionIntro class="section" />
     <SectionAboutMe id="about-me" class="section py-20" />
+    <SectionSoftSkills class="section py-10" />
     <TheSection id="technologies" title="Tech Stack" class="section py-20 text-primary"
       titleClass="text-primary lg:text-4xl lg:-rotate-90 lg:-translate-x-[28rem] lg:-translate-y-36">
       <ListTechnologies />
