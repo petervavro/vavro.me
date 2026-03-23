@@ -6,30 +6,28 @@ const target = ref(null)
 const targetIsVisible = useElementVisibility(target)
 
 const technologies = ref(
-  JSON_DATA.filter(({ preferred }) => preferred).sort(
-    (a, b) => a.preferred - b.preferred
-  )
+  JSON_DATA.filter(({ preferred }) => preferred).sort((a, b) => a.preferred - b.preferred)
 )
 
 const selectedIndex = ref(0)
 const loopInterval = ref(null)
 
-const stopLoop = () => {
-  clearInterval(loopInterval.value)
-}
+const currentYear = new Date().getFullYear()
+const maxYears = Math.max(...technologies.value.map(t => currentYear - t.year))
 
-const doSelect = (selectIndex, doStopLoop = false) => {
-  selectedIndex.value = selectIndex
+const yearsFor = (t) => currentYear - t.year
+const barWidth = (t) => Math.round((yearsFor(t) / maxYears) * 100)
 
-  if (selectIndex < technologies.value.length) {
-    technologies.value[selectIndex].alreadySelected = true
-  }
+const stopLoop = () => clearInterval(loopInterval.value)
 
+const doSelect = (index, doStopLoop = false) => {
+  selectedIndex.value = index
+  if (index < technologies.value.length) technologies.value[index].alreadySelected = true
   if (doStopLoop) stopLoop()
 }
 
-watch(selectedIndex, (newValue) => {
-  if (technologies.value.length === newValue) {
+watch(selectedIndex, (val) => {
+  if (val === technologies.value.length) {
     stopLoop()
     selectedIndex.value = 0
   }
@@ -37,9 +35,7 @@ watch(selectedIndex, (newValue) => {
 
 watch(targetIsVisible, () => {
   if (loopInterval.value === null) {
-    loopInterval.value = setInterval(() => {
-      doSelect(selectedIndex.value + 1)
-    }, 3000)
+    loopInterval.value = setInterval(() => doSelect(selectedIndex.value + 1), 3000)
   }
 })
 
@@ -49,69 +45,100 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="pb-5 border-tertiary border-b border-dotted">
-    <select class="select md:hidden pb-5" @click="stopLoop()"
-      @change="doSelect(parseInt($event.target.value, 10), true)" v-model="selectedIndex">
-      <option v-for="(t, index) in technologies" v-bind:value="index" :key="index">
-        {{ t.title }}
-      </option>
-    </select>
-    <div class="hidden md:flex flex-wrap gap-3">
-      <button v-for="(t, index) in technologies" :key="t.id" :class="[
-        'technology',
-        selectedIndex === index ? 'selected' : '',
-        t?.alreadySelected === true ? 'active' : 'inactive'
-      ]" @click="doSelect(index, true)">
-        {{ t.title }}
-      </button>
+  <div ref="target" class="tech-list">
+    <div
+      v-for="(t, index) in technologies"
+      :key="t.id"
+      class="tech-row"
+      :class="{ active: selectedIndex === index }"
+      @click="doSelect(index, true)"
+    >
+      <div class="tech-header">
+        <span class="tech-name">{{ t.title }}</span>
+        <span class="tech-years">{{ yearsFor(t) }} yrs</span>
+      </div>
+
+      <div class="bar-track">
+        <div class="bar-fill" :style="{ width: barWidth(t) + '%' }" />
+      </div>
+
+      <Transition
+        @enter="el => { el.style.height = '0'; el.offsetHeight; el.style.height = el.scrollHeight + 'px' }"
+        @after-enter="el => el.style.height = 'auto'"
+        @leave="el => { el.style.height = el.scrollHeight + 'px'; el.offsetHeight; el.style.height = '0' }"
+      >
+        <p v-if="selectedIndex === index" class="tech-note">{{ t.note }}</p>
+      </Transition>
     </div>
-  </div>
-  <div class="pt-3 pr-5 text-secondary min-h-56" ref="target">
-    <TransitionGroup name="list" tag="ul" class="relative">
-      <li v-for="(item, index) in technologies" :key="`content-${item.id}`" v-show="selectedIndex === index">
-        <div class="text-base pt-3">
-          <p>
-            since {{ item.year }}
-            &nbsp;|&nbsp;
-            <b>{{ new Date().getFullYear() - item.year }} years</b>
-          </p>
-          <p class="pt-3">
-            {{ item.note }}
-          </p>
-        </div>
-      </li>
-    </TransitionGroup>
   </div>
 </template>
 
 <style scoped lang="scss">
-.list-move,
-.list-enter-active,
-.list-leave-active {
-  @apply transition-opacity duration-500 ease-out;
+.tech-list {
+  @apply flex flex-col gap-1;
 }
 
-.list-enter-from,
-.list-leave-from,
-.list-leave-to {
-  @apply opacity-0;
-}
+.tech-row {
+  @apply px-3 py-2 cursor-pointer border-l-2 border-transparent transition-all duration-200;
 
-.list-leave-active {
-  position: absolute;
-}
-
-.select {
-  @apply appearance-none box-border bg-no-repeat bg-right w-full p-2 px-5 rounded-full border-2 border-tertiary text-tertiary text-base bg-neutral;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZmlsbDogIzkwY2E3NzsiPjxwYXRoIGQ9Ik0xNDcuNiAyMTAuN2MtNy41IDcuNS03LjUgMTkuOCAwIDI3LjNsOTUuNyA5NS40YzcuMyA3LjMgMTkuMSA3LjUgMjYuNi42bDk0LjMtOTRjMy44LTMuOCA1LjctOC43IDUuNy0xMy43IDAtNC45LTEuOS05LjktNS42LTEzLjYtNy41LTcuNS0xOS43LTcuNi0yNy4zIDBsLTgxIDc5LjgtODEuMS04MS45Yy03LjUtNy41LTE5LjctNy41LTI3LjMuMXoiLz48cGF0aCBkPSJNNDggMjU2YzAgMTE0LjkgOTMuMSAyMDggMjA4IDIwOHMyMDgtOTMuMSAyMDgtMjA4UzM3MC45IDQ4IDI1NiA0OCA0OCAxNDEuMSA0OCAyNTZ6bTMzMi40LTEyNC40QzQxMy43IDE2NC44IDQzMiAyMDkgNDMyIDI1NnMtMTguMyA5MS4yLTUxLjYgMTI0LjRDMzQ3LjIgNDEzLjcgMzAzIDQzMiAyNTYgNDMycy05MS4yLTE4LjMtMTI0LjQtNTEuNkM5OC4zIDM0Ny4yIDgwIDMwMyA4MCAyNTZzMTguMy05MS4yIDUxLjYtMTI0LjRDMTY0LjggOTguMyAyMDkgODAgMjU2IDgwczkxLjIgMTguMyAxMjQuNCA1MS42eiIvPjwvc3ZnPg==);
-}
-
-.technology {
-  @apply block overflow-hidden p-2 px-5 rounded-full border-2 text-sm transition-all duration-150 border-tertiary/60 text-tertiary/60 hover:text-tertiary hover:border-tertiary;
-
-  &.selected {
-    @apply border-secondary/80 text-secondary/80 opacity-100 hover:text-secondary hover:border-secondary;
+  &:hover {
+    @apply border-primary/40;
   }
 
+  &.active {
+    @apply border-secondary bg-white/[0.03];
+  }
+}
+
+.tech-header {
+  @apply flex justify-between items-baseline mb-1.5;
+
+  .tech-name {
+    @apply text-sm text-white/70 transition-colors duration-200;
+
+    .active & {
+      @apply text-secondary;
+    }
+  }
+
+  .tech-years {
+    @apply text-xs text-white/30;
+
+    .active & {
+      @apply text-secondary/60;
+    }
+  }
+}
+
+.bar-track {
+  @apply h-px bg-white/10 w-full;
+
+  .bar-fill {
+    @apply h-full bg-primary/40 transition-all duration-500;
+
+    .active & {
+      @apply bg-secondary/60;
+    }
+  }
+}
+
+.tech-note {
+  @apply text-xs text-white/40 leading-relaxed mt-2 pr-2;
+}
+
+.note-enter-active,
+.note-leave-active {
+  transition: height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.note-enter-from,
+.note-leave-to {
+  opacity: 0;
+}
+
+.note-enter-to,
+.note-leave-from {
+  opacity: 1;
 }
 </style>
