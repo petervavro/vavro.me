@@ -56,7 +56,7 @@ onMounted(() => {
         {{ t.title }}
       </option>
     </select>
-    <div class="hidden md:flex gap-3">
+    <div class="hidden md:flex flex-wrap gap-3">
       <button v-for="(t, index) in technologies" :key="t.id" :class="[
         'technology',
         selectedIndex === index ? 'selected' : '',
