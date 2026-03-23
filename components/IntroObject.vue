@@ -63,7 +63,7 @@
 }
 
 .seeking {
-    @apply border border-tertiary/30 rounded-lg px-6 py-4 text-left bg-tertiary/5 max-w-lg;
+    @apply border border-tertiary/30 px-6 py-4 text-left bg-tertiary/5 max-w-lg;
     animation: fade-in 1.5s ease 0.8s both;
 
     .seeking-label {
