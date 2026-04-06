@@ -109,7 +109,7 @@ onMounted(() => {
             </div>
           </div>
           <p v-if="item.role" class="text-xs font-medium text-secondary/90">{{ item.role }}</p>
-          <p class="text-tertiary text-sm leading-relaxed line-clamp-3 grow">
+          <p class="text-tertiary text-sm leading-relaxed grow">
             {{ item.contribution }}
           </p>
           <div class="text-xs text-neutral-light/50 group-hover:text-secondary border-t border-dotted border-neutral-light/20 pt-3 transition-colors duration-300">
