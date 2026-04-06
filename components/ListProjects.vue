@@ -156,7 +156,7 @@ onMounted(() => {
 }
 
 .duenio img {
-  @apply scale-[3] translate-x-10 translate-y-1;
+  @apply scale-[3];
 }
 
 .yovoca,
