@@ -39,10 +39,10 @@ onMounted(() => {
       scale: 1,
       opacity: 1,
       rotateY: 0,
-      duration: 0.5,
+      duration: 0.3,
       ease: 'power1.inOut',
       stagger: {
-        amount: 4.4,
+        amount: 1.2,
       },
     }
   )
