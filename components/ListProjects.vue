@@ -61,23 +61,26 @@ onMounted(() => {
         <div class="p-10">
           <h3 class="text-2xl pb-5">{{ projectData.title }}</h3>
           <section class="pb-5">
-            <h4 class="pb-1">PROJECT DESCRIPTION</h4>
-            <p class="pb-1 text-tertiary">{{ projectData.description }}</p>
-            <a :href="projectData.url" target="_blank" class="text-ellipsis overflow-hidden underline">
+            <h4 class="pb-1">WHAT IT SOLVES</h4>
+            <p class="pb-1 text-tertiary">{{ projectData.productSolves }}</p>
+            <a v-if="projectData.url" :href="projectData.url" target="_blank" class="text-ellipsis overflow-hidden underline">
               Go to the project.
             </a>
           </section>
-          <section class="pb-5">
-            <h4 class="pb-1">JOB DESCRIPTION</h4>
-            <p class="pb-2 text-tertiary" v-if="projectData.jobDescription">
-              {{ projectData.jobDescription }}
-            </p>
+          <section class="pb-5" v-if="projectData.contribution">
+            <h4 class="pb-1">MY CONTRIBUTION</h4>
+            <p v-if="projectData.role" class="pb-1 text-secondary font-medium">{{ projectData.role }}</p>
+            <p class="pb-2 text-tertiary">{{ projectData.contribution }}</p>
             <p class="text-tertiary">
               <span v-if="projectData.BE">Back-end</span>
               <span v-if="projectData.BE && projectData.FE">&nbsp;&&nbsp;</span>
               <span v-if="projectData.FE">Front-end</span>
               <span v-if="projectData.BE || projectData.FE">&nbsp;development.</span>
             </p>
+          </section>
+          <section class="pb-5" v-if="projectData.scale">
+            <h4 class="pb-1">SCALE</h4>
+            <p class="text-tertiary">{{ projectData.scale }}</p>
           </section>
           <section class="pb-5 flex flex-wrap">
             <the-thumbnail v-for="t in projectData.technologies" :key="t.id" :id="t.id" :title="t.title"
@@ -87,24 +90,30 @@ onMounted(() => {
       </article>
     </modal>
     <div id="projects">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-light/10">
         <button v-for="(item, index) in ITEMS" :key="item.id" :id="item.id" :data-index="index"
           @click="selectedProjectId = item.id" :class="[
-            'grid-box flex flex-row group text-primary hover:text-secondary py-5 md:p-5'
+            'grid-box group text-left text-primary hover:text-secondary bg-neutral hover:bg-neutral-light/5 p-5 flex flex-col gap-4 transition-colors duration-300'
           ]">
-          <div :class="[
-            item.id,
-            'flex shrink-0 items-center w-20 h-20 p-3 overflow-hidden rounded-50p group-hover:rounded-none shadow-black/80 group-hover:shadow-2xl group-hover:rotate-[360deg] border-primary border-2 group-hover:border-secondary transition-all duration-700 ease-out bg-white bg-cover bg-no-repeat bg-center saturate-150',
-            animationIndex === index ? 'rotate-[360deg]' : ''
-          ]">
-            <NuxtImg :src="`img/${item.backgroundImage}`" loading="lazy" :alt="`Project ${item.title}`" width="80"
-              class="saturate-150" />
-          </div>
-          <div class="grow min-w-0 p-1 pl-3">
-            <div
-              class="title p-2 pr-1 text-left text-ellipsis overflow-hidden border-b border-r border-dotted border-neutral-light/50 group-hover:border-secondary transition-all duration-500 ease-out">
+          <div class="flex items-center gap-3">
+            <div :class="[
+              item.id,
+              'flex shrink-0 items-center w-12 h-12 p-2 overflow-hidden rounded-50p group-hover:rounded-none border-primary border group-hover:border-secondary group-hover:rotate-[360deg] transition-all duration-700 ease-out bg-white bg-cover bg-no-repeat bg-center saturate-150',
+              animationIndex === index ? 'rotate-[360deg]' : ''
+            ]">
+              <NuxtImg :src="`img/${item.backgroundImage}`" loading="lazy" :alt="`Project ${item.title}`" width="48"
+                class="saturate-150" />
+            </div>
+            <div class="font-medium text-sm leading-snug text-ellipsis overflow-hidden">
               {{ item.title }}
             </div>
+          </div>
+          <p v-if="item.role" class="text-xs font-medium text-secondary/90">{{ item.role }}</p>
+          <p class="text-tertiary text-sm leading-relaxed line-clamp-3 grow">
+            {{ item.contribution }}
+          </p>
+          <div class="text-xs text-neutral-light/50 group-hover:text-secondary border-t border-dotted border-neutral-light/20 pt-3 transition-colors duration-300">
+            View details →
           </div>
         </button>
       </div>

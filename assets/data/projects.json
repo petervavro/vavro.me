@@ -9,10 +9,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "Companies deploying AI had no structured way to document decisions, audit model behavior, or prove ethical compliance to regulators.",
-    "roleShort": "Fullstack Developer in a cross-functional monorepo team",
     "scale": "Enterprise SaaS product used by companies managing AI governance across multiple regulatory frameworks",
-    "outcome": "Helped the team deliver features consistently across a complex monorepo — implementing Figma designs in React and building GraphQL APIs with NestJS code-first, covering both FE and BE.",
-    "liveStatus": "live"
+    "contribution": "implemented Figma designs in React and built GraphQL APIs with NestJS code-first, helping deliver features consistently.",
+    "liveStatus": "live",
+    "role": "Full-Stack Engineer in a cross-functional monorepo team"
   },
   {
     "id": "pwdDA",
@@ -24,10 +24,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "A manufacturer needed a fast way for production line workers to identify and retrieve product information directly on the factory floor.",
-    "roleShort": "Sole developer — built the PWA as a companion to the dashboard system",
     "scale": "Internal tool running on a local production network",
-    "outcome": "Delivered a mobile PWA with QR scanning accessible on any phone, no installation needed",
-    "liveStatus": "private"
+    "contribution": "built a mobile PWA with QR scanning as a companion to the dashboard system, accessible on any phone without installation.",
+    "liveStatus": "private",
+    "role": "Full-Stack Engineer"
   },
   {
     "id": "pl",
@@ -39,10 +39,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "A manufacturer needed a comfortable, centralised way to monitor production line performance and productivity data from PLC directly on a PC.",
-    "roleShort": "Sole developer — built the dashboard, Python PLC data fetchers, and deployment setup",
     "scale": "Production system integrating live PLC data into a dashboard used by both floor employees and management",
-    "outcome": "Gave the team real-time production monitoring and alerting, replacing manual checks with automated data pipelines from PLC to MySQL",
-    "liveStatus": "private"
+    "contribution": "built the dashboard, Python PLC data fetchers, and Docker deployment setup, giving the team real-time production monitoring and alerting from PLC data.",
+    "liveStatus": "private",
+    "role": "Full-Stack Engineer"
   },
   {
     "id": "vavromeV3",
@@ -54,10 +54,10 @@
     "BE": 0,
     "FE": 1,
     "productSolves": "A personal portfolio to showcase professional experience, projects, and skills to potential employers and clients.",
-    "roleShort": "Solo — designed and built everything",
     "scale": "Personal site, currently live",
-    "outcome": "Continuously iterated over multiple versions — current build uses Nuxt 3 + GSAP with a fully custom design",
-    "liveStatus": "live"
+    "contribution": "designed, built, and deployed everything, continuously iterating over multiple versions with the current build using Nuxt 3 + GSAP.",
+    "liveStatus": "live",
+    "role": "Solo Full-Stack Engineer"
   },
   {
     "id": "acrolinx",
@@ -69,10 +69,10 @@
     "BE": 0,
     "FE": 1,
     "productSolves": "Large enterprises struggled to maintain consistent brand language and content quality across thousands of documents and authors.",
-    "roleShort": "Senior Frontend Engineer — feature development on the admin web app",
     "scale": "Enterprise platform used by Fortune 500 companies to govern content at scale",
-    "outcome": "Implemented features in React/TypeScript and built a frontend test suite with Jest and React Testing Library",
-    "liveStatus": "live"
+    "contribution": "implemented features in React/TypeScript and built a frontend test suite with Jest and React Testing Library.",
+    "liveStatus": "live",
+    "role": "Senior Front-End Engineer"
   },
   {
     "id": "terminal",
@@ -83,11 +83,11 @@
     "platforms": "web,mobile",
     "BE": 1,
     "FE": 1,
-    "productSolves": "Travelers in Colombia had no reliable online source for up-to-date bus routes and schedules — information was scattered or outdated.",
-    "roleShort": "Sole engineer — built frontend and backend from scratch, also handled task management",
-    "scale": "Startup idea — full web app built and launched but ultimately didn't gain traction",
-    "outcome": "Took the product from zero to production solo, covering full-stack development, team coordination, and shipping the full web app",
-    "liveStatus": "archived"
+    "productSolves": "Travelers in Colombia had no reliable online source for up-to-date bus routes and schedules - information was scattered or outdated.",
+    "scale": "Startup idea - full web app built and launched but ultimately didn't gain traction",
+    "contribution": "built frontend and backend from scratch, handled task management and team coordination, taking the product from zero to production.",
+    "liveStatus": "archived",
+    "role": "Lead Engineer"
   },
   {
     "id": "careconnect365",
@@ -98,11 +98,11 @@
     "platforms": "mobile",
     "BE": 1,
     "FE": 1,
-    "productSolves": "Elderly people struggled to stay connected with family and access care services — existing apps were too complex for seniors to use independently.",
-    "roleShort": "Tech Lead — led the team, managed client communication and reporting",
-    "scale": "US-based startup — React Native app shipped to production ahead of schedule",
-    "outcome": "Built and led the team from scratch, delivered ahead of schedule with full customer satisfaction, handling both missing backend APIs and frontend accessibility improvements",
-    "liveStatus": "archived"
+    "productSolves": "Elderly people struggled to stay connected with family and access care services - existing apps were too complex for seniors to use independently.",
+    "scale": "US-based startup - React Native app shipped to production ahead of schedule",
+    "contribution": "built and led the team from scratch, managed client communication and reporting, delivering ahead of schedule with full customer satisfaction.",
+    "liveStatus": "archived",
+    "role": "Tech Lead"
   },
   {
     "id": "infocyte",
@@ -114,10 +114,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "Security teams lacked a cost-effective way to detect, investigate, and respond to cyber threats across their infrastructure.",
-    "roleShort": "Fullstack Developer — joined to improve the admin dashboard performance and usability",
     "scale": "Cybersecurity SaaS platform offering incident response and managed detection services",
-    "outcome": "Replaced Redux with MobX, applied React performance optimisation hooks, and built/maintained backend endpoints connected to PostgreSQL and third-party APIs — resulting in a noticeably faster and cleaner UI",
-    "liveStatus": "live"
+    "contribution": "replaced Redux with MobX, applied React performance hooks, and built backend endpoints connected to PostgreSQL and third-party APIs, resulting in a noticeably faster and cleaner UI.",
+    "liveStatus": "live",
+    "role": "Full-Stack Engineer"
   },
   {
     "id": "cropswap",
@@ -129,10 +129,10 @@
     "BE": 0,
     "FE": 0,
     "productSolves": "Local produce buyers had no easy way to discover and purchase fresh food directly from nearby growers, bypassing supermarket supply chains.",
-    "roleShort": "Tech Lead — managed the engineering team and ensured technical quality",
     "scale": "Marketplace mobile app targeting a global consumer base",
-    "outcome": "Led the engineering team, mentored developers, and drove technical decisions to keep the product moving toward production",
-    "liveStatus": "archived"
+    "contribution": "managed the engineering team, mentored developers, and drove technical decisions to keep the product moving toward production.",
+    "liveStatus": "archived",
+    "role": "Tech Lead"
   },
   {
     "id": "duenio",
@@ -144,10 +144,10 @@
     "BE": 0,
     "FE": 1,
     "productSolves": "Landlords in Colombia had no reliable way to verify a potential tenant's background before signing a lease, leading to costly disputes.",
-    "roleShort": "Principal developer — built the mobile app from concept to deployment",
     "scale": "Startup app covered by national press (El País Colombia)",
-    "outcome": "Delivered a full React Native mobile app for both iOS and Android, from concept through to production release",
-    "liveStatus": "archived"
+    "contribution": "built the full React Native mobile app for both iOS and Android, from concept through to production release.",
+    "liveStatus": "archived",
+    "role": "Solo Principal Developer"
   },
   {
     "id": "vavromeV2",
@@ -158,11 +158,11 @@
     "platforms": "web",
     "BE": 0,
     "FE": 1,
-    "productSolves": "A personal portfolio to present professional experience — an earlier version built with a classic JS stack before modern frameworks.",
-    "roleShort": "Solo — designed and built everything",
+    "productSolves": "A personal portfolio to present professional experience - an earlier version built with a classic JS stack before modern frameworks.",
     "scale": "Personal site, superseded by the current version",
-    "outcome": "Shipped a fully custom portfolio using Webpack, Babel, and EJS — later rebuilt as the current Nuxt 3 version",
-    "liveStatus": "opensource"
+    "contribution": "designed, built, and deployed everything using Webpack, Babel, and EJS - later rebuilt as the current Nuxt 3 version.",
+    "liveStatus": "opensource",
+    "role": "Solo Full-Stack Engineer"
   },
   {
     "id": "calali",
@@ -174,10 +174,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "People learning languages had no easy way to practice vocabulary in a conversational, chat-based format on mobile.",
-    "roleShort": "Solo developer — built frontend and backend end-to-end",
-    "scale": "Personal side project — cross-platform mobile app",
-    "outcome": "Shipped a full chat application with user accounts and authentication using Ionic, Angular, Sails/Node.js, and MongoDB",
-    "liveStatus": "archived"
+    "scale": "Personal side project - cross-platform mobile app",
+    "contribution": "built the full chat application end-to-end with user accounts and authentication using Ionic, Angular, Sails/Node.js, and MongoDB.",
+    "liveStatus": "archived",
+    "role": "Full-Stack Engineer"
   },
   {
     "id": "hopin",
@@ -189,10 +189,10 @@
     "BE": 0,
     "FE": 1,
     "productSolves": "There was no reliable mobile app for booking taxis in Slovakia.",
-    "roleShort": "PHP developer — full-stack website development",
     "scale": "Most popular transport app in Slovakia since 2012",
-    "outcome": "Built and maintained the web presence for a market-leading transport platform serving thousands of daily commuters",
-    "liveStatus": "archived"
+    "contribution": "maintained the website and implemented feature requests for a market-leading transport platform.",
+    "liveStatus": "archived",
+    "role": "PHP Developer"
   },
   {
     "id": "parcel",
@@ -204,10 +204,10 @@
     "BE": 0,
     "FE": 1,
     "productSolves": "Parcel companies had no modern tool to manage and track package dispatching efficiently.",
-    "roleShort": "Frontend developer — built the dispatcher UI",
     "scale": "Internal tool for parcel companies",
-    "outcome": "Delivered a dispatching interface in AngularJS covering the full package management workflow",
-    "liveStatus": "archived"
+    "contribution": "built the dispatcher UI in AngularJS covering the full package management workflow.",
+    "liveStatus": "archived",
+    "role": "Front-End Developer"
   },
   {
     "id": "justmassage",
@@ -219,10 +219,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "A local massage business had no online presence to attract clients and showcase their services.",
-    "roleShort": "Solo developer — built and delivered the full site",
     "scale": "Small business website for a Slovak massage company",
-    "outcome": "Delivered a WordPress-based site with a custom theme, giving the business a professional online presence",
-    "liveStatus": "archived"
+    "contribution": "built and delivered a WordPress site with a custom theme, giving the business a professional online presence.",
+    "liveStatus": "archived",
+    "role": "Solo PHP Developer"
   },
   {
     "id": "dingai",
@@ -234,10 +234,10 @@
     "BE": 0,
     "FE": 1,
     "productSolves": "Parcel companies lacked a modern, unified platform for tracking and managing shipments end-to-end.",
-    "roleShort": "Frontend developer — built the marketing/product website",
     "scale": "Startup offering parcel tracking products",
-    "outcome": "Delivered the company's web presence in AngularJS as part of the broader ding.ai product suite",
-    "liveStatus": "archived"
+    "contribution": "built the company's web presence in AngularJS as part of the broader ding.ai product suite.",
+    "liveStatus": "archived",
+    "role": "Front-End Developer"
   },
   {
     "id": "filesplit",
@@ -249,10 +249,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "There was no simple, no-install way to split large text files into smaller chunks online.",
-    "roleShort": "Solo developer — built and maintained the full tool",
     "scale": "Free public web tool used globally",
-    "outcome": "Shipped and maintained a live utility that remains accessible today for splitting text files in the browser",
-    "liveStatus": "archived"
+    "contribution": "built and maintained the tool, shipping a utility for splitting text files in the browser with no installation needed.",
+    "liveStatus": "archived",
+    "role": "Solo Developer"
   },
   {
     "id": "joomlaextensions",
@@ -264,10 +264,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "Joomla site owners needed specific functionality that wasn't covered by existing extensions in the ecosystem.",
-    "roleShort": "Solo developer — full development lifecycle from build to publishing",
     "scale": "Multiple extensions published in the official Joomla! Extensions Directory",
-    "outcome": "Built and released a variety of custom Joomla extensions used by the community worldwide",
-    "liveStatus": "archived"
+    "contribution": "handled the full development lifecycle from build to publishing, releasing a variety of custom Joomla extensions used by the community worldwide.",
+    "liveStatus": "archived",
+    "role": "PHP Developer"
   },
   {
     "id": "joomla",
@@ -279,10 +279,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "I needed my own storefront to sell and distribute the Joomla extensions I built, on my own terms.",
-    "roleShort": "Solo — built and ran the e-commerce site",
     "scale": "Personal e-commerce site selling custom Joomla extensions",
-    "outcome": "Built a self-hosted shop with a custom PayPal checkout integration — later extracted and published as a standalone Joomla extension",
-    "liveStatus": "archived"
+    "contribution": "built and ran the e-commerce site with a custom PayPal checkout integration, later extracted and published as a standalone Joomla extension.",
+    "liveStatus": "archived",
+    "role": "PHP Developer"
   },
   {
     "id": "yovoca",
@@ -294,10 +294,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "Language learners had no engaging way to build vocabulary using real-world content like movie subtitles.",
-    "roleShort": "Solo developer — built the full app end-to-end",
-    "scale": "Personal side project — open source on GitHub",
-    "outcome": "Shipped a working vocabulary learning system that uses movie subtitles as study material",
-    "liveStatus": "opensource"
+    "scale": "Personal side project - open source on GitHub",
+    "contribution": "built the full app end-to-end, shipping a vocabulary learning system that uses movie subtitles as study material.",
+    "liveStatus": "opensource",
+    "role": "Solo Developer"
   },
   {
     "id": "daysalive",
@@ -309,10 +309,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "There was no quick, simple tool to calculate exactly how many days you've been alive from a given date.",
-    "roleShort": "Solo developer — built and launched the tool",
     "scale": "Free public web tool",
-    "outcome": "Shipped a lightweight date calculator that remains simple and focused on one thing",
-    "liveStatus": "archived"
+    "contribution": "built and launched a lightweight date calculator focused on one simple thing.",
+    "liveStatus": "archived",
+    "role": "Solo PHP Developer"
   },
   {
     "id": "galeriaremix",
@@ -324,10 +324,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "There was no dedicated platform for a specific community to share and discover photos in one place.",
-    "roleShort": "Solo developer — built the full site",
     "scale": "Community photo sharing platform",
-    "outcome": "Delivered a WordPress-based photo sharing site with a custom theme",
-    "liveStatus": "archived"
+    "contribution": "built the full WordPress-based photo sharing site with a custom theme.",
+    "liveStatus": "archived",
+    "role": "Solo PHP Developer"
   },
   {
     "id": "epsa",
@@ -339,10 +339,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "A major Colombian energy provider needed their website modernised and properly maintained.",
-    "roleShort": "Web developer — maintenance and template redesign",
     "scale": "Corporate website for one of Colombia's largest energy companies",
-    "outcome": "Redesigned the site template and kept the platform up-to-date for an enterprise-scale client",
-    "liveStatus": "archived"
+    "contribution": "redesigned the site template and maintained the platform for an enterprise-scale energy company.",
+    "liveStatus": "archived",
+    "role": "Web Developer"
   },
   {
     "id": "inmovis",
@@ -354,10 +354,10 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "Real estate agents had no shared platform to promote and exchange property listings between each other to increase sales.",
-    "roleShort": "Lead developer — main engineer on the team, covered full application development lifecycle",
     "scale": "Web platform for the Colombian real estate agent market",
-    "outcome": "Built the full application from scratch, enabling agents to list, share, and socialise properties on a single platform",
-    "liveStatus": "archived"
+    "contribution": "main engineer on the team, built the full application from scratch enabling agents to list, share, and socialise properties.",
+    "liveStatus": "archived",
+    "role": "Lead Developer"
   },
   {
     "id": "icl",
@@ -369,9 +369,9 @@
     "BE": 1,
     "FE": 1,
     "productSolves": "A Colombian metalworking company needed an online presence with an integrated shop to sell their products directly to customers.",
-    "roleShort": "Lead web developer — oversaw the full site lifecycle and e-commerce integration",
     "scale": "Corporate site with online store for a manufacturer founded in 1988",
-    "outcome": "Integrated Joomla with VirtueMart to deliver a seamless shopping experience, and handed full content control to the client",
-    "liveStatus": "archived"
+    "contribution": "oversaw the full site lifecycle, integrated Joomla with VirtueMart for e-commerce, and handed full content control to the client.",
+    "liveStatus": "archived",
+    "role": "Solo Full-Stack PHP Engineer"
   }
 ]
