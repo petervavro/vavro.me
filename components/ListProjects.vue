@@ -18,32 +18,30 @@ const projectData = computed(() => {
 
 const animationIndex = ref(0)
 
+const liveStatusClass = (status) => ({
+  'bg-emerald-400 shadow-[0_0_6px_1px] shadow-emerald-400/60': status === 'live',
+  'bg-sky-400 shadow-[0_0_6px_1px] shadow-sky-400/60': status === 'opensource',
+  'bg-amber-400 shadow-[0_0_6px_1px] shadow-amber-400/60': status === 'private',
+  'bg-neutral-light/30': status === 'archived',
+})
+
 onMounted(() => {
   $gsap.timeline({
     repeat: 0,
-    repeatDelay: 0.5,
     scrollTrigger: {
       trigger: '#projects',
-      start: 'top 50%',
-      end: '+=100',
+      start: 'top 60%',
       toggleActions: 'play none none none'
     }
   }).fromTo(
     '.grid-box',
+    { y: 50, opacity: 0 },
     {
-      scale: 0.5,
-      opacity: 0,
-      rotateY: 180,
-    },
-    {
-      scale: 1,
+      y: 0,
       opacity: 1,
-      rotateY: 0,
-      duration: 0.3,
-      ease: 'power1.inOut',
-      stagger: {
-        amount: 1.2,
-      },
+      duration: 0.5,
+      ease: 'power3.out',
+      stagger: { amount: 1.0, from: 'start' },
     }
   )
 
@@ -90,30 +88,41 @@ onMounted(() => {
       </article>
     </modal>
     <div id="projects">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-light/10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         <button v-for="(item, index) in ITEMS" :key="item.id" :id="item.id" :data-index="index"
-          @click="selectedProjectId = item.id" :class="[
-            'grid-box group text-left text-primary hover:text-secondary bg-neutral hover:bg-neutral-light/5 p-5 flex flex-col gap-4 transition-colors duration-300'
-          ]">
-          <div class="flex items-center gap-3">
+          @click="selectedProjectId = item.id"
+          class="grid-box group relative text-left text-primary hover:text-secondary flex flex-col gap-4 p-5 border border-neutral-light/10 hover:border-neutral-light/25 hover:bg-neutral-light/5 transition-all duration-300 overflow-hidden">
+
+          <!-- top accent line -->
+          <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/0 to-transparent group-hover:via-secondary/50 transition-all duration-500" />
+
+          <!-- live status dot -->
+          <div class="absolute top-4 right-4">
+            <span :class="liveStatusClass(item.liveStatus)" class="w-2 h-2 rounded-full block" />
+          </div>
+
+          <!-- icon + title + role -->
+          <div class="flex items-center gap-3 pr-5">
             <div :class="[
               item.id,
-              'flex shrink-0 items-center w-12 h-12 p-2 overflow-hidden rounded-50p group-hover:rounded-none border-primary border group-hover:border-secondary group-hover:rotate-[360deg] transition-all duration-700 ease-out bg-white bg-cover bg-no-repeat bg-center saturate-150',
+              'flex shrink-0 items-center justify-center w-12 h-12 p-2 overflow-hidden rounded-full group-hover:rounded-lg border border-neutral-light/20 group-hover:border-secondary group-hover:rotate-[360deg] transition-all duration-700 ease-out bg-white saturate-150',
               animationIndex === index ? 'rotate-[360deg]' : ''
             ]">
-              <NuxtImg :src="`img/${item.backgroundImage}`" loading="lazy" :alt="`Project ${item.title}`" width="48"
-                class="saturate-150" />
+              <NuxtImg :src="`img/${item.backgroundImage}`" loading="lazy" :alt="`Project ${item.title}`" width="48" class="saturate-150" />
             </div>
-            <div class="font-medium text-sm leading-snug text-ellipsis overflow-hidden">
-              {{ item.title }}
+            <div class="min-w-0">
+              <div class="font-semibold text-sm truncate">{{ item.title }}</div>
+              <div v-if="item.role" class="text-xs text-secondary/60 truncate mt-0.5">{{ item.role }}</div>
             </div>
           </div>
-          <p v-if="item.role" class="text-xs font-medium text-secondary/90">{{ item.role }}</p>
-          <p class="text-tertiary text-sm leading-relaxed grow">
-            {{ item.contribution }}
-          </p>
-          <div class="text-xs text-neutral-light/50 group-hover:text-secondary border-t border-dotted border-neutral-light/20 pt-3 transition-colors duration-300">
-            View details →
+
+          <!-- contribution -->
+          <p class="text-tertiary text-sm leading-relaxed grow">{{ item.contribution }}</p>
+
+          <!-- footer -->
+          <div class="flex items-center justify-between border-t border-dotted border-neutral-light/15 pt-3">
+            <span class="text-xs text-neutral-light/40 group-hover:text-secondary transition-colors duration-300">View details →</span>
+            <span class="text-xs text-neutral-light/25 capitalize tracking-wide">{{ item.liveStatus }}</span>
           </div>
         </button>
       </div>
