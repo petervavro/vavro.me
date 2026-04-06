@@ -9,7 +9,12 @@
     "technologies": "typescript,react,nestjs,graphql,postgresql,prisma,docker,flowbite,tailwind,figma,azure-storage-account",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "Companies deploying AI had no structured way to document decisions, audit model behavior, or prove ethical compliance to regulators.",
+    "roleShort": "Fullstack Developer in a cross-functional monorepo team",
+    "scale": "Enterprise SaaS product used by companies managing AI governance across multiple regulatory frameworks",
+    "outcome": "Designed and shipped GraphQL APIs (NestJS code-first) and React UI features end-to-end, reducing time-to-feature across the team",
+    "liveStatus": "live"
   },
   {
     "id": "pwdDA",
@@ -21,7 +26,12 @@
     "technologies": "typescript,nextjs,react,node,pwa,mysql,docker,prisma",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "A manufacturer needed a fast way for production line workers to identify and retrieve product information directly on the factory floor.",
+    "roleShort": "Sole developer — built the PWA as a companion to the dashboard system",
+    "scale": "Internal tool running on a local production network",
+    "outcome": "Delivered a mobile PWA with QR scanning accessible on any phone, no installation needed",
+    "liveStatus": "private"
   },
   {
     "id": "pl",
@@ -33,7 +43,12 @@
     "technologies": "typescript,nextjs,react,node,mysql,python,docker,prisma",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "A manufacturer had no visibility into real-time production line performance — no way to monitor output, detect issues, or assess productivity from PLC data.",
+    "roleShort": "Sole developer — built the dashboard, Python PLC data fetchers, and deployment setup",
+    "scale": "Production system integrating live PLC data into a dashboard used by both floor employees and management",
+    "outcome": "Gave the team real-time production monitoring and alerting, replacing manual checks with automated data pipelines from PLC to MySQL",
+    "liveStatus": "private"
   },
   {
     "id": "vavromeV3",
@@ -45,7 +60,12 @@
     "technologies": "vuejs,nuxtjs,typescript",
     "platforms": "web",
     "BE": 0,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "A personal portfolio to showcase professional experience, projects, and skills to potential employers and clients.",
+    "roleShort": "Solo — designed and built everything",
+    "scale": "Personal site, currently live",
+    "outcome": "Continuously iterated over multiple versions — current build uses Nuxt 3 + GSAP with a fully custom design",
+    "liveStatus": "live"
   },
   {
     "id": "acrolinx",
@@ -57,7 +77,12 @@
     "technologies": "typescript,react,jss,nodejs,jest,testing-library",
     "platforms": "web",
     "BE": 0,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "Large enterprises struggled to maintain consistent brand language and content quality across thousands of documents and authors.",
+    "roleShort": "Senior Frontend Engineer — feature development on the admin web app",
+    "scale": "Enterprise platform used by Fortune 500 companies to govern content at scale",
+    "outcome": "Implemented features in React/TypeScript and built a frontend test suite with Jest and React Testing Library",
+    "liveStatus": "live"
   },
   {
     "id": "terminal",
@@ -69,7 +94,12 @@
     "technologies": "javascript,react,jss,nodejs,hapi,orientdb,aws",
     "platforms": "web,mobile",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "Travelers in Colombia had no reliable online source for up-to-date bus routes and schedules — information was scattered or outdated.",
+    "roleShort": "Sole engineer — built frontend and backend from scratch, also handled task management",
+    "scale": "Startup idea — full web app built and launched but ultimately didn't gain traction",
+    "outcome": "Took the product from zero to production solo, covering full-stack development, team coordination, and shipping the full web app",
+    "liveStatus": "archived"
   },
   {
     "id": "careconnect365",
@@ -81,7 +111,12 @@
     "technologies": "javascript,react-native,nodejs,hapi,mongodb",
     "platforms": "mobile",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "Elderly people struggled to stay connected with family and access care services — existing apps were too complex for seniors to use independently.",
+    "roleShort": "Tech Lead — led the team, managed client communication and reporting",
+    "scale": "US-based startup — React Native app shipped to production ahead of schedule",
+    "outcome": "Built and led the team from scratch, delivered ahead of schedule with full customer satisfaction, handling both missing backend APIs and frontend accessibility improvements",
+    "liveStatus": "archived"
   },
   {
     "id": "infocyte",
@@ -93,7 +128,12 @@
     "technologies": "react,mobx,nodejs,loopback,postgresql,aws",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "Security teams lacked a cost-effective way to detect, investigate, and respond to cyber threats across their infrastructure.",
+    "roleShort": "Fullstack Developer — joined to improve the admin dashboard performance and usability",
+    "scale": "Cybersecurity SaaS platform offering incident response and managed detection services",
+    "outcome": "Replaced Redux with MobX, applied React performance optimisation hooks, and built/maintained backend endpoints connected to PostgreSQL and third-party APIs — resulting in a noticeably faster and cleaner UI",
+    "liveStatus": "live"
   },
   {
     "id": "cropswap",
@@ -105,7 +145,12 @@
     "technologies": "react native, nodejs",
     "platforms": "mobile",
     "BE": 0,
-    "FE": 0
+    "FE": 0,
+    "productSolves": "Local produce buyers had no easy way to discover and purchase fresh food directly from nearby growers, bypassing supermarket supply chains.",
+    "roleShort": "Tech Lead — managed the engineering team and ensured technical quality",
+    "scale": "Marketplace mobile app targeting a global consumer base",
+    "outcome": "Led the engineering team, mentored developers, and drove technical decisions to keep the product moving toward production",
+    "liveStatus": "archived"
   },
   {
     "id": "duenio",
@@ -117,7 +162,12 @@
     "technologies": "javascript,react-native,jss",
     "platforms": "mobile",
     "BE": 0,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "Landlords in Colombia had no reliable way to verify a potential tenant's background before signing a lease, leading to costly disputes.",
+    "roleShort": "Principal developer — built the mobile app from concept to deployment",
+    "scale": "Startup app covered by national press (El País Colombia)",
+    "outcome": "Delivered a full React Native mobile app for both iOS and Android, from concept through to production release",
+    "liveStatus": "archived"
   },
   {
     "id": "vavromeV2",
@@ -129,7 +179,12 @@
     "technologies": "webpack,babel,es6,bootstrap,jquery,ejs",
     "platforms": "web",
     "BE": 0,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "A personal portfolio to present professional experience — an earlier version built with a classic JS stack before modern frameworks.",
+    "roleShort": "Solo — designed and built everything",
+    "scale": "Personal site, superseded by the current version",
+    "outcome": "Shipped a fully custom portfolio using Webpack, Babel, and EJS — later rebuilt as the current Nuxt 3 version",
+    "liveStatus": "opensource"
   },
   {
     "id": "calali",
@@ -141,7 +196,12 @@
     "technologies": "ionic,nodejs,mongodb,angularjs,javascript",
     "platforms": "mobile",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "People learning languages had no easy way to practice vocabulary in a conversational, chat-based format on mobile.",
+    "roleShort": "Solo developer — built frontend and backend end-to-end",
+    "scale": "Personal side project — cross-platform mobile app",
+    "outcome": "Shipped a full chat application with user accounts and authentication using Ionic, Angular, Sails/Node.js, and MongoDB",
+    "liveStatus": "archived"
   },
   {
     "id": "hopin",
@@ -153,7 +213,12 @@
     "technologies": "html,css,sass,php,codeigniter,mysql,javascript,jquery,angularjs",
     "platforms": "web",
     "BE": 0,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "There was no reliable mobile app for booking taxis in Slovakia.",
+    "roleShort": "PHP developer — full-stack website development",
+    "scale": "Most popular transport app in Slovakia since 2012",
+    "outcome": "Built and maintained the web presence for a market-leading transport platform serving thousands of daily commuters",
+    "liveStatus": "archived"
   },
   {
     "id": "parcel",
@@ -165,7 +230,12 @@
     "technologies": "angularjs,html,sass",
     "platforms": "web",
     "BE": 0,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "Parcel companies had no modern tool to manage and track package dispatching efficiently.",
+    "roleShort": "Frontend developer — built the dispatcher UI",
+    "scale": "Internal tool for parcel companies",
+    "outcome": "Delivered a dispatching interface in AngularJS covering the full package management workflow",
+    "liveStatus": "archived"
   },
   {
     "id": "justmassage",
@@ -177,7 +247,12 @@
     "technologies": "html,css,sass,php,wordpress,mysql,jquery,bootstrap",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "A local massage business had no online presence to attract clients and showcase their services.",
+    "roleShort": "Solo developer — built and delivered the full site",
+    "scale": "Small business website for a Slovak massage company",
+    "outcome": "Delivered a WordPress-based site with a custom theme, giving the business a professional online presence",
+    "liveStatus": "archived"
   },
   {
     "id": "dingai",
@@ -189,7 +264,12 @@
     "technologies": "html,css,sass,angularjs",
     "platforms": "web",
     "BE": 0,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "Parcel companies lacked a modern, unified platform for tracking and managing shipments end-to-end.",
+    "roleShort": "Frontend developer — built the marketing/product website",
+    "scale": "Startup offering parcel tracking products",
+    "outcome": "Delivered the company's web presence in AngularJS as part of the broader ding.ai product suite",
+    "liveStatus": "archived"
   },
   {
     "id": "filesplit",
@@ -201,7 +281,12 @@
     "technologies": "html,css,sass,php,codeigniter,mysql,jquery",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "There was no simple, no-install way to split large text files into smaller chunks online.",
+    "roleShort": "Solo developer — built and maintained the full tool",
+    "scale": "Free public web tool used globally",
+    "outcome": "Shipped and maintained a live utility that remains accessible today for splitting text files in the browser",
+    "liveStatus": "archived"
   },
   {
     "id": "joomlaextensions",
@@ -213,7 +298,12 @@
     "technologies": "php,html,css,joomla,mysql,jquery",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "Joomla site owners needed specific functionality that wasn't covered by existing extensions in the ecosystem.",
+    "roleShort": "Solo developer — full development lifecycle from build to publishing",
+    "scale": "Multiple extensions published in the official Joomla! Extensions Directory",
+    "outcome": "Built and released a variety of custom Joomla extensions used by the community worldwide",
+    "liveStatus": "archived"
   },
   {
     "id": "joomla",
@@ -225,7 +315,12 @@
     "technologies": "html,css,less,php,joomla,mysql,jquery,bootstrap",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "I needed my own storefront to sell and distribute the Joomla extensions I built, on my own terms.",
+    "roleShort": "Solo — built and ran the e-commerce site",
+    "scale": "Personal e-commerce site selling custom Joomla extensions",
+    "outcome": "Built a self-hosted shop with a custom PayPal checkout integration — later extracted and published as a standalone Joomla extension",
+    "liveStatus": "archived"
   },
   {
     "id": "yovoca",
@@ -237,7 +332,12 @@
     "technologies": "html,css,less,php,codeigniter,mysql,jquery",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "Language learners had no engaging way to build vocabulary using real-world content like movie subtitles.",
+    "roleShort": "Solo developer — built the full app end-to-end",
+    "scale": "Personal side project — open source on GitHub",
+    "outcome": "Shipped a working vocabulary learning system that uses movie subtitles as study material",
+    "liveStatus": "opensource"
   },
   {
     "id": "daysalive",
@@ -249,7 +349,12 @@
     "technologies": "html,css,less,php,joomla,mysql,jquery,bootstrap",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "There was no quick, simple tool to calculate exactly how many days you've been alive from a given date.",
+    "roleShort": "Solo developer — built and launched the tool",
+    "scale": "Free public web tool",
+    "outcome": "Shipped a lightweight date calculator that remains simple and focused on one thing",
+    "liveStatus": "archived"
   },
   {
     "id": "galeriaremix",
@@ -261,7 +366,12 @@
     "technologies": "html,css,sass,php,wordpress,mysql,jquery,bootstrap",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "There was no dedicated platform for a specific community to share and discover photos in one place.",
+    "roleShort": "Solo developer — built the full site",
+    "scale": "Community photo sharing platform",
+    "outcome": "Delivered a WordPress-based photo sharing site with a custom theme",
+    "liveStatus": "archived"
   },
   {
     "id": "epsa",
@@ -273,7 +383,12 @@
     "technologies": "html,css,asp,jquery",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "A major Colombian energy provider needed their website modernised and properly maintained.",
+    "roleShort": "Web developer — maintenance and template redesign",
+    "scale": "Corporate website for one of Colombia's largest energy companies",
+    "outcome": "Redesigned the site template and kept the platform up-to-date for an enterprise-scale client",
+    "liveStatus": "archived"
   },
   {
     "id": "inmovis",
@@ -285,7 +400,12 @@
     "technologies": "php,codeigniter,jquery,html,css",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "Real estate agents had no shared platform to promote and exchange property listings between each other to increase sales.",
+    "roleShort": "Lead developer — main engineer on the team, covered full application development lifecycle",
+    "scale": "Web platform for the Colombian real estate agent market",
+    "outcome": "Built the full application from scratch, enabling agents to list, share, and socialise properties on a single platform",
+    "liveStatus": "archived"
   },
   {
     "id": "icl",
@@ -297,6 +417,11 @@
     "technologies": "html,css,less,php,joomla,mysql,jquery",
     "platforms": "web",
     "BE": 1,
-    "FE": 1
+    "FE": 1,
+    "productSolves": "A Colombian metalworking company needed an online presence with an integrated shop to sell their products directly to customers.",
+    "roleShort": "Lead web developer — oversaw the full site lifecycle and e-commerce integration",
+    "scale": "Corporate site with online store for a manufacturer founded in 1988",
+    "outcome": "Integrated Joomla with VirtueMart to deliver a seamless shopping experience, and handed full content control to the client",
+    "liveStatus": "archived"
   }
 ]
