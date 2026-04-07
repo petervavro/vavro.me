@@ -67,12 +67,12 @@ onMounted(() => {
         item.title }}</h3>
 
       <!-- desc -->
-      <p class="text-xs text-tertiary leading-relaxed grow">{{ item.desc }}<br/><span
+      <p class="text-xs text-tertiary leading-relaxed">{{ item.desc }}<br/><span
           class="text-xs text-white/60 group-hover:text-secondary transition-colors duration-300">{{
             getSource(item.url) }} →</span></p>
 
       <!-- tech pills -->
-      <div class="flex flex-wrap gap-1.5 pt-2 border-t border-dotted border-neutral-light/10">
+      <div class="flex flex-wrap gap-1.5 border-t border-dotted border-neutral-light/10">
         <span v-for="t in item.technologies" :key="t.id"
           class="text-xs px-2 py-0.5 rounded-full border border-primary/40 text-primary/80 group-hover:border-secondary/60 group-hover:text-secondary/80 transition-colors duration-300">
           {{ t.title }}
