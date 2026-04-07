@@ -1,3 +1,22 @@
+<script setup>
+const { $gsap } = useNuxtApp()
+
+onMounted(() => {
+  $gsap.set('.seeking', { opacity: 0.4, y: 16 })
+
+  $gsap.to('.seeking', {
+    opacity: 1,
+    y: 0,
+    scrollTrigger: {
+      trigger: 'body',
+      start: 'top top-=1',
+      end: '+=150',
+      scrub: true,
+    }
+  })
+})
+</script>
+
 <template>
     <div class="flex flex-col items-center justify-center w-full px-10">
         <div class="flex flex-col items-center max-w-2xl text-center gap-8">
@@ -67,7 +86,6 @@
 
 .seeking {
     @apply border border-tertiary/30 px-6 py-4 text-left bg-tertiary/5 max-w-lg;
-    animation: fade-in 0.5s ease 2.1s both;
 
     .seeking-label {
         @apply text-tertiary text-xs uppercase tracking-widest mb-3;

@@ -10,7 +10,7 @@ onMounted(() => {
   <div class="grid place-items-center grid-rows-1 grid-cols-1 pt-24 lg:pt-0" style="min-height: 100dvh">
     <div class="content opacity-0" :class="{ 'opacity-100': isVisible }">
       <IntroObject />
-      <div class="absolute bottom-10 left-10">
+      <div class="absolute bottom-10 left-10 hidden md:block">
         <div class="pt-3">
           <NuxtLink to="/#about-me" class="menu-link" aria-label="Go to About me">
             <i
