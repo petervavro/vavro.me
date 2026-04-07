@@ -44,11 +44,12 @@ export default {
             <div class="relative flex flex-col w-full h-full">
               <div class="sticky top-0 z-10 flex justify-end p-4">
                 <button @click="$emit('close')" :class="[
-                  'p-2 border-2 transition duration-300',
+                  'group flex items-center gap-2 px-4 py-2 border-2 transition-all duration-300 hover:scale-105 active:scale-95',
                   buttonClass ||
                   'bg-secondary hover:bg-neutral border-neutral text-neutral hover:text-secondary'
                 ]">
-                  Close
+                  <span class="transition-transform duration-300 group-hover:rotate-90 inline-block">✕</span>
+                  <span class="text-sm font-medium tracking-wide">Close</span>
                 </button>
               </div>
               <div class="overflow-y-auto relative grow shrink basis-auto">
