@@ -42,18 +42,17 @@ export default {
         ]">
           <div class="w-screen max-w-none h-full m-0 relative">
             <div class="relative flex flex-col w-full h-full">
+              <div class="sticky top-0 z-10 flex justify-end p-4">
+                <button @click="$emit('close')" :class="[
+                  'p-2 border-2 transition duration-300',
+                  buttonClass ||
+                  'bg-secondary hover:bg-neutral border-neutral text-neutral hover:text-secondary'
+                ]">
+                  Close
+                </button>
+              </div>
               <div class="overflow-y-auto relative grow shrink basis-auto">
-                <div class="p-11 my-3 hidden md:flex shrink-0 items-center justify-between"></div>
                 <slot />
-                <div class="w-full text-center py-10">
-                  <button @click="$emit('close')" :class="[
-                    'p-2 border-2 transition duration-300',
-                    buttonClass ||
-                    'bg-secondary hover:bg-neutral border-neutral text-neutral hover:text-secondary'
-                  ]">
-                    Close
-                  </button>
-                </div>
               </div>
             </div>
           </div>
