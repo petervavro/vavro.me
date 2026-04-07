@@ -61,7 +61,7 @@ onMounted(() => {
         <div class="flex items-center gap-5 p-8 pb-6 border-b border-white/10">
           <div :class="[
             projectData.id,
-            'flex shrink-0 items-center justify-center w-16 h-16 p-2 rounded-xl bg-white saturate-150 shadow-lg'
+            'flex shrink-0 items-center justify-center w-16 h-16 p-2 rounded-xl bg-white saturate-150 shadow-lg overflow-hidden'
           ]">
             <NuxtImg :src="`img/${projectData.backgroundImage}`" :alt="projectData.title" width="64" class="saturate-150" />
           </div>
