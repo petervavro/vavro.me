@@ -121,7 +121,7 @@ onMounted(() => {
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         <button v-for="(item, index) in ITEMS" :key="item.id" :id="item.id" :data-index="index"
           @click="selectedProjectId = item.id"
-          class="grid-box group relative text-left text-primary hover:text-secondary flex flex-col gap-4 p-5 hover:bg-neutral-light/10 transition-all duration-300 overflow-hidden border-b border-r border-neutral-light/15">
+          class="grid-box group relative text-left text-primary hover:text-secondary flex flex-col gap-4 p-5 hover:bg-neutral-light/10 transition-all duration-300 overflow-hidden border-b border-neutral-light/15 border-r-0 sm:border-r sm:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 last:border-b-0">
 
           <!-- top accent line -->
           <div class="absolute top-0 left-0 right-0 h-px bg-secondary/60 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out" />
@@ -183,25 +183,6 @@ onMounted(() => {
   initial-value: 0turn;
 }
 
-/* remove right border on last column */
-@media (max-width: 639px) {
-  .grid-box { border-right: none; }
-}
-@media (min-width: 640px) and (max-width: 1023px) {
-  .grid-box:nth-child(2n) { border-right: none; }
-}
-@media (min-width: 1024px) {
-  .grid-box:nth-child(3n) { border-right: none; }
-}
-/* remove bottom border on last row items */
-.grid-box:last-child { border-bottom: none; }
-@media (min-width: 640px) {
-  .grid-box:nth-last-child(2):nth-child(odd) { border-bottom: none; }
-}
-@media (min-width: 1024px) {
-  .grid-box:nth-last-child(2) { border-bottom: none; }
-  .grid-box:nth-last-child(3) { border-bottom: none; }
-}
 
 .vavromeV3,
 .vavromeV2 {

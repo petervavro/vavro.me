@@ -40,7 +40,7 @@ onMounted(() => {
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     <a :href="item.url" target="_blank" v-for="(item, index) in items" :key="item.title"
-      class="code-box group relative flex flex-col gap-4 p-5 border border-neutral-light/10 hover:bg-neutral-light/5 transition-all duration-300 overflow-hidden">
+      class="code-box group relative flex flex-col gap-4 p-5 border-b border-neutral-light/15 border-r-0 md:border-r md:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 last:border-b-0 hover:bg-neutral-light/5 transition-all duration-300 overflow-hidden">
 
       <!-- corner brackets -->
       <span
@@ -81,3 +81,4 @@ onMounted(() => {
     </a>
   </div>
 </template>
+
