@@ -71,7 +71,7 @@ onMounted(() => {
               <span :class="liveStatusClass(projectData.liveStatus)" class="w-2 h-2 rounded-full shrink-0 mt-1" />
               <span class="text-xs text-neutral-light/40 capitalize">{{ projectData.liveStatus }}</span>
             </div>
-            <p v-if="projectData.role" class="text-sm text-secondary/60 mt-1">{{ projectData.role }}</p>
+            <p v-if="projectData.role" class="text-sm text-secondary/90 mt-1">{{ projectData.role }}</p>
             <a v-if="projectData.url" :href="projectData.url" target="_blank"
               class="sm:hidden inline-flex items-center gap-2 text-xs border border-white/20 hover:border-secondary hover:text-secondary px-3 py-1.5 mt-2 transition-all duration-200">
               Visit project →
