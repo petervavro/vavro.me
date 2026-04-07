@@ -164,7 +164,7 @@ onMounted(() => {
   --border-angle: 0turn;
   background-image: conic-gradient(from var(--border-angle) at -2% -2%,
       transparent 20%,
-      theme('colors.neutral.light'),
+      color-mix(in srgb, theme('colors.neutral.light') 30%, transparent),
       theme('colors.neutral.DEFAULT'));
   background-repeat: no-repeat;
   background-position: center center;
