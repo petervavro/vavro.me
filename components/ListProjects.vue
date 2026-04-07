@@ -40,7 +40,7 @@ onMounted(() => {
       opacity: 1,
       duration: 0.4,
       ease: 'power1.inOut',
-      stagger: { amount: 1.0, from: 'start' },
+      stagger: { amount: 1.0, grid: [Math.ceil(ITEMS.length / 3), 3], from: 'start', axis: 'y' },
     }
   )
 
