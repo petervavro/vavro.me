@@ -67,7 +67,7 @@ onMounted(() => {
           </div>
           <div class="flex-1 min-w-0">
             <div class="flex items-center gap-3 flex-wrap">
-              <h3 class="text-2xl font-semibold">{{ projectData.title }}</h3>
+              <h3 class="text-2xl font-semibold text-primary">{{ projectData.title }}</h3>
               <span :class="liveStatusClass(projectData.liveStatus)" class="w-2 h-2 rounded-full shrink-0 mt-1" />
               <span class="text-xs text-neutral-light/40 capitalize">{{ projectData.liveStatus }}</span>
             </div>
