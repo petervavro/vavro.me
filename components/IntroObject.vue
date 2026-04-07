@@ -12,11 +12,11 @@
             </p>
 
             <div class="stack">
-                <span>TypeScript&nbsp;/&nbsp;Javascript</span>
-                <span>Node.js</span>
-                <span>React</span>
-                <span>Vue</span>
-                <span>AWS</span>
+                <span style="animation-delay: 0.1s">TypeScript&nbsp;/&nbsp;Javascript</span>
+                <span style="animation-delay: 0.8s">Node.js</span>
+                <span style="animation-delay: 1.0s">React</span>
+                <span style="animation-delay: 1.2s">Vue</span>
+                <span style="animation-delay: 1.4s">AWS</span>
             </div>
 
             <div class="seeking">
@@ -60,12 +60,14 @@
 
     span {
         @apply text-sm md:text-base px-4 py-1.5 rounded-full border border-primary/40 text-primary/80 hover:border-primary hover:text-primary transition-colors duration-200;
+        opacity: 0;
+        animation: fade-in 0.5s ease both;
     }
 }
 
 .seeking {
     @apply border border-tertiary/30 px-6 py-4 text-left bg-tertiary/5 max-w-lg;
-    animation: fade-in 1.5s ease 0.8s both;
+    animation: fade-in 0.5s ease 2.1s both;
 
     .seeking-label {
         @apply text-tertiary text-xs uppercase tracking-widest mb-3;
