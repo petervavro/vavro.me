@@ -66,7 +66,7 @@ const skills = [
   }
 
   .card-title {
-    @apply text-sm font-semibold text-primary mb-2;
+    @apply text-sm font-semibold text-tertiary mb-2;
   }
 
   .card-body {
