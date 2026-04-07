@@ -12,19 +12,23 @@
             </p>
 
             <div class="stack">
+                <span>TypeScript&nbsp;/&nbsp;Javascript</span>
+                <span>Node.js</span>
                 <span>React</span>
                 <span>Vue</span>
-                <span>TypeScript</span>
-                <span>Node.js</span>
-                <span>GraphQL</span>
                 <span>AWS</span>
             </div>
 
             <div class="seeking">
-                <p class="seeking-label">Currently Seeking</p>
+                <p class="seeking-label">Open to New Roles</p>
                 <ul>
-                    <li>Software Engineer roles building <span class="text-secondary">AI-powered applications</span>.</li>
-                    <li>Bringing a strong frontend/fullstack foundation into <span class="text-secondary">LLM systems, LangChain, and AI agents</span>.</li>
+                    <li>Looking for a <span class="text-secondary">Full-Stack</span> or <span
+                            class="text-secondary">Software Engineer</span> position where I can build real products —
+                        ideally at a company using or building <span class="text-secondary">AI-powered features</span>.
+                    </li>
+                    <li>- I'm actively deepening my skills in <span class="text-secondary">LLM application
+                            development</span>, and <span
+                            class="text-secondary">AI agents</span>.</li>
                 </ul>
             </div>
 
@@ -39,12 +43,10 @@
 
 .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: radial-gradient(
-        circle,
-        theme('colors.primary.light') 0%,
-        theme('colors.primary.DEFAULT') 40%,
-        theme('colors.secondary.DEFAULT') 100%
-    );
+    background-image: radial-gradient(circle,
+            theme('colors.primary.light') 0%,
+            theme('colors.primary.DEFAULT') 40%,
+            theme('colors.secondary.DEFAULT') 100%);
     animation: gradient 8s ease infinite;
     background-size: 300% 300%;
 }
@@ -57,8 +59,7 @@
     @apply flex flex-wrap justify-center gap-3;
 
     span {
-        @apply text-sm md:text-base px-4 py-1.5 rounded-full border border-primary/40 text-primary/80
-               hover:border-primary hover:text-primary transition-colors duration-200;
+        @apply text-sm md:text-base px-4 py-1.5 rounded-full border border-primary/40 text-primary/80 hover:border-primary hover:text-primary transition-colors duration-200;
     }
 }
 
@@ -80,13 +81,28 @@
 }
 
 @keyframes fade-in {
-    from { opacity: 0; transform: translateY(8px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes gradient {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 </style>
