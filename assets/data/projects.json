@@ -54,7 +54,7 @@
     "BE": 0,
     "FE": 1,
     "productSolves": "A personal portfolio to showcase professional experience, projects, and skills to potential employers and clients.",
-    "scale": "Personal site, currently live",
+    "scale": "Personal site",
     "contribution": "designed, built, and deployed everything, continuously iterating over multiple versions with the current build using Nuxt 3 + GSAP.",
     "liveStatus": "live",
     "role": "Solo Full-Stack Engineer"
