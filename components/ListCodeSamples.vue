@@ -43,25 +43,33 @@ onMounted(() => {
       class="code-box group relative flex flex-col gap-4 p-5 border border-neutral-light/10 hover:bg-neutral-light/5 transition-all duration-300 overflow-hidden">
 
       <!-- corner brackets -->
-      <span class="absolute top-0 left-0 w-0 h-0 border-t border-l border-transparent group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
-      <span class="absolute top-0 right-0 w-0 h-0 border-t border-r border-transparent group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
-      <span class="absolute bottom-0 left-0 w-0 h-0 border-b border-l border-transparent group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
-      <span class="absolute bottom-0 right-0 w-0 h-0 border-b border-r border-transparent group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
+      <span
+        class="absolute top-0 left-0 w-0 h-0 border-t border-l border-transparent group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
+      <span
+        class="absolute top-0 right-0 w-0 h-0 border-t border-r border-transparent group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
+      <span
+        class="absolute bottom-0 left-0 w-0 h-0 border-b border-l border-transparent group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
+      <span
+        class="absolute bottom-0 right-0 w-0 h-0 border-b border-r border-transparent group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
 
       <!-- top accent line -->
-      <div class="absolute top-0 left-0 right-0 h-px bg-secondary/60 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out" />
+      <div
+        class="absolute top-0 left-0 right-0 h-px bg-secondary/60 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out" />
 
       <!-- index + source -->
       <div class="flex items-center justify-between">
-        <span class="text-xs font-mono text-neutral-light/30">{{ String(index + 1).padStart(2, '0') }}</span>
-        <span class="text-xs text-neutral-light/40 group-hover:text-secondary/70 transition-colors duration-300">{{ getSource(item.url) }} →</span>
+        <span class="text-xs font-mono text-white/60">{{ String(index + 1).padStart(2, '0') }}</span>
+
       </div>
 
       <!-- title -->
-      <h3 class="text-base font-semibold text-primary group-hover:text-secondary transition-colors duration-300">{{ item.title }}</h3>
+      <h3 class="text-base font-semibold text-primary group-hover:text-secondary transition-colors duration-300">{{
+        item.title }}</h3>
 
       <!-- desc -->
-      <p class="text-xs text-white/50 leading-relaxed grow">{{ item.desc }}</p>
+      <p class="text-xs text-tertiary leading-relaxed grow">{{ item.desc }}<br/><span
+          class="text-xs text-white/60 group-hover:text-secondary transition-colors duration-300">{{
+            getSource(item.url) }} →</span></p>
 
       <!-- tech pills -->
       <div class="flex flex-wrap gap-1.5 pt-2 border-t border-dotted border-neutral-light/10">
@@ -70,7 +78,6 @@ onMounted(() => {
           {{ t.title }}
         </span>
       </div>
-
     </a>
   </div>
 </template>

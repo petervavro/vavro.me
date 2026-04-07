@@ -70,7 +70,7 @@ const skills = [
   }
 
   .card-body {
-    @apply text-xs text-white/50 leading-relaxed;
+    @apply text-xs text-white/60 leading-relaxed;
   }
 }
 </style>
