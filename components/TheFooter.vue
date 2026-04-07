@@ -14,11 +14,11 @@ export default {
       <div class="flex md:flex-row-reverse p-10 text-primary">
         <div class="md:basis-5/6 md:border-neutral-light md:border-l md:p-10">
           <p class="pb-10 text-secondary leading-relaxed">
-            Please feel free to contact me, and let us begin a discussion on how I can assist
-            you in achieving your objectives. I look forward to hearing from you soon.
+            Got a role or a project in mind? I'd love to hear about it.
+            I'm available for full-time positions — on-site, hybrid, or remote.
           </p>
           <div class="p-1 rounded-full border-2 border-secondary inline-flex items-center">
-            <div class="p-3 px-5">Contact me</div>
+            <div class="p-3 px-5">Best way to reach me</div>
             <PanelContact :is-github-visible="false" />
           </div>
         </div>
