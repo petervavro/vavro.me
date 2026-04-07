@@ -7,7 +7,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="grid place-items-center grid-rows-1 grid-cols-1 pt-24 lg:pt-0" style="min-height: 100dvh">
+  <div class="grid place-items-center grid-rows-1 grid-cols-1 pt-24 lg:pt-0" style="min-height: 100svh">
     <div class="content opacity-0" :class="{ 'opacity-100': isVisible }">
       <IntroObject />
       <div class="absolute bottom-10 left-10 hidden md:block">

@@ -22,13 +22,16 @@
   @apply bg-tertiary;
 }
 
-html {
-  scroll-behavior: smooth;
+@media (hover: hover) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer base {
   body {
     @apply font-mono bg-neutral overflow-x-hidden;
+    overscroll-behavior-y: none;
   }
 }
 
