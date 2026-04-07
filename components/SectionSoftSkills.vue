@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto lg:max-w-4xl px-10 py-10">
 
-    <h2 class="text-xs uppercase tracking-widest text-primary/60 mb-10">What Makes Me Different</h2>
+    <h2 class="pb-5 text-2xl md:text-2xl uppercase text-tertiary/50">What Makes Me Different</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
