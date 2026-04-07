@@ -55,36 +55,66 @@ onMounted(() => {
   <div>
     <modal :show="!!selectedProjectId" @close="selectedProjectId = false" modalContentClass="bg-neutral text-secondary"
       buttonClass="text-white/50 hover:text-white hover:bg-neutral-light border-white/50">
-      <article class="box mx-auto max-w-4xl md:p-10 pt-5">
-        <div class="p-10">
-          <h3 class="text-2xl pb-5">{{ projectData.title }}</h3>
-          <section class="pb-5">
-            <h4 class="pb-1">WHAT IT SOLVES</h4>
-            <p class="pb-1 text-tertiary">{{ projectData.productSolves }}</p>
-            <a v-if="projectData.url" :href="projectData.url" target="_blank" class="text-ellipsis overflow-hidden underline">
-              Go to the project.
-            </a>
-          </section>
-          <section class="pb-5" v-if="projectData.contribution">
-            <h4 class="pb-1">MY CONTRIBUTION</h4>
-            <p v-if="projectData.role" class="pb-1 text-secondary font-medium">{{ projectData.role }}</p>
-            <p class="pb-2 text-tertiary">{{ projectData.contribution }}</p>
-            <p class="text-tertiary">
-              <span v-if="projectData.BE">Back-end</span>
-              <span v-if="projectData.BE && projectData.FE">&nbsp;&&nbsp;</span>
-              <span v-if="projectData.FE">Front-end</span>
-              <span v-if="projectData.BE || projectData.FE">&nbsp;development.</span>
-            </p>
-          </section>
-          <section class="pb-5" v-if="projectData.scale">
-            <h4 class="pb-1">SCALE</h4>
-            <p class="text-tertiary">{{ projectData.scale }}</p>
-          </section>
-          <section class="pb-5 flex flex-wrap">
-            <the-thumbnail v-for="t in projectData.technologies" :key="t.id" :id="t.id" :title="t.title"
-              :thumbnailImage="t.thumbnailImage" class="p-3" thumbnailClasses="border-white/10" />
-          </section>
+      <article class="box mx-auto max-w-4xl">
+
+        <!-- header -->
+        <div class="flex items-center gap-5 p-8 pb-6 border-b border-white/10">
+          <div :class="[
+            projectData.id,
+            'flex shrink-0 items-center justify-center w-16 h-16 p-2 rounded-xl bg-white saturate-150 shadow-lg'
+          ]">
+            <NuxtImg :src="`img/${projectData.backgroundImage}`" :alt="projectData.title" width="64" class="saturate-150" />
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-3 flex-wrap">
+              <h3 class="text-2xl font-semibold">{{ projectData.title }}</h3>
+              <span :class="liveStatusClass(projectData.liveStatus)" class="w-2 h-2 rounded-full shrink-0 mt-1" />
+              <span class="text-xs text-neutral-light/40 capitalize">{{ projectData.liveStatus }}</span>
+            </div>
+            <p v-if="projectData.role" class="text-sm text-secondary/60 mt-1">{{ projectData.role }}</p>
+          </div>
+          <a v-if="projectData.url" :href="projectData.url" target="_blank"
+            class="shrink-0 hidden sm:flex items-center gap-2 text-xs border border-white/20 hover:border-secondary hover:text-secondary px-4 py-2 transition-all duration-200">
+            Visit project →
+          </a>
         </div>
+
+        <!-- body -->
+        <div class="p-8 flex flex-col gap-7">
+
+          <section>
+            <h4 class="text-xs tracking-widest text-white/60 mb-3 uppercase">What it solves</h4>
+            <p class="text-tertiary leading-relaxed border-l-2 border-secondary/30 pl-4">{{ projectData.productSolves }}</p>
+          </section>
+
+          <section v-if="projectData.contribution">
+            <h4 class="text-xs tracking-widest text-white/60 mb-3 uppercase">My Contribution</h4>
+            <p class="text-tertiary leading-relaxed border-l-2 border-secondary/30 pl-4">{{ projectData.contribution }}</p>
+            <div class="flex gap-2 mt-3 pl-4">
+              <span v-if="projectData.BE" class="text-xs border border-white/30 px-2 py-0.5 text-white/70">Back-end</span>
+              <span v-if="projectData.FE" class="text-xs border border-white/30 px-2 py-0.5 text-white/70">Front-end</span>
+            </div>
+          </section>
+
+          <section v-if="projectData.scale">
+            <h4 class="text-xs tracking-widest text-white/60 mb-3 uppercase">Scale</h4>
+            <p class="text-tertiary leading-relaxed border-l-2 border-secondary/30 pl-4">{{ projectData.scale }}</p>
+          </section>
+
+          <section v-if="projectData.technologies?.length">
+            <h4 class="text-xs tracking-widest text-white/60 mb-3 uppercase">Technologies</h4>
+            <div class="flex flex-wrap">
+              <the-thumbnail v-for="t in projectData.technologies" :key="t.id" :id="t.id" :title="t.title"
+                :thumbnailImage="t.thumbnailImage" class="p-2" thumbnailClasses="border-white/10" />
+            </div>
+          </section>
+
+          <a v-if="projectData.url" :href="projectData.url" target="_blank"
+            class="sm:hidden flex items-center gap-2 text-xs border border-white/20 hover:border-secondary hover:text-secondary px-4 py-2 w-fit transition-all duration-200">
+            Visit project →
+          </a>
+        </div>
+
       </article>
     </modal>
     <div id="projects">
