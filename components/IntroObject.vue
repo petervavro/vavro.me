@@ -2,11 +2,10 @@
 const { $gsap } = useNuxtApp()
 
 onMounted(() => {
-  $gsap.set('.seeking', { opacity: 0.4, y: 16 })
+  $gsap.set('.seeking', { opacity: 0.4 })
 
   $gsap.to('.seeking', {
     opacity: 1,
-    y: 0,
     scrollTrigger: {
       trigger: 'body',
       start: 'top top-=1',
