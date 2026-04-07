@@ -124,7 +124,7 @@ onMounted(() => {
           class="grid-box group relative text-left text-primary hover:text-secondary flex flex-col gap-4 p-5 border border-neutral-light/10 hover:border-neutral-light/25 hover:bg-neutral-light/5 transition-all duration-300 overflow-hidden">
 
           <!-- top accent line -->
-          <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/0 to-transparent group-hover:via-secondary/50 transition-all duration-500" />
+          <div class="absolute top-0 left-0 right-0 h-px bg-secondary/60 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out" />
 
           <!-- live status dot -->
           <div class="absolute top-4 right-4">
