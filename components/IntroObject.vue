@@ -59,7 +59,7 @@
     @apply flex flex-wrap justify-center gap-3;
 
     span {
-        @apply text-sm md:text-base px-4 py-1.5 rounded-full border border-primary/40 text-primary/80 hover:border-primary hover:text-primary transition-colors duration-200;
+        @apply text-xs md:text-base px-2 py-1 md:px-4 md:py-1.5 rounded-full border border-primary/40 text-primary/80 hover:border-primary hover:text-primary transition-colors duration-200;
         opacity: 0;
         animation: fade-in 0.5s ease both;
     }
