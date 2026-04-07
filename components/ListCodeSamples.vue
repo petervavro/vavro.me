@@ -66,7 +66,7 @@ onMounted(() => {
       <!-- tech pills -->
       <div class="flex flex-wrap gap-1.5 pt-2 border-t border-dotted border-neutral-light/10">
         <span v-for="t in item.technologies" :key="t.id"
-          class="text-xs px-2 py-0.5 border border-primary/40 text-primary/80 group-hover:border-secondary/60 group-hover:text-secondary/80 transition-colors duration-300">
+          class="text-xs px-2 py-0.5 rounded-full border border-primary/40 text-primary/80 group-hover:border-secondary/60 group-hover:text-secondary/80 transition-colors duration-300">
           {{ t.title }}
         </span>
       </div>
