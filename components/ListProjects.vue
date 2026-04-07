@@ -54,7 +54,7 @@ onMounted(() => {
 <template>
   <div>
     <modal :show="!!selectedProjectId" @close="selectedProjectId = false" modalContentClass="bg-neutral text-secondary"
-      buttonClass="text-white/50 hover:text-white hover:bg-neutral-light border-white/50">
+      buttonClass="text-white/60 hover:text-white hover:bg-neutral-light border-white/60">
       <article class="box mx-auto max-w-4xl">
 
         <!-- header -->
