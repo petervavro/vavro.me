@@ -1,16 +1,11 @@
 <script setup>
-import { useElementVisibility } from '@vueuse/core'
 import JSON_DATA from '~/assets/data/technologies.json'
-
-const target = ref(null)
-const targetIsVisible = useElementVisibility(target)
 
 const technologies = ref(
   JSON_DATA.filter(({ preferred }) => preferred).sort((a, b) => a.preferred - b.preferred)
 )
 
 const selectedIndex = ref(0)
-const loopInterval = ref(null)
 
 const currentYear = new Date().getFullYear()
 const maxYears = Math.max(...technologies.value.map(t => currentYear - t.year))
@@ -18,26 +13,10 @@ const maxYears = Math.max(...technologies.value.map(t => currentYear - t.year))
 const yearsFor = (t) => currentYear - t.year
 const barWidth = (t) => Math.round((yearsFor(t) / maxYears) * 100)
 
-const stopLoop = () => clearInterval(loopInterval.value)
-
-const doSelect = (index, doStopLoop = false) => {
+const doSelect = (index) => {
   selectedIndex.value = index
   if (index < technologies.value.length) technologies.value[index].alreadySelected = true
-  if (doStopLoop) stopLoop()
 }
-
-watch(selectedIndex, (val) => {
-  if (val === technologies.value.length) {
-    stopLoop()
-    selectedIndex.value = 0
-  }
-})
-
-watch(targetIsVisible, () => {
-  if (loopInterval.value === null) {
-    loopInterval.value = setInterval(() => doSelect(selectedIndex.value + 1), 3000)
-  }
-})
 
 onMounted(() => {
   technologies.value[selectedIndex.value].alreadySelected = true
@@ -45,13 +24,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="target" class="tech-list">
+  <div class="tech-list">
     <div
       v-for="(t, index) in technologies"
       :key="t.id"
       class="tech-row"
       :class="{ active: selectedIndex === index }"
-      @click="doSelect(index, true)"
+      @click="doSelect(index)"
     >
       <div class="tech-header">
         <span class="tech-name">{{ t.title }}</span>
