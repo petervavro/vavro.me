@@ -40,13 +40,13 @@ onMounted(() => {
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     <a :href="item.url" target="_blank" v-for="(item, index) in items" :key="item.title"
-      class="code-box group relative flex flex-col gap-4 p-5 border border-neutral-light/5 hover:bg-neutral-light/5 transition-all duration-300 overflow-hidden">
+      class="code-box group relative flex flex-col gap-4 p-5 border border-neutral-light/10 hover:bg-neutral-light/5 transition-all duration-300 overflow-hidden">
 
       <!-- corner brackets -->
-      <span class="absolute top-0 left-0 w-4 h-4 border-t border-l border-neutral-light/20 group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
-      <span class="absolute top-0 right-0 w-4 h-4 border-t border-r border-neutral-light/20 group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
-      <span class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-neutral-light/20 group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
-      <span class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-neutral-light/20 group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
+      <span class="absolute top-0 left-0 w-0 h-0 border-t border-l border-transparent group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
+      <span class="absolute top-0 right-0 w-0 h-0 border-t border-r border-transparent group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
+      <span class="absolute bottom-0 left-0 w-0 h-0 border-b border-l border-transparent group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
+      <span class="absolute bottom-0 right-0 w-0 h-0 border-b border-r border-transparent group-hover:border-secondary group-hover:w-6 group-hover:h-6 transition-all duration-300" />
 
       <!-- top accent line -->
       <div class="absolute top-0 left-0 right-0 h-px bg-secondary/60 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out" />
