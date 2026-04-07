@@ -152,7 +152,6 @@ onMounted(() => {
           <!-- footer -->
           <div class="flex items-center justify-between border-t border-dotted border-neutral-light/15 pt-3">
             <span class="text-xs text-white/60 group-hover:text-secondary transition-colors duration-300">View details →</span>
-            <span class="text-xs text-neutral-light/25 capitalize tracking-wide">{{ item.liveStatus }}</span>
           </div>
         </button>
       </div>
