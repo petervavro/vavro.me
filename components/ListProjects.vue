@@ -95,8 +95,8 @@ onMounted(() => {
             <h4 class="text-xs tracking-widest text-white/60 mb-3 uppercase">My Contribution</h4>
             <p class="text-tertiary leading-relaxed border-l-2 border-secondary/30 pl-4">{{ projectData.contribution }}</p>
             <div class="flex gap-2 mt-3 pl-4">
-              <span v-if="projectData.BE" class="text-xs border border-white/30 px-2 py-0.5 text-white/70">Back-end</span>
-              <span v-if="projectData.FE" class="text-xs border border-white/30 px-2 py-0.5 text-white/70">Front-end</span>
+              <span v-if="projectData.BE" class="text-xs px-3 py-1 bg-secondary/10 border border-secondary/30 text-secondary/80 tracking-wide">Back-end</span>
+              <span v-if="projectData.FE" class="text-xs px-3 py-1 bg-secondary/10 border border-secondary/30 text-secondary/80 tracking-wide">Front-end</span>
             </div>
           </section>
 
