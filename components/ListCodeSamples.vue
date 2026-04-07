@@ -58,7 +58,7 @@ onMounted(() => {
 
       <!-- index + source -->
       <div class="flex items-center justify-between">
-        <span class="text-xs font-mono text-white/60">{{ String(index + 1).padStart(2, '0') }}</span>
+        <span class="text-xs font-mono text-neutral-light">{{ String(index + 1).padStart(2, '0') }}</span>
 
       </div>
 
@@ -68,7 +68,7 @@ onMounted(() => {
 
       <!-- desc -->
       <p class="text-xs text-tertiary leading-relaxed">{{ item.desc }}<br/><span
-          class="text-xs text-white/60 group-hover:text-secondary transition-colors duration-300">{{
+          class="text-xs text-neutral-light group-hover:text-secondary transition-colors duration-300">{{
             getSource(item.url) }} →</span></p>
 
       <!-- tech pills -->

@@ -54,7 +54,7 @@ onMounted(() => {
 <template>
   <div>
     <modal :show="!!selectedProjectId" @close="selectedProjectId = false" modalContentClass="bg-neutral text-secondary"
-      buttonClass="text-white/60 hover:text-white hover:bg-neutral-light border-white/60">
+      buttonClass="text-neutral-light hover:text-white hover:bg-neutral-light border-neutral-light">
       <article class="box mx-auto max-w-4xl">
 
         <!-- header -->
@@ -87,12 +87,12 @@ onMounted(() => {
         <div class="p-8 flex flex-col gap-7">
 
           <section>
-            <h4 class="text-xs tracking-widest text-white/60 mb-3 uppercase">What it solves</h4>
+            <h4 class="text-xs tracking-widest text-neutral-light mb-3 uppercase">What it solves</h4>
             <p class="text-tertiary leading-relaxed border-l-2 border-secondary/30 pl-4">{{ projectData.productSolves }}</p>
           </section>
 
           <section v-if="projectData.contribution">
-            <h4 class="text-xs tracking-widest text-white/60 mb-3 uppercase">My Contribution</h4>
+            <h4 class="text-xs tracking-widest text-neutral-light mb-3 uppercase">My Contribution</h4>
             <p class="text-tertiary leading-relaxed border-l-2 border-secondary/30 pl-4">{{ projectData.contribution }}</p>
             <div class="flex gap-2 mt-3 pl-4">
               <span v-if="projectData.BE" class="text-xs px-3 py-1 bg-secondary/10 border border-secondary/30 text-secondary/80 tracking-wide">Back-end</span>
@@ -101,12 +101,12 @@ onMounted(() => {
           </section>
 
           <section v-if="projectData.scale">
-            <h4 class="text-xs tracking-widest text-white/60 mb-3 uppercase">Scale</h4>
+            <h4 class="text-xs tracking-widest text-neutral-light mb-3 uppercase">Scale</h4>
             <p class="text-tertiary leading-relaxed border-l-2 border-secondary/30 pl-4">{{ projectData.scale }}</p>
           </section>
 
           <section v-if="projectData.technologies?.length">
-            <h4 class="text-xs tracking-widest text-white/60 mb-3 uppercase">Technologies</h4>
+            <h4 class="text-xs tracking-widest text-neutral-light mb-3 uppercase">Technologies</h4>
             <div class="flex flex-wrap">
               <the-thumbnail v-for="t in projectData.technologies" :key="t.id" :id="t.id" :title="t.title"
                 :thumbnailImage="t.thumbnailImage" class="p-2" thumbnailClasses="border-white/10" />
@@ -151,7 +151,7 @@ onMounted(() => {
 
           <!-- footer -->
           <div class="flex items-center justify-between border-t border-dotted border-neutral-light/15 pt-3">
-            <span class="text-xs text-white/60 group-hover:text-secondary transition-colors duration-300">View details →</span>
+            <span class="text-xs text-neutral-light group-hover:text-secondary transition-colors duration-300">View details →</span>
           </div>
         </button>
       </div>

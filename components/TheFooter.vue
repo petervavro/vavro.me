@@ -13,7 +13,7 @@ export default {
     <div class="container mx-auto lg:max-w-4xl">
       <div class="flex md:flex-row-reverse p-10 text-primary">
         <div class="md:basis-5/6 md:border-neutral-light md:border-l md:p-10">
-          <p class="text-xs uppercase tracking-widest text-white/60 mb-3">Available for hire</p>
+          <p class="text-xs uppercase tracking-widest text-neutral-light mb-3">Available for hire</p>
           <p class="pb-8 leading-relaxed">
             <span class="text-2xl md:text-2xl font-semibold text-primary">Got a role or project in mind?</span><br/>
             <span class="text-secondary/80 text-sm md:text-base mt-2 block">I'd love to hear about it — open to full-time positions on-site, hybrid, or remote.</span>

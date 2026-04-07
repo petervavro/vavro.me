@@ -7,7 +7,7 @@ export default {
         transparent: "transparent",
         current: "currentColor",
         neutral: {
-          light: "hsl(214deg 10% 33%)",
+          light: "rgb(255 255 255 / 0.55)",
           DEFAULT: "#343a40",
         },
         primary: {

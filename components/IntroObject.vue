@@ -95,7 +95,7 @@ onMounted(() => {
         @apply space-y-2;
 
         li {
-            @apply text-xs md:text-sm text-white/60 leading-relaxed pl-3 border-l border-tertiary/30;
+            @apply text-xs md:text-sm text-neutral-light leading-relaxed pl-3 border-l border-tertiary/30;
         }
     }
 }

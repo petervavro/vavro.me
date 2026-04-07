@@ -87,7 +87,7 @@ onMounted(() => {
   }
 
   p {
-    @apply text-sm text-white/60 leading-relaxed;
+    @apply text-sm text-neutral-light leading-relaxed;
   }
 }
 
