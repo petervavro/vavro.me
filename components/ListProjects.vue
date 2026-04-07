@@ -35,12 +35,13 @@ onMounted(() => {
     }
   }).fromTo(
     '.grid-box',
-    { opacity: 0 },
+    { y: 20, opacity: 0 },
     {
+      y: 0,
       opacity: 1,
-      duration: 0.4,
-      ease: 'power1.inOut',
-      stagger: { amount: 1.0, grid: [Math.ceil(ITEMS.length / 3), 3], from: 'start', axis: 'y' },
+      duration: 0.5,
+      ease: 'power2.out',
+      stagger: { amount: 1.0, from: 'start' },
     }
   )
 
