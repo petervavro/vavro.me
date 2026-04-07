@@ -72,9 +72,13 @@ onMounted(() => {
               <span class="text-xs text-neutral-light/40 capitalize">{{ projectData.liveStatus }}</span>
             </div>
             <p v-if="projectData.role" class="text-sm text-secondary/60 mt-1">{{ projectData.role }}</p>
+            <a v-if="projectData.url" :href="projectData.url" target="_blank"
+              class="sm:hidden inline-flex items-center gap-2 text-xs border border-white/20 hover:border-secondary hover:text-secondary px-3 py-1.5 mt-2 transition-all duration-200">
+              Visit project →
+            </a>
           </div>
           <a v-if="projectData.url" :href="projectData.url" target="_blank"
-            class="shrink-0 hidden sm:flex items-center gap-2 text-xs border border-white/20 hover:border-secondary hover:text-secondary px-4 py-2 transition-all duration-200">
+            class="hidden sm:flex shrink-0 items-center gap-2 text-xs border border-white/20 hover:border-secondary hover:text-secondary px-4 py-2 transition-all duration-200">
             Visit project →
           </a>
         </div>
@@ -109,10 +113,6 @@ onMounted(() => {
             </div>
           </section>
 
-          <a v-if="projectData.url" :href="projectData.url" target="_blank"
-            class="sm:hidden flex items-center gap-2 text-xs border border-white/20 hover:border-secondary hover:text-secondary px-4 py-2 w-fit transition-all duration-200">
-            Visit project →
-          </a>
         </div>
 
       </article>
