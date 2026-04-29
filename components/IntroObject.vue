@@ -2,17 +2,17 @@
 const { $gsap } = useNuxtApp()
 
 onMounted(() => {
-  $gsap.set('.seeking', { opacity: 0.4 })
+    $gsap.set('.seeking', { opacity: 0.4 })
 
-  $gsap.to('.seeking', {
-    opacity: 1,
-    scrollTrigger: {
-      trigger: 'body',
-      start: 'top top-=1',
-      end: '+=150',
-      scrub: true,
-    }
-  })
+    $gsap.to('.seeking', {
+        opacity: 1,
+        scrollTrigger: {
+            trigger: 'body',
+            start: 'top top-=1',
+            end: '+=150',
+            scrub: true,
+        }
+    })
 })
 </script>
 
@@ -34,7 +34,7 @@ onMounted(() => {
                 <span style="animation-delay: 0.8s">Node.js</span>
                 <span style="animation-delay: 1.0s">React</span>
                 <span style="animation-delay: 1.2s">Vue</span>
-                <span style="animation-delay: 1.4s">AWS</span>
+                <span style="animation-delay: 1.4s">Angular</span>
             </div>
 
             <div class="seeking">
@@ -45,8 +45,7 @@ onMounted(() => {
                         ideally at a company using or building <span class="text-secondary">AI-powered features</span>.
                     </li>
                     <li>- I'm actively deepening my skills in <span class="text-secondary">LLM application
-                            development</span>, and <span
-                            class="text-secondary">AI agents</span>.</li>
+                            development</span>, and <span class="text-secondary">AI agents</span>.</li>
                 </ul>
             </div>
 
