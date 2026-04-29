@@ -231,12 +231,12 @@
   },
   {
     "year": 2013,
-    "title": "AngularJS",
+    "title": "Angular",
     "url": "https://en.wikipedia.org/wiki/AngularJS",
     "thumbnailImage": "logo-AngularJS.svg",
     "id": "angularjs",
-    "preferred": 0,
-    "note": "",
+    "preferred": 5,
+    "note": "AngularJS was my entry point into the world of frontend frameworks. It provided my foundation in dependency injection and modular architecture, and it’s where I first began building complex, production-ready single-page applications.",
     "FE": 1
   },
   {
@@ -245,8 +245,8 @@
     "url": "https://en.wikipedia.org/wiki/Node.js",
     "thumbnailImage": "logo-Nodejs.svg",
     "id": "nodejs",
-    "preferred": 5,
-    "note": "My beloved JavaScript runtime server environment I worked with a variety of Node.js frameworks, including Express.js, Sails.js, LoopBack, Koa.js, and HapiJS.",
+    "preferred": 2,
+    "note": "Node.js is my go-to runtime for building scalable server-side logic. Over the years, I’ve worked across a diverse ecosystem of frameworks, including Express.js, NestJS, Sails.js, LoopBack, Koa.js, and HapiJS, allowing me to choose the right tool for any architectural challenge.",
     "FE": 1
   },
   {
@@ -325,8 +325,8 @@
     "url": "https://en.wikipedia.org/wiki/React_(web_framework)",
     "thumbnailImage": "logo-React.svg",
     "id": "react",
-    "preferred": 1,
-    "note": "When it comes to UI tools, I tend to favor MATERIAL-UI/MUI. For managing the state of my applications, I often rely on either Redux or MobX. I enjoy utilizing various techniques such as refs, context, higher-order components, and memorization. Furthermore, I find Next.js to be an excellent framework, not just for server-side rendering.",
+    "preferred": 3,
+    "note": "I have a deep appreciation for the React ecosystem. When building UIs, I favor MUI for its robust and flexible component system. To keep state predictable, I lean on Redux or MobX depending on the scale of the task. I truly enjoy diving into the finer details of React, using refs, Context, and memoization to build maintainable, high-performance apps. I also consider Next.js an essential tool in my kit, it's so much more than just a server-side rendering solution",
     "FE": 1
   },
   {
@@ -425,8 +425,8 @@
     "url": "https://en.wikipedia.org/wiki/TypeScript",
     "thumbnailImage": "logo-TypeScript.svg",
     "id": "typescript",
-    "preferred": 4,
-    "note": "TypeScript was utilized in 85% of the projects I've worked on in the previous several years.",
+    "preferred": 1,
+    "note": "TypeScript has become my standard; it has been the backbone of roughly 85% of my projects over the last several years, providing the type safety and scalability necessary for modern fullstack development.",
     "FE": 1
   },
   {
@@ -435,8 +435,8 @@
     "url": "https://vuejs.org/",
     "thumbnailImage": "logo-vuejs.svg",
     "id": "vuejs",
-    "preferred": 3,
-    "note": "I had the pleasure of working with this really great framework on a couple projects. I built this website with NuxtJS, by the way.",
+    "preferred": 4,
+    "note": "I’ve had the pleasure of working with this fantastic framework on several projects, in fact, I built this very website using NuxtJS.",
     "FE": 1
   },
   {

@@ -25,27 +25,21 @@ onMounted(() => {
 
 <template>
   <div class="tech-list">
-    <div
-      v-for="(t, index) in technologies"
-      :key="t.id"
-      class="tech-row"
-      :class="{ active: selectedIndex === index }"
-      @click="doSelect(index)"
-    >
+    <p class="list-label">Experience spanning</p>
+    <div v-for="(t, index) in technologies" :key="t.id" class="tech-row" :class="{ active: selectedIndex === index }"
+      @click="doSelect(index)">
       <div class="tech-header">
         <span class="tech-name">{{ t.title }}</span>
-        <span class="tech-years">{{ yearsFor(t) }} yrs</span>
+        <span class="tech-years">{{ yearsFor(t) }} years</span>
       </div>
 
       <div class="bar-track">
         <div class="bar-fill" :style="{ width: barWidth(t) + '%' }" />
       </div>
 
-      <Transition
-        @enter="el => { el.style.height = '0'; el.offsetHeight; el.style.height = el.scrollHeight + 'px' }"
+      <Transition @enter="el => { el.style.height = '0'; el.offsetHeight; el.style.height = el.scrollHeight + 'px' }"
         @after-enter="el => el.style.height = 'auto'"
-        @leave="el => { el.style.height = el.scrollHeight + 'px'; el.offsetHeight; el.style.height = '0' }"
-      >
+        @leave="el => { el.style.height = el.scrollHeight + 'px'; el.offsetHeight; el.style.height = '0' }">
         <p v-if="selectedIndex === index" class="tech-note">{{ t.note }}</p>
       </Transition>
     </div>
@@ -55,6 +49,10 @@ onMounted(() => {
 <style scoped lang="scss">
 .tech-list {
   @apply flex flex-col gap-1;
+
+  .list-label {
+    @apply text-xs uppercase tracking-widest text-white/30 mb-1;
+  }
 }
 
 .tech-row {

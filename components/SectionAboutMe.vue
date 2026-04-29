@@ -3,9 +3,9 @@ const { $gsap } = useNuxtApp()
 import JSON_DATA from '~/assets/data/technologies.json'
 import type { Technology } from '~/types';
 
-const getExperienceYears = (technologyId: string): number => {
+const getExperience = (technologyId: string): { title: string; since: number } => {
   const t = JSON_DATA.find(({ id }) => id === technologyId) as Technology | undefined
-  return t ? new Date().getFullYear() - t.year : 0
+  return { title: t?.title ?? technologyId, since: t?.year ?? 0 }
 }
 
 onMounted(() => {
@@ -48,24 +48,17 @@ onMounted(() => {
         </p>
         <p>
           My focus today is building accessible digital experiences in
-          JavaScript&nbsp;/&nbsp;TypeScript — equally adept at front-end and back-end.
+          JavaScript&nbsp;/&nbsp;TypeScript - equally adept at front-end and back-end.
         </p>
         <div class="stats">
-          <div class="stat">
-            <span class="stat-value">{{ getExperienceYears('javascript') }}+</span>
-            <span class="stat-label">years JS</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value">{{ getExperienceYears('react') }}+</span>
-            <span class="stat-label">years React</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value">{{ getExperienceYears('vuejs') }}+</span>
-            <span class="stat-label">years Vue</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value">{{ getExperienceYears('nodejs') }}+</span>
-            <span class="stat-label">years Node</span>
+          <p class="stats-label">Long-term familiarity</p>
+          <div v-for="id in ['javascript', 'typescript', 'nodejs', 'react', 'vuejs', 'angularjs']" :key="id"
+            class="stat">
+            <span class="stat-tech">{{ getExperience(id).title }}</span>
+            <div class="stat-count">
+              <span class="stat-eyebrow">since</span>
+              <span class="stat-value">{{ getExperience(id).since }}</span>
+            </div>
           </div>
         </div>
       </section>
@@ -92,17 +85,34 @@ onMounted(() => {
 }
 
 .stats {
-  @apply grid grid-cols-2 gap-3 mt-2;
+  @apply grid grid-cols-2 sm:grid-cols-3 gap-3 mt-2;
+
+  .stats-label {
+    @apply col-span-2 sm:col-span-3 text-xs uppercase tracking-widest text-white/30 -mb-1;
+  }
 
   .stat {
-    @apply border border-primary/10 p-3 flex flex-col bg-neutral/60;
+    @apply relative border border-primary/10 p-4 flex flex-col gap-0.5 bg-neutral/60 overflow-hidden text-wrap;
 
-    .stat-value {
-      @apply text-2xl font-bold text-primary;
+    &::before {
+      content: '';
+      @apply absolute top-0 left-0 right-0 h-px bg-secondary/40;
     }
 
-    .stat-label {
-      @apply text-xs text-white/40 mt-1;
+    .stat-tech {
+      @apply text-sm font-bold text-secondary leading-tight;
+    }
+
+    .stat-count {
+      @apply flex flex-col;
+
+      .stat-eyebrow {
+        @apply text-xs text-white/30;
+      }
+
+      .stat-value {
+        @apply text-2xl font-bold text-primary;
+      }
     }
   }
 }
