@@ -19,14 +19,13 @@ const getSource = (url) => {
 }
 
 onMounted(() => {
-  $gsap.fromTo('.code-box',
-    { y: 20, opacity: 0 },
+  $gsap.set('.code-box', { opacity: 0 })
+  $gsap.to('.code-box',
     {
-      y: 0,
       opacity: 1,
-      duration: 0.5,
+      duration: 0.35,
       ease: 'power2.out',
-      stagger: { amount: 0.8, from: 'start' },
+      stagger: { amount: 0.25, from: 'start' },
       scrollTrigger: {
         trigger: '#code-samples',
         start: 'top 60%',
