@@ -24,16 +24,16 @@
     "url": "https://github.com/petervavro/remotion-animations"
   },
   {
+    "title": "Chrome Extension",
+    "desc": "A Chrome extension that automates unfollowing Instagram accounts directly from your browser.",
+    "technologies": "javascript,chrome-extension,html,css",
+    "url": "https://github.com/petervavro/chrome-extension-ig-unfollower"
+  },
+  {
     "title": "React App",
     "desc": "This front-end challenge is intended to evaluate my proficiency in Typescript and React.",
     "technologies": "typescript,react",
     "url": "https://github.com/petervavro/react-coding-test"
-  },
-  {
-    "title": "Array Methods",
-    "desc": "My solution to a JS challenge that was designed to assess one's experience with Array object methods.",
-    "technologies": "js,es6",
-    "url": "https://github.com/petervavro/Code-Challenge---JavaScript-Array-Methods"
   },
   {
     "title": "JS challenge",

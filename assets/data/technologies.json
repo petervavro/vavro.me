@@ -510,6 +510,16 @@
     "FE": 1
   },
   {
+    "year": 2020,
+    "title": "Chrome Extension",
+    "url": "https://chromewebstore.google.com/category/extensions",
+    "thumbnailImage": "logo-ChromeExtension.svg",
+    "id": "chrome-extension",
+    "preferred": 0,
+    "note": "",
+    "FE": 1
+  },
+  {
     "year": 2021,
     "title": "Electron",
     "url": "https://www.electronjs.org",
