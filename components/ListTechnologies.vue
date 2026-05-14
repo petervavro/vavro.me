@@ -69,7 +69,7 @@ onMounted(() => {
             <div class="text-md origin-bottom -rotate-90 antialiased tracking-widest" :class="[
               selectedYear === t.year
                 ? 'text-primary'
-                : 'text-neutral-light/30'
+                : 'text-neutral-light/55'
             ]">
               {{ t.year }}
             </div>
