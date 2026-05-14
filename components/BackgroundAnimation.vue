@@ -59,6 +59,6 @@ const vParticles = {
 
 <template>
   <Teleport to="body">
-    <canvas v-particles class="fixed top-0 left-0 w-full h-full pointer-events-none" style="z-index: 0;" />
+    <canvas v-particles aria-hidden="true" class="fixed top-0 left-0 w-full h-full pointer-events-none" style="z-index: 0;" />
   </Teleport>
 </template>
