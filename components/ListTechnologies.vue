@@ -54,7 +54,7 @@ onMounted(() => {
         'inline-block p-2 px-5 rounded-full border-2 text-sm transition-all hover:opacity-100',
         selectedRange === index
           ? 'border-secondary text-secondary opacity-100'
-          : 'border-tertiary text-tertiary opacity-60'
+          : 'border-tertiary text-tertiary opacity-75'
       ]" :key="index">
         {{ rangeStart }}&nbsp;-&nbsp;{{ rangeEnd }}
       </button>
