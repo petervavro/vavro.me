@@ -688,5 +688,25 @@
     "preferred": 0,
     "note": "",
     "FE": 0
+  },
+  {
+    "year": 2026,
+    "title": "Reka UI",
+    "url": "https://reka-ui.com/",
+    "thumbnailImage": "logo-Reka_ui.svg",
+    "id": "reka-ui",
+    "preferred": 0,
+    "note": "",
+    "FE": 1
+  },
+  {
+    "year": 2026,
+    "title": "shadcn-vue",
+    "url": "https://shadcn-vue.com/",
+    "thumbnailImage": "logo-shadcn_vue.svg",
+    "id": "shadcn-vue",
+    "preferred": 0,
+    "note": "",
+    "FE": 1
   }
 ]

@@ -1,10 +1,25 @@
 [
   {
+    "id": "superfaktura",
+    "title": "SuperFaktura",
+    "url": "https://www.superfaktura.sk/",
+    "backgroundImage": "logo-SuperFaktura.svg",
+    "technologies": "vuejs,typescript,graphql,tailwind,shadcn,rekaui,bun,nodejs,playwright,figma,docker,php",
+    "platforms": "web",
+    "BE": 0,
+    "FE": 1,
+    "productSolves": "Small businesses and freelancers needed a simple, all-in-one online platform to manage invoicing, expenses, payments, and everyday business administration.",
+    "scale": "Established Slovak invoicing and accounting platform with an existing PHP backend and a large legacy frontend.",
+    "contribution": "led the frontend migration strategy, introducing a Vue.js island architecture alongside the existing PHP backend and modernising the legacy codebase for better maintainability.",
+    "liveStatus": "live",
+    "role": "Senior Front-End Engineer"
+  },
+  {
     "id": "saidot",
     "title": "Saidot",
     "url": "https://www.saidot.ai/",
     "backgroundImage": "logo-Saidot.svg",
-    "technologies": "typescript,react,nestjs,graphql,postgresql,prisma,docker,flowbite,tailwind,figma,azure-storage-account",
+    "technologies": "typescript,react,nestjs,graphql,postgresql,prisma,docker,flowbite,figma,azure-storage-account",
     "platforms": "web",
     "BE": 1,
     "FE": 1,
